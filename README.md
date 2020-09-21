@@ -66,7 +66,7 @@ community but also for other scientific or industrial areas such as High Energy 
 Sciences, Weather Forecasting, Aerospatial security or Computer Science, among others,
 because the effects of cosmic radiation on natural life, materials, or climate change.
 
-## B.FAIR data
+## B. FAIR data
 
 ### Making data findable, including provisions for metadata:
 
@@ -174,7 +174,7 @@ of data.
 ● **Specify the length of time for which the data will remain re-usable**. Indefinitely after the
 waiting period.
 
-## C.Allocation of resources
+## C. Allocation of resources
 
 Explain the allocation of resources, addressing the following issues:
 ● **Estimate the costs for making your data FAIR. Describe how you intend to cover these costs**.
@@ -195,14 +195,14 @@ are the hardware (two generic RAID servers ~240TB = ~30k€, prices in 2019), th
 (3.68KW max. power for 2 servers, ~ 0.1 €/kWh industrial price average in 2019 = max. 13k€)
 and human resources (technician: 1 person/month, scientific: 2 p/m, ~10k€).
 
-## D.Data security
+## D. Data security
 
 Address data recovery as well as secure storage and transfer of sensitive data. There is no sensitive
 data, thus anonymization and encryption of the data is not required. Data recovery should be
 guaranteed by means of replication, at least, in two locations of a distributed repository or filesystem (in
 this case OneData).
 
-## E.Ethical aspects
+## E. Ethical aspects
 
 Data do not contain protected records that could present ethical or security issues. The only personal
 data included is the required by FAIR policies in metadata, this is, the name and identifier of the author
