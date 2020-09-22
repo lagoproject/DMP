@@ -39,10 +39,14 @@ these guidelines, being also beneficial for the success of both initiatives.
 
 ● **Specify the types and formats of data generated/collected**. 
 
+Every file is considered the minimum data-set to be referenced and processed, while a collection of related files 
+is grouped in a catalog. As the different LAGO activities generate only one data sub-type, catalogs will only 
+contain files belonging to one sub-type an activity, with exception of checking or correction procedures.
+
 There are two main kinds of data managed by LAGO Collaboration. The first is the data measured (L) by 
 water-Cherenkov detectors (WCD), and the second is the simulations (S).
 
-Thus, the measured data (raw) is pipelined for correction, obtainig these data subtypes that corresponds 
+The measured data (raw) is pipelined for correction, obtainig these data sub-types that corresponds 
 with their quality level:
   - L0. Raw data.
   - L1. Preliminary data: low resolution but the atmospheric pressure is corrected.
@@ -51,36 +55,79 @@ atmospheric parameters and the efficiency of the detector.
   - L3. Ensures high quality to be used by researchers from other subjects or general public: the
 histograms are also corrected.
 
-On the other hand, users can perform their own simulations of rains, generating two types of data-sets: 
-  - S0. Plain simulations: CORSIKA outputs. CORSIKA outputs described in the official documentation [D. Heck and T. Piero, "Extensive Air Shower Simulation with CORSIKA: A
+On the other hand, users can perform their own simulations of rains, generating two sub-types of data-sets: 
+  - S0. Plain simulations: CORSIKA outputs, which are described in the official documentation [D. Heck and T. Piero, "Extensive Air Shower Simulation with CORSIKA: A
 User’s Guide". Version 7.7100 from December 17, 2019], section 10, page 121. Available at
 https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf
   - S1. Analysed simulations: ARTI outputs.
 
-
-
 ● **Specify if existing data is being re-used (if any)**. 
 
-Measurements from WCDs gathered in previous years and relevant simulations.
+Measurements from WCDs gathered in previous years and relevant simulations stored at the old centralised repository at UIS (Universidad Industrial de Santander, Colombia).
 
 ● **Specify the origin of the data**.
 
-○ Raw data (L0) from WCDs.
-
-○ Preliminary data (L1) obtained cleaning raw data (L0).
-
-○ Quality data (L2, L3) obtained analysing and fixing preliminary data (L1).
-
-○ Simulated (S0, S1) from standalone CORSIKA and ARTI runs by researchers.
+  - Raw data (L0) from WCDs.
+  - Preliminary data (L1) obtained cleaning raw data (L0).
+  - Quality data (L2, L3) obtained analysing and fixing preliminary data (L1).
+  - Simulated (S0, S1) from standalone CORSIKA and ARTI runs by researchers.
 
 ● **State the expected size of the data (if known)**. 
 
 Minimal data-set is one hour of measurement or simulation:
-○ Raw data (L0): ~200MB
-○ Preliminary data (L1): ~100MB
-○ Quality data (L2, L3): ~ 30 MB
-○ Simulated (background): ~ 10GB
-○ Simulated (event): ~ 100GB
+  - Raw data (L0): ~200MB
+  - Preliminary data (L1): ~100MB
+  - Quality data (L2, L3): ~ 30 MB
+  - Simulated background (S0+S1): ~ 10GB
+  - Simulated event (S0+S1): ~ 100GB
+
+Typically, every WCD generates one measurement per hour producing ~ 200 MB files each, this is ~ 150
+GB of raw data per month with a total of 720 files. These files can originate 70-120GB of cleaned (L1) and 10-40GB of
+quality data (L2 and L3). The one hour interval is kept as unit, resulting in 2160 files (between 2-160
+MB each). The necessary amount of CPU resources to generate these files is small; around 35 mins on a
+Gold 6138 Intel core (2 GHz). However, all data-sets should be preserved for reprocessing if software
+errors can appear in the future. 
+
+On the other hand, users can perform their own simulations, which should be re-usable and
+reproducible with other collaborators. A standard simulation using only CORSIKA (i.e. background
+simulation), results in a data-set of 4-10 GB (usually ~ 6 GB), but an event simulation could take 100 GB.
+In order to keep the 1 hour convention, both types of simulation are usually split into 60 runs, with an
+interval lasting from 15 mins to 10 hours, one task per minute. Thus, the complete workload of a
+background simulation is over 640 CPU/hours (Gold Intel core, 2 GHz). Additionally, to assure
+reproducibility, every input and output file of every run should be in the data-set comprising 180 files.
+
+Currently, there are 10 detectors installed (plus 11 planned), that can potentially transfer 18 TB/year of
+raw data. Members of the Collaboration (~ 85 researchers) are also allowed to make simulations. Thus, the 
+entire collaboration could generate up to 27 TB of raw, cleaned, and analysed data, plus 12-120 TB
+of simulated data in one year. Nevertheless, the availability of detectors can be an issue, an active user 
+could submit 10 or 20 simulations per month, but actually researchers do not regularly submit simulations, 
+and even some may only run simulations sporadically. Therefore, a realistic estimation of the storage consumption 
+could be around 3.6 TB/year of L(0-3) data corresponding to 4 WCDs and 2-8 TB/year corresponding to 25 active users.
+
+| Data Type | Source | Size |
+| Raw (L0) | Water-Cherenkov detector (WCD) |  150GB/month (per WCD) |
+
+Cleaned
+(L1)
+Raw data from
+WCD
+70-120GB /month
+(per WCD)
+Analysed
+(L2 and L3)
+Cleaned data
+from WCD
+Public after fixed
+waiting period
+10-40GB /month
+(per WCD)
+Simulated 1 User User Public after
+variable waiting
+period
+Estimated:
+1-4 sim. per month
+(72-300 GB/year)
+Max: 120GB/month
 
 ● **Outline the data utility: to whom will it be useful**. 
 
