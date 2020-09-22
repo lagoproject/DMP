@@ -1,7 +1,6 @@
 ---
 layout: default
-title: Definitions
-parent: true
+parent: Definitions
 nav_order: 2
 ---
 
