@@ -5,9 +5,7 @@ has_children: false
 nav_order: 2
 ---
 
-# The LAGO Data Management Plan (DPM)
-
-Published in EU Deliverable EOSC-SYNERGY-D4.1 "Best Practices Elicitation including Data Management Plans" (EOSC-SYNERGY – H2020 RIA 857647)
+# The LAGO Data Management Plan (DPM) document
 
 |Version|Date|Contributors|
 |-------|----|------------|
@@ -16,49 +14,78 @@ Published in EU Deliverable EOSC-SYNERGY-D4.1 "Best Practices Elicitation includ
 
 Provide a summary of the data addressing the following issues:
 
-● **State the purpose of the data collection/generation**. The Latin American Giant Observatory
-(LAGO) is an extended cosmic ray observatory composed of a network water-Cherenkov
-detectors (WCD) spanning over different sites located at significantly different altitudes and
-latitudes. The measurements collected from these detectors are posteriorly processed and
-analysed. Additionally, scientists continuously generate simulated data. The final purpose is to
+● **State the purpose of the data collection/generation**. 
+
+The Latin American Giant Observatory (LAGO) is an extended cosmic ray observatory 
+composed of a network water-Cherenkov detectors (WCD) spanning over different sites 
+located at significantly different altitudes and latitudes. 
+
+The measurements collected from these detectors are posteriorly processed and analysed. 
+Additionally, scientists continuously generate simulated data. The final purpose is to
 enable the long-term curation and re-use of data within and outside the LAGO Collaboration
 through a Virtual Observatory.
 
-● **Explain the relation to the objectives of the project**. European Commision requires open access
-to the results obtained from their funded projects, meanwhile EOSC-Synergy is a H2020 project
-that encourages the implementation of FAIR policies as another standard in research. Since the
-LAGO computation is included in the EOSC-Synergy as one of their Thematic Services, generated
-or stored data in its resources must observe these guidelines, being also beneficial for the
-success of both initiatives.
+● **Explain the relation to the objectives of the project**. 
 
-● **Specify the types and formats of data generated/collected**. CORSIKA outputs described in the
-official documentation [D. Heck and T. Piero, "Extensive Air Shower Simulation with CORSIKA: A
+The objective is to enable the long-term curation and re-use of generated data within 
+and outside LAGO Collaboration through a Virtual Observatory, being of interest in areas as HEP, 
+space weather, life sciences, aerospatial security, computer science,... 
+
+On the other hand, European Commision requires open access to the results obtained from their funded 
+projects, meanwhile EOSC-Synergy is a H2020 project (RIA 857647) that encourages the implementation 
+of FAIR policies as another standard in research. Since the LAGO computation is included in the 
+EOSC-Synergy as one of their Thematic Services, generated or stored data in its resources must observe 
+these guidelines, being also beneficial for the success of both initiatives.
+
+● **Specify the types and formats of data generated/collected**. 
+
+There are two main kinds of data managed by LAGO Collaboration. The first is the data measured (L) by 
+water-Cherenkov detectors (WCD), and the second is the simulations (S).
+
+Thus, the measured data (raw) is pipelined for correction, obtainig these data subtypes that corresponds 
+with their quality level:
+  - L0. Raw data.
+  - L1. Preliminary data: low resolution but the atmospheric pressure is corrected.
+  - L2: Ensures data quality to be used by experts from Astrophysics Community: fixed scalers by
+atmospheric parameters and the efficiency of the detector.
+  - L3. Ensures high quality to be used by researchers from other subjects or general public: the
+histograms are also corrected.
+
+On the other hand, users can perform their own simulations of rains, generating two types of data-sets: 
+  - S0. Plain simulations: CORSIKA outputs. CORSIKA outputs described in the official documentation [D. Heck and T. Piero, "Extensive Air Shower Simulation with CORSIKA: A
 User’s Guide". Version 7.7100 from December 17, 2019], section 10, page 121. Available at
 https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf
+  - S1. Analysed simulations: ARTI outputs.
 
-● **Specify if existing data is being re-used (if any)**. Measurements from WCDs gathered in previous
-years.
+
+
+● **Specify if existing data is being re-used (if any)**. 
+
+Measurements from WCDs gathered in previous years and relevant simulations.
 
 ● **Specify the origin of the data**.
+
 ○ Raw data (L0) from WCDs.
 
 ○ Preliminary data (L1) obtained cleaning raw data (L0).
 
 ○ Quality data (L2, L3) obtained analysing and fixing preliminary data (L1).
 
-○ Simulated from standalone CORSIKA runs by researchers.
+○ Simulated (S0, S1) from standalone CORSIKA and ARTI runs by researchers.
 
-● **State the expected size of the data (if known)**. Minimal data-set is one hour of measurement or
-simulation:
+● **State the expected size of the data (if known)**. 
+
+Minimal data-set is one hour of measurement or simulation:
 ○ Raw data (L0): ~200MB
 ○ Preliminary data (L1): ~100MB
 ○ Quality data (L2, L3): ~ 30 MB
 ○ Simulated (background): ~ 10GB
 ○ Simulated (event): ~ 100GB
 
-● **Outline the data utility: to whom will it be useful**. Data are of interest for the Astrophysics
-community but also for other scientific or industrial areas such as High Energy Physics, Life
-Sciences, Weather Forecasting, Aerospatial security or Computer Science, among others,
+● **Outline the data utility: to whom will it be useful**. 
+
+Data are of interest for the Astrophysics community but also for other scientific or industrial areas such as
+High Energy Physics, Life Sciences, Weather Forecasting, Aerospatial security or Computer Science, among others,
 because the effects of cosmic radiation on natural life, materials, or climate change.
 
 ## B. FAIR data
@@ -69,9 +96,9 @@ because the effects of cosmic radiation on natural life, materials, or climate c
 processing or simulation and posteriorly check the data-sets and will store them in EGI DataHub
 always with their metadata to allow gathering by services such as B2FIND.
 
-● **Outline the identifiability of data and refer to standard identification mechanism**. Do you
-make use of persistent and unique identifiers such as Digital Object Identifiers? Data-sets will
-be referenced by PIDs automatically requested through EOSC B2Handle service.
+● **Outline the identifiability of data and refer to standard identification mechanism. Do you
+make use of persistent and unique identifiers such as Digital Object Identifiers?**
+Data-sets will be referenced by PIDs automatically requested through EOSC B2Handle service.
 
 ● **Outline naming conventions used**. It should be based in the metadata values but an approach
 for clear versioning is being discussed.
