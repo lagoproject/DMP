@@ -107,29 +107,9 @@ could be around 3.6 TB/year of L(0-3) data corresponding to 4 WCDs and 2-8 TB/ye
 | Data Type | Source | Size |
 |-----------|--------|------|
 | Raw (L0) | Water-Cherenkov detector (WCD) |  150GB/month (per WCD) |
-|-----------|--------|------|
-
-Cleaned
-(L1)
-Raw data from
-WCD
-70-120GB /month
-(per WCD)
-Analysed
-(L2 and L3)
-Cleaned data
-from WCD
-Public after fixed
-waiting period
-10-40GB /month
-(per WCD)
-Simulated 1 User User Public after
-variable waiting
-period
-Estimated:
-1-4 sim. per month
-(72-300 GB/year)
-Max: 120GB/month
+| Cleaned (L1) | Raw data from WCD | 70-120GB/month (per WCD) |
+| Analysed (L2 and L3)| Cleaned data from WCD | 10-40GB/month (per WCD) |
+| Simulated (S0 and S1)| researchers | Estimated per 1 user: 1-4 sim. per month (72-300 GB/year) Max: 120GB/month |
 
 ● **Outline the data utility: to whom will it be useful**. 
 
@@ -141,12 +121,14 @@ because the effects of cosmic radiation on natural life, materials, or climate c
 
 ### Making data findable, including provisions for metadata:
 
-● **Outline the discoverability of data (metadata provision)**. Specific LAGO wrappers execute the
-processing or simulation and posteriorly check the data-sets and will store them in EGI DataHub
-always with their metadata to allow gathering by services such as B2FIND.
+● **Outline the discoverability of data (metadata provision)**. 
+
+Specific LAGO wrappers execute the processing or simulation and posteriorly check every data-set and will store them in EGI DataHub
+always with their metadata, to allow gathering by services such as B2FIND.
 
 ● **Outline the identifiability of data and refer to standard identification mechanism. Do you
 make use of persistent and unique identifiers such as Digital Object Identifiers?**
+
 Data-sets will be referenced by PIDs automatically requested through EOSC B2Handle service.
 
 ● **Outline naming conventions used**. It should be based in the metadata values but an approach
