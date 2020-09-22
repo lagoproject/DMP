@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Introduction
+title: Home
 nav_order: 1
 ---
 
-# Introduction to the Data Management Plan
+### Introduction to the Data Management Plan
 
