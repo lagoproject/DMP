@@ -10,6 +10,8 @@ nav_order: 2
 |Version|Date|Contributors|
 |-------|----|------------|
 
+{:toc}
+
 ## A. Data summary
 
 Provide a summary of the data addressing the following issues:
