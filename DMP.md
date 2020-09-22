@@ -105,7 +105,9 @@ and even some may only run simulations sporadically. Therefore, a realistic esti
 could be around 3.6 TB/year of L(0-3) data corresponding to 4 WCDs and 2-8 TB/year corresponding to 25 active users.
 
 | Data Type | Source | Size |
+|-----------|--------|------|
 | Raw (L0) | Water-Cherenkov detector (WCD) |  150GB/month (per WCD) |
+|-----------|--------|------|
 
 Cleaned
 (L1)
