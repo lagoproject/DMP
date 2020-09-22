@@ -1,0 +1,61 @@
+{
+"@context":{
+            "@base":"https://mon01-tic.ciemat.es/api/v3/oneprovider/metadata/json/LAGOsim",
+            "_@base":"https://hdl.handle.net/21.T11998/0000-001A-6C0D-E?urlappend=",
+            "@vocab":"https://github.com/SEMICeu/DCAT-AP/blob/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
+            "_dcatap":"https://github.com/SEMICeu/DCAT-AP/blob/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
+            "_dcatap_landing_page":"http://data.europa.eu/r5r/",
+            "lago":"https://github.com/lagoproject/DMP/blob/0.0.1/schema/lagoSchema.jsonld",
+            "prov":"http://www.w3.org/ns/prov#",
+            "dct":"http://purl.org/dc/terms/"
+            },
+"@id":"/sac_60_100.0_75600_QGSII_flat","@type":"Catalog",
+"title":"sac_60_100.0_75600_QGSII_flat",
+"description":"A Complete Corsika Simulation",
+"publisher":{
+             "@id":"https://github.com/lagoproject/DMP/blob/0.0.1/defs/lagocollaboration.jsonld",
+             "@type":"lago:Organization"
+            },
+"wasGeneratedBy":"/sac_60_100.0_75600_QGSII_flat#activity",
+"license":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+"rights":"https://github.com/lagoproject/DMP/blob/0.0.1/rights/lagoCommonRights.jsonld",
+"accessRigths":"http://publications.europa.eu/resource/authority/access-right/RESTRICTED",
+"creator":{
+           "@id":"https://orcid.org/0000-0001-6497-753X",
+           "@type":"lago:Person"
+          },
+"_landing_page":"https://datahub.egi.eu/TOPUBLISH",
+"dataset":["/sac_60_100.0_75600_QGSII_flat/DAT080014-0014-00000017573.input",
+"/sac_60_100.0_75600_QGSII_flat/DAT080014-0014-00000017573.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT080014.bz2","/sac_60_100.0_75600_QGSII_flat/DAT070014-0014-00000017573.input","/sac_60_100.0_75600_QGSII_flat/DAT070014-0014-00000017573.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT070014.bz2","/sac_60_100.0_75600_QGSII_flat/DAT060014-0014-00000017573.input","/sac_60_100.0_75600_QGSII_flat/DAT060014-0014-00000017573.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT060014.bz2","/sac_60_100.0_75600_QGSII_flat/DAT050014-0014-00000017573.input","/sac_60_100.0_75600_QGSII_flat/DAT050014-0014-00000017573.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT050014.bz2","/sac_60_100.0_75600_QGSII_flat/DAT040014-0014-00000017573.input","/sac_60_100.0_75600_QGSII_flat/DAT040014-0014-00000017573.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT040014.bz2","/sac_60_100.0_75600_QGSII_flat/DAT030014-0014-00000017573.input","/sac_60_100.0_75600_QGSII_flat/DAT030014-0014-00000017573.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT030014.bz2","/sac_60_100.0_75600_QGSII_flat/DAT020014-0014-00000017573.input","/sac_60_100.0_75600_QGSII_flat/DAT020014-0014-00000017573.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT020014.bz2","/sac_60_100.0_75600_QGSII_flat/DAT010014-0014-00000017573.input","/sac_60_100.0_75600_QGSII_flat/DAT010014-0014-00000017573.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT010014.bz2","/sac_60_100.0_75600_QGSII_flat/DAT010402-0402-00000014149.input","/sac_60_100.0_75600_QGSII_flat/DAT010402-0402-00000014149.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT010402.bz2","/sac_60_100.0_75600_QGSII_flat/DAT004521-4521-00000000006.input","/sac_60_100.0_75600_QGSII_flat/DAT004521-4521-00000000006.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT004521.bz2","/sac_60_100.0_75600_QGSII_flat/DAT003517-3517-00000000002.input","/sac_60_100.0_75600_QGSII_flat/DAT003517-3517-00000000002.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT003517.bz2","/sac_60_100.0_75600_QGSII_flat/DAT003115-3115-00000000003.input","/sac_60_100.0_75600_QGSII_flat/DAT003115-3115-00000000003.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT003115.bz2","/sac_60_100.0_75600_QGSII_flat/DAT005123-5123-00000000012.input","/sac_60_100.0_75600_QGSII_flat/DAT005123-5123-00000000012.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT005123.bz2","/sac_60_100.0_75600_QGSII_flat/DAT003919-3919-00000000004.input","/sac_60_100.0_75600_QGSII_flat/DAT003919-3919-00000000004.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT003919.bz2","/sac_60_100.0_75600_QGSII_flat/DAT005525-5525-00000000015.input","/sac_60_100.0_75600_QGSII_flat/DAT005525-5525-00000000015.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT005525.bz2","/sac_60_100.0_75600_QGSII_flat/DAT004822-4822-00000000009.input","/sac_60_100.0_75600_QGSII_flat/DAT004822-4822-00000000009.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT004822.bz2","/sac_60_100.0_75600_QGSII_flat/DAT004018-4018-00000000005.input","/sac_60_100.0_75600_QGSII_flat/DAT004018-4018-00000000005.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT004018.bz2","/sac_60_100.0_75600_QGSII_flat/DAT005224-5224-00000000014.input","/sac_60_100.0_75600_QGSII_flat/DAT005224-5224-00000000014.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT005224.bz2","/sac_60_100.0_75600_QGSII_flat/DAT001909-1909-00000000007.input","/sac_60_100.0_75600_QGSII_flat/DAT001909-1909-00000000007.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT001909.bz2","/sac_60_100.0_75600_QGSII_flat/DAT004020-4020-00000000008.input","/sac_60_100.0_75600_QGSII_flat/DAT004020-4020-00000000008.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT004020.bz2","/sac_60_100.0_75600_QGSII_flat/DAT002311-2311-00000000010.input","/sac_60_100.0_75600_QGSII_flat/DAT002311-2311-00000000010.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT002311.bz2","/sac_60_100.0_75600_QGSII_flat/DAT002713-2713-00000000011.input","/sac_60_100.0_75600_QGSII_flat/DAT002713-2713-00000000011.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT002713.bz2","/sac_60_100.0_75600_QGSII_flat/DAT003216-3216-00000000013.input","/sac_60_100.0_75600_QGSII_flat/DAT003216-3216-00000000013.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT003216.bz2","/sac_60_100.0_75600_QGSII_flat/DAT000904-0904-00000000042.input","/sac_60_100.0_75600_QGSII_flat/DAT000904-0904-00000000042.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT000904.bz2","/sac_60_100.0_75600_QGSII_flat/DAT005626-5626-00000000049.input","/sac_60_100.0_75600_QGSII_flat/DAT005626-5626-00000000049.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT005626.bz2","/sac_60_100.0_75600_QGSII_flat/DAT002010-2010-00000000065.input","/sac_60_100.0_75600_QGSII_flat/DAT002010-2010-00000000065.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT002010.bz2","/sac_60_100.0_75600_QGSII_flat/DAT001407-1407-00000000074.input","/sac_60_100.0_75600_QGSII_flat/DAT001407-1407-00000000074.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT001407.bz2","/sac_60_100.0_75600_QGSII_flat/DAT002814-2814-00000000081.input","/sac_60_100.0_75600_QGSII_flat/DAT002814-2814-00000000081.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT002814.bz2","/sac_60_100.0_75600_QGSII_flat/DAT001105-1105-00000000099.input","/sac_60_100.0_75600_QGSII_flat/DAT001105-1105-00000000099.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT001105.bz2","/sac_60_100.0_75600_QGSII_flat/DAT002412-2412-00000000084.input","/sac_60_100.0_75600_QGSII_flat/DAT002412-2412-00000000084.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT002412.bz2","/sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.input","/sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT000703.bz2","/sac_60_100.0_75600_QGSII_flat/DAT001608-1608-00000000353.input","/sac_60_100.0_75600_QGSII_flat/DAT001608-1608-00000000353.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT001608.bz2","/sac_60_100.0_75600_QGSII_flat/DAT001206-1206-00000000365.input","/sac_60_100.0_75600_QGSII_flat/DAT001206-1206-00000000365.lst.bz2","/sac_60_100.0_75600_QGSII_flat/DAT001206.bz2"],
+"@graph":[
+          {
+           "@id":"/sac_60_100.0_75600_QGSII_flat#artiParams",
+           "@type":"lago:ArtiParams",
+           "lago:cherenkov":False,
+           "lago:debug":False,
+           "lago:highEnergyIntModel":"QGSII",
+           "lago:detectorSite":"https://github.com/lagoproject/DMP/blob/0.0.1/defs/sitesLago.jsonld#sac",
+           "lago:obsLev":100,
+           "lago:highEnergyCutsSecondaries": False,
+           "lago:fluxTime":"Psac_60_100.0_75600_QGSII_flatS",
+           "lago:flatArray":True
+           },
+           {
+            "@id":"/sac_60_100.0_75600_QGSII_flat#activity",
+            "@type":"prov:Activity",
+            "prov:endedAtTime":"2020-09-07T15:17:51.593134Z",
+            "prov:startedAtTime":"2020-09-07T15:13:42.073838Z",
+            "prov:used":"/sac_60_100.0_75600_QGSII_flat#artiParams"
+            "prov:wasAssociatedWith":{
+                                      "@id":"https://github.com/lagoproject/arti/archive/master.zip",
+                                      "@type":"lago:Software", 
+                                      "name":"LAGO Arti v.3",
+                                      "lago:runtimePlatform":{
+                                                              "@id:":"https://github.com/lagoproject/onedataSim/archive/release/0.0.1.zip",
+                                                              "@type":"lago:Software",
+                                                              "name":"Arti Simulator integrated in OneData v.0.0.1"
+                                                              }
+                                    }
+           }
+         ]
+}

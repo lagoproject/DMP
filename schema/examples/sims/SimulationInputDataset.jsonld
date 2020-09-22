@@ -1,0 +1,94 @@
+{
+"@context":{
+            "@base":"https://mon01-tic.ciemat.es/api/v3/oneprovider/metadata/json/LAGOsim",
+            "_@base":"https://hdl.handle.net/21.T11998/0000-001A-6C0D-E?urlappend=",
+            "@vocab":"https://github.com/SEMICeu/DCAT-AP/blob/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
+            "_dcatap":"https://github.com/SEMICeu/DCAT-AP/blob/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
+            "_dcatap_landing_page":"http://data.europa.eu/r5r/",
+            "lago":"https://github.com/lagoproject/DMP/blob/0.0.1/schema/lagoSchema.jsonld",
+            "prov":"http://www.w3.org/ns/prov#",
+            "dct":"http://purl.org/dc/terms/"
+            },
+"@id":"/sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.input",
+"@type":"DataSet",
+"description":"CORSIKA DAT000703-0703-00000000144.input",
+"title":"sac_60_100.0_75600_QGSII_flat_DAT000703-0703-00000000144.input",
+"publisher":{
+                "@id":"https://github.com/lagoproject/DMP/blob/0.0.1/defs/lagocollaboration.jsonld",
+                "@type":"lago:Organization"
+            },
+"license":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+"rights":"https://github.com/lagoproject/DMP/blob/0.0.1/rights/lagoCommonRights.jsonld",
+"accessRigths":"http://publications.europa.eu/resource/authority/access-right/RESTRICTED",
+"creator":{
+            "@id":"https://orcid.org/0000-0001-6497-753X",
+            "@type":"lago:Person"
+          },
+"wasGeneratedBy":"/sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.input#activity",
+"distribution":"/sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.input#distribution",
+"dct:hasFormat":"/sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.input#corsikainput",
+"qualifiedAttribution":{
+                        "@id":"https://orcid.org/0000-0001-6497-753X",
+                        "@type":"lago:Person"
+                       },
+"@graph":[
+          {
+            "@id" : "//sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.input#corsikainput",
+            "@type" : "lago:CorsikaInput",
+            "dct:isFormatOf" : "/sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.input",
+            "lago:atmcrd" : { 
+                                "@type": "lago:Atmod", 
+                                "lago:modatm" : "10" 
+                            },
+            "lago:obsLev" : "1e2",
+            "lago:magnet" : { 
+                                "lago:bx" : "20.94", 
+                                "lago:bz" : "-8.91" 
+                            }
+          },
+          {
+            "@id":"/sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.input#dataservice",
+            "@type":"DataService",
+            "title":"sac_60_100.0_75600_QGSII_flat_DAT000703-0703-00000000144.input_CDMI",
+            "endpointURL":"HANDLECDMI/sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.input",
+            "conformsTo":"https://www.iana.org/assignments/media-types/application/cdmi-object",
+            "servesDataset":"/sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.input"
+          },
+          {
+            "@id":"/sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.input#activity",
+            "@type":"prov:Activity",
+            "prov:endedAtTime":"2020-09-07T15:14:14.916595Z",
+            "prov:startedAtTime":"2020-09-07T15:14:09.240080Z",
+            "prov:used":"/sac_60_100.0_75600_QGSII_flat#artiParams",
+            "prov:wasAssociatedWith":{
+                                        "@id":"https://github.com/lagoproject/arti/archive/master.zip",
+                                        "@type":"lago:Software",
+                                        "name":"LAGO Arti v.3",
+                                        "lago:runtimePlatform":{
+                                                                  "@id:":"https://github.com/lagoproject/onedataSim/archive/release/0.0.1.zip",
+                                                                  "@type":"lago:Software",
+                                                                  "name":"Arti Simulator integrated in OneData v.0.0.1"
+                                                               }
+                                     }
+          },
+          {
+            "@id":"/sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.input#distribution",
+            "@type":"Distribution",
+            "accessService":"/sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.input#dataservice",
+            "_accessURL": "https://datahub.egi.eu/TOPUBLISH",
+            "format":"http://publications.europa.eu/resource/authority/file-type/TXT",
+            "mediaType":"http://www.iana.org/assignments/media-types/text",          
+            "publisher":{
+                            "@id":"https://github.com/lagoproject/DMP/blob/0.0.1/defs/lagocollaboration.jsonld",
+                            "@type":"lago:Organization"
+                        },
+            "license":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+            "rights":"https://github.com/lagoproject/DMP/blob/0.0.1/rights/lagoCommonRights.jsonld",
+            "accessRigths":"http://publications.europa.eu/resource/authority/access-right/RESTRICTED",
+            "creator":{
+                        "@id":"https://orcid.org/0000-0001-6497-753X",
+                        "@type":"lago:Person"
+                      }
+          }
+        ]
+}
