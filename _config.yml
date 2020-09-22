@@ -86,7 +86,7 @@ collections:
   #  permalink: "/:collection/:path/"
   #  output: true
   schema:
-    permalink: "/:collection/:path/"
+    permalink: "/:collection/schema/"
     output: true
 
 just_the_docs:
