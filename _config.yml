@@ -4,8 +4,8 @@ remote_theme: pmarsceill/just-the-docs
 # Color scheme supports "light" (default) and "dark"
 color_scheme: "light"
 # logo: "/images/lago.png"
-#baseurl: "/DMP" # the subpath of your site, e.g. /blog
-url: "https://lagoproject.github.io/DMP" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "/DMP" # the subpath of your site, e.g. /blog
+# url: "https://lagoproject.github.io/DMP" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 # exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile", "docs/tests/"]
 
