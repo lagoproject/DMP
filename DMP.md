@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Definitions
+#title: Definitions
 has_children: false
 nav_order: 2
 ---
