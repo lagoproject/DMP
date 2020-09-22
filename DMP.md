@@ -1,3 +1,9 @@
+---
+layout: default
+title: Definitions
+has_children: true
+nav_order: 2
+---
 
 # The LAGO Data Management Plan (DPM)
 
