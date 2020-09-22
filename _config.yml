@@ -80,16 +80,12 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 #
 #
 # Define Jekyll collections
-collections:
+# collections:
   # Define a collection named "docs", its documents reside in the "_docs" directory
   #docs:
   #  permalink: "/:collection/:path/"
   #  output: true
-  schema:
-    permalink: "/:collection/schema/"
-    output: true
-
-just_the_docs:
+# just_the_docs:
   # Define which collections are used in just-the-docs
   #collections:
   #  # Reference the "docs" collection
@@ -102,10 +98,9 @@ just_the_docs:
   #    # Exclude the collection from the search
   #    # Supports true or false (default)
   #    search_exclude: false
-  collections:
-    schema:
-      name: Metadata Schema
-      nav_exclude: false
-      search_exclude: false
 
+includes:
+  - schema
+
+  
 
