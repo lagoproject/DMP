@@ -6,12 +6,16 @@ nav_order: 2
 ---
 
 # The LAGO Data Management Plan (DPM) document
+{: .no_toc }
 
 |Version|Date|Contributors|
 |-------|----|------------|
 | 1.1 develop | 2020-06-01 - today | LAGO Collaboration|
 
-A.TOC
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
 {:toc}
 
 ## A. Data summary
