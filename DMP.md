@@ -61,13 +61,13 @@ histograms are also corrected.
 
 On the other hand, users can perform their own simulations of rains, generating two sub-types of data-sets: 
   - S0. Plain simulations: CORSIKA outputs, which are described in the official documentation [D. Heck and T. Piero, "Extensive Air Shower Simulation with CORSIKA: A
-User’s Guide". Version 7.7100 from December 17, 2019], section 10, page 121. Available at
-https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf
+User’s Guide". Version 7.7100 from December 17, 2019](https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf), section 10, page 121. (Available at
+https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf ) 
   - S1. Analysed simulations: ARTI outputs.
 
 ● **Specify if existing data is being re-used (if any)**. 
 
-Measurements from WCDs gathered in previous years and relevant simulations stored at the old centralised repository at UIS (Universidad Industrial de Santander, Colombia).
+Measurements from WCDs gathered in previous years and relevant simulations stored at the old centralised repository at UIS (Universidad Industrial de Santander, Colombia). This is, ~ 6.6TB, mainly measurements. Additionally, previous simulations performed by users in private clusters be will considered if implies high CPU consumption. 
 
 ● **Specify the origin of the data**.
 
@@ -111,8 +111,8 @@ could be around 3.6 TB/year of L(0-3) data corresponding to 4 WCDs and 2-8 TB/ye
 | Data Type | Source | Size |
 |-----------|--------|------|
 | Raw (L0) | Water-Cherenkov detector (WCD) |  150GB/month (per WCD) |
-| Cleaned (L1) | Raw data from WCD | 70-120GB/month (per WCD) |
-| Analysed (L2 and L3)| Cleaned data from WCD | 10-40GB/month (per WCD) |
+| Preliminary (L1) | Raw data from WCD | 70-120GB/month (per WCD) |
+| Quality (L2 and L3)| Cleaned data from WCD | 10-40GB/month (per WCD) |
 | Simulated (S0 and S1)| researchers | Estimated per 1 user: 1-4 sim. per month (72-300 GB/year) Max: 120GB/month |
 
 ● **Outline the data utility: to whom will it be useful**. 
@@ -127,8 +127,18 @@ because the effects of cosmic radiation on natural life, materials, or climate c
 
 ● **Outline the discoverability of data (metadata provision)**. 
 
-Specific LAGO wrappers execute the processing or simulation and posteriorly check every data-set and will store them in EGI DataHub
-always with their metadata, to allow gathering by services such as B2FIND.
+LAGO data repository will be based on OneData. OneData supports storing catalogs and datasets with enriched metadata, as well as publishing catalogs with persistent identifiers (PIDs) to allow gathering by services such as B2FIND. Thus **the discoverability** will be technically guaranteed, through:
+- OneData: 
+  - for LAGO mebers: web browser (without search engine), CDMI API, propietary API and FUSE mount;
+  - for general public: web browser (link to a public PID).
+- B2FIND: web interface (with search engine), for LAGO members and general public.
+- Other discovery services: customised CKAN based could better benefit from metadata provided than B2FIND, and they will be explored in the future. Anyway, when the data become public, any discovery service can gather metadata, even not specific engines such as Google.
+
+Specific LAGO wrappers execute the processing or simulation and they posteriorly check every data-set and will store them in the LAGO repository,
+always with their metadata. These wrappers will be packed into Docker images and published as releases at LAGO code repository at GitHub. 
+
+To assure the **metadata provision**, the only allowed way to directly store and publish data-sets in the LAGO repository by LAGO members will be making use of these wrappers in official Docker releases. Other inclusion of data must be supervised and checked by LAGO responsibles. 
+
 
 ● **Outline the identifiability of data and refer to standard identification mechanism. Do you
 make use of persistent and unique identifiers such as Digital Object Identifiers?**
