@@ -11,7 +11,8 @@ nav_order: 2
 |-------|----|------------|
 | 1.1 develop | 2020-06-01 - today | LAGO Collaboration|
 
-TOC{:toc}
+TOC
+{:toc}
 
 ## A. Data summary
 
@@ -122,7 +123,7 @@ because the effects of cosmic radiation on natural life, materials, or climate c
 
 ## B. FAIR data
 
-### Making data findable, including provisions for metadata:
+### B.1 Making data findable, including provisions for metadata:
 
 #### **Outline the discoverability of data (metadata provision)**. 
 
@@ -182,9 +183,9 @@ https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf
 ● **Specify how access will be provided in case there are any restrictions**. Data will be only
 accessible by the author and/or the Collaboration making during embargo period use of EGI AAI.
 
-### Making data interoperable:
+### B.2 Making data interoperable:
 
-● **Assess the interoperability of your data**. Specify what data and metadata vocabularies,
+####  **Assess the interoperability of your data**. Specify what data and metadata vocabularies,
 standards or methodologies you will follow to facilitate interoperability. Metadata follows the
 Dublin Core schema ( http://dublincore.org ), extending the vocabulary with the elements the
 described in [H. Asorey et al. The LAGO: A Successful Collaboration in Latin America Based on
@@ -201,18 +202,18 @@ electronic board; voltage, level and sensor.
 libraries indicating which are the included CORSIKA libraries; computation describing the
 computational environment by unix command: uname -a , lsb_release -a , free and gcc -v .
 
-● **Specify whether you will be using standard vocabulary for all data types present in your data
+####  **Specify whether you will be using standard vocabulary for all data types present in your data
 set, to allow inter-disciplinary interoperability? If not, will you provide mapping to more
 commonly used ontologies?** In principle, only support CORSIKA outputs as described in the
 official documentation, but we can consider translating files to standardised formats in the
 future.
 
-### Increase data re-use (through clarifying licenses):
+### B.3 Increase data re-use (through clarifying licenses):
 
-● **Specify how the data will be licenced to permit the widest reuse possible**. They will be
+####  **Specify how the data will be licenced to permit the widest reuse possible**. They will be
 published under BSD-3 or CC license.
 
-● **Specify when the data will be made available for reuse. If applicable, specify why and for what
+####  **Specify when the data will be made available for reuse. If applicable, specify why and for what
 period a data embargo is needed**. LAGO Collaboration requires a waiting period similar to the
 established ones for other large experiments. Such a period should be set not only to properly
 exploit results by the Consortium prior to their availability, but because raw data measured
@@ -228,30 +229,30 @@ data type, specifically:
 ○ Simulated data: a year maximum, the owner can decide to open the data before the end
 of this period.
 
-● **Specify whether the data produced and/or used in the project is usable by third parties, in
+####  **Specify whether the data produced and/or used in the project is usable by third parties, in
 particular after the end of the project? If the re-use of some data is restricted, explain why**.
 There is no restriction after the embargo period.
 
-● **Describe data quality assurance processes**. Only the data measured by WCDs or generated
+####  **Describe data quality assurance processes**. Only the data measured by WCDs or generated
 using software versions officially released by LAGO will be stored and exposed in repositories.
 Previously to the publication, a robot of the Virtual Organization will check the minimal accuracy
 of data.
 
-● **Specify the length of time for which the data will remain re-usable**. Indefinitely after the
+####  **Specify the length of time for which the data will remain re-usable**. Indefinitely after the
 waiting period.
 
 ## C. Allocation of resources
 
 Explain the allocation of resources, addressing the following issues:
-● **Estimate the costs for making your data FAIR. Describe how you intend to cover these costs**.
+####  **Estimate the costs for making your data FAIR. Describe how you intend to cover these costs**.
 The process of making the data FAIR will be supported by the EOSC-Synergy project. The human
 cost of the management will be supported by LAGO Collaboration.
 
-● **Clearly identify responsibilities for data management in your project**. Computing as data
+####  **Clearly identify responsibilities for data management in your project**. Computing as data
 management will be structured as a Virtual Organization with specific roles for data acquisition
 and processing.
 
-● **Describe costs and potential value of long term preservation**. Preservation of data-sets is
+####  **Describe costs and potential value of long term preservation**. Preservation of data-sets is
 essential for the sustainability of LAGO. Every active WCD should generate 300GB/month of
 L0-L3 data. Currently, due to the number of active WCDs, the Collaboration will generate up to
 27 TB of L0-L3 data, plus 12-120 TB of simulated data throughout the year. Data should be
