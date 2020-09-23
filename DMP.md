@@ -11,8 +11,8 @@ nav_order: 2
 |-------|----|------------|
 | 1.1 develop | 2020-06-01 - today | LAGO Collaboration|
 
-TOC
-{:toc}
+  - TOC
+  {:toc}
 
 ## A. Data summary
 
@@ -144,16 +144,22 @@ To assure the **metadata provision**, the only allowed way to directly store and
 
 Data-sets will be referenced by PIDs automatically requested through EOSC B2Handle service.
 
-#### **Outline naming conventions used**. It should be based in the metadata values but an approach
+#### **Outline naming conventions used**. 
+
+It should be based in the metadata values but an approach
 for clear versioning is being discussed.
 
-#### **Outline the approach towards search keywords**. Searching should be based on any metadata
-value.
+#### **Outline the approach towards search keywords**. 
 
-#### **Outline the approach for clear versioning**. It should be based on the metadata An approach for
+Searching should be based on any metadata value.
+
+#### **Outline the approach for clear versioning**. 
+
+It should be based on the metadata An approach for
 clear versioning is being discussed.
 
 #### **Specify standards for metadata creation (if any). If there are no standards in your discipline describe what metadata will be created and how**
+
 
 ### Making data openly accessible:
 
