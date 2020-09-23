@@ -11,8 +11,8 @@ nav_order: 2
 |-------|----|------------|
 | 1.1 develop | 2020-06-01 - today | LAGO Collaboration|
 
-  - TOC
-  {:toc}
+A.TOC
+{:toc}
 
 ## A. Data summary
 
@@ -123,7 +123,7 @@ because the effects of cosmic radiation on natural life, materials, or climate c
 
 ## B. FAIR data
 
-### B.1 Making data findable, including provisions for metadata:
+### B.1. Making data findable, including provisions for metadata:
 
 #### **Outline the discoverability of data (metadata provision)**. 
 
@@ -161,7 +161,7 @@ clear versioning is being discussed.
 #### **Specify standards for metadata creation (if any). If there are no standards in your discipline describe what metadata will be created and how**
 
 
-### Making data openly accessible:
+### B.2. Making data openly accessible:
 
 #### **Specify which data will be made openly available? If some data is kept closed provide
 rationale for doing so**. 
@@ -192,7 +192,7 @@ https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf
 accessible by the author and/or the Collaboration making during embargo period use of EGI AAI.
 
 
-### B.2 Making data interoperable:
+### B.3. Making data interoperable:
 
 ####  **Assess the interoperability of your data. Specify what data and metadata vocabularies, standards or methodologies you will follow to facilitate interoperability**.
 
@@ -218,7 +218,7 @@ In principle, only support CORSIKA outputs as described in the
 official documentation, but we can consider translating files to standardised formats in the
 future.
 
-### B.3 Increase data re-use (through clarifying licenses):
+### B.4. Increase data re-use (through clarifying licenses):
 
 ####  **Specify how the data will be licenced to permit the widest reuse possible**. 
 
