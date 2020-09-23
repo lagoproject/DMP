@@ -140,53 +140,57 @@ always with their metadata. These wrappers will be packed into Docker images and
 To assure the **metadata provision**, the only allowed way to directly store and publish data-sets in the LAGO repository by LAGO members will be making use of these wrappers in official Docker releases. Other inclusion of data must be supervised and checked by LAGO responsibles. 
 
 
-#### **Outline the identifiability of data and refer to standard identification mechanism. Do you
-make use of persistent and unique identifiers such as Digital Object Identifiers?**
+#### **Outline the identifiability of data and refer to standard identification mechanism. Do you make use of persistent and unique identifiers such as Digital Object Identifiers?**
 
 Data-sets will be referenced by PIDs automatically requested through EOSC B2Handle service.
 
-● **Outline naming conventions used**. It should be based in the metadata values but an approach
+#### **Outline naming conventions used**. It should be based in the metadata values but an approach
 for clear versioning is being discussed.
 
-● **Outline the approach towards search keywords**. Searching should be based on any metadata
+#### **Outline the approach towards search keywords**. Searching should be based on any metadata
 value.
 
-● **Outline the approach for clear versioning**. It should be based on the metadata An approach for
+#### **Outline the approach for clear versioning**. It should be based on the metadata An approach for
 clear versioning is being discussed.
 
-● **Specify standards for metadata creation (if any)**. If there are no standards in your discipline
-describe what metadata will be created and how
+#### **Specify standards for metadata creation (if any). If there are no standards in your discipline describe what metadata will be created and how**
 
 ### Making data openly accessible:
 
-● **Specify which data will be made openly available? If some data is kept closed provide
-rationale for doing so**. Data will be made publicly available after a variable waiting (embargo)
+#### **Specify which data will be made openly available? If some data is kept closed provide
+rationale for doing so**. 
+
+Data will be made publicly available after a variable waiting (embargo)
 period similar to the established ones for other large experiments.
 
-● **Specify how the data will be made available**. Consolidated data-sets that are stored in EGI
-DataHub will be exposed together with their metadata to be gathered by services such as
+#### **Specify how the data will be made available**. 
+
+Consolidated data-sets that are stored in EGI DataHub will be exposed together with their metadata to be gathered by services such as
 B2FIND.
 
-● **Specify what methods or software tools are needed to access the data? Is documentation
-about the software needed to access the data included?** Is it possible to include the relevant
+#### **Specify what methods or software tools are needed to access the data? Is documentation about the software needed to access the data included?** 
+
+Is it possible to include the relevant
 software (e.g. in open source code)? . To take advantage of the data published, researchers
 should use the CORSIKA tools included in the source code and described in the official
 documentation in section 10, page 121 at
 https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf
 
-● **Specify where the data and associated metadata, documentation and code are deposited**.
+#### **Specify where the data and associated metadata, documentation and code are deposited**.
 
 ○ Data and metadata will be stored in EGI DataHub service (OneData technology)
 
 ○ CORSIKA documentation and source code https://web.ikp.kit.edu/corsika/
 
-● **Specify how access will be provided in case there are any restrictions**. Data will be only
+#### **Specify how access will be provided in case there are any restrictions**. Data will be only
 accessible by the author and/or the Collaboration making during embargo period use of EGI AAI.
+
 
 ### B.2 Making data interoperable:
 
-####  **Assess the interoperability of your data**. Specify what data and metadata vocabularies,
-standards or methodologies you will follow to facilitate interoperability. Metadata follows the
+####  **Assess the interoperability of your data. Specify what data and metadata vocabularies, standards or methodologies you will follow to facilitate interoperability**.
+
+Metadata follows the
 Dublin Core schema ( http://dublincore.org ), extending the vocabulary with the elements the
 described in [H. Asorey et al. The LAGO: A Successful Collaboration in Latin America Based on
 Cosmic Rays and Computer Science Domains, in Proc. 16th IEEE/ACM CCGrid, 2016,
@@ -202,19 +206,22 @@ electronic board; voltage, level and sensor.
 libraries indicating which are the included CORSIKA libraries; computation describing the
 computational environment by unix command: uname -a , lsb_release -a , free and gcc -v .
 
-####  **Specify whether you will be using standard vocabulary for all data types present in your data
-set, to allow inter-disciplinary interoperability? If not, will you provide mapping to more
-commonly used ontologies?** In principle, only support CORSIKA outputs as described in the
+####  **Specify whether you will be using standard vocabulary for all data types present in your data set, to allow inter-disciplinary interoperability? If not, will you provide mapping to more commonly used ontologies?** 
+
+In principle, only support CORSIKA outputs as described in the
 official documentation, but we can consider translating files to standardised formats in the
 future.
 
 ### B.3 Increase data re-use (through clarifying licenses):
 
-####  **Specify how the data will be licenced to permit the widest reuse possible**. They will be
-published under BSD-3 or CC license.
+####  **Specify how the data will be licenced to permit the widest reuse possible**. 
+
+They will be published under BSD-3 or CC license.
 
 ####  **Specify when the data will be made available for reuse. If applicable, specify why and for what
-period a data embargo is needed**. LAGO Collaboration requires a waiting period similar to the
+period a data embargo is needed**. 
+
+LAGO Collaboration requires a waiting period similar to the
 established ones for other large experiments. Such a period should be set not only to properly
 exploit results by the Consortium prior to their availability, but because raw data measured
 must be pre-processed by the Consortium to make them 'understandable’. Simulations will be
@@ -231,28 +238,40 @@ of this period.
 
 ####  **Specify whether the data produced and/or used in the project is usable by third parties, in
 particular after the end of the project? If the re-use of some data is restricted, explain why**.
+
 There is no restriction after the embargo period.
 
-####  **Describe data quality assurance processes**. Only the data measured by WCDs or generated
+####  **Describe data quality assurance processes**. 
+
+
+Only the data measured by WCDs or generated
 using software versions officially released by LAGO will be stored and exposed in repositories.
 Previously to the publication, a robot of the Virtual Organization will check the minimal accuracy
 of data.
 
-####  **Specify the length of time for which the data will remain re-usable**. Indefinitely after the
+####  **Specify the length of time for which the data will remain re-usable**. 
+
+Indefinitely after the
 waiting period.
 
 ## C. Allocation of resources
 
 Explain the allocation of resources, addressing the following issues:
+
 ####  **Estimate the costs for making your data FAIR. Describe how you intend to cover these costs**.
+
 The process of making the data FAIR will be supported by the EOSC-Synergy project. The human
 cost of the management will be supported by LAGO Collaboration.
 
-####  **Clearly identify responsibilities for data management in your project**. Computing as data
+####  **Clearly identify responsibilities for data management in your project**. 
+
+Computing as data
 management will be structured as a Virtual Organization with specific roles for data acquisition
 and processing.
 
-####  **Describe costs and potential value of long term preservation**. Preservation of data-sets is
+####  **Describe costs and potential value of long term preservation**. 
+
+Preservation of data-sets is
 essential for the sustainability of LAGO. Every active WCD should generate 300GB/month of
 L0-L3 data. Currently, due to the number of active WCDs, the Collaboration will generate up to
 27 TB of L0-L3 data, plus 12-120 TB of simulated data throughout the year. Data should be
