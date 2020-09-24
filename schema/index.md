@@ -8,6 +8,12 @@ nav_order: 3
 
 # This is anoter index for schema
 
+TBD.
+
+
+<div class="container">
+   <div id="graph"></div>
+</div>
 
 <script>
 import d3Tip from 'd3-tip';
@@ -274,7 +280,4 @@ d3.jsonldVis(data, '#graph', {
 
 </script>
 
-<div class="container">
-   <div id="graph"></div>
-</div>
     
