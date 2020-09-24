@@ -8,7 +8,7 @@ nav_order: 2
 
 TBD.
 
-```json
-{% include_relative defs/sitesLago.jsonld %}
-```
+
+{% include_relative sitesLago.jsonld %}
+
 
