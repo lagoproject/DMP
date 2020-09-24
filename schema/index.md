@@ -267,7 +267,7 @@ export default function(d3) {
 }
 
 
-import data from './schemaLago.jsonld';
+import data from './lagoSchema.jsonld';
 
 jsonldVis(d3);
 
