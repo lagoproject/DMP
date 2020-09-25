@@ -246,9 +246,9 @@
   ],
 
 "@context" : {
-    "lago" : "https://github.com/lagoproject/DMP/blob/0.0.1/schema/lagoSchema.jsonld",
-    "@vocab:" : "https://github.com/SEMICeu/DCAT-AP/blob/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
-    "_dcatap" : "https://github.com/SEMICeu/DCAT-AP/blob/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
+    "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.jsonld",
+    "@vocab:" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
+    "_dcatap" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
     "_dcatap_landing_page" : "http://data.europa.eu/r5r/",
     "owl" : "http://www.w3.org/2002/07/owl#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
