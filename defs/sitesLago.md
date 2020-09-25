@@ -20,14 +20,14 @@ Note that any site supports or had supported (actually or virtually) one or seve
 
 ## How should a item be referenced?
 
-In order to preserve the provenance of the linked metadata through the time, you must use the GitHub raw link of a certain release of this document, plus `#` and the short site codename. Adittionally, the any link should be identified with their type defined in LAGO schema ("lago:detectorSite"). Thus: 
+In order to preserve the provenance of the linked metadata through the time, you must use the GitHub raw link of a certain release of this document, plus `#` and the short site codename:
 
-`"lago:detectorSite": https://raw.githubusercontent.com/lagoproject/DMP/`**\<tag release\>**`/defs/sitesLago.jsonld`**#\<site codename\>**
-
+`https://raw.githubusercontent.com/lagoproject/DMP/`*\<tag release\>*`/defs/sitesLago.jsonld`*#\<site codename\>*
 
 For example:
 
-"lago:detectorSite":[https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#sac](https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#sac)
+[https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#sac](https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#sac)
+
 
 As an real example, the catalog metadata of some simulation should include the site reference:
 
@@ -58,6 +58,7 @@ As an real example, the catalog metadata of some simulation should include the s
 ```
 
 ## Plain JSON-LD file
+
 
 ```json
 {% include_relative sitesLago.jsonld %}
