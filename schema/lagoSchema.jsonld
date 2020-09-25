@@ -119,7 +119,7 @@
     "@id": "lago:DetectorSite",
     "@type" : [ "rdfs:Class", "owl:Class" ],
     "dcat:subClassOf" : "Agent",
-    "comment" : [ { "@language" : "en", "@value" : "Main characteristics of a detector, such as location, mangetic fied, recommended parameters for simuation, hardware/software intalled ..." },  
+    "comment" : [ { "@language" : "en", "@value" : "Main characteristics of a detector, such as location, mangetic field, recommended parameters for simuation, hardware/software intalled ..." },  
                   { "@language" : "es", "@value" : "Caractersísticas principales de un Detector como su ubicación, coordenadas magnéticas, parámetros recomendados en simulación, hardware/software instalado..." } ]
    },
    {
