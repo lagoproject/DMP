@@ -22,11 +22,33 @@ Note that any site supports or had supported (actually or virtually) one or seve
 
 In order to preserve the provenance of the linked metadata through the time, you must use the GitHub raw link of a certain release of this document, plus `#` and the short site codename:
 
-`https://raw.githubusercontent.com/lagoproject/DMP/``**\<tag release\>**``/defs/sitesLago.jsonld``**#\<site codename\>**`
+`https://raw.githubusercontent.com/lagoproject/DMP/`**\<tag release\>**`/defs/sitesLago.jsonld`**#\<site codename\>**
 
 For example:
 
-https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#sac
+[https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#sac](https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#sac)
+
+In the Catalog metadata of some simulation:
+
+```json
+...
+...
+          {
+           "@id":"/sac_60_100.0_75600_QGSII_flat#artiParams",
+           "@type":"lago:ArtiParams",
+           "lago:cherenkov":False,
+           "lago:debug":False,
+           "lago:highEnergyIntModel":"QGSII",
+           "lago:detectorSite":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#sac",
+           "lago:obsLev":100,
+           "lago:highEnergyCutsSecondaries": False,
+           "lago:fluxTime":"Psac_60_100.0_75600_QGSII_flatS",
+           "lago:flatArray":True
+           },
+...
+...
+...
+```
 
 ## Plain JSON-LD file
 
