@@ -13,17 +13,26 @@ Every file related to CORSIKA are stored with their corresponding linked metadat
 
 ## Metadata for the Catalog 
 
+```json
 {% include_relative SimulationCatalog.jsonld %}
+```
 
 ## Metadata for a DAT\<filecode\>.input
 
+```json
 {% include_relative SimulationInputDataset.jsonld %}
+```
 
 ## Metadata for a DAT\<prmpar\>.bz2
 
+```json
 {% include_relative SimulationOutBinDataset.jsonld %}
+```
 
 ## Metadata for a DAT\<filecode\>.lst.bz2
 
+```json
 {% include_relative SimulationOutLstDataset.jsonld %}
+```
+
 
