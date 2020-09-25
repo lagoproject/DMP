@@ -6,14 +6,16 @@ parent: Metadata Schema
 # Metadata Schema for LAGO
 
 
-# Desciption, item by item
+## Desciption, item by item
 
 TBD.
 
-# Graphical Representation
+## Graphical Representation
 
 TBD.
 
-# Plain JSON-LD file
+## Plain JSON-LD file
 
+```json
 {% include_relative lagoSchema.jsonld %}
+```
