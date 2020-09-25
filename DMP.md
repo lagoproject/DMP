@@ -15,14 +15,14 @@ nav_order: 2
 ## Table of contents
 {: .no_toc .text-delta }
 
-1. TOC
+. TOC
 {:toc}
 
 ## A. Data summary
 
 Provide a summary of the data addressing the following issues:
 
-#### **State the purpose of the data collection/generation**. 
+#### **Purpose of the data collection/generation**. 
 
 The Latin American Giant Observatory (LAGO) is an extended cosmic ray observatory 
 composed of a network water-Cherenkov detectors (WCD) spanning over different sites 
@@ -33,7 +33,7 @@ Additionally, scientists continuously generate simulated data. The final purpose
 enable the long-term curation and re-use of data within and outside the LAGO Collaboration
 through a Virtual Observatory.
 
-#### **Explain the relation to the objectives of the project**. 
+#### **Relation to the objectives of the project**. 
 
 The objective is to enable the long-term curation and re-use of generated data within 
 and outside LAGO Collaboration through a Virtual Observatory, being of interest in areas as HEP, 
@@ -45,7 +45,7 @@ of FAIR policies as another standard in research. Since the LAGO computation is 
 EOSC-Synergy as one of their Thematic Services, generated or stored data in its resources must observe 
 these guidelines, being also beneficial for the success of both initiatives.
 
-#### **Specify the types and formats of data generated/collected**. 
+#### **Types and formats of data generated/collected**. 
 
 Every file is considered the minimum data-set to be referenced and processed, while a collection of related files 
 is grouped in a catalog. As the different LAGO activities generate only one data sub-type, catalogs will only 
@@ -69,18 +69,18 @@ User’s Guide". Version 7.7100 from December 17, 2019](https://web.ikp.kit.edu/
 https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf ) 
   - S1. Analysed simulations: ARTI outputs.
 
-#### **Specify if existing data is being re-used (if any)**. 
+#### **Re-used previous data**. 
 
 Measurements from WCDs gathered in previous years and relevant simulations stored at the old centralised repository at UIS (Universidad Industrial de Santander, Colombia). This is, ~ 6.6TB, mainly measurements. Additionally, previous simulations performed by users in private clusters be will considered if implies high CPU consumption. 
 
-#### **Specify the origin of the data**.
+#### **Origin of the data**.
 
   - Raw data (L0) from WCDs.
   - Preliminary data (L1) obtained cleaning raw data (L0).
   - Quality data (L2, L3) obtained analysing and fixing preliminary data (L1).
   - Simulated (S0, S1) from standalone CORSIKA and ARTI runs by researchers.
 
-#### **State the expected size of the data (if known)**. 
+#### **Expected size of the data**. 
 
 Minimal data-set is one hour of measurement or simulation:
   - Raw data (L0): ~200MB
@@ -119,7 +119,7 @@ could be around 3.6 TB/year of L(0-3) data corresponding to 4 WCDs and 2-8 TB/ye
 | Quality (L2 and L3)| Cleaned data from WCD | 10-40GB/month (per WCD) |
 | Simulated (S0 and S1)| researchers | Estimated per 1 user: 1-4 sim. per month (72-300 GB/year) Max: 120GB/month |
 
-#### **Outline the data utility: to whom will it be useful**. 
+#### **Data utility: to whom will it be useful**. 
 
 Data are of interest for the Astrophysics community but also for other scientific or industrial areas such as
 High Energy Physics, Life Sciences, Weather Forecasting, Aerospatial security or Computer Science, among others,
@@ -129,7 +129,7 @@ because the effects of cosmic radiation on natural life, materials, or climate c
 
 ### B.1. Making data findable, including provisions for metadata:
 
-#### **Outline the discoverability of data (metadata provision)**. 
+#### **Discoverability of data (metadata provision)**. 
 
 LAGO data repository will be based on OneData. OneData supports storing catalogs and datasets with enriched metadata, as well as publishing catalogs with persistent identifiers (PIDs) to allow gathering by services such as B2FIND. Thus **the discoverability** will be technically guaranteed, through:
 - OneData: 
@@ -144,31 +144,33 @@ always with their metadata. These wrappers will be packed into Docker images and
 To assure the **metadata provision**, the only allowed way to directly store and publish data-sets in the LAGO repository by LAGO members will be making use of these wrappers in official Docker releases. Other inclusion of data must be supervised and checked by LAGO responsibles. 
 
 
-#### **Outline the identifiability of data and refer to standard identification mechanism. Do you make use of persistent and unique identifiers such as Digital Object Identifiers?**
+#### **Identifiability of data and standard identification mechanisms (persistent and unique identifiers)**
 
 Data-sets will be referenced by PIDs automatically requested through EOSC B2Handle service.
 
-#### **Outline naming conventions used**. 
+#### **Naming conventions used**. 
 
 It should be based in the metadata values but an approach
 for clear versioning is being discussed.
 
-#### **Outline the approach towards search keywords**. 
+#### **Approach towards search keywords**. 
 
 Searching should be based on any metadata value.
 
-#### **Outline the approach for clear versioning**. 
+#### **Approach for clear versioning**. 
 
 It should be based on the metadata An approach for
 clear versioning is being discussed.
 
-#### **Specify standards for metadata creation (if any). If there are no standards in your discipline describe what metadata will be created and how**
+#### **Standards for metadata creation (in your discipline)**.
 
+(**If there are no standards in your discipline describe what metadata will be created and how**)
 
 ### B.2. Making data openly accessible:
 
-#### **Specify which data will be made openly available? If some data is kept closed provide
-rationale for doing so**. 
+#### **Which data will be made openly available**.
+
+(**If some data is kept closed provide rationale for doing so**). 
 
 Data will be made publicly available after a variable waiting (embargo)
 period similar to the established ones for other large experiments.
@@ -178,7 +180,9 @@ period similar to the established ones for other large experiments.
 Consolidated data-sets that are stored in EGI DataHub will be exposed together with their metadata to be gathered by services such as
 B2FIND.
 
-#### **Specify what methods or software tools are needed to access the data? Is documentation about the software needed to access the data included?** 
+#### **Methods or software tools needed to access the data**. 
+
+(**Is documentation about the software needed to access the data included?**) 
 
 Is it possible to include the relevant
 software (e.g. in open source code)? . To take advantage of the data published, researchers
