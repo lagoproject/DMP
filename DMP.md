@@ -47,27 +47,28 @@ these guidelines, being also beneficial for the success of both initiatives.
 
 #### **Types and formats of data generated/collected**. 
 
-Every file is considered the minimum data-set to be referenced and processed, while a collection of related files 
-is grouped in a catalog. As the different LAGO activities generate only one data sub-type, catalogs will only 
-contain files belonging to one sub-type an activity, with exception of checking or correction procedures.
+Every **file** generated is considered **the minimum data-set** to be data-linked and processed, while **a collection** of related files 
+is grouped in a **catalog**, which should be referenced with a persistent and unique identifier (PID). 
+As the different LAGO activities generate only one data sub-type, **catalogs will only 
+contain files belonging to one sub-type an activity**, with exception of checking or correction procedures.
 
 There are two main kinds of data managed by LAGO Collaboration. The first is the data measured (L) by 
 water-Cherenkov detectors (WCD), and the second is the simulations (S).
 
 The measured data (raw) is pipelined for correction, obtainig these data sub-types that corresponds 
 with their quality level:
-  - L0. Raw data.
-  - L1. Preliminary data: low resolution but the atmospheric pressure is corrected.
-  - L2: Ensures data quality to be used by experts from Astrophysics Community: fixed scalers by
+  - **L0. Raw data**.
+  - **L1. Preliminary data**. low resolution but the atmospheric pressure is corrected.
+  - **L2: Quality for Astrophysics**. Ensures data quality to be used by experts from Astrophysics Community: fixed scalers by
 atmospheric parameters and the efficiency of the detector.
-  - L3. Ensures high quality to be used by researchers from other subjects or general public: the
+  - **L3. Quality for public**. Ensures high quality to be used by researchers from other subjects or general public: the
 histograms are also corrected.
 
 On the other hand, users can perform their own simulations of rains, generating two sub-types of data-sets: 
-  - S0. Plain simulations: CORSIKA outputs, which are described in the official documentation [D. Heck and T. Piero, "Extensive Air Shower Simulation with CORSIKA: A
+  - **S0. Plain simulations**. CORSIKA outputs, which are described in the official documentation [D. Heck and T. Piero, "Extensive Air Shower Simulation with CORSIKA: A
 User’s Guide". Version 7.7100 from December 17, 2019](https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf), section 10, page 121. (Available at
 https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf ) 
-  - S1. Analysed simulations: ARTI outputs.
+  - **S1. Analysed simulations**. ARTI outputs.
 
 #### **Re-used previous data**. 
 
@@ -144,9 +145,18 @@ always with their metadata. These wrappers will be packed into Docker images and
 To assure the **metadata provision**, the only allowed way to directly store and publish data-sets in the LAGO repository by LAGO members will be making use of these wrappers in official Docker releases. Other inclusion of data must be supervised and checked by LAGO responsibles. 
 
 
-#### **Identifiability of data and standard identification mechanisms (persistent and unique identifiers)**
+#### **Identifiability of data and standard identification mechanisms (PIDs)**
 
-Data-sets will be referenced by PIDs automatically requested through EOSC B2Handle service.
+There are two kinds of standard identifiers:
+1. Resolvable IRIs [(IETF RFC 3987)](https://tools.ietf.org/html/rfc3987) that univocally idenfies every JSON-LD [(W3C Recomm.)](https://www.w3.org/TR/json-ld11/) object (datasets, catalogs and others) over the Internet. They build the network of standards-based, machine-readable linked-data across Web sites, actually allowing the provenance and reuse of the data. 
+2. Handle.net PIDs that only points to catalogs or to repository providers. The first ones are used as shortcuts for publication (as cheaper DOIs), but the second are for assure the accessibility of whole data through provider migrations (changes of name/domain), being part of aforementioned IRIs.
+
+As explanation, the Internationalized Resource Identifier (IRI) is an internet protocol standard [IETF RFC 3987](https://tools.ietf.org/html/rfc3987) that unambiguously identifies an object, but a resolvable IRI corresponds to the one that can be publicy accessed in Internet, prefereabily through conventional protocols such as HTTP. The basis of JSON-LD syntax [(W3C Recomm.)](https://www.w3.org/TR/json-ld11/) is always to refer related objects and descriptions with IRIs in order to to discover new data by simply following those links. This creates a metadata grid linking objects. These objects describe datasets, catalogs as well as provenance elements (activities, actors, owners) following certain vocabulary.
+
+On the other hand, repository providers are physical servers, with certain DNS name/IP. However, these addresses could change through the time due to migrations of data,  maintenance or change of their domain. To preserve the linked grid and the univocally identification, absolute IRIs should use persistent and unique identifiers (PIDs) from Handle.net to resolve these addresses. 
+
+As commented above, every file generated is considered a dataset, but only collections of related datasets compose the catalogs. Catalogs should be directly referenced with  PIDs from Handle.net, but datasets should not. This is so because have not sense to reference for publication, for example, an input file without the output, overall when every file (i.e. dataset) can also be identified with relative path to their catalog' PID. When a Catalog was complete and verified, the corresponding PID automatically requested by the checker tool through EOSC B2Handle service for being publised.
+
 
 #### **Naming conventions used**. 
 
