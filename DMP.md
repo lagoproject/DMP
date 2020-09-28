@@ -76,10 +76,15 @@ Measurements from WCDs gathered in previous years and relevant simulations store
 
 #### **Origin of the data**.
 
-  - Raw data (L0) from WCDs.
-  - Preliminary data (L1) obtained cleaning raw data (L0).
-  - Quality data (L2, L3) obtained analysing and fixing preliminary data (L1).
-  - Simulated (S0, S1) from standalone CORSIKA and ARTI runs by researchers.
+| Data Type | Source |
+|-----------|--------|
+| Raw (L0) | measurements of Water-Cherenkov detectors (WCDs) |  
+| Preliminary (L1) | cleaning raw data (L0) |
+| Quality for Astrophysics (L2)| fixing scalers in preliminary data (L1) |  
+| Quality for public (L3)| fixing histograms in quality data (L2) | 
+| Simulated (S0) | from standalone CORSIKA runs |
+| Anaysed (S1) | ARTI analisys of plain simulated data (S0) |
+
 
 #### **Expected size of the data**. 
 
@@ -113,12 +118,12 @@ could submit 10 or 20 simulations per month, but actually researchers do not reg
 and even some may only run simulations sporadically. Therefore, a realistic estimation of the storage consumption 
 could be around 3.6 TB/year of L(0-3) data corresponding to 4 WCDs and 2-8 TB/year corresponding to 25 active users.
 
-| Data Type | Source | Size |
+| Data Type | triggered | Size |
 |-----------|--------|------|
 | Raw (L0) | Water-Cherenkov detector (WCD) |  150GB/month (per WCD) |
-| Preliminary (L1) | Raw data from WCD | 70-120GB/month (per WCD) |
-| Quality (L2 and L3)| Cleaned data from WCD | 10-40GB/month (per WCD) |
-| Simulated (S0 and S1)| researchers | Estimated per 1 user: 1-4 sim. per month (72-300 GB/year) Max: 120GB/month |
+| Preliminary (L1) | robot (mainly) or researcher | 70-120GB/month (per WCD) |
+| Quality (L2 and L3)| robot (mainly) or researcher | 10-40GB/month (per WCD) |
+| Simulated (S0 and S1)| robot or researcher (mainly) | Estimated per 1 user: 1-4 sim. per month (72-300 GB/year) Max: 120GB/month |
 
 #### **Data utility: to whom will it be useful**. 
 
@@ -193,40 +198,65 @@ clear versioning is being discussed.
 
 (**If there are no standards in your discipline describe what metadata will be created and how**)
 
+| Data Type | previous metadata | new metadata specification |
+|-----------|--------|--------|
+| Raw (L0) | _TBD_ | _TBD_ |  
+| Preliminary (L1) | _TBD_ | _TBD_ |
+| Quality for Astrophysics (L2) | _TBD_ | _TBD_ |  
+| Quality for public (L3) | _TBD_ | _TBD_ | 
+| Simulated (S0) | _TBD_ | _TBD_ |
+| Anaysed (S1) | _TBD_ | _TBD_ |
+
+
 ### B.2. Making data openly accessible:
 
 #### **Which data will be made openly available**.
 
-(**If some data is kept closed provide rationale for doing so**). 
+(_If some data is kept closed provide rationale for doing so_). 
 
 Data will be made publicly available after a variable waiting (embargo)
 period similar to the established ones for other large experiments.
 
 #### **Specify how the data will be made available**. 
 
-Consolidated data-sets that are stored in EGI DataHub will be exposed together with their metadata to be gathered by services such as
-B2FIND.
+Consolidated datasets (grouped by catalogs) will be exposed together with their metadata through the [EGI DataHub, https://datahub.egi.eu](https://datahub.egi.eu) service to be gathered by discovery services such as B2FIND, thus:  
+
+- General public: B2FIND web interface at [http://b2find.eudat.eu](http://b2find.eudat.eu) (search engine of metadata published), web browser to the page of some published catalog (link to a public PID). Aditionally, as metadata follow a linked-data syntaxsis and standars, other discovery services, even Google could expose them.
+- LAGO mebers: the aforementioned ones for general public plus, browser whole data repositry at [https://datahub.egi.eu](https://datahub.egi.eu) (without search engine),
+CDMI API, propietary API and FUSE mount on local system of the repository tree.
+
 
 #### **Methods or software tools needed to access the data**. 
 
 (**Is documentation about the software needed to access the data included?**) 
 
-Is it possible to include the relevant
-software (e.g. in open source code)? . To take advantage of the data published, researchers
+Is it possible to include the relevant software (e.g. in open source code)? . 
+
+To take advantage of the data published, researchers
 should use the CORSIKA tools included in the source code and described in the official
 documentation in section 10, page 121 at
 https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf
 
-#### **Specify where the data and associated metadata, documentation and code are deposited**.
+#### **Where the data and associated metadata, documentation and code are deposited**.
 
-○ Data and metadata will be stored in EGI DataHub service (OneData technology)
+As commented above, whole data and metadata will be stored in providers associated to [EGI DataHub, https://datahub.egi.eu](https://datahub.egi.eu) service (reliying in [OneData](https://onedata.org/) technology), while the documentation and code:
 
-○ CORSIKA documentation and source code https://web.ikp.kit.edu/corsika/
+| Data Type | URLs |
+|-----------|--------|
+| Raw (L0) | _TBD_ |
+| Preliminary (L1) | _TBD_ | 
+| Quality for Astrophysics (L2) | _TBD_ | 
+| Quality for public (L3) | _TBD_ |
+| Simulated (S0, S1) | - onedataSim:  https://github/lagoproject/onedataSim - ARTI: https://github/lagoproject/onedataSim - CORSIKA: https://web.ikp.kit.edu/corsika/ |
+
+
+
 
 #### **Specify how access will be provided in case there are any restrictions**. 
 
-Data will be only
-accessible by the author and/or the Collaboration making during embargo period use of EGI AAI.
+The data will be only accessible by the author and/or the Collaboration during embargo period with the corresponding OpenID credentials. These will be obtained after login into the LAGO Virtual Organisation, supported by eduTEAMs (https://eduteams.org/), a service provided by GEANT in Europe but associated with RedClara.
+
+A manual for joining to the LAGO VO is published at [https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO/](https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO/), while a manual to login into EGI datahub, visualise datasets and obtain tockens is at [https://lagoproject.github.io/DMP/docs/howtos/how_to_login_OneData/](https://lagoproject.github.io/DMP/docs/howtos/how_to_login_OneData/). 
 
 
 ### B.3. Making data interoperable:
