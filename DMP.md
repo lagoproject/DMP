@@ -241,7 +241,7 @@ https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf
 
 As commented above, whole data and metadata will be stored in providers associated to [EGI DataHub, https://datahub.egi.eu](https://datahub.egi.eu) service (reliying in [OneData](https://onedata.org/) technology), while the documentation and code:
 
-| Data Type | URLs |
+| Data Type | Docs and code URLs |
 |-----------|--------|
 | Raw (L0) | _TBD_ |
 | Preliminary (L1) | _TBD_ | 
@@ -256,43 +256,50 @@ As commented above, whole data and metadata will be stored in providers associat
 
 The data will be only accessible by the author and/or the Collaboration during embargo period with the corresponding OpenID credentials. These will be obtained after login into the LAGO Virtual Organisation, supported by eduTEAMs (https://eduteams.org/), a service provided by GEANT in Europe but associated with RedClara.
 
-A manual for joining to the LAGO VO is published at [https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO/](https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO/), while a manual to login into EGI datahub, visualise datasets and obtain tockens is at [https://lagoproject.github.io/DMP/docs/howtos/how_to_login_OneData/](https://lagoproject.github.io/DMP/docs/howtos/how_to_login_OneData/). 
+A manual for joining to the LAGO VO is published at:
+- [https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO/](https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO/), 
+while a manual to login into EGI datahub, visualise datasets and obtain tockens is at:
+- [https://lagoproject.github.io/DMP/docs/howtos/how_to_login_OneData/](https://lagoproject.github.io/DMP/docs/howtos/how_to_login_OneData/). 
 
 
 ### B.3. Making data interoperable:
 
-####  **Assess the interoperability of your data. Specify what data and metadata vocabularies, standards or methodologies you will follow to facilitate interoperability**.
+####  **Interoperability of data (general vocabularies, standards or methodologies) 
 
-Metadata follows the
-Dublin Core schema ( http://dublincore.org ), extending the vocabulary with the elements the
-described in [H. Asorey et al. The LAGO: A Successful Collaboration in Latin America Based on
-Cosmic Rays and Computer Science Domains, in Proc. 16th IEEE/ACM CCGrid, 2016,
-https://doi.org/10.1109/CCGrid.2016.110 ].
+(_Specify what data and metadata vocabularies, standards or methodologies you will follow to facilitate interoperability_)
 
-○ Common for all metadata: site contains the name, latitude, longitude and height of the
-WCD or the simulated ground point.
+Metadata:
+- Language syntax: [JSON-LD 1.1, W3C](https://json-ld.org/spec/latest/json-ld/)
+- Main vocabulary: [DCAT-AP2, European Commision](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe), which is an specific profile of [DCAT2, W3C](https://www.w3.org/TR/vocab-dcat-2/) recommended for repositories, content aggregators or data consumers related to public sector (governement, rearcher centers, founded projects).
+- LAGO vocabulary: It is re-profile of [DCAT-AP2, European Commision](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe), extending the existent classes and adding properties needed for LAGO computation.
 
-○ WCD metadata scheme adds: data corresponds to the version/type of the Digit/Analog
-electronic board; voltage, level and sensor.
+Data:
+- TBD.
 
-○ Simulation metadata adds: primary described by the CORSIKA input file DATXXXX.dbase;
-libraries indicating which are the included CORSIKA libraries; computation describing the
-computational environment by unix command: uname -a , lsb_release -a , free and gcc -v .
 
-####  **Specify whether you will be using standard vocabulary for all data types present in your data set, to allow inter-disciplinary interoperability? If not, will you provide mapping to more commonly used ontologies?** 
+####  Inter-disciplinary interoperability
+
+(_Specify whether you will be using standard vocabulary for all data types present in your data set, to allow inter-disciplinary interoperability? If not, will you provide mapping to more commonly used ontologies?_) 
 
 In principle, only support CORSIKA outputs as described in the
 official documentation, but we can consider translating files to standardised formats in the
 future.
 
-### B.4. Increase data re-use (through clarifying licenses):
+## B.4. Increase data re-use (through clarifying licenses):
 
-####  **Specify how the data will be licenced to permit the widest reuse possible**. 
+###  **How the data will be licenced**. 
 
-They will be published under BSD-3 or CC license.
+- Related code: BSD-3 clause
+- Documentation (including DPM): [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+- Metadata specifications: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+- Data: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+- Metadata: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+- Databases derived from metadata or data: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 
-####  **Specify when the data will be made available for reuse. If applicable, specify why and for what
-period a data embargo is needed**. 
+
+###  **When the data will be made available for reuse**.
+
+(_Specify why and for what period a data embargo is needed_). 
 
 LAGO Collaboration requires a waiting period similar to the
 established ones for other large experiments. Such a period should be set not only to properly
@@ -302,12 +309,11 @@ available too, but it would be valuable that the waiting period could be set by 
 he is the owner of the data. The embargo period is set for a year in general, but depends of the
 data type, specifically:
 
-○ L0, L1: private while analysed data are not publicly available.
-
-○ L2, L3: a year.
-
-○ Simulated data: a year maximum, the owner can decide to open the data before the end
-of this period.
+| Data Type | embargo period |
+|-----------|--------|
+L0, L1 | private while quality data (L2,L3) are not publicly available.
+L2, L3 | a year.
+S0, S1 | a year maximum, the owner can decide to open the data before the end of this period.
 
 ####  **Specify whether the data produced and/or used in the project is usable by third parties, in
 particular after the end of the project? If the re-use of some data is restricted, explain why**.
