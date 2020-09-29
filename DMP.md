@@ -285,9 +285,9 @@ In principle, only support CORSIKA outputs as described in the
 official documentation, but we can consider translating files to standardised formats in the
 future.
 
-## B.4. Increase data re-use (through clarifying licenses):
+### B.4. Increase data re-use (through clarifying licenses):
 
-###  **How the data will be licenced**. 
+####  **How the data will be licenced**. 
 
 - Related code: BSD-3 clause
 - Documentation (including DPM): [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
@@ -297,7 +297,7 @@ future.
 - Databases derived from metadata or data: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 
 
-###  **When the data will be made available for reuse**.
+####  **When the data will be made available for reuse**.
 
 (_Specify why and for what period a data embargo is needed_). 
 
