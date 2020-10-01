@@ -315,7 +315,7 @@ L0, L1 | private while quality data (L2,L3) are not publicly available.
 L2, L3 | a year.
 S0, S1 | a year maximum, the owner can decide to open the data before the end of this period.
 
-####  **Usability by third parties (restricted data)**
+####  **Usability by third parties (restricted data)**.
 
 (_Specify whether the data produced and/or used in the project is usable by third parties, in
 particular after the end of the project? If the re-use of some data is restricted, explain why_).
@@ -338,7 +338,7 @@ waiting period.
 
 Explain the allocation of resources, addressing the following issues:
 
-####  **Costs for making your data FAIR **.
+####  **Costs for making your data FAIR**.
 
 The process of making the data FAIR will be supported by the EOSC-Synergy project. The human
 cost of the management will be supported by LAGO Collaboration.
@@ -350,7 +350,7 @@ and processing.
 
 Roles - TBD.
 
-####  **Describe costs and potential value of long term preservation**. 
+####  **Costs and potential value of long term preservation**. 
 
 Preservation of data-sets is
 essential for the sustainability of LAGO. Every active WCD should generate 300GB/month of
