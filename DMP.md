@@ -228,7 +228,7 @@ CDMI API, propietary API and FUSE mount on local system of the repository tree.
 
 #### **Methods or software tools needed to access the data**. 
 
-(**Is documentation about the software needed to access the data included?**) 
+(_Is documentation about the software needed to access the data included?_) 
 
 Is it possible to include the relevant software (e.g. in open source code)? . 
 
@@ -264,7 +264,7 @@ while a manual to login into EGI datahub, visualise datasets and obtain tockens 
 
 ### B.3. Making data interoperable:
 
-####  **Interoperability of data (general vocabularies, standards or methodologies) 
+####  **Interoperability of data (general vocabularies, standards or methodologies)** 
 
 (_Specify what data and metadata vocabularies, standards or methodologies you will follow to facilitate interoperability_)
 
@@ -277,7 +277,7 @@ Data:
 - TBD.
 
 
-####  Inter-disciplinary interoperability
+####  **Inter-disciplinary interoperability**
 
 (_Specify whether you will be using standard vocabulary for all data types present in your data set, to allow inter-disciplinary interoperability? If not, will you provide mapping to more commonly used ontologies?_) 
 
@@ -315,20 +315,21 @@ L0, L1 | private while quality data (L2,L3) are not publicly available.
 L2, L3 | a year.
 S0, S1 | a year maximum, the owner can decide to open the data before the end of this period.
 
-####  **Specify whether the data produced and/or used in the project is usable by third parties, in
-particular after the end of the project? If the re-use of some data is restricted, explain why**.
+####  **Usability by third parties (restricted data)**
 
-There is no restriction after the embargo period.
+(_Specify whether the data produced and/or used in the project is usable by third parties, in
+particular after the end of the project? If the re-use of some data is restricted, explain why_).
 
-####  **Describe data quality assurance processes**. 
+There is no restriction after the embargo period with exception of [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) clauses.
 
+####  **Data quality assurance processes**. 
 
 Only the data measured by WCDs or generated
 using software versions officially released by LAGO will be stored and exposed in repositories.
 Previously to the publication, a robot of the Virtual Organization will check the minimal accuracy
 of data.
 
-####  **Specify the length of time for which the data will remain re-usable**. 
+####  **Length of time for which the data will remain re-usable**. 
 
 Indefinitely after the
 waiting period.
@@ -337,16 +338,17 @@ waiting period.
 
 Explain the allocation of resources, addressing the following issues:
 
-####  **Estimate the costs for making your data FAIR. Describe how you intend to cover these costs**.
+####  **Costs for making your data FAIR **.
 
 The process of making the data FAIR will be supported by the EOSC-Synergy project. The human
 cost of the management will be supported by LAGO Collaboration.
 
-####  **Clearly identify responsibilities for data management in your project**. 
+####  **Responsibilities for data management in your project**. 
 
-Computing as data
-management will be structured as a Virtual Organization with specific roles for data acquisition
+Computing as data management will be structured as a Virtual Organization with specific roles for data acquisition
 and processing.
+
+Roles - TBD.
 
 ####  **Describe costs and potential value of long term preservation**. 
 
