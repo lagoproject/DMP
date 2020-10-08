@@ -8,7 +8,10 @@ parent: Metadata Schema
 
 ## Desciption, item by item
 
-TBD.
+{% capture thisPage %}
+    {% include_relative lagoSchema.jsonld %}
+{% endcapture %}
+{{ thisPage | markdownify }}
 
 ## Graphical Representation
 
