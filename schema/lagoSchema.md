@@ -11,7 +11,7 @@ parent: Metadata Schema
 {% capture thisPage %}
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
-{{ thisPage | markdownify }}
+{{ thisPage | stringify | markdownify }}
 
 ## Graphical Representation
 
