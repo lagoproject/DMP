@@ -14,6 +14,9 @@ parent: Metadata Schema
 
 {% for entry in thisPage %}
     Hola soy una entrada primaria
+    ```json
+    {{ entry }}
+    ```
     {% for desc in entry %}
         {% if desc.comment  != empty %}
            #### Comment
