@@ -13,10 +13,10 @@ parent: Metadata Schema
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
 
-{% for entry in thisPage.@graph %}
+{% for entry in thisPage.\@graph %}
     Hola soy una entrada
-    {% if entry.@id  != empty %}
-    #### {{ entry.@id }}
+    {% if entry.\@id  != empty %}
+    #### {{ entry.\@id }}
         {% for desc in entry %}
             - {{ desc }} 
         
