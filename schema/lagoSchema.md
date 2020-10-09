@@ -12,7 +12,7 @@ parent: Metadata Schema
 {% capture thisPage %}
     {% include_relative prueba.jsonld %}
 {% endcapture %}
-pruebecita 12
+pruebecita 13
 
 {% assign tableJson =  thisPage | normalize_whitespace %}
 
