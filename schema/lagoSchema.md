@@ -16,7 +16,7 @@ pruebecita 6
 
 {% assign tableJson =  thisPage | normalize_whitespace %}
 
-{% for entry in tableJson.@graph %}
+{% for entry in tableJson."@graph" %}
     Hola soy una entrada
     {{ entry | inspect }}  
 {% endfor %}
