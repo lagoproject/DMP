@@ -12,11 +12,12 @@ parent: Metadata Schema
 {% capture thisPage %}
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
-pruebecita
-{% for entry in thisPage.\@graph %}
+pruebecita 2
+{% for entry in thisPage %}
     Hola soy una entrada
-    {% if entry.\@id  != empty %}
-    #### {{ entry.\@id }}
+    {{ entry | inspect }}  
+    {% if entry.@id  != empty %}
+    #### {{ entry.@id }}
         {% for desc in entry %}
             - {{ desc }} 
         
