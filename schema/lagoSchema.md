@@ -14,7 +14,7 @@ parent: Metadata Schema
 {% endcapture %}
 pruebecita 21
 
-{% assign tableJson =  thisPage | normalize_whitespace | strip | strip_html | replace:'"{','{' | replace:'}"','}'    %}
+{% assign tableJson =  thisPage | normalize_whitespace | strip | strip_html | split: ", "    %}
 
 {{ tableJson | inspect  }}
 
