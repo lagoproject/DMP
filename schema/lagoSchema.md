@@ -12,9 +12,11 @@ parent: Metadata Schema
 {% capture thisPage %}
     {% include_relative prueba.jsonld %}
 {% endcapture %}
-pruebecita 13
+pruebecita 14
 
-{% assign tableJson =  thisPage | normalize_whitespace %}
+{% assign tableJson =  thisPage | uri_escape | normalize_whitespace %}
+
+{{ tableJson | inspect }}
 
 {{ tableJson.propertyA | inspect }}
 
