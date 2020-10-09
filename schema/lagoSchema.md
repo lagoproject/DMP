@@ -12,12 +12,14 @@ parent: Metadata Schema
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
 
-{% for entry in thisPage %}
+{% for entry in thisPage['@graph'] %}
+    {% if entry.'@id'  != empty %}
     #### {{ entry.'@id' }}
-    {% for desc in entry %}
-        - {{ desc }} 
+        {% for desc in entry %}
+            - {{ desc }} 
         
-    {% endfor %}        
+        {% endfor %}
+    {% endif %}
 {% endfor %}
 
 
