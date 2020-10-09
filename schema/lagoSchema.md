@@ -14,7 +14,7 @@ parent: Metadata Schema
 {% endcapture %}
 pruebecita 4
 
-{% assign tableJson = {{ thisPage | jsonify }} %}
+{% assign tableJson =  thisPage | normalize_whitespace | jsonify %}
 
 {% for entry in tableJson %}
     Hola soy una entrada
