@@ -15,7 +15,7 @@ parent: Metadata Schema
 {% assign tableJson = thisPage | json %}
 
 {% for entry in tableJson %}
-    Hola soy una entrada primaria
+    Hola soy una entrada primaria 2
     ```json
     {{ entry }}
     ```
