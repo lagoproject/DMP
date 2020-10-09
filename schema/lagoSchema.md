@@ -13,6 +13,7 @@ parent: Metadata Schema
 {% endcapture %}
 
 {% for entry in thisPage.'@graph' %}
+    Hola soy una entrada
     {% if entry.'@id'  != empty %}
     #### {{ entry.'@id' }}
         {% for desc in entry %}
