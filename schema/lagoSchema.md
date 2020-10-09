@@ -12,15 +12,14 @@ parent: Metadata Schema
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
 
-{% for entry in thisPage.'@graph' %}
-    Hola soy una entrada
-    {% if entry.'@id'  != empty %}
-    #### {{ entry.'@id' }}
-        {% for desc in entry %}
-            - {{ desc }} 
-        
-        {% endfor %}
-    {% endif %}
+{% for entry in thisPage %}
+    Hola soy una entrada primaria
+    {% for desc in entry %}
+        {% if desc.comment  != empty %}
+           #### Comment
+           {{ desc.comment }}
+        {% endif %}
+    {% endfor %}
 {% endfor %}
 
 
