@@ -11,11 +11,28 @@ parent: Metadata Schema
 {% capture thisPage %}
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
-{{ thisPage | stringify | markdownify }}
+
+{% assign tableFile = thisPage %}
+{% assing tableGraph = tableFile['graph'] %}
+
+{% for entry in tableGraph %}
+    #### {{ entry.'@id' }}
+    {% for desc in entry %}
+        - {{ desc }} 
+        
+    {% endfor %}        
+{% endfor %}
+
 
 ## Graphical Representation
 
 TBD.
+
+{% capture thisPage %}
+    {% include_relative lagoSchema.jsonld %}
+{% endcapture %}
+{{ thisPage | jsonVis }}
+
 
 ## Plain JSON-LD file
 
