@@ -14,9 +14,11 @@ parent: Metadata Schema
 {% endcapture %}
 pruebecita 16
 
-{% assign tableJson =  thisPage | normalize_whitespace | remove: "\" %}
+{% assign tableJson =  thisPage | normalize_whitespace | remove: "\\" %}
 
-{{ tableJson | inspect }}
+{{ tableJson | inspect  }}
+
+{{ tableJson | inspect |  remove: "\" }}
 
 {{ tableJson[0] | inspect }}
 
