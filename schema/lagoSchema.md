@@ -8,24 +8,22 @@ parent: Metadata Schema
 
 ## Desciption, item by item
 
+
 {% capture thisPage %}
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
 
-{% assign tableJson = thisPage | json %}
-
-{% for entry in tableJson %}
-    Hola soy una entrada primaria 2
-    ```json
-    {{ entry }}
-    ```
-    {% for desc in entry %}
-        {% if desc.comment  != empty %}
-           #### Comment
-           {{ desc.comment }}
-        {% endif %}
-    {% endfor %}
+{% for entry in thisPage.@graph %}
+    Hola soy una entrada
+    {% if entry.@id  != empty %}
+    #### {{ entry.@id }}
+        {% for desc in entry %}
+            - {{ desc }} 
+        
+        {% endfor %}
+    {% endif %}
 {% endfor %}
+
 
 
 ## Graphical Representation
