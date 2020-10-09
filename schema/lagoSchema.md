@@ -12,7 +12,9 @@ parent: Metadata Schema
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
 
-{% for entry in thisPage %}
+{% assign tableJson = thisPage | json %}
+
+{% for entry in tableJson %}
     Hola soy una entrada primaria
     ```json
     {{ entry }}
