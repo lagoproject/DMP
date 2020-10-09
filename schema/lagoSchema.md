@@ -12,7 +12,7 @@ parent: Metadata Schema
 {% capture thisPage %}
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
-pruebecita 9
+pruebecita 10
 
 {% assign tableJson =  thisPage | normalize_whitespace %}
 
@@ -21,8 +21,12 @@ pruebecita 9
 {{ tableJson.@context | inspect }}
 
 {% for entry in tableJson %}
-    Hola soy una entrada
+    Hola soy una entrada principal
     {{ entry | inspect }}  
+    {% for sec in entry %}
+        Hola soy una entrada secundaria
+        {{ sec | inspect }}
+    {% endfor %}    
 {% endfor %}
 
 
