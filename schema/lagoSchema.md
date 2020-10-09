@@ -13,7 +13,7 @@ parent: Metadata Schema
 {% endcapture %}
 
 {% assign tableFile = thisPage %}
-{% assing tableGraph = tableFile['graph'] %}
+{% assign tableGraph = tableFile['graph'] %}
 
 {% for entry in tableGraph %}
     #### {{ entry.'@id' }}
