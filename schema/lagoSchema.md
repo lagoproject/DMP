@@ -12,9 +12,9 @@ parent: Metadata Schema
 {% capture thisPage %}
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
-pruebecita 4
+pruebecita 5
 
-{% assign tableJson =  thisPage | normalize_whitespace | jsonify %}
+{% assign tableJson =  thisPage | normalize_whitespace %}
 
 {% for entry in tableJson %}
     Hola soy una entrada
