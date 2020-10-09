@@ -16,13 +16,6 @@ pruebecita 2
 {% for entry in thisPage %}
     Hola soy una entrada
     {{ entry | inspect }}  
-    {% if entry.@id  != empty %}
-    #### {{ entry.@id }}
-        {% for desc in entry %}
-            - {{ desc }} 
-        
-        {% endfor %}
-    {% endif %}
 {% endfor %}
 
 
