@@ -1,0 +1,5 @@
+{ 
+    "objectA": { "propertyA": "FooA", "propertyB": "BarA" },
+    "objectB": { "propertyA": "FooB", "propertyB": "BarB" },
+    "objectC": { "propertyA": "FooC", "propertyB": "BarC" }
+}
