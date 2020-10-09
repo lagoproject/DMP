@@ -10,9 +10,9 @@ parent: Metadata Schema
 
 
 {% capture thisPage %}
-    {% include_relative lagoSchema.jsonld %}
+    {% include_relative prueba.jsonld %}
 {% endcapture %}
-pruebecita 10
+pruebecita 11
 
 {% assign tableJson =  thisPage | normalize_whitespace %}
 
