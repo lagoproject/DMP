@@ -20,7 +20,7 @@ pruebecita 9
 
 {{ tableJson.@context | inspect }}
 
-{% for entry in tableJson."@graph" %}
+{% for entry in tableJson %}
     Hola soy una entrada
     {{ entry | inspect }}  
 {% endfor %}
