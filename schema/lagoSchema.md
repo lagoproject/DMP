@@ -12,7 +12,7 @@ parent: Metadata Schema
 {% capture thisPage %}
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
-pruebecita 2
+pruebecita 3
 
 {% assign tableJson = thisPage | json %}
 
