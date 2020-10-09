@@ -16,13 +16,13 @@ pruebecita 11
 
 {% assign tableJson =  thisPage | normalize_whitespace %}
 
-{{ tableJson.@graph | inspect }}
+{{ tableJson.propertyA | inspect }}
 
-{{ tableJson.@context | inspect }}
+{{ tableJson.propertyB | inspect }}
 
-{% for entry in tableJson %}
+{% for entry in tableJson.propertyA %}
     Hola soy una entrada principal
-    {{ entry | inspect }}  
+    {{ entry | inspect }} 
     {% for sec in entry %}
         Hola soy una entrada secundaria
         {{ sec | inspect }}
