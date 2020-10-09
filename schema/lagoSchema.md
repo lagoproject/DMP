@@ -14,13 +14,13 @@ parent: Metadata Schema
 {% endcapture %}
 pruebecita 14
 
-{% assign tableJson =  thisPage | uri_escape | normalize_whitespace %}
+{% assign tableJson =  thisPage | normalize_whitespace %}
 
 {{ tableJson | inspect }}
 
-{{ tableJson.propertyA | inspect }}
+{{ tableJson[propertyA] | inspect }}
 
-{{ tableJson.propertyB | inspect }}
+{{ tableJson['propertyB'] | inspect }}
 
 {% for entry in site.schema.prueba %}
     Hola soy una entrada principal
