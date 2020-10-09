@@ -12,7 +12,7 @@ parent: Metadata Schema
 {% capture thisPage %}
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
-
+pruebecita
 {% for entry in thisPage.\@graph %}
     Hola soy una entrada
     {% if entry.\@id  != empty %}
