@@ -10,7 +10,7 @@ parent: Metadata Schema
 
 
 {% capture thisPage %}
-    {% include_relative prueba.jsonld %}
+    {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
 pruebecita 15
 
@@ -18,14 +18,13 @@ pruebecita 15
 
 {{ tableJson | inspect }}
 
-{{ tableJson[\"propertyA\"] | inspect }}
+{{ tableJson[0] | inspect }}
 
-{{ tableJson["propertyB"] | inspect }}
-
-{{ tableJson.\"propertyB\" | inspect }}
+{{ tableJson[1] | inspect }}
 
 
-{% for entry in site.schema.prueba %}
+
+{% for entry in tableJson %}
     Hola soy una entrada principal
     {{ entry | inspect }} 
     {% for sec in entry %}
