@@ -12,7 +12,7 @@ parent: Metadata Schema
 {% capture thisPage %}
     {% include_relative prueba.jsonld %}
 {% endcapture %}
-pruebecita 11
+pruebecita 12
 
 {% assign tableJson =  thisPage | normalize_whitespace %}
 
@@ -20,7 +20,7 @@ pruebecita 11
 
 {{ tableJson.propertyB | inspect }}
 
-{% for entry in tableJson.propertyA %}
+{% for entry in site.schema.prueba %}
     Hola soy una entrada principal
     {{ entry | inspect }} 
     {% for sec in entry %}
