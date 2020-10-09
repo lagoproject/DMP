@@ -13,7 +13,10 @@ parent: Metadata Schema
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
 pruebecita 2
-{% for entry in thisPage %}
+
+{% assign tableJson = thisPage | json %}
+
+{% for entry in tableJson %}
     Hola soy una entrada
     {{ entry | inspect }}  
 {% endfor %}
