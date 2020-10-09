@@ -12,7 +12,7 @@ parent: Metadata Schema
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
 
-{% assign tableFile = thisPage %}
+{% assign tableFile = thisPage.data %}
 {% assign tableGraph = tableFile['graph'] %}
 
 {% for entry in tableGraph %}
