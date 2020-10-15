@@ -18,7 +18,7 @@ $().ready(function(){
 		for (i=1; i<=2; i++) {
 		    	var id=data["@graph"][i]["@id"];
 			// append a <li> list items
-			$('#text').append("<li>"+id+"</li>");
+			$('#text').htlm(id);
 		}		
 
   });
