@@ -5,7 +5,7 @@ parent: Metadata Schema
 
 # Metadata Schema for LAGO
 
-Test 23
+Test 24
 
 ## Desciption, item by item (js) 
 
