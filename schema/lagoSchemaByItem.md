@@ -5,7 +5,7 @@ parent: Metadata Schema
 
 # Metadata Schema for LAGO
 
-Test 5
+Test 6
 
 ## Desciption, item by item (js) 
 
@@ -13,7 +13,7 @@ Test 5
 <script>
 $().ready(function(){
    $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) {
-         $("#text").html("hola");
+         $("#text").html("data");
       });
     });
 </script>
