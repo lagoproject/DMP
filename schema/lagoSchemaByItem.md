@@ -5,7 +5,7 @@ parent: Metadata Schema
 
 # Metadata Schema for LAGO
 
-Test 10
+Test 11
 
 ## Desciption, item by item (js) 
 
@@ -18,7 +18,7 @@ Test 10
 <div id="text2"></div>
  
 <script>
-document.getElementById("text2").innerHTML = "{{thisPage}}";
+document.getElementById("text2").innerHTML = "</script>{{ thisPage }}<script>";
 </script>
 
 
@@ -26,7 +26,7 @@ document.getElementById("text2").innerHTML = "{{thisPage}}";
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 $().ready(function(){
-     $("#text").html( {{ thisPage }} );
+     $("#text").html(</script>{{ thisPage }}<script>);
     });
 </script>
  
