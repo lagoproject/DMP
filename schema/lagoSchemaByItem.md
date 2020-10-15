@@ -12,7 +12,7 @@ Test 36
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 $().ready(function(){
-    $.getJSON( "/DMP/schema/prueba.jsonld", function( data ) {
+    $.getJSON( "/DMP/schema/test.json", function( data ) {
 	        $('#text').html(["@graph"][2]["@id"]);  
         	//var graphelements = data["@graph"];
 		// iterate 
