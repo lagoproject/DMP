@@ -17,8 +17,7 @@ Test 8
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 $().ready(function(){
-     var data = $("#thisPage").html();
-     $("#text").html(data);
+     $("#text").html( {{ thisPage }} );
     });
 </script>
  
