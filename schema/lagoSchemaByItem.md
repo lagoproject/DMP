@@ -5,13 +5,13 @@ parent: Metadata Schema
 
 # Metadata Schema for LAGO
 
-Test 19
+Test 20
 
 ## Desciption, item by item (js) 
 
 
 {% capture thisPage %}
-    {% include_relative lagoSchema.jsonld %}
+    {% include_relative test.json %}
 {% endcapture %}
 
 
@@ -26,8 +26,11 @@ document.getElementById("text2").innerHTML = "hola2";
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 $().ready(function(){
-     $("#text").html("hola");
-    });
+    $.getJSON( "/test.json", function( data ) {
+    console.log(data);
+    $("#text").html(data["text"]);
+  });
+});
 </script>
  
 <div id="text"></div>
