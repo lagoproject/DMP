@@ -7,11 +7,9 @@ parent: Metadata Schema
 
 ## Desciption, item by item (js) 
 
-{% capture thisPage %}
-    {% include_relative lagoSchema.jsonld %}
-{% endcapture %}
-
-<script type="application/ld+json" id="datablock1">thisPage</script>
+<script type="application/ld+json" id="datablock1">
+	{% include_relative lagoSchema.jsonld %}
+</script>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
