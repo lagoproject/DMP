@@ -5,6 +5,8 @@ parent: Metadata Schema
 
 # Metadata Schema for LAGO
 
+pruebecita 26
+
 ## Desciption, item by item (js) 
 
 <script type="application/ld+json" id="datablock1">
@@ -35,7 +37,7 @@ parent: Metadata Schema
 {% capture thisPage %}
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
-pruebecita 25
+
 
 {% assign tableJson =  thisPage | normalize_whitespace | strip | strip_html | split: "}, {"    %}
 
