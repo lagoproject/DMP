@@ -5,16 +5,20 @@ parent: Metadata Schema
 
 # Metadata Schema for LAGO
 
-Test 7
+Test 8
 
 ## Desciption, item by item (js) 
+
+
+{% capture thisPage %}
+    {% include_relative lagoSchema.jsonld %}
+{% endcapture %}
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 $().ready(function(){
-   $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) {
-         $("#text").html(data);
-      });
+     var data = $("#thisPage").html();
+     $("#text").html(data);
     });
 </script>
  
