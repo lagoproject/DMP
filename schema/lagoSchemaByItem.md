@@ -18,15 +18,16 @@ Test 11
 <div id="text2"></div>
  
 <script>
-document.getElementById("text2").innerHTML = "</script>{{ thisPage }}<script>";
+document.getElementById("text2").innerHTML = "{{ thisPage }}";
+document.getElementById("text3").innerHTML = "{{ thisPage }}";
 </script>
 
-
+<div id="text3"></div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 $().ready(function(){
-     $("#text").html(</script>{{ thisPage }}<script>);
+     $("#text").html("{{thisPage}}");
     });
 </script>
  
