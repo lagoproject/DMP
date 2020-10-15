@@ -5,14 +5,14 @@ parent: Metadata Schema
 
 # Metadata Schema for LAGO
 
-Test 43
+Test 44
 
 ## Desciption, item by item (js) 
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 $().ready(function(){
-    $.getJSON( "/DMP/schema/test.json", function( data ) {
+    $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) {
 	        $('#text').append(data["@graph"][3]["@id"]); 
         	var graphelements = data["@graph"];
 		for (i=1; i<=2; i++) {
