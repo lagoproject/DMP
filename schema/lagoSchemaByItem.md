@@ -5,29 +5,21 @@ parent: Metadata Schema
 
 # Metadata Schema for LAGO
 
-Test 27
+Test 28
 
 ## Desciption, item by item (js) 
-
-
-{% capture thisPage %}
-    {% include_relative prueba.jsonld %}
-{% endcapture %}
-
-
-<div id="text2"></div>
- 
-<script>
-var j = '{{thisPage}}'
-document.getElementById("text2").innerHTML = "hola2";
-</script>
-
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 $().ready(function(){
-    $.getJSON( "/DMP/schema/prueba.jsonld", function( data ) {
-    $("#text").html(data["objectA"]["propertyA"]);
+    $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) {
+        var graphelements = data["@graph"];
+		// iterate 
+		for (i=0; i<=graphelements.length-1; i++) {
+		    var id=data["@graph"][i]["@id"];
+			// append a <li> list items
+			$('#text').append("<li>"+id+"</li>");
+		}
   });
 });
 </script>
