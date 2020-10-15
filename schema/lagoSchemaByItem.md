@@ -18,7 +18,7 @@ Test 20
 <div id="text2"></div>
  
 <script>
-var j = '{{thisPage|jsonify}}'
+var j = '{{thisPage}}'
 document.getElementById("text2").innerHTML = "hola2";
 </script>
 
@@ -26,7 +26,7 @@ document.getElementById("text2").innerHTML = "hola2";
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 $().ready(function(){
-    $.getJSON( "/test.json", function( data ) {
+    $.getJSON( "/DMP/schema/test.json", function( data ) {
     console.log(data);
     $("#text").html(data["text"]);
   });
