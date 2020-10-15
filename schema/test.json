@@ -1,6 +1,5 @@
 {
 "@graph": [
-{"_comment" : "------ Some prov:Agent that acts in LAGO proccesses : Person, Organization and Software. Defining these claess is not our business far away that were univocally identified and conforms to DCAP-AP --------"},
    {
     "@id": "lago:Person",
     "@type": "sdo:Person",
