@@ -13,15 +13,20 @@ Test 29
 <script>
 $().ready(function(){
     $.getJSON( "/DMP/schema/test.json", function( data ) {
-        var graphelements = data["@graph"];
-		// iterate 
-		for (i=0; i<=graphelements.length-1; i++) {
-		    var id=data["@graph"][i]["@id"];
-			// append a <li> list items
-			$('#text').append("<li>"+id+"</li>");
-		}
+		$('#text').html(data["@graph"][2]["@id"]);
+
   });
 });
 </script>
  
 <div id="text"></div>
+
+
+
+        var graphelements = data["@graph"];
+		// iterate 
+		for (i=0; i<=graphelements.length-1; i++) {
+		    	var id=data["@graph"][i]["@id"];
+			// append a <li> list items
+			$('#text').append("<li>"+id+"</li>");
+		}
