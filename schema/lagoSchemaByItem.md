@@ -17,7 +17,7 @@ $().ready(function(){
         	var graphelements = data["@graph"];
 		for (i=1; i<=graphelements.length-1; i++) {
 		    	var id=data["@graph"][i]["@id"];
-			$('#text').append("<br /> ####" + id);
+			$('#text').append("<br /> #### " + id);
 		}		
 
     });
