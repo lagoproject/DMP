@@ -5,14 +5,39 @@ parent: Metadata Schema
 
 # Metadata Schema for LAGO
 
+## Desciption, item by item (js) 
 
-## Desciption, item by item
+{% capture thisPage %}
+    {% include_relative lagoSchema.jsonld %}
+{% endcapture %}
+
+<script type="application/ld+json" id="datablock1">thisPage</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+		// get the contents of the element with id="datablock1"
+		var data = $("#datablock1").html();
+
+		// parse the contents as a JSON object
+		var json = JSON.parse(data);
+        
+		var graphelements = json["@graph"];
+
+		// iterate 
+		for (i=0; i<=graphelements.length-1; i++) {
+		    var id=json["@graph"][i]["@id"];
+			// append a <li> list items
+			$('#items').append("<li>"+id+"</li>");
+		}
+</script>        
+     
+## Desciption, item by item (jekyll)
 
 
 {% capture thisPage %}
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
-pruebecita 24
+pruebecita 25
 
 {% assign tableJson =  thisPage | normalize_whitespace | strip | strip_html | split: "}, {"    %}
 
