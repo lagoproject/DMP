@@ -27,7 +27,6 @@ document.getElementById("text2").innerHTML = "hola2";
 <script>
 $().ready(function(){
     $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) {
-    console.log(data);
     $("#text").html("hola");
   });
 });
