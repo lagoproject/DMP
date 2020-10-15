@@ -15,7 +15,7 @@ $().ready(function(){
     $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) {
 	        $('#text').append(data["@graph"][3]["@id"]); 
         	var graphelements = data["@graph"];
-		for (i=0; i<=graphelements.length-1; i++) {
+		for (i=1; i<=graphelements.length-1; i++) {
 		    	var id=data["@graph"][i]["@id"];
 			$('#text').append(<li>id</li>);
 		}		
