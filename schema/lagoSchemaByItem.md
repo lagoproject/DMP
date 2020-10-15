@@ -5,7 +5,7 @@ parent: Metadata Schema
 
 # Metadata Schema for LAGO
 
-Test 42
+Test 43
 
 ## Desciption, item by item (js) 
 
@@ -14,7 +14,11 @@ Test 42
 $().ready(function(){
     $.getJSON( "/DMP/schema/test.json", function( data ) {
 	        $('#text').append(data["@graph"][3]["@id"]); 
-	
+        	var graphelements = data["@graph"];
+		for (i=1; i<=2; i++) {
+		    	var id=data["@graph"][i]["@id"];
+			$('#text').append(i);
+		}		
 
     });
 });
