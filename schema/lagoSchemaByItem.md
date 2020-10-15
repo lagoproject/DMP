@@ -18,7 +18,7 @@ Test 18
 <div id="text2"></div>
  
 <script>
-var j = JSON.parse('{{thisPage}}')
+var j = '{{thisPage|jsonify}}'
 document.getElementById("text2").innerHTML = "hola2";
 </script>
 
