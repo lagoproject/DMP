@@ -20,12 +20,12 @@ function itemnize_json( json ) {
     html = '<li>'+json["@id"]+'</li>';
   } else {
     for (j=0; j<=json.length-1; j++) {
-      html = html + 'hola';
+      html = html + '<li>'+json[j]["@id"]+'</li>';
     };
   };
   return html;
 };
-	
+	 
 $().ready(function(){
   $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) { 
       var graphelements = data["@graph"];
