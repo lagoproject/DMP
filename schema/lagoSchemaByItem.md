@@ -64,27 +64,7 @@ $().ready(function(){
 		$('#properties').append(table);				  
 	  } else {
 	    $('#iclasses').append(indexhtml);
-	    $('#classes').append(headerhtml);
-	    var table = '<table class="grid" style="width: 100%"> 
-			    <colgroup> 
-				<col width="33%" /> 
-				<col width="33%" />
-				<col width="33%" />
-			    </colgroup>
-			    <thead>
-				<tr class="header">
-				    <th>"@type"</th>
-				    <th>"??"</th>
-				    <th>"??"</th>
-				</tr>
-			    </thead>
-			    <tbody>
-				<tr>
-				  <td>'+ itemnize_json(graphelements[i]["@type"]) +'</td>
-				</tr>
-			    </tbody>
-			</table>';
-		$('#classes').append(table);			    
+	    $('#classes').append(headerhtml);	    
 	  };
 	};
       };		
