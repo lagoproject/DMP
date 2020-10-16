@@ -52,9 +52,9 @@ $().ready(function(){
 			    </thead>
 			    <tbody>
 				<tr>
-				  <td>'+ graphelements[i]["@type"] +'</td>
-				  <td>'+ graphelements[i]["dcat:domain"] +' </td>
-				  <td>'+ graphelements[i]["dcat:range"] +'</td>
+				  <td>'+ itemnize_json(graphelements[i]["@type"]) +'</td>
+				  <td>'+ itemnize_json(graphelements[i]["dcat:domain"]) +' </td>
+				  <td>'+ itemnize_json(graphelements[i]["dcat:range"]) +'</td>
 				</tr>
 			    </tbody>
 			</table>';
