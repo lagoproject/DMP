@@ -13,16 +13,16 @@ parent: Metadata Schema
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 $().ready(function(){
-    $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) {
-	        $('#text').append(data["@graph"][3]["@id"]); 
-	        $('#text').append(data.@graph[3].@id);
-        	var graphelements = data["@graph"];
-		for (i=1; i<=graphelements.length-1; i++) {
+  $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) {
+    $('#text').append(data["@graph"][3]["@id"]); 
+      var graphelements = data["@graph"];
+      for (i=1; i<=graphelements.length-1; i++) {
+        if ("@id" in graphelements[i] ){ 				   			    
 		        var id = data["@graph"][i]["@id"];    
 			$('#index').append('<li><a href="#'+id+'"><strong>'+id+'</strong>.</a></li>');
 			$('#text').append('<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h5>');
-		}		
-
+	};
+      };		
     });
 });
 </script>
