@@ -14,7 +14,7 @@ parent: Metadata Schema
 <script>
 $().ready(function(){
   $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) {
-    $('#text').append(data["@graph"][3]["@id"]); 
+      $('#text').append(data["@graph"][3]["@id"]); 
       var graphelements = data["@graph"];
       for (i=1; i<=graphelements.length-1; i++) {
         if ("@id" in graphelements[i]) { 
@@ -22,8 +22,7 @@ $().ready(function(){
 	  if ("dcat:domain" in graphelements[i]) {
             $('#iproperties').append('<li><a href="#'+id+'"><strong>'+id+'</strong>.</a></li>');
 	    $('#properties').append('<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h5>');
-	  };
-	  else {
+	  } else {
 	    $('#iclasses').append('<li><a href="#'+id+'"><strong>'+id+'</strong>.</a></li>');
 	    $('#classes').append('<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h5>');
 	  };
@@ -35,10 +34,10 @@ $().ready(function(){
 
 ## Table of Contents
 
-* [LAGO Classes](#LAGO-Classes)
+* [LAGO Classes](#lago-classes)
 	- <div id="iclasses"></div>
-* [LAGO Properties](#LAGO-Properties)
-	- <div id="iproperties"></div>
+* [LAGO Properties](#lago-properties)
+	<div id="iproperties"></div>
 
 ## LAGO Classes
 
