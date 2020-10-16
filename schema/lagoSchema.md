@@ -5,28 +5,23 @@ parent: Metadata Schema
 
 # Metadata Schema for LAGO
 
-pruebecita 26
+pruebecita 27
 
 ## Desciption, item by item (js) 
 
-<script type="application/ld+json" id="datablock1">
-	{% include_relative lagoSchema.jsonld %}
-</script>
+{% capture thisPage %}
+    {% include_relative lagoSchema.jsonld %}
+{% endcapture %}
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<div id="items"></div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
-		// get the contents of the element with id="datablock1"
-		var data = $("#datablock1").html();
-
-		// parse the contents as a JSON object
-		var json = JSON.parse(data);
-        
+		var json = JSON.parse({{thisPage}});
 		var graphelements = json["@graph"];
-
-		// iterate 
-		for (i=0; i<=graphelements.length-1; i++) {
+	
+		for (i=1; i<=graphelements.length-1; i++) {
 		    var id=json["@graph"][i]["@id"];
-			// append a <li> list items
 			$('#items').append("<li>"+id+"</li>");
 		}
 </script>        
