@@ -17,7 +17,7 @@ parent: Metadata Schema
 function itemnize_json( json ) { 
   var html ='';
   if ("@id" in json) {
-    html = '<li>'+json["@id"]+'</li>';
+    html = 'hola';
   } else {
     for (j=0; j<=json.length-1; j++) {
       html = html + itemnize_json(json[j]);
