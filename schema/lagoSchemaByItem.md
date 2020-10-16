@@ -17,10 +17,10 @@ parent: Metadata Schema
 function itemnize_json( json ) { 
   var html ='';
   if ("@id" in json) {
-    html = 'hola';
+    html = '<li>'+json["@id"]+'</li>';
   } else {
     for (j=0; j<=json.length-1; j++) {
-      html = html + itemnize_json(json[j]);
+      html = html + 'hola';
     };
   };
   return html;
