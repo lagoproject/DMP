@@ -5,7 +5,7 @@ parent: Metadata Schema
 
 # Metadata Schema for LAGO
 
-pruebecita 28
+pruebecita 29
 
 ## Desciption, item by item (js) 
 
@@ -13,19 +13,19 @@ pruebecita 28
     {% include_relative lagoSchema.jsonld %}
 {% endcapture %}
 
-
+<div id="text"></div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 		var data = JSON.parse({{thisPage}});
 	        $('#text').append(data["@graph"][3]["@id"]); 
         	var graphelements = data["@graph"];
-		for (i=1; i<=graphelements.length-1; i++) {
+		for (i=2; i<=4; i++) {
 		    	var id=data["@graph"][i]["@id"];
 			$('#text').append("<br /> #### " + id);
 </script>        
 
-<div id="text"></div>
+
      
 ## Desciption, item by item (jekyll)
 
