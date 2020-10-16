@@ -17,10 +17,16 @@ $().ready(function(){
     $('#text').append(data["@graph"][3]["@id"]); 
       var graphelements = data["@graph"];
       for (i=1; i<=graphelements.length-1; i++) {
-        if ("@id" in graphelements[i] ){ 				   			    
-		        var id = data["@graph"][i]["@id"];    
-			$('#index').append('<li><a href="#'+id+'"><strong>'+id+'</strong>.</a></li>');
-			$('#text').append('<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h5>');
+        if ("@id" in graphelements[i]) { 
+	  var id = graphelements[i]["@id"];
+	  if ("dcat:domain" in graphelements[i]) {
+            $('#iproperties').append('<li><a href="#'+id+'"><strong>'+id+'</strong>.</a></li>');
+	    $('#properties').append('<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h5>');
+	  };
+	  else {
+	    $('#iclasses').append('<li><a href="#'+id+'"><strong>'+id+'</strong>.</a></li>');
+	    $('#classes').append('<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h5>');
+	  };
 	};
       };		
     });
@@ -29,14 +35,18 @@ $().ready(function(){
 
 ## Table of Contents
 
-<div id="index"></div>
+* [LAGO Classes](#LAGO-Classes)
+	- <div id="iclasses"></div>
+* [LAGO Properties](#LAGO-Properties)
+	- <div id="iproperties"></div>
 
-## Lago Items
+## LAGO Classes
 
-<div id="text"></div>
+<div id="classes"></div>
 
+## LAGO Properties
 
-
+<div id="properties"></div>
 
 
 
