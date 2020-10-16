@@ -13,11 +13,6 @@ parent: Metadata Schema
 ## Table of contents
 {: .no_toc .text-delta }
 
-- TOC
-{:toc}
-
-
-## Desciption, item by item (js) 
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
@@ -35,6 +30,10 @@ $().ready(function(){
 </script>
  
 <div id="text"></div>
+
+
+- TOC
+{:toc}
 
 
 
