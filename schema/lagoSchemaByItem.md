@@ -28,9 +28,9 @@ $().ready(function(){
 	  if ("dcat:domain" in graphelements[i]) {
             $('#iproperties').append(indexhtml);
 	    $('#properties').append(headerhtml);
-	    var table = '<table class="grid" style="width: 100%">
-			    <colgroup>
-				<col width="20%" />
+	    var table = '<table class="grid" style="width: 100%"> 
+			    <colgroup> 
+				<col width="20%" /> 
 				<col width="65%" />
 				<col width="15%" />
 			    </colgroup>
@@ -48,7 +48,7 @@ $().ready(function(){
 				  <td>'+ graphelements[i]["dcat:range"] +'</td>
 				</tr>
 			    </tbody>
-			</table>'
+			</table>';
 		$('#properties').append(table);				  
 	  } else {
 	    $('#iclasses').append(indexhtml);
