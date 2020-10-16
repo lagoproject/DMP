@@ -3,9 +3,19 @@ layout: default
 parent: Metadata Schema
 ---
 
-# Metadata Schema for LAGO
+# Metadata Schema for LAGO by item
+{: .no_toc }
 
-Test 47
+|Version|Date|Contributors|
+|-------|----|------------|
+| 1.1 develop | 2020-06-01 - today | LAGO Collaboration|
+
+## Table of contents
+{: .no_toc .text-delta }
+
+- TOC
+{:toc}
+
 
 ## Desciption, item by item (js) 
 
@@ -16,8 +26,9 @@ $().ready(function(){
 	        $('#text').append(data["@graph"][3]["@id"]); 
         	var graphelements = data["@graph"];
 		for (i=1; i<=graphelements.length-1; i++) {
-		    	var id=data["@graph"][i]["@id"];
-			$('#text').append('<h4 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h4>');
+		    	var id = data["@graph"][i]["@id"];
+			id = 
+			$('#text').append('<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h5>');
 		}		
 
     });
