@@ -20,11 +20,14 @@ $().ready(function(){
       for (i=0; i<=graphelements.length-1; i++) {
         if ("@id" in graphelements[i]) { 
 	  var id = graphelements[i]["@id"].split(':')[1];
-	  var indexhtml = '<li><a href="#'+id+'"><strong>'+id+'</strong>.</a></li>';
+	  var indexhtml = '<li><a href="#'+id+'"><strong>'+id+'</strong></a></li>';
 	  var headerhtml = '<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h5>';
+	  if ("comment" in graphelements[i]) {
+	    headerhtml = headerhtml + '  <p>'+'graphelements[i]["comment"][1]["@value"]'+'</p>';
 	  if ("dcat:domain" in graphelements[i]) {
             $('#iproperties').append(indexhtml);
 	    $('#properties').append(headerhtml);
+					  
 	  } else {
 	    $('#iclasses').append(indexhtml);
 	    $('#classes').append(headerhtml);
