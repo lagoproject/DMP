@@ -18,9 +18,10 @@ function itemnize_json( json ) {
   var html ='';
   if ("@id" in json) {
     html = '<li>'+json["@id"]+'</li>';
-  };
-  for (j=0; j<=json.length-1; j++) {
-    html = html + itemnize_json(json[j]);
+  } else {
+    for (j=0; j<=json.length-1; j++) {
+      html = html + itemnize_json(json[j]);
+    };
   };
   return html;
 };
