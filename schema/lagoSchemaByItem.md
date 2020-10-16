@@ -3,17 +3,6 @@ layout: default
 parent: Metadata Schema
 ---
 
-# Metadata Schema for LAGO by item
-{: .no_toc }
-
-|Version|Date|Contributors|
-|-------|----|------------|
-| 1.1 develop | 2020-06-01 - today | LAGO Collaboration|
-
-## Table of contents
-{: .no_toc .text-delta }
-
-
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 $().ready(function(){
@@ -28,12 +17,23 @@ $().ready(function(){
     });
 });
 </script>
- 
+
+# Metadata Schema for LAGO by item
+{: .no_toc }
+
+|Version|Date|Contributors|
+|-------|----|------------|
+| 1.1 develop | 2020-06-01 - today | LAGO Collaboration|
+
+
 <div id="text"></div>
 
+## Table of contents
+{: .no_toc .text-delta }
 
 - TOC
 {:toc}
+
 
 
 
