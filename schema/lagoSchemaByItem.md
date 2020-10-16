@@ -15,10 +15,12 @@ parent: Metadata Schema
 $().ready(function(){
     $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) {
 	        $('#text').append(data["@graph"][3]["@id"]); 
+	        var data2 = JSON.parse(data);
+	        $('#text').append(data2.@graph[3].@id); 
         	var graphelements = data["@graph"];
 		for (i=1; i<=graphelements.length-1; i++) {
-		    	var id = data["@graph"][i]["@id"];
-			$('#index').append('<li><a href="#'+id+'" id="'+id+'"><strong>'+id+'</strong>.</a></li>');
+		        var id = data["@graph"][i]["@id"];    
+			$('#index').append('<li><a href="#'+id+'"><strong>'+id+'</strong>.</a></li>');
 			$('#text').append('<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h5>');
 		}		
 
