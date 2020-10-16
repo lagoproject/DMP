@@ -13,6 +13,15 @@ parent: Metadata Schema
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
+
+function itemnize_json( json ) {  
+  var html ='';
+  for (j=0; j<=json.length-1; j++) {
+    html = html + '<li>'+json[j]+'</li>';
+  };
+  return html;
+};
+	
 $().ready(function(){
   $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) {
       $('#text').append(data["@graph"][3]["@id"]); 
@@ -36,9 +45,9 @@ $().ready(function(){
 			    </colgroup>
 			    <thead>
 				<tr class="header">
-				    <th>Field</th>
-				    <th>Description</th>
-				    <th>Data Type</th>
+				    <th>"@type"</th>
+				    <th>"dcat:domain"</th>
+				    <th>"dcat:range"</th>
 				</tr>
 			    </thead>
 			    <tbody>
