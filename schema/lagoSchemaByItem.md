@@ -15,8 +15,7 @@ parent: Metadata Schema
 $().ready(function(){
     $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) {
 	        $('#text').append(data["@graph"][3]["@id"]); 
-	        var data2 = JSON.parse(data);
-	        $('#text').append(data2.@graph[3].@id); 
+	        var data2 = JSON.parse(data); 
         	var graphelements = data["@graph"];
 		for (i=1; i<=graphelements.length-1; i++) {
 		        var id = data["@graph"][i]["@id"];    
