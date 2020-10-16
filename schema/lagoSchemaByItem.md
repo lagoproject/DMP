@@ -10,13 +10,14 @@ parent: Metadata Schema
 |-------|---------|------|------------|
 | 1.1 develop | {{ page.date }} | 2020-06-01 - today | LAGO Collaboration|
 
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 $().ready(function(){
   $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) {
       $('#text').append(data["@graph"][3]["@id"]); 
       var graphelements = data["@graph"];
-      for (i=0; i<=graphelements.length-1; i++) {
+      for (i=1; i<=graphelements.length-1; i++) {
         if ("@id" in graphelements[i]) { 
 	  var id = graphelements[i]["@id"].split(':')[1];
 	  var indexhtml = '<li><a href="#'+id+'"><strong>'+id+'</strong>.</a></li>'
