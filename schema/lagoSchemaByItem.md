@@ -28,7 +28,28 @@ $().ready(function(){
 	  if ("dcat:domain" in graphelements[i]) {
             $('#iproperties').append(indexhtml);
 	    $('#properties').append(headerhtml);
-					  
+	    var table = '<table class="grid" style="width: 100%">
+			    <colgroup>
+				<col width="20%" />
+				<col width="65%" />
+				<col width="15%" />
+			    </colgroup>
+			    <thead>
+				<tr class="header">
+				    <th>Field</th>
+				    <th>Description</th>
+				    <th>Data Type</th>
+				</tr>
+			    </thead>
+			    <tbody>
+				<tr>
+				  <td>'+ graphelements[i]["@type"] +'</td>
+				  <td>'+ graphelements[i]["dcat:domain"] +' </td>
+				  <td>'+ graphelements[i]["dcat:range"] +'</td>
+				</tr>
+			    </tbody>
+			</table>'
+		$('#properties').append(table);				  
 	  } else {
 	    $('#iclasses').append(indexhtml);
 	    $('#classes').append(headerhtml);
