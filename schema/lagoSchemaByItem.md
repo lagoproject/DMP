@@ -75,7 +75,7 @@ $().ready(function(){
 				<tr class="header">
 				    <th>"@type"</th>
 				    <th>"??"</th>
-				    <th>??"</th>
+				    <th>"??"</th>
 				</tr>
 			    </thead>
 			    <tbody>
