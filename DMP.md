@@ -5,7 +5,7 @@ has_children: false
 nav_order: 2
 ---
 
-# The LAGO Data Management Plan (DPM) document
+# The LAGO Data Management Plan (DMP) document
 {: .no_toc }
 
 |Version|Date|Contributors|
@@ -290,7 +290,7 @@ future.
 ####  **How the data will be licenced**. 
 
 - Related code: BSD-3 clause
-- Documentation (including DPM): [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+- Documentation (including DMP): [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 - Metadata specifications: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 - Data: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 - Metadata: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
