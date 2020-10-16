@@ -27,8 +27,7 @@ $().ready(function(){
         	var graphelements = data["@graph"];
 		for (i=1; i<=graphelements.length-1; i++) {
 		    	var id = data["@graph"][i]["@id"];
-			id = 
-			$('#text').append('<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h5>');
+			$('#text').append('<h3 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h3>');
 		}		
 
     });
