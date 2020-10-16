@@ -14,17 +14,17 @@ parent: Metadata Schema
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 
-function itemnize_json( json ) {  
+function itemnize_json( json ) { 
+  if ("@id" in json) return '<li>'+json.split(:)[1]+'</li>';
   var html ='';
   for (j=0; j<=json.length-1; j++) {
-    html = html + '<li>'+json[j]+'</li>';
+    html = html + itemnize_json(json[j]);
   };
   return html;
 };
 	
 $().ready(function(){
-  $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) {
-      $('#text').append(data["@graph"][3]["@id"]); 
+  $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) { 
       var graphelements = data["@graph"];
       for (i=0; i<=graphelements.length-1; i++) {
         if ("@id" in graphelements[i]) { 
