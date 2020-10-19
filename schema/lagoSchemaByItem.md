@@ -26,13 +26,13 @@ function itemnize_json( json, context ) {
     };
     var contexturl = context[vocab];
     if ( vocab == "lago" ) {
-      contexturl = "";  
+      contexturl = '';  
     };
-    html = '<li><a href=#"'+ contexturl + innid +'">'+ json["@id"]+'</a></li>';
+    html = '<li><a href="#'+ contexturl + innid +'">'+ json["@id"]+'</a></li>';
   } else {
     for (j=0; j<=json.length-1; j++) {
       inner_json = json[j];
-      html = html + '<li>'+ json[j] +'</li>';
+      html = html + '<li>'+ itemnize_json(json[j], context) +'</li>';
     };
   };
   return html;
