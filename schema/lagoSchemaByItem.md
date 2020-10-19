@@ -95,16 +95,16 @@ $().ready(function(){
 			    <thead>
 				<tr class="header">
 				    <th>"@type"</th>'
-	    for ( k in keys ) {
-	      table = table + ' <th>'+ k + '</th>';
+	    for (var k=0; k<keys.length; k++) {
+	      table = table + ' <th>'+ keys[k] + '</th>';
 	    };
 	    table = table +'	</tr>
 			    </thead>
 			    <tbody>
 				<tr>
 				  <td>'+ itemnize_json(graphelements[i]["@type"] , data["@context"]) +'</td>'
-	    for ( k in keys ) {
-	      table = table + ' <td>'+ itemnize_json(graphelements[i][k] , data["@context"]) +' </td>';
+	    for (var k=0; k<keys.length; k++) {
+	      table = table + ' <td>'+ itemnize_json(graphelements[i][keys[k]] , data["@context"]) +' </td>';
 	    };	  
 	    table = table +'	</tr>
 			    </tbody>
