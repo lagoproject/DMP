@@ -14,10 +14,6 @@ parent: Metadata Schema
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 
-itemnize_json_bis ( json ) { 
-  return itemnize_json( json ); 
-};
-
 function itemnize_json( json, context ) { 
   var html ='';
   if ("@id" in json) {
