@@ -21,11 +21,19 @@ itemnize_json_bis ( json ) {
 function itemnize_json( json ) { 
   var html ='';
   if ("@id" in json) {
-    html = '<li>'+json["@id"]+'</li>';
+    var element = json["@id"].split(':');
+    var innid = element[0]; 
+    var vocab = "@vocab";
+    if (element.length == 2) {
+      innid = element[1];
+      vocab = element[0];
+    };
+    contexturl= data["@context"][vocab];
+    html = '<li><a href="+ contexturl + innid +'">'+ json["@id"]+'</a></li>';
   } else {
     for (j=0; j<=json.length-1; j++) {
       inner_json = json[j];
-      html = html + '<li>'+ itemnize_json( inner_json )+'</li>';
+      html = html + '<li>'+ itemnize_json_bis( inner_json )+'</li>';
     };
   };
   return html;
