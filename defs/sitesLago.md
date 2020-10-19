@@ -72,11 +72,11 @@ As an real example, the catalog metadata of some simulation should include the s
 ## Defined LAGO sites
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="process_vocabularies.js"></script>
+<script src="{{ base.url | prepend: site.url }}/assets/js/generate_html_for_vocab.j"></script>
 <script>
 $().ready(function(){
   $.getJSON( "/DMP/defs/sitesLago.jsonld", function( data ) { 
-       generate_html_for_vocab(data);     
+       generate_html(data);     
   });
 });
 </script>
@@ -86,11 +86,6 @@ $().ready(function(){
    
  <div id="properties"></div>
  
- 
-   
-
-
-
 
 ## Plain JSON-LD file
 
