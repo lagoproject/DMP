@@ -92,7 +92,7 @@ $().ready(function(){
 			    <thead>
 				<tr class="header">
 				    <th>"@type"</th>';	  
-	    for (var k=0; k<keys.length; k++) {
+	    for (k=0; k<keys.length; k++) {
 	      table = table + ' <th>'+ keys[k] + '</th>';
 	    };
 	    table = table +'	</tr>
@@ -100,7 +100,7 @@ $().ready(function(){
 			    <tbody>
 				<tr>
 				  <td>'+ itemnize_json(graphelements[i]["@type"] , data["@context"]) +'</td>';
-	    for (var k=0; k<keys.length; k++) {
+	    for (k=0; k<keys.length; k++) {
 	      table = table + ' <td>'+ itemnize_json(graphelements[i][keys[k]] , data["@context"]) +' </td>';
 	    };
 	    table = table +'	</tr>
