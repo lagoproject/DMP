@@ -17,18 +17,7 @@ parent: Metadata Schema
 function itemnize_json( json, context ) { 
   var html ='';
   if ( typeof(json) === 'string' ) {
-    var element = json.split(':');
-    var innid = element[0];
-    var vocab = "@vocab";
-    if (element.length == 2) {
-        innid = element[1];
-        vocab = element[0];
-    };
-    var contexturl = context[vocab];
-    if ( vocab == "lago" ) {
-      contexturl = '';  
-    };
-    html = '<li><a href="#'+ contexturl + innid +'">'+ json+'</a></li>';
+     html = 'hola';
   } else {
     if (! Array.isArray(json) ) {
       json = [json];
