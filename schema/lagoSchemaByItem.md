@@ -42,7 +42,7 @@ function itemnize_json( json, context ) {
           inner_json = json[j]["@id"];
         };
       };
-      html = html + itemnize_json(inner_json, context);
+      html = html + '<li>'+ itemnize_json(inner_json, context) +'</li>';
     };
   };
   return html;
