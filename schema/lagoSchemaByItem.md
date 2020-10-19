@@ -80,7 +80,32 @@ $().ready(function(){
 		$('#properties').append(table);				  
 	  } else {
 	    $('#iclasses').append(indexhtml);
-	    $('#classes').append(headerhtml);	    
+	    $('#classes').append(headerhtml);	
+	    var table = '<table class="grid" style="width: 100%"> 
+			    <colgroup> 
+				<col width="25%" /> 
+				<col width="25%" />
+				<col width="25%" />
+				<col width="25%" />
+			    </colgroup>
+			    <thead>
+				<tr class="header">
+				    <th>"@type"</th>
+				    <th>"owl:equivalentClass"</th>
+				    <th>"dcat:subClassOf"</th>
+			            <th>"seeAlso"</th>
+				</tr>
+			    </thead>
+			    <tbody>
+				<tr>
+				  <td>'+ itemnize_json(graphelements[i]["@type"] , data["@context"]) +'</td>
+				  <td>'+ itemnize_json(graphelements[i]["owl:equivalentClass"] , data["@context"]) +' </td>
+				  <td>'+ itemnize_json(graphelements[i]["dcat:subClassOf"] , data["@context"]) +'</td>
+				  <td>'+ itemnize_json(graphelements[i]["seeAlso"] , data["@context"]) +'</td>
+				</tr>
+			    </tbody>
+			</table>';
+		$('#classes').append(table);			
 	  };
 	};
       };		
