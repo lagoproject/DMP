@@ -60,7 +60,7 @@ $().ready(function(){
 	    headerhtml = headerhtml + '  <p>'+ graphelements[i]["comment"][0]["@value"] +'</p>';
 	  };
 	  var keys = Object.keys(graphelements[i]);
-	  omit = ["@id","@type","@comment"];
+	  var omit = ["@id","@type","@comment"];
 	  for (k=0; k < omit.lenght; k++) {
 	    if (omit[k] in keys) {
 	      keys.splice(keys.indexOf(omit[k], 1);
