@@ -14,13 +14,17 @@ parent: Metadata Schema
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 
+itemnize_json_bis ( json ) { 
+  return itemnize_json( json ); 
+};
+
 function itemnize_json( json ) { 
   var html ='';
   if ("@id" in json) {
     html = '<li>'+json["@id"]+'</li>';
   } else {
     for (j=0; j<=json.length-1; j++) {
-      html = html + '<li>'+json[j]+'</li>';
+      html = html + '<li>'+ itemnize_json_bis( json[j] )+'</li>';
     };
   };
   return html;
