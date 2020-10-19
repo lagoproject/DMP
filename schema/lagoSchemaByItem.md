@@ -87,8 +87,7 @@ $().ready(function(){
 		$('#properties').append(table);				  
 	  } else {
 	    $('#iclasses').append(indexhtml);
-	    $('#classes').append(headerhtml);
-	    var keys = graphelements[i].keys();			
+	    $('#classes').append(headerhtml);		
 	  };
 	};
       };		
