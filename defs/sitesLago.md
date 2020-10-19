@@ -76,9 +76,6 @@ As an real example, the catalog metadata of some simulation should include the s
 <script>
 $().ready(function(){
   generate_test();     
-  $.getJSON( "/DMP/defs/sitesLago.jsonld", function( data ) { 
-       generate_html(data);    
-  });
 });
 </script>
  
