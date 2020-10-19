@@ -42,7 +42,7 @@ function itemnize_json( json, context ) {
           inner_json = json[j]["@id"];
         };
       };
-      html = html + '<li>'+ itemnize_json(inner_json, context) +'</li>';
+      html = html + itemnize_json(inner_json, context);
     };
   };
   return html;
@@ -87,32 +87,29 @@ $().ready(function(){
 		$('#properties').append(table);				  
 	  } else {
 	    $('#iclasses').append(indexhtml);
-	    $('#classes').append(headerhtml);	
+	    $('#classes').append(headerhtml);
+	    keys=graphelements[i].keys();
+	    keys.pop("@type");
+	    keys.pop("comment");
 	    var table = '<table class="grid" style="width: 100%"> 
-			    <colgroup> 
-				<col width="25%" /> 
-				<col width="25%" />
-				<col width="25%" />
-				<col width="25%" />
-			    </colgroup>
 			    <thead>
 				<tr class="header">
-				    <th>"@type"</th>
-				    <th>"owl:equivalentClass"</th>
-				    <th>"dcat:subClassOf"</th>
-			            <th>"seeAlso"</th>
-				</tr>
+				    <th>"@type"</th>'
+	    for ( k in keys ) {
+	      table = table + ' <th>'+ k + '</th>';
+	    };
+	    table = table +'	</tr>
 			    </thead>
 			    <tbody>
 				<tr>
-				  <td>'+ itemnize_json(graphelements[i]["@type"] , data["@context"]) +'</td>
-				  <td>'+ itemnize_json(graphelements[i]["owl:equivalentClass"] , data["@context"]) +' </td>
-				  <td>'+ itemnize_json(graphelements[i]["dcat:subClassOf"] , data["@context"]) +'</td>
-				  <td>'+ itemnize_json(graphelements[i]["seeAlso"] , data["@context"]) +'</td>
-				</tr>
+				  <td>'+ itemnize_json(graphelements[i]["@type"] , data["@context"]) +'</td>'
+	    for ( k in keys ) {
+	      table = table + ' <td>'+ itemnize_json(graphelements[i][k] , data["@context"]) +' </td>';
+	    };	  
+	    table = table +'	</tr>
 			    </tbody>
 			</table>';
-		$('#classes').append(table);			
+	    $('#classes').append(table);			
 	  };
 	};
       };		
