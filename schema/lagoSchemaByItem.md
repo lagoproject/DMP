@@ -24,7 +24,11 @@ function itemnize_json( json, context ) {
       innid = element[1];
       vocab = element[0];
     };
-    html = '<li><a href="'+ context[vocab] + innid +'">'+ json["@id"]+'</a></li>';
+    var contexturl = context[vocab];
+    if ( vocab == "lago" ) {
+      contexturl = "";  
+    };
+    html = '<li><a href=#"'+ contexturl + innid +'">'+ json["@id"]+'</a></li>';
   } else {
     for (j=0; j<=json.length-1; j++) {
       inner_json = json[j];
