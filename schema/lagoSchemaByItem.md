@@ -94,18 +94,7 @@ $().ready(function(){
 	    var table = '<table class="grid" style="width: 100%"> 
 			    <thead>
 				<tr class="header">
-				    <th>"@type"</th>';
-	    for (var k=0; k<keys.length; k++) {
-	      table = table + ' <th>'+ keys[k] + '</th>';
-	    };
-	    table = table +'	</tr>
-			    </thead>
-			    <tbody>
-				<tr>
-				  <td>'+ itemnize_json(graphelements[i]["@type"] , data["@context"]) +'</td>';
-	    for (var k=0; k<keys.length; k++) {
-	      table = table + ' <td>'+ itemnize_json(graphelements[i][keys[k]] , data["@context"]) +' </td>';
-	    };	  
+				    <th>"@type"</th>';	  
 	    table = table +'	</tr>
 			    </tbody>
 			</table>';
