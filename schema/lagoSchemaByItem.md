@@ -24,12 +24,14 @@ function itemnize_json( json ) {
     html = '<li>'+json["@id"]+'</li>';
   } else {
     for (j=0; j<=json.length-1; j++) {
-      html = html + '<li>'+ itemnize_json_bis( json[j] )+'</li>';
+      inner_json = json[j]
+      html = html + '<li>'+ itemnize_json( inner_json )+'</li>';
     };
   };
   return html;
 };
-	 
+
+
 $().ready(function(){
   $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) { 
       var graphelements = data["@graph"];
