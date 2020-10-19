@@ -18,7 +18,7 @@ itemnize_json_bis ( json ) {
   return itemnize_json( json ); 
 };
 
-function itemnize_json( json ) { 
+function itemnize_json( json, context ) { 
   var html ='';
   if ("@id" in json) {
     var element = json["@id"].split(':');
@@ -28,12 +28,11 @@ function itemnize_json( json ) {
       innid = element[1];
       vocab = element[0];
     };
-    contexturl= data["@context"][vocab];
-    html = '<li><a href="+ contexturl + innid +'">'+ json["@id"]+'</a></li>';
+    html = '<li><a href="+ context[vocab] + innid +'">'+ json["@id"]+'</a></li>';
   } else {
     for (j=0; j<=json.length-1; j++) {
       inner_json = json[j];
-      html = html + '<li>'+ itemnize_json_bis( inner_json )+'</li>';
+      html = html + '<li>'+ json[j] +'</li>';
     };
   };
   return html;
@@ -69,9 +68,9 @@ $().ready(function(){
 			    </thead>
 			    <tbody>
 				<tr>
-				  <td>'+ itemnize_json(graphelements[i]["@type"]) +'</td>
-				  <td>'+ itemnize_json(graphelements[i]["dcat:domain"]) +' </td>
-				  <td>'+ itemnize_json(graphelements[i]["dcat:range"]) +'</td>
+				  <td>'+ itemnize_json(graphelements[i]["@type"] , data["@context"]) +'</td>
+				  <td>'+ itemnize_json(graphelements[i]["dcat:domain"] , data["@context"]) +' </td>
+				  <td>'+ itemnize_json(graphelements[i]["dcat:range"] , data["@context"]) +'</td>
 				</tr>
 			    </tbody>
 			</table>';
