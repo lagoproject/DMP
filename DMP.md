@@ -8,9 +8,10 @@ nav_order: 2
 # The LAGO Data Management Plan (DMP) document
 {: .no_toc }
 
-|Version|Date|Contributors|
-|-------|----|------------|
-| 1.1 develop | 2020-06-01 - today | LAGO Collaboration|
+|Version| Updated | Date |Contributors|
+|-------|---------|------|------------|
+| 1.1 develop | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
+
 
 ## Table of contents
 {: .no_toc .text-delta }
