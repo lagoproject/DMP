@@ -32,7 +32,7 @@ function itemnize_json( json, context ) {
   } else {
     for (j=0; j<=json.length-1; j++) {
       inner_json = json[j];
-      html = html + '<li>'+ itemnize_json(json[j], context) +'</li>';
+      html = html + '<li>'+ itemnize_json(inner_json, context) +'</li>';
     };
   };
   return html;
