@@ -16,7 +16,7 @@ parent: Metadata Schema
 
 function itemnize_json( json, context ) { 
   var html ='';
-  if ( typeof json == 'string' ) {
+  if ( typeof(json) === 'string' ) {
     var element = json.split(':');
     var innid = element[0];
     var vocab = "@vocab";
@@ -30,6 +30,9 @@ function itemnize_json( json, context ) {
     };
     html = '<li><a href="#'+ contexturl + innid +'">'+ json+'</a></li>';
   } else {
+    if (! Array.isArray(json) ) {
+      json = [json];
+    };
     for (j=0; j<=json.length-1; j++) {
       var inner_json = json[j];
       if ("@id" in json[j]) {
