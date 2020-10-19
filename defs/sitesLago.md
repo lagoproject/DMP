@@ -75,7 +75,7 @@ As an real example, the catalog metadata of some simulation should include the s
 <script src="{{ base.url | prepend: site.url }}/assets/js/generate_html_for_vocab.js"></script>
 <script>
 $().ready(function(){
-  generate_html(test);     
+  generate_test();     
   $.getJSON( "/DMP/defs/sitesLago.jsonld", function( data ) { 
        generate_html(data);    
   });
@@ -87,6 +87,7 @@ $().ready(function(){
    
  <div id="properties"></div>
  
+ <div id="classes"></div>
 
 ## Plain JSON-LD file
 
