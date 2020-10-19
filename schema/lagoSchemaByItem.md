@@ -34,7 +34,7 @@ function itemnize_json( json, context ) {
       json_aux.push(json);
       json = json_aux;
     };
-    for (j=0; j<=json.length-1; j++) {
+    for (j=0; j<json.length; j++) {
       var inner_json = json[j];
       if ( !(typeof(json[j]) === 'string') ) {
       	if ("@id" in json[j]) {
@@ -51,7 +51,7 @@ function itemnize_json( json, context ) {
 $().ready(function(){
   $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) { 
       var graphelements = data["@graph"];
-      for (i=0; i<=graphelements.length-1; i++) {
+      for (i=0; i<graphelements.length; i++) {
         if ("@id" in graphelements[i]) { 
 	  var id = graphelements[i]["@id"].split(':')[1];
 	  var indexhtml = '<li><a href="#'+id+'"><strong>'+id+'</strong></a></li>';
@@ -61,7 +61,7 @@ $().ready(function(){
 	  };
 	  var keys = Object.keys(graphelements[i]);
 	  var omit = ["@id","@type","@comment"];
-	  for (k=0; k < omit.lenght; k++) {
+	  for (k=0; k<omit.lenght; k++) {
 	    if (omit[k] in keys) {
 	      keys.splice(keys.indexOf(omit[k], 1);
 	    };  
