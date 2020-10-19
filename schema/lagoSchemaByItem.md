@@ -25,9 +25,9 @@ function itemnize_json( json, context ) {
     };
     var contexturl = context[vocab];
     if ( vocab == "lago" ) {
-      contexturl = '';  
+      contexturl = '#';  
     };
-    html = '<li><a href="#'+ contexturl + innid +'">'+ json +'</a></li>';
+    html = '<li><a href="'+ contexturl + innid +'">'+ json +'</a></li>';
   } else {
     if ( !Array.isArray(json) ) {
       var json_aux = [];
@@ -39,6 +39,8 @@ function itemnize_json( json, context ) {
       if ( !(typeof(json[j]) === 'string') ) {
       	if ("@id" in json[j]) {
           inner_json = json[j]["@id"];
+        } else if ("@default" in json[j]) {
+          inner_json = json[j].toString();
         } else {
           inner_json = JSON.stringify(json[j]);
         };
