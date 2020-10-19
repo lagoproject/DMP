@@ -86,8 +86,6 @@ $().ready(function(){
 	    $('#iclasses').append(indexhtml);
 	    $('#classes').append(headerhtml);
             var keys = graphelements[i].keys();	
-            keys.splice(keys.indexOf("@type"), 1); 
-            keys.splice(keys.indexOf("comment"), 1);  
 	  };
 	};
       };		
