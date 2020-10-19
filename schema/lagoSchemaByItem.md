@@ -88,7 +88,7 @@ $().ready(function(){
 	    $('#iclasses').append(indexhtml);
 	    $('#classes').append(headerhtml);
             var keys = Object.keys(graphelements[i]);
-	    keys.splice(keys.indexOf("@id), 1); 
+	    keys.splice(keys.indexOf("@id"), 1); 
 	    keys.splice(keys.indexOf("@type"), 1); 
             keys.splice(keys.indexOf("comment"), 1);  
 	    var table = '<table class="grid" style="width: 100%"> 
