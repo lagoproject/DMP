@@ -39,6 +39,8 @@ function itemnize_json( json, context ) {
       if ( !(typeof(json[j]) === 'string') ) {
       	if ("@id" in json[j]) {
           inner_json = json[j]["@id"];
+        } else {
+          inner_json = JSON.stringify(json[j]);
         };
       };
       html = html + itemnize_json(inner_json, context);
@@ -85,7 +87,8 @@ $().ready(function(){
 	  } else {
 	    $('#iclasses').append(indexhtml);
 	    $('#classes').append(headerhtml);
-            var keys = Object.keys(graphelements[i]);	
+            var keys = Object.keys(graphelements[i]);
+	    keys.splice(keys.indexOf("@id), 1); 
 	    keys.splice(keys.indexOf("@type"), 1); 
             keys.splice(keys.indexOf("comment"), 1);  
 	    var table = '<table class="grid" style="width: 100%"> 
