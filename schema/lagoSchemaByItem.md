@@ -16,22 +16,25 @@ parent: Metadata Schema
 
 function itemnize_json( json, context ) { 
   var html ='';
-  if ("@id" in json) {
-    var element = json["@id"].split(':');
-    var innid = element[0]; 
+  if ( typeof json == 'string' ) {
+    var element = json.split(':');
+    var innid = element[0];
     var vocab = "@vocab";
     if (element.length == 2) {
-      innid = element[1];
-      vocab = element[0];
+        innid = element[1];
+        vocab = element[0];
     };
     var contexturl = context[vocab];
     if ( vocab == "lago" ) {
       contexturl = '';  
     };
-    html = '<li><a href="#'+ contexturl + innid +'">'+ json["@id"]+'</a></li>';
+    html = '<li><a href="#'+ contexturl + innid +'">'+ json+'</a></li>';
   } else {
     for (j=0; j<=json.length-1; j++) {
-      inner_json = json[j];
+      var inner_json = json[j];
+      if ("@id" in json[j]) {
+        inner_json = json[j]["@id"];
+      };
       html = html + '<li>'+ itemnize_json(inner_json, context) +'</li>';
     };
   };
