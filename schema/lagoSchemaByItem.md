@@ -13,7 +13,6 @@ parent: Metadata Schema
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
-
 function itemnize_json( json, context ) { 
   var html ='';
   if ( typeof(json) === 'string' ) {
@@ -36,7 +35,7 @@ function itemnize_json( json, context ) {
       json = json_aux;
     };
     for (j=0; j<=json.length-1; j++) {
-     var inner_json = json[j];
+      var inner_json = json[j];
       if ( ! typeof(json) === 'string' ) {
       	if ("@id" in json[j]) {
           inner_json = json[j]["@id"];
@@ -47,8 +46,6 @@ function itemnize_json( json, context ) {
   };
   return html;
 };
-
-
 $().ready(function(){
   $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) { 
       var graphelements = data["@graph"];
