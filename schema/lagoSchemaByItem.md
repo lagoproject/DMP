@@ -15,6 +15,9 @@ parent: Metadata Schema
 <script>
 function itemnize_json( json, context ) { 
   var html ='';
+  if ( typeof(json) === 'boolean' ) {
+    return json;
+  };
   if ( typeof(json) === 'string' ) {
     var element = json.split(':');
     var innid = element[0];
@@ -39,8 +42,6 @@ function itemnize_json( json, context ) {
       if ( !(typeof(json[j]) === 'string') ) {
       	if ("@id" in json[j]) {
           inner_json = json[j]["@id"];
-        } else if ("@default" in json[j]) {
-          inner_json = json[j].toString();
         } else {
           inner_json = JSON.stringify(json[j]);
         };
