@@ -36,12 +36,12 @@ function itemnize_json( json, context ) {
     };
     for (j=0; j<=json.length-1; j++) {
       var inner_json = json[j];
-      if ( !(typeof(json) === 'string') ) {
+      if ( !(typeof(json[j]) === 'string') ) {
       	if ("@id" in json[j]) {
           inner_json = json[j]["@id"];
         };
       };
-      html = html + '<li>'+ itemnize_json(inner_json, context) +'</li>';
+      html = html + itemnize_json(inner_json, context);
     };
   };
   return html;
