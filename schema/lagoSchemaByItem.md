@@ -63,10 +63,10 @@ $().ready(function(){
 	    headerhtml = headerhtml + '  <p>'+ graphelements[i]["comment"][0]["@value"] +'</p>';
 	  };
 	  var keys = Object.keys(graphelements[i]);
-          var omit = [ '"@id"', '"@type"', '"comment"'];
+          var omit = [ '@id', '@type', 'comment'];
 	  for (k=0; k<omit.length; k++) {
-	    if ( keys.indexOf(omit[k]) > -1 ) {
-	      keys.splice(keys.indexOf(omit[k]), 1);
+	    if ( keys.indexOf('"'+omit[k]+'"') > -1 ) {
+	      keys.splice(keys.indexOf('"'+omit[k]+'"'), 1);
 	    };  
 	  }; 
 	  var table = '<table class="grid" style="width: 100%"> 
