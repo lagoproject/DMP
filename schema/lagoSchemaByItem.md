@@ -60,12 +60,6 @@ $().ready(function(){
 	    headerhtml = headerhtml + '  <p>'+ graphelements[i]["comment"][0]["@value"] +'</p>';
 	  };
 	  var keys = Object.keys(graphelements[i]);
-	  var omit = ["@id","@type","@comment"];
-	  for (k=0; k<omit.lenght; k++) {
-	    if (omit[k] in keys) {
-	      keys.splice(keys.indexOf(omit[k], 1);
-	    };  
-	  }; 
 	  var table = '<table class="grid" style="width: 100%"> 
 		    <thead>
 			<tr class="header">
