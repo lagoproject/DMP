@@ -82,7 +82,8 @@ $().ready(function(){
 		      </tbody>
 		  </table>';
 	  if ("dcat:domain" in graphelements[i]) {
-            $('#iproperties').append(headerhtml);
+            $('#iproperties').append(indexhtml);
+	    $('#properties').append(headerhtml);
             $('#properties').append(table);				  
 	  } else {
 	    $('#iclasses').append(indexhtml);
