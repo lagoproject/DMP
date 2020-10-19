@@ -36,9 +36,11 @@ function itemnize_json( json, context ) {
       json = json_aux;
     };
     for (j=0; j<=json.length-1; j++) {
-      var inner_json = json[j];
-      if ("@id" in json[j]) {
-        inner_json = json[j]["@id"];
+     var inner_json = json[j];
+      if ( ! typeof(json) === 'string' ) {
+      	if ("@id" in json[j]) {
+          inner_json = json[j]["@id"];
+        };
       };
       html = html + '<li>'+ itemnize_json(inner_json, context) +'</li>';
     };
