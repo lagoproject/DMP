@@ -5,6 +5,18 @@ nav_order: 2
 ---
 
 # LAGO sites 
+{: .no_toc }
+
+|Version| Updated | Date |Contributors|
+|-------|---------|------|------------|
+| 1.1 develop | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
+
+
+## Table of contents
+{: .no_toc .text-delta }
+
+- TOC
+{:toc}
 
 ## What is defined?
 
@@ -57,8 +69,30 @@ As an real example, the catalog metadata of some simulation should include the s
 ...
 ```
 
-## Plain JSON-LD file
+## Defined LAGO sites
 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="process_vocabularies.js"></script>
+<script>
+$().ready(function(){
+  $.getJSON( "/DMP/defs/sitesLago.jsonld", function( data ) { 
+       generate_html_for_vocab(data);     
+  });
+});
+</script>
+ 
+ * List of defined LAGO sites
+   <div id="iproperties"></div>
+   
+ <div id="properties"></div>
+ 
+ 
+   
+
+
+
+
+## Plain JSON-LD file
 
 ```json
 {% include_relative sitesLago.jsonld %}
