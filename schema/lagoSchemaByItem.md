@@ -85,9 +85,6 @@ $().ready(function(){
 	  } else {
 	    $('#iclasses').append(indexhtml);
 	    $('#classes').append(headerhtml);
-            var keys = graphelements[i].keys();	
-	    keys.pop("@type");
-	    keys.pop("comment");
 	    var table = '<table class="grid" style="width: 100%"> 
 			    <thead>
 				<tr class="header">
