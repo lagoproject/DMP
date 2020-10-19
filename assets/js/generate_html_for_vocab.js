@@ -1,3 +1,6 @@
+function generate_test() {
+	$('#classes').append("test"); 
+};
 function itemnize_json( json, context ) { 
   var html ='';
   if ( typeof(json) === 'boolean' ) {
