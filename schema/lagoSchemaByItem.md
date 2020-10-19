@@ -24,7 +24,7 @@ function itemnize_json( json ) {
     html = '<li>'+json["@id"]+'</li>';
   } else {
     for (j=0; j<=json.length-1; j++) {
-      inner_json = json[j]
+      inner_json = json[j];
       html = html + '<li>'+ itemnize_json( inner_json )+'</li>';
     };
   };
