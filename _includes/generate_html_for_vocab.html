@@ -9,9 +9,9 @@
 -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
-function itemnize_json( json, context ) { 
+function itemnize_json( json, context, link ) { 
   var html ='';
-  if ( typeof(json) === 'boolean' ) {
+  if ( (link == false) || (typeof(json) === 'boolean') ) {
     return json;
   };
   if ( typeof(json) === 'string' ) {
@@ -28,21 +28,22 @@ function itemnize_json( json, context ) {
     };
     html = '<br /><a href="'+ contexturl + json +'">'+ json +'</a>';
   } else {
-    if ( !Array.isArray(json) ) {
+    if ( !(Array.isArray(json)) ) {
       var json_aux = [];
       json_aux.push(json);
       json = json_aux;
     };
-    for (j=0; j<json.length; j++) {
+    for (var j=0; j<json.length; j++) {
       var inner_json = json[j];
       if ( !(typeof(json[j]) === 'string') ) {
       	if ("@id" in json[j]) {
           inner_json = json[j]["@id"];
         } else {
           inner_json = JSON.stringify(json[j]);
+	  link = false;
         };
       };
-      html = html + itemnize_json(inner_json, context);
+      html = html + itemnize_json(inner_json, context, link);
     };
   };
   return html;
@@ -50,11 +51,11 @@ function itemnize_json( json, context ) {
 $().ready(function(){
   $.getJSON( "{{ include.folder }}", function( data ) { 
     var graphelements = data["@graph"];
-    for (i=0; i<graphelements.length; i++) {
+    for (var i=0; i<graphelements.length; i++) {
         if ("@id" in graphelements[i]) { 
           var id = graphelements[i]["@id"];
           var indexhtml = '<li><a href="#'+id+'">'+id+'</a></li>';
-          var headerhtml = '<h4 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h4>';
+          var headerhtml = '<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h5>';
           if ("comment" in graphelements[i]) {
             headerhtml = headerhtml + '<p><small>'+ graphelements[i]["comment"][0]["@value"]+'</small></p>';
           };
@@ -66,16 +67,16 @@ $().ready(function(){
 		      <thead>
 			    <tr class="header">
 				<th>@type</th>';	  
-	  for (k=0; k<keys.length; k++) {
+	  for (var k=0; k<keys.length; k++) {
 	    table = table + ' <th>'+ keys[k] + '</th>';
 	  };
 	  table = table +'	</tr>
 			</thead>
 			<tbody>
 			    <tr>
-			      <td>'+ itemnize_json(graphelements[i]["@type"] , data["@context"]) +'</td>';
-          for (k=0; k<keys.length; k++) {
-            table = table + ' <td>'+ itemnize_json(graphelements[i][keys[k]] , data["@context"]) +' </td>';
+			      <td>'+ itemnize_json(graphelements[i]["@type"] , data["@context"], true ) +'</td>';
+          for (var k=0; k<keys.length; k++) {
+            table = table + ' <td>'+ itemnize_json(graphelements[i][keys[k]] , data["@context"], true ) +'</td>';
           };
           table = table +'	</tr>
 			</tbody>
@@ -98,10 +99,10 @@ $().ready(function(){
 ## Vocabulary
 
 - [**Classes**](#classes)
-<ul id="iclasses"></ul>
+  <ul id="iclasses"></ul>
 		
 - [**Properties**](#properties)
-<ul id="iproperties"></ul>
+  <ul id="iproperties"></ul>
 
 
 ### Classes
@@ -110,5 +111,5 @@ $().ready(function(){
 
 ### Properties
 
-<p id="properties"></p>
+<div  id="properties"></div>
 
