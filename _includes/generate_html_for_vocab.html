@@ -1,7 +1,5 @@
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
-function generate_test() {
-	$('#classes').append("test"); 
-};
 function itemnize_json( json, context ) { 
   var html ='';
   if ( typeof(json) === 'boolean' ) {
@@ -40,7 +38,8 @@ function itemnize_json( json, context ) {
   };
   return html;
 };
-generate_html( data ) { 
+$().ready(function(){
+  $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) { 
     var graphelements = data["@graph"];
     for (i=0; i<graphelements.length; i++) {
         if ("@id" in graphelements[i]) { 
@@ -80,8 +79,19 @@ generate_html( data ) {
             $('#iclasses').append(indexhtml);
             $('#classes').append(headerhtml);
             $('#classes').append(table);
-          };
-	    };
-   };		
-};
+	  };
+	};
+      };		
+    });
+});
 </script>
+### Vocabulary
+* [Classes](#classes)
+	<div id="iclasses"></div>
+* [Properties](#properties)
+	<div id="iproperties"></div>
+### Classes
+<div id="classes"></div>
+## Properties
+<div id="properties"></div>
+
