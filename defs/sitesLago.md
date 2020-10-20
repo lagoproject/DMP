@@ -75,7 +75,7 @@ As an real example, the catalog metadata of some simulation should include the s
 <script type="text/javascript" src="/assets/js/generate_html_for_vocab.js"></script>
 <script>
 $().ready(function(){
-  generate_test();     
+  $().generate_test();     
 });
 </script>
  
