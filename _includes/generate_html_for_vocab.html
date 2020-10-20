@@ -1,3 +1,12 @@
+<!-- 
+################################################################################
+# Original Author: A.J. Rubio-Montero (http://orcid.org/0000-0001-6497-753X),  #
+#          CIEMAT - Sci-Track Group (http://rdgroups.ciemat.es/web/sci-track), #
+#          for the EOSC-Synergy project (EU H2020 RI Grant No 857647).         #
+# License (SPDX): BSD-3-Clause (https://opensource.org/licenses/BSD-3-Clause)  #
+# Copyright (c): 2020-today, The LAGO Collaboration (http://lagoproject.net)   #
+################################################################################
+-->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 function itemnize_json( json, context ) { 
@@ -43,7 +52,7 @@ $().ready(function(){
     var graphelements = data["@graph"];
     for (i=0; i<graphelements.length; i++) {
         if ("@id" in graphelements[i]) { 
-          var id = graphelements[i]["@id"].split(':')[1];
+          var id = graphelements[i]["@id"];
           var indexhtml = '<li><a href="#'+id+'"><strong>lago:'+id+'</strong></a></li>';
           var headerhtml = '<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>lago:'+id+'</strong></h5>';
           if ("comment" in graphelements[i]) {
@@ -92,6 +101,6 @@ $().ready(function(){
 	<div id="iproperties"></div>
 ### Classes
 <div id="classes"></div>
-## Properties
+### Properties
 <div id="properties"></div>
 
