@@ -53,7 +53,7 @@ $().ready(function(){
     for (i=0; i<graphelements.length; i++) {
         if ("@id" in graphelements[i]) { 
           var id = graphelements[i]["@id"];
-          var indexhtml = '<a href="#'+id+'">'+id+'</a>';
+          var indexhtml = '<li><a href="#'+id+'">'+id+'</a></li>';
           var headerhtml = '<h4 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h4>';
           if ("comment" in graphelements[i]) {
             headerhtml = headerhtml + '<p>'+ graphelements[i]["comment"][0]["@value"]+'</p>';
@@ -99,11 +99,11 @@ $().ready(function(){
 
 <ul><li>
 [**Classes**](#classes)
-<ul><li id="iclasses"></li></ul>
+<ul id="iclasses"></ul>
 </li><li>		
 [**Properties**](#properties)
-<ul><li id="iproperties"></li></ul>
-</li><ul>
+<ul id="iproperties"></ul>
+</li></ul>
 
 ### Classes
 
