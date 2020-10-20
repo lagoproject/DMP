@@ -11,7 +11,7 @@
 <script>
 function itemnize_json( json, context, link ) { 
   var html ='';
-  if ( (link == false) || (typeof(json) === 'boolean') )  return json;
+  if ( typeof(json) === 'boolean' )  return json;
   if ( typeof(json) === 'string' ) {
     var element = json.split(':');
     var innid = element[0];
