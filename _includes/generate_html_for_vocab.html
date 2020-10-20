@@ -11,9 +11,7 @@
 <script>
 function itemnize_json( json, context, link ) { 
   var html ='';
-  if ( (link == false) || (typeof(json) === 'boolean') ) {
-    return json;
-  };
+  if ( (link == false) || (typeof(json) === 'boolean') )  return json;
   if ( typeof(json) === 'string' ) {
     var element = json.split(':');
     var innid = element[0];
@@ -23,10 +21,11 @@ function itemnize_json( json, context, link ) {
         vocab = element[0];
     };
     var contexturl = context[vocab];
-    if ( vocab == "lago" ) {
-      contexturl = '#';  
-    };
-    html = '<br /><a href="'+ contexturl + json +'">'+ json +'</a>';
+    if ( vocab == "lago" ) contexturl = '';  
+    if  ( contexturl[contexturl.length-1]!='#' )  contexturl = contexturl + '#';
+    if ( vocab == "sdo" ) contexturl = context[vocab];
+    else innid = json;
+    html = '<br /><a href="'+ contexturl + innid +'">'+ json +'</a>';
   } else {
     if ( !(Array.isArray(json)) ) {
       var json_aux = [];
