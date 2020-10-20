@@ -71,7 +71,7 @@ As an real example, the catalog metadata of some simulation should include the s
 
 ## Defined LAGO sites
 
-{% include generate_html_for_vocab.html %}
+{% include generate_html_for_vocab.html folder="/DMP/defs/sitesLago.jsonld" %}
 
 
 ## Plain JSON-LD file
