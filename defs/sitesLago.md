@@ -72,7 +72,7 @@ As an real example, the catalog metadata of some simulation should include the s
 ## Defined LAGO sites
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
-<script type="text/javascript" src="assets/js/generate_html_for_vocab.js"></script>
+<script type="text/javascript" src="/assets/js/generate_html_for_vocab.js"></script>
 <script>
 $().ready(function(){
   generate_test();     
