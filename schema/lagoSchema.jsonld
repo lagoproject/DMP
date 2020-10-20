@@ -34,8 +34,7 @@
     "comment" : [ { "@language" : "en", "@value" : "Identifies any concrete release of software used for simulation, measure, cleaning or analisys procedures. It always refers to source code, thus sdo:codeRepository is equivalent to the main object @id and therefore mandatory. It must point to an compresed file (in a file repository as OneZone) or to an CVS as GitHub (zipped or .git) whenever the contents were immutable (i.e. it is not valid to link generic GitHub branch without versioning that can change in the future). It is also mandatory assing an Agent:name. However, it is optional to use sdo:runtimePlatform (redefined as lago:runtimePlatform) to point to other releated SoftwareSourceCode object (to other lago:Software), for example to the Docker distribution/integration in GitHub (it could be modified to sdo:SoftwareApplication in the Future)." },  
                   { "@language" : "es", "@value" : "Identifica una versión concreta de un software usado para simular, medir, limpiar o analizar los datos de LAGO. Siempre se refiere a código fuente, por tanto, la propiedad sdo:codeRepository se considera equivalente al @id del objeto y por tanto obligatoria. Además debe apuntar a un fichero comprimido  (almacenado en en un repositorio) o a un CVS como GitHub (.zip o .git) siempre que los contenidos señalados sean inmutables (es decir, no es válido enlazar una rama genérica en GitHub si version fija que pueda cambiar en un futuro). También es obligatorio asignar un Agent:name. Por otro lado es opcional el uso de sdo:runtimePlatform (redefinida como lago:runtimePlatform) para señalar otro objeto SoftwareSourceCode (otro lago:Software) relacionado, por ejemplo la integración Docker en GitHub (en un futuro se podría considerar cambiar a sdo:SoftwareApplication)." } ]
    },
-
-  {
+   {
     "@id": "lago:runtimePlatform", 
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:Software" },
@@ -43,9 +42,6 @@
     "comment" : [ { "@language" : "en", "@value" : "" },  
                   { "@language" : "es", "@value" : "" } ]
    },
-    
-
-
 {"_comment" : "------ ARTI do_sims main Class and parameters to create a Catalog of a complete Simulation --------"},
    {
     "@id": "lago:ArtiParams",
@@ -112,8 +108,7 @@
     "@default" : false,
     "comment" : [ { "@language" : "en", "@value" : "Enable high energy cuts for secondaries" },  
                   { "@language" : "es", "@value" : "" } ]
-   },
-   
+   },  
 {"_comment" : "------ Defining installed detectors and simulated detectors, this implies estaiblishing equivalencies among measures and software parameters --------"},
    {
     "@id": "lago:DetectorSite",
@@ -128,8 +123,7 @@
     "comment" : [ { "@language" : "en", "@value" : "Set of effectively used parameters in (i.e extracted from) a CORSIKA input. The significant ones for reusing, datamining and BigData are only included." },  
                   { "@language" : "es", "@value" : "Conjunto de parámetros efectivamente usados para crear (o extraidos de) un fichero INPUT de CORSIKA, solo los que son para reutilización, minería de datos y BigData." } ]
    },
-
-  {
+   {
      "@id": "lago:corsikaParam",
      "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
      "dcat:domain": [ { "@id" : "lago:obsLev" },
@@ -142,7 +136,6 @@
      "comment" : [ { "@language" : "en", "@value" : "" },  
                    { "@language" : "es", "@value" : "" } ]
   },
-
 {"_comment" : "------ common properties to describe characteristics of a DetectorSite (Agent) which are included also in a lago:CorsikaInput --------"},
    {
      "@id": "lago:obsLev",
@@ -167,14 +160,12 @@
     "comment" : [ { "@language" : "en", "@value" : " Earth's mag. field (MAGNET), see values at http://www.ngdc.noaa.gov/geomagmodels/struts/calcIGRFWMM or currently at https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm"},  
                   { "@language" : "es", "@value" : "" } ]
    },
-
    {
     "@id": "lago:MagnetComponents",
     "@type" : [ "rdfs:Class", "owl:Class" ],
     "comment" : [ { "@language" : "en", "@value" : " Components of the Earth's mag. field (MAGNET), Horizontal (bx) and Vertical (bx)" },  
                   { "@language" : "es", "@value" : "" } ]
    },
-
     {
       "@id": "lago:bx",
       "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
@@ -193,8 +184,6 @@
       "comment" : [ { "@language" : "en", "@value" : "Vertical comp. of the Earth's mag. field (MAGNET) [downwards,muT], see values at http://www.ngdc.noaa.gov/geomagmodels/struts/calcIGRFWMM or currently at https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" },  
                     { "@language" : "es", "@value" : "" } ]
     },
-
-
     {
       "@id": "lago:atmcrd",
       "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
@@ -205,7 +194,6 @@
       "comment" : [ { "@language" : "en", "@value" : "Atmospheric type, posible values: ATMOSPHERE, ATMOD" },  
                     { "@language" : "es", "@value" : "" } ]
     },
-
     { 
       "@id": "lago:Atmosphere",
       "@type" : [ "rdfs:Class", "owl:Class" ],
@@ -213,7 +201,6 @@
       "comment" : [ { "@language" : "en", "@value" : "Atmospheric type, fixed value: ATMOSPHERE" },  
                     { "@language" : "es", "@value" : "" } ]
     },
-
     { 
       "@id": "lago:Atmod",
       "@type" : [ "rdfs:Class", "owl:Class" ],
@@ -221,7 +208,6 @@
       "comment" : [ { "@language" : "en", "@value" : "Atmospheric type, fixed vaule: ATMOD" },  
                     { "@language" : "es", "@value" : "" } ]
     },
-
     {
       "@id": "lago:modatm",
       "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
@@ -231,7 +217,6 @@
       "comment" : [ { "@language" : "en", "@value" : "Atmospheric model (can be ATMOSPHERE or ATMOD), some posible values: 19, E1, E2, E10, E29, E30(=wi), E31(=sp), E32(=su), E33(=au)" },  
                     { "@language" : "es", "@value" : "" } ]
     },
-
     {
       "@id": "lago:arrang",
       "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
@@ -244,10 +229,9 @@
                     { "@language" : "es", "@value" : "" } ]
     }
   ],
-
 "@context" : {
     "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.jsonld",
-    "@vocab:" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
+    "@vocab" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
     "_dcatap" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
     "_dcatap_landing_page" : "http://data.europa.eu/r5r/",
     "owl" : "http://www.w3.org/2002/07/owl#",
