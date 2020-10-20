@@ -39,7 +39,7 @@ function itemnize_json( json, context ) {
   return html;
 };
 $().ready(function(){
-  $.getJSON( "/DMP/schema/lagoSchema.jsonld", function( data ) { 
+  $.getJSON( {{ include.folder }}, function( data ) { 
     var graphelements = data["@graph"];
     for (i=0; i<graphelements.length; i++) {
         if ("@id" in graphelements[i]) { 
