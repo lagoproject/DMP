@@ -71,20 +71,8 @@ As an real example, the catalog metadata of some simulation should include the s
 
 ## Defined LAGO sites
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
-<script type="text/javascript" src="/assets/js/generate_html_for_vocab.js"></script>
-<script>
-$().ready(function(){
-  $().generate_test();     
-});
-</script>
- 
- * List of defined LAGO sites
-   <div id="iproperties"></div>
-   
- <div id="properties"></div>
- 
- <div id="classes"></div>
+{% include generate_html_for_vocab.html %}
+
 
 ## Plain JSON-LD file
 
