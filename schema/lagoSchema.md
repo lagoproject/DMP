@@ -18,9 +18,9 @@ parent: Metadata Schema
 {:toc}
 
 
-## Metadata Schema for LAGO by item by item
+## Vocabulary item by item
 
-{% include generate_html_for_vocab.html folder="/DMP/schema/lagoSchema.jsonld" %}
+{% include generate_html_for_vocab.html folder="/DMP/schema/lagoSchema.jsonld" vocabulary=true %}
 
 
 
