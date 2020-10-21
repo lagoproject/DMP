@@ -21,13 +21,13 @@ function itemnize_json( json, context, link ) {
         innid = element[1];
         vocab = element[0];
       } else return json;
-    };
+    } else return json;
     var contexturl = context[vocab];
     if ( vocab == "lago" ) contexturl = '';  
     if ( contexturl[contexturl.length-1] !== '#' )  contexturl = contexturl + '#';
     if ( vocab == "sdo" ) contexturl = context[vocab];
     else innid = json;
-    html = '<br /><a href="'+ contexturl + innid +'">'+ json +'</a>';
+    html = '<a href="'+ contexturl + innid +'">'+ json +'</a>';
   } else {
     if ( !(Array.isArray(json)) ) {
       var json_aux = [];
@@ -44,7 +44,7 @@ function itemnize_json( json, context, link ) {
 	  link = false;
         };
       };
-      html = html + itemnize_json(inner_json, context, link);
+      html = html + '<br />' + itemnize_json(inner_json, context, link);
     };
   };
   return html;
@@ -69,7 +69,7 @@ $().ready(function(){
 			    <tr class="header">
 				<th>@type</th>';	  
 	  for (var k=0; k<keys.length; k++) {
-	    table = table + ' <th>'+ keys[k] + '</th>';
+	    table = table + ' <th>'+ itemnize_json(keys[k]) + '</th>';
 	  };
 	  table = table +'	</tr>
 			</thead>
