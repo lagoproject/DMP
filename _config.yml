@@ -14,7 +14,6 @@ permalink: pretty
 # To include them, comment-out the relevant line above.
 # Uncommenting the following line doesn't work - see https://github.com/jekyll/jekyll/issues/4791
 # include: ["docs/tests/"]
-include: ["schema"]
 
 # 
 #
@@ -48,7 +47,7 @@ search:
 #
 # Aux links for the upper right navigation
 aux_links:
-  "LAGO DPM on GitHub":
+  "LAGO DMP on GitHub":
     - "https://github.com/lagoproject/DMP/"
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
