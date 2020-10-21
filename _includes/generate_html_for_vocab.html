@@ -97,7 +97,7 @@ $().ready(function(){
 });
 </script>
 
-{% if include.vocabulary %}
+{% if include.vocabulary == "true" %}
 
 - [**Classes**](#classes)
   <ul id="iclasses"></ul>
@@ -115,8 +115,6 @@ $().ready(function(){
 
 {% else %}
 
-{% endif %}
-
 - [**Items**](#items)
   <ul id="iclasses"></ul>
 
@@ -124,5 +122,5 @@ $().ready(function(){
 
 <div id="classes"></div>
 
-
+{% endif %}
 
