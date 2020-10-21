@@ -20,7 +20,7 @@ parent: Metadata Schema
 
 ## Vocabulary item by item
 
-{% include generate_html_for_vocab.html folder="/DMP/schema/lagoSchema.jsonld" vocabulary=true %}
+{% include generate_html_for_vocab.html folder="/DMP/schema/lagoSchema.jsonld" vocabulary="true" %}
 
 
 
