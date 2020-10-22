@@ -6,4 +6,6 @@ permalink: /defs/
 nav_order: 4
 ---
 
-# This is a index text
+# Established definitions
+
+This section fixes the definition of certain LAGO actors following the [metadata schema](/DMP/schema/lagoSchema.md). The objetive is to allow linking metadata with public URIs.
