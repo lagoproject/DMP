@@ -27,8 +27,11 @@ parent: Metadata Schema
 
 ## Plain JSON-LD file
 
+{% capture thisPage %}
+    {% include_relative lagoSchema.jsonld %}
+{% endcapture %}
 ```json
-{% include_relative sitesLago.jsonld %}
+{{ thisPage }}
 ```
 
 
