@@ -10,19 +10,25 @@ parent: Metadata Schema
 |-------|---------|------|------------|
 | 1.1 develop | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
 
-
 ## Table of contents
-{: .no_toc}
+{: .no_toc .text-delta }
 
 - TOC
 {:toc}
 
+## What is defined?
+
+## How to use this metadata Vocabulary?
 
 ## Vocabulary item by item
 
 {% include generate_html_for_vocab.html folder="/DMP/schema/lagoSchema.jsonld" vocabulary="true" %}
 
 
+## Plain JSON-LD file
 
+```json
+{% include_relative sitesLago.jsonld %}
+```
 
 
