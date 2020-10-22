@@ -4,11 +4,11 @@ parent: HowTo's
 nav_order: 2
 ---
 
-# How to Login into LAGO data repository 
+# How to enrol a OneData provider
 
 TBD.
 
-## Get a usable TOKEN
+## etc...
 
 TBD.
 
