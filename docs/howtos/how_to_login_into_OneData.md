@@ -9,9 +9,9 @@ nav_order: 2
 
 ![](./how_to_login_into_OneData_img/datahub.egi.eu_login.png)
 {% for i in (2..5) %} 
- <figure class="image">
-  <img src="/DPM/docs/howtos/how_to_login_into_OneData_img/datahub.egi.eu_login{{i}}.png">
- </figure>
+ <p>
+  <img src="/DPM/docs/howtos/how_to_login_into_OneData_img/datahub.egi.eu_login{{i}}.png" alt>
+ </p>
 {% endfor %}
 
 ## Get a usable TOKEN
