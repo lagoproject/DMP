@@ -5,13 +5,13 @@ nav_order: 2
 ---
 
 # How to Login into LAGO data repository 
-
-TBD.
+ ![Step](./how_to_login_into_OneData/datahub.egi.eu_login.png)
+{% for i in (2..5) %} 
+  ![Step](./how_to_login_into_OneData/datahub.egi.eu_login{{i}}.png)
+{% endfor%}
 
 ## Get a usable TOKEN
 
-TBD.
-
-![Step](./how_to_login_into_OneData/datahub.egi.eu_login.png)
-
-![Step](./how_to_login_into_OneData/datahub.egi.eu_login2.png)
+{% for i in (6..12) %} 
+  ![Step](./how_to_login_into_OneData/datahub.egi.eu_login{{i}}.png)
+{% endfor%}
