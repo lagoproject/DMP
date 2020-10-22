@@ -33,7 +33,7 @@ For example, if you had enroled into LAGO VO with a Google account, you will fir
 
 Depending on the browser and the screen size, menu list on the left can be hidden and the objects change of position:
 
-{% for i in (7..9) %} 
+{% for i in (7..8) %} 
   ![Step{{i}}](/DMP/docs/howtos/how_to_login_into_OneData_img/datahub.egi.eu_login{{i}}.png)
 {% endfor %}
 
