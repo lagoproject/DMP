@@ -10,12 +10,12 @@ nav_order: 2
 ![](./how_to_login_into_OneData_img/datahub.egi.eu_login.png)
 {% for i in (2..5) %} 
  <p>
-  <img src="/DPM/docs/howtos/how_to_login_into_OneData_img/datahub.egi.eu_login{{i}}.png" alt>
+  <img src="/DMP/docs/howtos/how_to_login_into_OneData_img/datahub.egi.eu_login{{i}}.png" alt>
  </p>
 {% endfor %}
 
 ## Get a usable TOKEN
 
 {% for i in (6..12) %} 
-  ![Step](/DPM/docs/howtos/how_to_login_into_OneData_img/datahub.egi.eu_login6.png)
+  ![Step{{i}}](/DMP/docs/howtos/how_to_login_into_OneData_img/datahub.egi.eu_login6.png)
 {% endfor %}
