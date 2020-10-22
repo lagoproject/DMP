@@ -41,13 +41,13 @@ Secondly, the developer can use [this document](./lagoSchema.md) and the [lagoSc
     - expose some data and harvest them;
 - making available data by means to: 
     - describe legacy data (extracting metadata from existing files),
-    - generate new data with metadata (specific LAGO wrappers execute the processing or [simulations](examples/sims/simulationExample));
+    - generate new data with metadata (specific LAGO wrappers execute the processing or [simulations](examples/sims/simulationExample.md));
 - using the pre-stablished:
-    - [LAGO sites](/defs/lagoSites) or [LAGO organisation](/defs/lagoOrganisation).
-    - licenses and permissions;
+    - [definitions](/defs/index.md): [LAGO sites](/defs/lagoSites.md) or [LAGO organisation](/defs/lagoOrganisation.md),
+    - [rights](/rights/index.md)): licenses and permissions;
 - proposing extensions of the schema or definitions:
     - new or simulated LAGO sites,
-    - etc.
+    - users, institutions, etc.
 
 
 ## Vocabulary item by item
