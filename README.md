@@ -2,7 +2,7 @@
 layout: default
 title: Contributing
 has_children: false
-nav_order: 7
+nav_order: 8
 ---
 
 ## Description of this repository
