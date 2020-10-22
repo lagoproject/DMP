@@ -7,8 +7,7 @@ nav_order: 2
 # How to Login into LAGO data repository
 
 
-![](./how_to_login_into_OneData_img/datahub.egi.eu_login.png)
-{% for i in (2..5) %} 
+{% for i in (1..5) %} 
  <p>
   <img src="/DMP/docs/howtos/how_to_login_into_OneData_img/datahub.egi.eu_login{{i}}.png" alt>
  </p>
@@ -17,5 +16,5 @@ nav_order: 2
 ## Get a usable TOKEN
 
 {% for i in (6..12) %} 
-  ![Step{{i}}](/DMP/docs/howtos/how_to_login_into_OneData_img/datahub.egi.eu_login6.png)
+  ![Step{{i}}](/DMP/docs/howtos/how_to_login_into_OneData_img/datahub.egi.eu_login{{i}}.png)
 {% endfor %}
