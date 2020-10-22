@@ -6,9 +6,9 @@ permalink: /schema/
 nav_order: 3
 ---
 
-# This is anoter index for schema
+# Metadata Vocabulary and examples 
 
-TBD.
+This section deals with the definition of a specific metadata vocabulary for LAGO computation, based on the current standards widely accepted by scientific community. Additionally it compiles real examples of the use of this schema.
 
 
     
