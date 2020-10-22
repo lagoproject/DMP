@@ -20,7 +20,7 @@ nav_order: 2
 
 ## What is defined?
 
-[sitesCollaboration.jsonld](./lagoCollaboration.jsonld) unifies the definition of LAGO sites following the official LAGO schema vocabulary. 
+[lagoCollaboration.jsonld](./lagoCollaboration.jsonld) unifies the definition of LAGO Collaboration following the official LAGO schema vocabulary. 
 
 The purpose of the definition is to univocally idenfify the LAGO Collaboration by means of a public URI for being linked by any metadata. 
 
