@@ -9,7 +9,7 @@ nav_order: 5
 
 This repository contains the Data Management Plan (DMP) for LAGO Collaboration. It is a dynamic document that describes data, metadata and how they is produced, accessed and managed under an unified view at that link:
 
-https://lagoproject.github.io/DMP/
+[https://lagoproject.github.io/DMP/](https://lagoproject.github.io/DMP/)
 
 # Contributing
 
@@ -19,6 +19,6 @@ https://lagoproject.github.io/DMP/
 
 # License
 
-All contents of this repository are under the terms of the Creative Common [CC BY-NC-SA 4.0](./LICENSE) license.
+All contents of this repository are under the terms of the Creative Common [CC BY-NC-SA 4.0](./LICENSE) license, with exception of some code needed for rendering the web page, which have its own license declared at the head of the code.  
 
 
