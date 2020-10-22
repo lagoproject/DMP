@@ -4,7 +4,7 @@ parent: Definitions
 nav_order: 2
 ---
 
-# LAGO sites 
+# LAGO Collaboration 
 {: .no_toc }
 
 |Version| Updated | Date |Contributors|
@@ -20,7 +20,7 @@ nav_order: 2
 
 ## What is defined?
 
-[sitesCollaboration.jsonld](./sitesCollaboration.jsonld) unifies the definition of LAGO sites following the official LAGO schema vocabulary. 
+[sitesCollaboration.jsonld](./lagoCollaboration.jsonld) unifies the definition of LAGO sites following the official LAGO schema vocabulary. 
 
 The purpose of the definition is to univocally idenfify the LAGO Collaboration by means of a public URI for being linked by any metadata. 
 
@@ -28,7 +28,7 @@ The purpose of the definition is to univocally idenfify the LAGO Collaboration b
 
 In order to preserve the provenance of the linked metadata through the time, you must use the GitHub raw link of a certain release of this document:
 
-`https://raw.githubusercontent.com/lagoproject/DMP/`*\<tag release\>*`/defs/lagoCollaboration.jsonld`*#\<site codename\>*
+`https://raw.githubusercontent.com/lagoproject/DMP/`*\<tag release\>*`/defs/lagoCollaboration.jsonld`
 
 For example:
 
@@ -60,6 +60,6 @@ As an real example, the catalog metadata of some simulation should include the t
 ## Plain JSON-LD file
 
 ```json
-{% include_relative sitesLago.jsonld %}
+{% include_relative lagoCollaboration.jsonld %}
 ```
 
