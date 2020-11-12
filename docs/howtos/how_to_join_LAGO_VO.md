@@ -52,7 +52,7 @@ The collaboration are mainly distributed by countries, every one correspond to a
 {% endfor %}
 
 
-For example, after following the corresponding link, you must accept the AUP clauses of LAGO collaboration (also updated at this [page](DMP/rights/AUP/)):
+For example, after following the corresponding link, you must accept the AUP clauses of LAGO collaboration (also updated at this [page](/DMP/rights/AUP/)):
 
 {% assign i = i | plus: 1 %}
 ![https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png](/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png)
