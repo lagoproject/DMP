@@ -24,7 +24,7 @@ Before to join LAGO you must register in eduTeams. Te procedure is as follow:
 
 {% assign i = 0 %}
 
-1.  In order to get started with eduTEAMS, all users, regardless of their role need to register on the eduTEAMS Service.{% assign i = i | plus: 1 %}![https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png](/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png)
+1.  In order to get started with eduTEAMS, all users, regardless of their role need to register on the eduTEAMS Service at [https://www.eduteams.org/#join](https://www.eduteams.org/#join).{% assign i = i | plus: 1 %}![https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png](/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png)
 
 1.  When you click the "JOIN" button, you will be presented with a screen on which you will have to select your organisation's Identity Provider where you will authenticate. If your organisation is not listed, you might want to search/choose "ORCID" or "Google".{% assign i = i | plus: 1 %}![https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png](/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png)
 
