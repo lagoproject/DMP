@@ -48,7 +48,7 @@ Every collaborator should belong to some LAGO scientific group.
 ``https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group=<GROUP>``
 
 This is currently distributed by countries:
-{% assign countries = [argentina, colombia, spain] %}
+{% assign countries = ("argentina", "colombia", "spain") %}
 {% for c in countries %}
   {{c}} : [https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group={{c}}](https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group={{c}})
 {% endfor %}
