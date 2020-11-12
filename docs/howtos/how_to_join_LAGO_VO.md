@@ -20,7 +20,7 @@ https://wiki.geant.org/display/eduTEAMS/Services
 ## Registering as a new user on the eduTEAMS Service
 *(This subsection is copied from the work of Christos Kanellopoulos as eduTEAMs responsible at  [https://wiki.geant.org/display/eduTEAMS/Registering+as+a+new+user+on+the+eduTEAMS+Service](https://wiki.geant.org/display/eduTEAMS/Registering+as+a+new+user+on+the+eduTEAMS+Service))*.
 
-Before to join LAGO you must register in eduTeams. Te procedure is as follow:
+Before to join LAGO you must register in eduTeams. Te procedure is as follows:
 
 {% assign i = 0 %}
 
@@ -37,15 +37,15 @@ Before to join LAGO you must register in eduTeams. Te procedure is as follow:
 ![https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png](/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png)
 
 
-Now that you are registered on the eduTEAMS Service, but to access services  you can join to some group in LAGO Virtual Organization
+Now that you are registered on the eduTEAMS Service, but to access the LAGO services **you must also join to some group in the LAGO Virtual Organization**. See the next section.
 
 ## Applying to a LAGO group
 
-Every collaborator should belong to some LAGO scientific group.
+Every collaborator should belong to some LAGO scientific group. To apply for someone you should follow the link:
 
 ``https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group=<GROUP>``
 
-This is currently distributed by countries:
+The collaboration are mainly distributed by countries, every one correspond to a one group:
 {% assign countries = "argentina, colombia, spain" | split: ", " %}
 {% for c in countries %}
   - {{c}} : [https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group={{c}}](https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group={{c}})
