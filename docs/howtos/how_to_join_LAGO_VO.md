@@ -37,7 +37,7 @@ Before to join LAGO you must register in eduTeams. Te procedure is as follow:
 ![https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png](/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png)
 
 
-Now that you are registered on the eduTEAMS Service, you can join to some group in LAGO Virtual Organization
+Now that you are registered on the eduTEAMS Service, but to access services  you can join to some group in LAGO Virtual Organization
 
 ## Applying to a LAGO group
 
@@ -48,18 +48,26 @@ Every collaborator should belong to some LAGO scientific group.
 This is currently distributed by countries:
 {% assign countries = "argentina, colombia, spain" | split: ", " %}
 {% for c in countries %}
-  {{c}} : [https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group={{c}}](https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group={{c}})
+  - {{c}} : [https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group={{c}}](https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group={{c}})
 {% endfor %}
 
 
-For example, to apply to Spain group:
+For example, after following the corresponding link, you must accept the AUP clauses of LAGO collaboration (also updated at this [page](DMP/rights/AUP/)):
 
 {% assign i = i | plus: 1 %}
 ![https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png](/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png)
 
-{% assign i = i | plus: 1 %}
-![https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png](/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png)
+Then, eduTEAMS informs you that the application was sent and it is waiting for approval:
 
 {% assign i = i | plus: 1 %}
 ![https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png](/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png)
+
+You can also see that has two pending registration, one for the main LAGO-AAI virtual organisation (VO) and other for the group for which you were applied:
+
+{% assign i = i | plus: 1 %}
+![https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png](/DMP/docs/howtos/how_to_join_LAGO_VO_img/RegistrationLAGO{{i}}.png)
+
+
+The result (the acceptance or not) will be notified by email.
+
 
