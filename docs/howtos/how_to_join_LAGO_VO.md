@@ -51,7 +51,7 @@ This is currently distributed by countries:
 {% assign countries = [argentina, colombia, spain] %}
 {% for c in countries}
   {{c}} : [https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group={{c}}](https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group={{c}})
-{% endfor%}
+{% endfor %}
 
 
 For example, to apply to Spain group:
