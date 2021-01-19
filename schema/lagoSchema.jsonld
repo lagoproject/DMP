@@ -101,6 +101,15 @@
                   { "@language" : "es", "@value" : "" } ]
    },
    {
+    "@id": "lago:otherDefaultValues",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:boolean" },
+    "@default" : false,
+    "comment" : [ { "@language" : "en", "@value" : "If true, other parameters not explicitly stored in metadata are the default values set by the specific release of ARTI. Otherwise these values are unknow (set manually by the user via prompt)." },  
+                  { "@language" : "es", "@value" : "Si es verdadero, los par,ametros que no aparecen en los metadatos corresponden a los valores por defecto de la versión concreta de ARTI que se estuviera usando. Si está marcado como falso, los valores que no aparecen en los metadatos son desconocidos, porque el usuario los ha puesto manualmente cuando la aplicación se lo ha preguntado por consola." } ]
+   },
+   {
     "@id": "lago:highEnergyCutsSecondaries",
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
