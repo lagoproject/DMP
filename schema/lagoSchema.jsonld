@@ -101,7 +101,7 @@
                   { "@language" : "es", "@value" : "" } ]
    },
    {
-    "@id": "lago:otherDefaultValues",
+    "@id": "lago:defaults",
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:boolean" },
