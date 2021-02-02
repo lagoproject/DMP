@@ -48,7 +48,7 @@
                             "@type":"lago:Software",
                             "name":"CORSIKA 75600 for LAGO Collaboration",
                             "lago:runtimePlatform":{
-				    "@id:":"https://api.github.com/repos/lagoproject/onedataSim/git/commits/69f665c3f4767699844f95728b6be1fe0c481142",
+				    		    "@id:":"https://api.github.com/repos/lagoproject/onedataSim/git/commits/69f665c3f4767699844f95728b6be1fe0c481142",
                                                     "@type":"lago:Software",
                                                     "name":"onedataSim",
                                                     "sdo:codeRepository":"https://github.com/lagoproject/onedataSim/69f665c3f4767699844f95728b6be1fe0c481142"
