@@ -52,10 +52,10 @@
                                       "name":"arti",
                                       "sdo:codeRepository":"https://github.com/lagoproject/arti/tree/a761dfe63e9f72e2dcfe106d314de28b6148b78b",
                                       "lago:runtimePlatform":{
-				              "@id:":"https://api.github.com/repos/lagoproject/onedataSim/git/commits/69f665c3f4767699844f95728b6be1fe0c481142",
+				           		      "@id:":"https://api.github.com/repos/lagoproject/onedataSim/git/commits/69f665c3f4767699844f95728b6be1fe0c481142",
                                                               "@type":"lago:Software",
                                                               "name":"onedataSim",
-		                                      "sdo:codeRepository":"https://github.com/lagoproject/onedataSim/69f665c3f4767699844f95728b6be1fe0c481142"
+		                                   	      "sdo:codeRepository":"https://github.com/lagoproject/onedataSim/69f665c3f4767699844f95728b6be1fe0c481142"
                                                              }
                                      }
 
