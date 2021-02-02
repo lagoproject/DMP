@@ -45,14 +45,15 @@
                 "prov:endedAtTime":"2020-09-07T15:14:14.916595Z",
                 "prov:startedAtTime":"2020-09-07T15:14:09.240080Z",
                 "prov:wasAssociatedWith":{
-                                            "@id":"https://mon01-tic.ciemat.es/cdmi/LAGOsoft/corsika/corsika-75600-lago.tar.gz",
-                                            "@type":"lago:Software",
-                                            "name":"CORSIKA 75600 for LAGO Collaboration",
-                                            "lago:runtimePlatform":{
-                                                                    "@id:":"https://github.com/lagoproject/onedataSim/archive/release/0.0.1.zip",
-                                                                    "@type":"lago:Software",
-                                                                    "name":"Arti Simulator integrated in OneData v.0.0.1"
-                                                                    }
+                                          "@id":"https://mon01-tic.ciemat.es/cdmi/LAGOsoft/corsika/corsika-75600-lago.tar.gz",
+                                          "@type":"lago:Software",
+                                          "name":"CORSIKA 75600 for LAGO Collaboration",
+                                          "lago:runtimePlatform":{
+                                                                  "@id:":"https://api.github.com/repos/lagoproject/onedataSim/git/commits/69f665c3f4767699844f95728b6be1fe0c481142",
+                                                                  "@type":"lago:Software",
+                                                                  "name":"onedataSim",
+                                                                  "sdo:codeRepository":"https://github.com/lagoproject/onedataSim/69f665c3f4767699844f95728b6be1fe0c481142"
+                                                                 }
                                          },
                 "prov:used":"/sac_60_100.0_75600_QGSII_flat/DAT000703-0703-00000000144.input"
             },
