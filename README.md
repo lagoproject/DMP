@@ -13,8 +13,8 @@ This repository contains the Data Management Plan (DMP) for LAGO Collaboration. 
 
 ## Contributing
 
-- All LAGO members can contribute to the *develop* branch of DMP through pull request.
-- Members of standardisation group can make `push` to the *develop* branch, but not `merge` to *master* without authorisation.
+- All LAGO members can contribute to the *dev* branch of DMP through pull request.
+- Members of standardisation group can authorise pull requests to the *dev* branch, but not `merge` to *master* without authorisation.
 - Only managers or administrators of the repository can `merge` to *master* branch and to publish stable releases.
 
 ## License
