@@ -74,6 +74,78 @@
                   { "@language" : "es", "@value" : "" } ]
    },
    {
+    "@id": "lago:obsLev",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "lago:ObsLev" },
+    "comment" : [ { "@language" : "en", "@value" : "Detector altitude (cm)" },  
+                  { "@language" : "es", "@value" : "Altura del detector (cm)" } ]
+   },
+   {
+    "@id": "lago:atmModel",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "lago:AtmModel" },
+    "comment" : [ { "@language" : "en", "@value" : "Atmospheric Model" },  
+                  { "@language" : "es", "@value" : "Modelo atmosférico" } ]
+   },
+   {
+    "@id": "lago:rigidCutoff",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "lago:RigidCutoff" },
+    "comment" : [ { "@language" : "en", "@value" : "Rigidity cutoff; 0 = disabled; value in GV = enabled" },  
+                  { "@language" : "es", "@value" : "Corte de la rigidez; 0 = deshabilitado; valor en GV = habilitado" } ]
+   },
+   {
+    "@id": "lago:lowZenith",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "lago:LowZenith" },
+    "comment" : [ { "@language" : "en", "@value" : "Low edge of zenith angle" },  
+                  { "@language" : "es", "@value" : "Límite inferior del ángulo cenital" } ]
+   },
+   {
+    "@id": "lago:highZenith",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "lago:HighZenith" },
+    "comment" : [ { "@language" : "en", "@value" : "High edge of zenith angle" },  
+                  { "@language" : "es", "@value" : "Límite superior del ángulo cenital" } ]
+   },
+   {
+    "@id": "lago:lowPenergy",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "lago:LowPenergy" },
+    "comment" : [ { "@language" : "en", "@value" : "Lower limit of the primary particle energy" },  
+                  { "@language" : "es", "@value" : "Límite inferior de la energía de las partículas primarias" } ]
+   },
+   {
+    "@id": "lago:upPenergy",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "lago:UpPenergy" },
+    "comment" : [ { "@language" : "en", "@value" : "Upper limit of the primary particle energy" },  
+                  { "@language" : "es", "@value" : "Límite superior de la energía de las partículas primarias" } ]
+   },
+   {
+    "@id": "lago:horMag",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "lago:HorMag" },
+    "comment" : [ { "@language" : "en", "@value" : "Horizontal component of the Earth's magnetic field" },  
+                  { "@language" : "es", "@value" : "Componente horizontal del campo magnético de la Tierra" } ]
+   },
+   {
+    "@id": "lago:verMag",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "lago:VerMag" },
+    "comment" : [ { "@language" : "en", "@value" : "Vertical component of the Earth's magnetic field" },  
+                  { "@language" : "es", "@value" : "Componente vertical del campo magnético de la Tierra" } ]
+   },
+   {
     "@id": "lago:flatArray",
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
