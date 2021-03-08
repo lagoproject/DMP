@@ -13,4 +13,4 @@ Currently, DMPs are mandatory for data-science and e-science funded grants and i
 
 DMPs are living documents that will be amended, improved and detailed along the project timeline. Therefore, DMPs should have a clear version number and include a
 timetable for updates. The DMPs should have been defined according to the template of the [DMP Online tool](https://dmponline.dcc.ac.uk/), 
-but they could derive into structured documents, as long as maintaining their unity.
+but they could derive into structured documents, as long as they maintain their unity.
