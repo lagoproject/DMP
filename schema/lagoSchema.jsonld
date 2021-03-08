@@ -77,7 +77,7 @@
     "@id": "lago:rigidity",
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
-    "dcat:range": { "@id" : "xsd:boolean" },
+    "dcat:range": { "@id" : "xsd:float" },
     "comment" : [ { "@language" : "en", "@value" : "Rigidity cutoff; 0 = disabled; value in GV = enabled" },  
                   { "@language" : "es", "@value" : "Corte de la rigidez; 0 = deshabilitado; valor en GV = habilitado" } ]
    },

@@ -22,9 +22,9 @@ nav_order: 1
 
 [lagoCommonRights.jsonld](./sitesLago.jsonld) unifies the usual rights of LAGO data and metadata, following the official LAGO schema vocabulary. 
 
-## How should a item be referenced?
+## How should an item be referenced?
 
-In order to preserve the provenance of the linked metadata through the time, you must use the GitHub raw link of a certain release of this document:
+To preserve the provenance of the linked metadata through time, the GitHub raw link of a certain release of this document must be used:
 
 `https://raw.githubusercontent.com/lagoproject/DMP/`*\<tag release\>*`/rights/lagoCommonRights.jsonld`
 
@@ -33,7 +33,7 @@ For example:
 [https://raw.githubusercontent.com/lagoproject/DMP/1.1/rights/lagoCommonRights.jsonld](https://raw.githubusercontent.com/lagoproject/DMP/1.1/rights/lagoCommonRights.jsonld)
 
 
-As an real example, the catalog metadata of some simulation should include the the reference as the [DCAT-AP2](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe) property [*rigths*](https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld#rigths):
+As a real example, the metadata´s catalog of a simulation should include the reference as the [DCAT-AP2](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe) property [*rights*](https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld#rigths):
 
 ```json
 {

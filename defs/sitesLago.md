@@ -20,19 +20,19 @@ nav_order: 1
 
 ## What is defined?
 
-[sitesLago.jsonld](./sitesLago.jsonld) unifies the definition of LAGO sites following the official LAGO schema vocabulary. 
+[sitesLago.jsonld](./sitesLago.jsonld) unifies the definition of the LAGO sites following the official LAGO schema vocabulary. 
 
-The purpose of site's definition is:
-- to univocally idenfify a predefined LAGO site (real or virtual) to be linked by metadata by means of a public URI;
+The purpose of the site's definition is:
+- to univocally identify a predefined LAGO site (real or virtual) to be linked by metadata using a public URL;
 - to link several related definitions of the site: short codename, name, description, responsible organisation;  
-- to fix their location, i.e. the mangetic field, observation level, GPS coordinates;
+- to fix their location, i.e. magnetic field, observation level, GPS coordinates;
 - to provide other default configuration parameters, meaningful for applications such as the `arrang` [(ARTI)](https://github.com/lagoproject/arti), `status` [(locationMaps)](https://github.com/lagoproject/locationsMaps), etc.  
 
-Note that any site supports or had supported (actually or virtually) one or several Water Cherenkov Detectectors (WCDs). Their definitions should not be included into this document, on the contrary, a WCD definition should link a LAGO site.
+Note that the sites give support or have given support (physically or virtually) to one or several Water Cherenkov Detectors (WCDs). Their definitions should not be included in this document, conversely, it is the WCD definition that should be linked to a LAGO site.
 
-## How should a item be referenced?
+## How should an item be referenced?
 
-In order to preserve the provenance of the linked metadata through the time, you must use the GitHub raw link of a certain release of this document, plus `#` and the short site codename:
+To preserve the provenance of the linked metadata through time, you must use the GitHub raw link to a certain release of this document, plus `#` and the short site codename:
 
 `https://raw.githubusercontent.com/lagoproject/DMP/`*\<tag release\>*`/defs/sitesLago.jsonld`*#\<site codename\>*
 
@@ -41,7 +41,7 @@ For example:
 [https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#sac](https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#sac)
 
 
-As an real example, the catalog metadata of some simulation should include the site reference:
+As a real example, the metadata´s catalog of a simulation should include the site´s reference:
 
 ```json
 {
