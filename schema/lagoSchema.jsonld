@@ -53,7 +53,7 @@
     "@id": "lago:fluxTime", 
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
-    "dcat:range": { "@id" : "xsd:duration" },
+    "dcat:range": { "@id" : "xsd:float" },
     "comment" : [ { "@language" : "en", "@value" : "Flux time (in seconds) for simulations. Use XML Schema 1.1, the format is P<secods>S (while in 1.0 was PT<seconds>S)" },  
                   { "@language" : "es", "@value" : "" } ]
    },
@@ -69,81 +69,49 @@
     "@id": "lago:detectorSite",
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
-    "dcat:range": { "@id" : "lago:DetectorSite" },
-    "comment" : [ { "@language" : "en", "@value" : "Location (several options) of predefined detector sites" },  
-                  { "@language" : "es", "@value" : "" } ]
+    "dcat:range": { "@id" : "xsd:string" },
+    "comment" : [ { "@language" : "en", "@value" : "Location (several options) of predefined detector sites" }, 
+                  { "@language" : "es", "@value" : "Localización (varias opciones) predefinida de detectores" } ]
    },
    {
-    "@id": "lago:obsLev",
+    "@id": "lago:rigidity",
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
-    "dcat:range": { "@id" : "lago:ObsLev" },
-    "comment" : [ { "@language" : "en", "@value" : "Detector altitude (cm)" },  
-                  { "@language" : "es", "@value" : "Altura del detector (cm)" } ]
-   },
-   {
-    "@id": "lago:atmModel",
-    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
-    "dcat:domain": { "@id" : "lago:ArtiParams" },
-    "dcat:range": { "@id" : "lago:AtmModel" },
-    "comment" : [ { "@language" : "en", "@value" : "Atmospheric Model" },  
-                  { "@language" : "es", "@value" : "Modelo atmosférico" } ]
-   },
-   {
-    "@id": "lago:rigidCutoff",
-    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
-    "dcat:domain": { "@id" : "lago:ArtiParams" },
-    "dcat:range": { "@id" : "lago:RigidCutoff" },
+    "dcat:range": { "@id" : "xsd:boolean" },
     "comment" : [ { "@language" : "en", "@value" : "Rigidity cutoff; 0 = disabled; value in GV = enabled" },  
                   { "@language" : "es", "@value" : "Corte de la rigidez; 0 = deshabilitado; valor en GV = habilitado" } ]
    },
    {
-    "@id": "lago:lowZenith",
+    "@id": "lago:tMin",
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
-    "dcat:range": { "@id" : "lago:LowZenith" },
+    "dcat:range": { "@id" : "xsd:float" },
     "comment" : [ { "@language" : "en", "@value" : "Low edge of zenith angle" },  
                   { "@language" : "es", "@value" : "Límite inferior del ángulo cenital" } ]
    },
    {
-    "@id": "lago:highZenith",
+    "@id": "lago:tMax",
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
-    "dcat:range": { "@id" : "lago:HighZenith" },
+    "dcat:range": { "@id" : "xsd:float" },
     "comment" : [ { "@language" : "en", "@value" : "High edge of zenith angle" },  
                   { "@language" : "es", "@value" : "Límite superior del ángulo cenital" } ]
    },
    {
-    "@id": "lago:lowPenergy",
+    "@id": "lago:llimit",
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
-    "dcat:range": { "@id" : "lago:LowPenergy" },
+    "dcat:range": { "@id" : "xsd:float" },
     "comment" : [ { "@language" : "en", "@value" : "Lower limit of the primary particle energy" },  
                   { "@language" : "es", "@value" : "Límite inferior de la energía de las partículas primarias" } ]
    },
    {
-    "@id": "lago:upPenergy",
+    "@id": "lago:ulimit",
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
-    "dcat:range": { "@id" : "lago:UpPenergy" },
+    "dcat:range": { "@id" : "xsd:float" },
     "comment" : [ { "@language" : "en", "@value" : "Upper limit of the primary particle energy" },  
                   { "@language" : "es", "@value" : "Límite superior de la energía de las partículas primarias" } ]
-   },
-   {
-    "@id": "lago:horMag",
-    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
-    "dcat:domain": { "@id" : "lago:ArtiParams" },
-    "dcat:range": { "@id" : "lago:HorMag" },
-    "comment" : [ { "@language" : "en", "@value" : "Horizontal component of the Earth's magnetic field" },  
-                  { "@language" : "es", "@value" : "Componente horizontal del campo magnético de la Tierra" } ]
-   },
-   {
-    "@id": "lago:verMag",
-    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
-    "dcat:domain": { "@id" : "lago:ArtiParams" },
-    "dcat:range": { "@id" : "lago:VerMag" },
-    "comment" : [ { "@language" : "en", "@value" : "Vertical component of the Earth's magnetic field" },  
-                  { "@language" : "es", "@value" : "Componente vertical del campo magnético de la Tierra" } ]
    },
    {
     "@id": "lago:flatArray",
@@ -207,7 +175,7 @@
    {
      "@id": "lago:corsikaParam",
      "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
-     "dcat:domain": [ { "@id" : "lago:obsLev" },
+     "dcat:domain": [ { "@id" : "lago:altitude" },
                       { "@id" : "lago:magnet" },
                       { "@id" : "lago:Atmosphere" },
                       { "@id" : "lago:Atmod" },
@@ -219,14 +187,14 @@
   },
 {"_comment" : "------ common properties to describe characteristics of a DetectorSite (Agent) which are included also in a lago:CorsikaInput --------"},
    {
-     "@id": "lago:obsLev",
+     "@id": "lago:altitude",
      "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
      "dcat:domain": [ { "@id" : "lago:DetectorSite" },
                       { "@id" : "lago:CorsikaInput" },
                       { "@id" : "lago:ArtiParams" } ],
      "dcat:range": { "@id": "xsd:float"},
-     "dcat:label": "obslev",
-     "lago:corsikaParam" : "OBSLEV",
+     "dcat:label": "altitude",
+     "lago:corsikaParam" : "altitude",
      "comment" : [ { "@language" : "en", "@value" : "Observation Level (altitude) above sea level [cm]. xsd:double type allows decimal (i.e. 2.10), non decimal (28467) and scientific notation (1633e2) values within 64-bits (double word)." },  
                    { "@language" : "es", "@value" : "[cm] por encima del nivel del mar. El tipo xsd:double permite valores decimales (2.10), no decimales (28467) y en notación cientifica (1633e2) con tamaño máximo de 64-bits (doble palabra)." } ]
     },
@@ -253,8 +221,8 @@
       "dcat:domain": { "@id" : "lago:MagnetComponents" },
       "dcat:range": { "@id": "xsd:decimal"},
       "dcat:label": "bx",
-      "comment" : [ { "@language" : "en", "@value" : "Horizontal comp. of the Earth's mag. field (MAGNET) [North,muT], see values at http://www.ngdc.noaa.gov/geomagmodels/struts/calcIGRFWMM or currently at https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" },  
-                    { "@language" : "es", "@value" : "" } ]
+      "comment" : [ { "@language" : "en", "@value" : "Horizontal comp. of the Earth's mag. field (MAGNET) [North,muT], see values at https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" },  
+                    { "@language" : "es", "@value" : "Componente horizontal del campo magnético de la Tierra (MAGNET) [North,muT], ver valores en https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" } ]
     },
     {
       "@id": "lago:bz",
@@ -262,8 +230,8 @@
       "dcat:domain": { "@id" : "lago:MagnetComponents" },
       "dcat:range": { "@id": "xsd:decimal"},
       "dcat:label": "bz",
-      "comment" : [ { "@language" : "en", "@value" : "Vertical comp. of the Earth's mag. field (MAGNET) [downwards,muT], see values at http://www.ngdc.noaa.gov/geomagmodels/struts/calcIGRFWMM or currently at https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" },  
-                    { "@language" : "es", "@value" : "" } ]
+      "comment" : [ { "@language" : "en", "@value" : "Vertical comp. of the Earth's mag. field (MAGNET) [downwards,muT], see values at https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" },  
+                    { "@language" : "es", "@value" : "Componente vertical del campo magnético de la Tierra (MAGNET) [downwards,muT], ver valores en https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" } ]
     },
     {
       "@id": "lago:atmcrd",
