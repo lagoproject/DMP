@@ -62,14 +62,13 @@ with their quality and processing level:
   - **L3. Quality for public**. Ensures high quality to be used by researchers from other subjects or general public. Charge histograms of the detectors are also processed corrected. This is the third level of processing in the LAGO ANNA framework.
 
 On the other hand, users can perform their own simulations of extensive atmospheric showers (EAS), the cascades of secondary particles produced when a high energy particle coming from the space interacts with the atmosphere. By using the LAGO ARTI framework, it is possible to simulate the expected flux on signals at the detector level including different geomagnetic, atmospheric and detector conditions. By using ARTI, users are able to generate different types of hierarchical data-sets:
-  - **S0. ARTI inputs**: Set of parameters and auxiliary files needed to configure ARTI specific production (including location, geomagnetic, atmospheric and detector conditions).
-  - **S1. Plain simulations**: CORSIKA outputs, which are described in the official documentation [D. Heck and T. Pierog, "Extensive Air Shower Simulation with CORSIKA: A User’s Guide". Version 7.7100 from December 17, 2019](https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf), section 10, page 121. (Available at https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf)
-  - **S2. Analysed simulations**: ARTI analysis and outputs of the S1 data-set, containing the expected flux of secondary particles at ground.
-  - **S3. Detector response simulations**: ARTI detector simulation module, containing a complete, detailed and adjustable [Geant4](https://geant4.web.cern.ch/) model of the LAGO detectors. The main output is the expected signals in the detector, allowing site characterization and comparison with 2 and L3 data sets at each site.
+  - **S0. Plain simulations**: CORSIKA outputs, which are described in the official documentation [D. Heck and T. Pierog, "Extensive Air Shower Simulation with CORSIKA: A User’s Guide". Version 7.7100 from December 17, 2019](https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf), section 10, page 121. (Available at https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf)
+  - **S1. Analyzed simulations**: ARTI analysis and outputs of the S0 data-set, containing the expected flux of secondary particles at ground.
+  - **S2. Detector response simulations**: ARTI detector simulation module, containing a complete, detailed and adjustable [Geant4](https://geant4.web.cern.ch/) model of the LAGO detectors. The main output is the expected signals in the detector, allowing site characterization and comparison with 2 and L3 data sets at each site.
 
 #### **Re-used previous data**.
 
-Measurements from WCDs gathered in previous years and relevant simulations stored at the old centralised repository at UIS (Universidad Industrial de Santander, Colombia). This is, ~ 6.6TB, mainly measurements. Additionally, previous simulations performed by users in private clusters be will considered if implies high CPU consumption.
+Measurements from WCDs gathered in previous years and relevant simulations stored at the old centralized repository at UIS (Universidad Industrial de Santander, Colombia). This is, ~ 6.6TB, mainly measurements. Additionally, previous simulations performed by users in private clusters be will considered if implies high CPU consumption.
 
 #### **Origin of the data**.
 
@@ -79,10 +78,9 @@ Measurements from WCDs gathered in previous years and relevant simulations store
 | Preliminary (L1) | cleaning raw data (L0) |
 | Quality for Astrophysics (L2)| fixed scalers from preliminary data (L1) |  
 | Quality for public (L3)| fixed scalers from histograms in quality data (L2) |
-| Simulated (S0) | Users input files for ARTI configuration|
-| Simulated (S1) | from standalone CORSIKA runs |
-| Anaysed (S2) | ARTI analisys of plain simulated data (S1) |
-| Anaysed (S3) | ARTI analisys including simulated detector response |
+| Simulated (S0) | from standalone CORSIKA runs |
+| Analyzed (S1) | ARTI analysis of plain simulated data (S0) |
+| Analyzed (S2) | ARTI analysis including simulated detector response |
 
 #### **Expected size of the data**.
 
@@ -90,35 +88,23 @@ Minimal data-set is one hour of measurement or simulation:
   - Raw data (L0): ~200MB
   - Preliminary data (L1): ~100MB
   - Quality data (L2, L3): ~ 30 MB
-  - Simulated background (S0+S1+S2+S3): ~ 10GB
-  - Simulated event (S0+S1+S2+S3): ~ 110GB
+  - Simulated background (S0+S1+S2): ~ 10GB
+  - Simulated event (S0+S1+S2): ~ 110GB
 
-Typically, every WCD generates one measurement per hour producing ~ 200 MB files each, this is ~ 150
-GB of raw data per month with a total of 720 files. These files can originate 70-120GB of cleaned (L1) and 10-40GB of
-quality data (L2 and L3). The one hour interval is kept as unit, resulting in 2160 files (between 2-160
-MB each). The necessary amount of CPU resources to generate these files is small; around 35 minutes on a Gold 6138 Intel core (2 GHz). However, all data-sets should be preserved for reprocessing if software errors can appear in the future.
+Typically, every WCD generates one measurement per hour producing ~ 200MB files each, this is ~ 150GB of raw data per month with a total of 720 files. These files can originate 70-120GB of cleaned (L1) and 10-40GB of quality data (L2 and L3). The one hour interval is kept as unit, resulting in 2160 files (between 2-160MB each). The necessary amount of CPU resources to generate these files is small; around 35 minutes on a Gold 6138 Intel core (2 GHz). However, all data-sets should be preserved for reprocessing if software errors can appear in the future.
 
 On the other hand, users can perform their own simulations, which should be re-usable and reproducible with other collaborators. A standard simulation using only CORSIKA (i.e. background simulation), results in a data-set of 4-10 GB (usually ~ 6 GB), but an event simulation could take 100 GB. Geant4 files output don't change this estimated figures.
 
-In order to keep the 1 hour convention, both types of simulation are usually split into 60 runs, with an
-interval lasting from 15 minutes to 10 hours, one task per minute. Thus, the complete workload of a
-background simulation is over 640 CPU/hours (Gold Intel core, 2 GHz). Additionally, to assure
-reproducibility, every input and output file of every run should be in the data-set comprising 180 files.
+In order to keep the 1 hour convention, both types of simulation are usually split into 60 runs, with an interval lasting from 15 minutes to 10 hours, one task per minute. Thus, the complete workload of a background simulation is over 640 CPU/hours (Gold Intel core, 2 GHz). Additionally, to assure reproducibility, every input and output file of every run should be in the data-set comprising 180 files.
 
-Currently, there are 10 detectors installed (plus 11 planned), that can potentially transfer 18 TB/year of
-raw data. Members of the Collaboration (~ 85 researchers) are also allowed to make simulations. Thus, the
-entire collaboration could generate up to 27 TB of raw, cleaned, and analyzed data, plus 12-120 TB
-of simulated data in one year. Nevertheless, the availability of detectors can be an issue, an active user
-could submit 10 or 20 simulations per month, but actually researchers do not regularly submit simulations,
-and even some may only run simulations sporadically. Therefore, a realistic estimation of the storage consumption
-could be around 3.6 TB/year of L(0-3) data corresponding to 4 WCDs and 2-8 TB/year corresponding to 25 active users.
+Currently, there are 10 detectors installed (plus 11 planned), that can potentially transfer 18 TB/year of raw data. Members of the Collaboration (~ 85 researchers) are also allowed to make simulations. Thus, the entire collaboration could generate up to 27 TB of raw, cleaned, and analyzed data, plus 12-120 TB of simulated data in one year. Nevertheless, the availability of detectors can be an issue, an active user could submit 10 or 20 simulations per month, but actually researchers do not regularly submit simulations, and even some may only run simulations sporadically. Therefore, a realistic estimation of the storage consumption could be around 3.6 TB/year of L(0-3) data corresponding to 4 WCDs and 2-8 TB/year corresponding to 25 active users.
 
 | Data Type | triggered | Size |
 |-----------|--------|------|
-| Raw (L0) | Water-Cherenkov detector (WCD) |  150GB/month (per WCD) |
+| Raw (L0) | Water-Cherenkov detector (WCD) | 150GB/month (per WCD) |
 | Preliminary (L1) | robot (mainly) or researcher | 70-120GB/month (per WCD) |
 | Quality (L2 and L3)| robot (mainly) or researcher | 10-40GB/month (per WCD) |
-| Simulated (S0, S1, S2 and S3)| robot or researcher (mainly) | Estimated per 1 user: 1-4 sim. per month (72-300 GB/year) Max: 120GB/month |
+| Simulated (S0, S1, and S2)| robot or researcher (mainly) | Estimated per 1 user: 1-4 sim. per month (72-300 GB/year) Max: 120GB/month |
 
 #### **Data utility: to whom will it be useful**.
 
@@ -168,16 +154,14 @@ but naming catalogs will follow different approach. In order to be distinguishab
 | Quality (L2) | Cleaned data from WCD | _TBD_ |
 | Quality (L3) | Cleaned data from WCD | _TBD_ |
 | Simulated (S0) | researchers | `<site>_<flux time>_<altitude>_ <CORSIKA version>_<HE model>[_LE model][_volu][_flat][_Cherenk][_HEcuts][_GDASmodel]` |
-| Simulated (S1) | researchers | _TBD_ (hierarchical from S0) |
-| Analysed (S2) | researchers | _TBD_ (hierarchical from S1) |
-| Analysed (S3) | researchers | _TBD_ (hierarchical from S2)|
+| Analyzed (S1) | researchers | _TBD_ (hierarchical from S0) |
+| Analyzed (S2) | researchers | _TBD_ (hierarchical from S1) |
 
 Versioning (the same generation of files) only is allowed if corrections have made done to the generator software. It will be declared adding a `_v<number>` to the end of name, where it is the consecutive number of version, beginning by 2.
 
 #### **Approach towards search keywords**.
 
-Searching should be based on any metadata value, but we are aware of the technical limitations in discovery services (i.e. B2FIND) and repositories (i.e OneData).
-Therefore, the main search keywords that enable minimal SPARQL queries are the ones related to:
+Searching should be based on any metadata value, but we are aware of the technical limitations in discovery services (i.e. B2FIND) and repositories (i.e OneData). Therefore, the main search keywords that enable minimal SPARQL queries are the ones related to:
 - the location (virtual or real) of the site: name, magnetic field, atmosphere, observation level and GPS coordinates;
 - the period measured or the flux time simulated.
 
@@ -187,8 +171,6 @@ It should be based on the metadata An approach for clear versioning is being dis
 
 #### **Standards for metadata creation (in your discipline)**.
 
-(**If there are no standards in your discipline describe what metadata will be created and how**)
-
 | Data Type | previous metadata | new metadata specification |
 |-----------|--------|--------|
 | Raw (L0) | _TBD_ | _TBD_ |  
@@ -196,8 +178,8 @@ It should be based on the metadata An approach for clear versioning is being dis
 | Quality for Astrophysics (L2) | _TBD_ | _TBD_ |  
 | Quality for public (L3) | _TBD_ | _TBD_ |
 | Simulated (S0) | _TBD_ | _TBD_ |
-| Anaysed (S1) | _TBD_ | _TBD_ |
-
+| Analyzed (S1) | _TBD_ | _TBD_ |
+| Analyzed (S2) | _TBD_ | _TBD_ |
 
 ### B.2. Making data openly accessible:
 
@@ -220,12 +202,10 @@ CDMI API, propietary API and FUSE mount on local system of the repository tree.
 #### **Methods or software tools needed to access the data**.
 
 (_Is documentation about the software needed to access the data included?_)
-
-Is it possible to include the relevant software (e.g. in open source code)? .
+(_Is it possible to include the relevant software (e.g. in open source code)?_)
 
 To take advantage of the data published, researchers
-should use the CORSIKA tools included in the source code and described in the official
-documentation in section 10, page 121 at
+should use the CORSIKA tools included in the source code and described in the official documentation in section 10, page 121 at
 https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf
 
 #### **Where the data and associated metadata, documentation and code are deposited**.
@@ -238,7 +218,7 @@ As commented above, whole data and metadata will be stored in providers associat
 | Preliminary (L1) | _TBD_ |
 | Quality for Astrophysics (L2) | _TBD_ |
 | Quality for public (L3) | _TBD_ |
-| Simulated (S0, S1, S2, S3) | - onedataSim:  https://github/lagoproject/onedataSim - ARTI: https://github/lagoproject/onedataSim - CORSIKA: https://web.ikp.kit.edu/corsika/ |
+| Simulated (S0, S1, S2) | - onedataSim:  https://github/lagoproject/onedataSim - ARTI: https://github/lagoproject/onedataSim - CORSIKA: https://web.ikp.kit.edu/corsika/ |
 
 
 #### **Specify how access will be provided in case there are any restrictions**.
@@ -300,12 +280,11 @@ data type, specifically:
 | L0 | private while quality data (L2,L3) are not publicly available. |
 | L1 | should be released almost in real-time as it is important for operative space weather forecasting. Should include a disclaimer about quality and usage |
 | L2, L3 | a year.|
-| S0, S1, S2, S3 | a year maximum, the owner can decide to open the data before the end of this period.|
+| S0, S1, S2 | a year maximum, the owner can decide to open the data before the end of this period.|
 
 ####  **Usability by third parties (restricted data)**.
 
-(_Specify whether the data produced and/or used in the project is usable by third parties, in
-particular after the end of the project? If the re-use of some data is restricted, explain why_).
+(_Specify whether the data produced and/or used in the project is usable by third parties, in particular after the end of the project? If the re-use of some data is restricted, explain why_).
 
 There is no restriction after the embargo period with exception of [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) clauses.
 
@@ -324,27 +303,19 @@ Explain the allocation of resources, addressing the following issues:
 
 ####  **Costs for making your data FAIR**.
 
-The process of making the data FAIR will be supported by the EOSC-Synergy project. The human
-cost of the management will be supported by LAGO Collaboration.
+The process of making the data FAIR will be supported by the EOSC-Synergy project. The human cost of the management will be supported by the LAGO Collaboration and its participating institutions.
 
 ####  **Responsibilities for data management in your project**.
 
-Computing as data management will be structured as a Virtual Organization with specific roles for data acquisition
-and processing.
+Computing as data management will be structured as a Virtual Organization with specific roles for data acquisition and processing.
 
 Roles - TBD.
 
 ####  **Costs and potential value of long term preservation**.
 
-Preservation of data-sets is
-essential for the sustainability of LAGO. Every active WCD should generate 300GB/month of
-L0-L3 data. Currently, due to the number of active WCDs, the Collaboration will generate up to
-27 TB of L0-L3 data, plus 12-120 TB of simulated data throughout the year. Data should be
-replicated, at least, in two locations of a distributed repository (in this case OneData).
-Considering an average generation of 60TB/year, the costs of long-term preservation for 4 years
-are the hardware (two generic RAID servers ~240TB = ~30k€, prices in 2019), the consumption
-(3.68KW max. power for 2 servers, ~ 0.1 €/kWh industrial price average in 2019 = max. 13k€)
-and human resources (technician: 1 person/month, scientific: 2 p/m, ~10k€).
+Preservation of data-sets is essential for the sustainability of LAGO. Every active WCD should generate 300GB/month of L0-L3 data. Currently, due to the number of active WCDs, the Collaboration will generate up to 27 TB of L0-L3 data, plus 12-120 TB of simulated data throughout the year. Data should be replicated, at least, in two locations of a distributed repository (in this case OneData).
+
+Considering an average generation of 60TB/year, the costs of long-term preservation for 4 years are the hardware (two generic RAID servers ~240TB = ~30k€, prices in 2019), the consumption (3.68KW max. power for 2 servers, ~ 0.1 €/kWh industrial price average in 2019 = max. 13k€) and human resources (technician: 1 person/month, scientific: 2 p/m, ~10k€).
 
 ## D. Data security
 
