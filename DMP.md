@@ -21,45 +21,31 @@ nav_order: 2
 
 ## A. Data summary
 
-Provide a summary of the data addressing the following issues:
+This section presents the main issues on how the project deals with data as established in the LAGO Data Management Plan (DMP).
 
 #### **Purpose of the data collection/generation**.
 
-The Latin American Giant Observatory (LAGO) is an extended cosmic ray observatory
-composed of a network water-Cherenkov detectors (WCD) spanning over different sites
-located at significantly different altitudes and latitudes.
+The Latin American Giant Observatory (LAGO) is an extended cosmic ray observatory composed of a network of water-Cherenkov detectors (WCD) spanning over different sites located at significantly different altitudes and latitudes.
 
-The measurements collected from these detectors are posteriorly processed and analysed.
-Additionally, scientists continuously generate simulated data. The final purpose is to
-enable the long-term curation and re-use of data within and outside the LAGO Collaboration
-through a Virtual Observatory.
+The measurements collected from these detectors are processed and analysed in subsequent steps. Additionally, scientists continuously generate simulated data. The final purpose is to enable the long-term curation and re-use of data within and outside the LAGO Collaboration through a Virtual Observatory.
 
 #### **Relation to the objectives of the project**.
 
-The objective is to enable the long-term curation and re-use of generated data within
-and outside LAGO Collaboration through a Virtual Observatory, being of interest in areas as HEP,
-space weather, life sciences, aerospatial security, computer science,...
+The objective is to enable the long-term curation and re-use of generated data within and outside LAGO Collaboration through a Virtual Observatory, being of interest in areas as HEP, space weather, life sciences, aerospatial security, computer science,...
 
-On the other hand, European Commision requires open access to the results obtained from their funded
-projects, meanwhile EOSC-Synergy is a H2020 project (RIA 857647) that encourages the implementation
-of FAIR policies as another standard in research. Since the LAGO computation is included in the
-EOSC-Synergy as one of their Thematic Services, generated or stored data in its resources must observe
-these guidelines, being also beneficial for the success of both initiatives.
+On the other hand, the European Commission requires open access to the results obtained from their funded projects meanwhile, EOSC-Synergy being a H2020 project (RIA 857647) encourages the implementation of FAIR policies as an additional standard in research. Since LAGO computations are included in the EOSC-Synergy project as one of their Thematic Services, the generated or stored data within the project resources must observe these guidelines, being also beneficial for the success of both initiatives.
 
-#### **Types and formats of data generated/collected**.
+#### **Types and formats of generated/collected data**.
 
-Every **file** generated is considered **the minimum data-set** to be data-linked and processed, while **a collection** of related files is grouped in a **catalog**, which should be referenced with a persistent and unique identifier (PID).
-As the different LAGO activities generate only one data sub-type, **catalogs will only contain files belonging to one sub-type an activity**, with exception of checking or correction procedures.
+Every generated **file** is considered **the minimum data-set** to be linked and processed, while **a collection** of related files is grouped in a **catalog**, which should be referenced with a persistent and unique identifier (PID).As the different LAGO activities generate only one data sub-type, **catalogs will only contain files belonging to one sub-type activity**, with exception of checking or correction procedures.
 
-There are two main kinds of data managed by LAGO Collaboration. The first is the data measured (L) by
-water-Cherenkov detectors (WCD), and the second is the simulations (S).
+There are two main kinds of data managed by the LAGO Collaboration. The first one is the data measured (L) by the water-Cherenkov detectors (WCD), and the second is the data obtained from simulations (S).
 
-The measured data (raw) is pipelined for correction and analysis, obtaining these data sub-types that corresponds
-with their quality and processing level:
-  - **L0. Raw data**: data as acquired from detectors. Includes onboard telemetry. It is directly acquired and transferred from the LAGO ACQUA system.
+The measured (raw) data is pipelined for correction and analysis, obtaining the following data sub-types according to their quality and processing level:
+  - **L0. Raw data**: data as acquired from detectors. Including onboard telemetry. Data directly acquired and transferred from the LAGO ACQUA system.
   - **L1. Preliminary data**: low temporal resolution data processed in almost real-time. Only includes atmospheric pressure corrections. First processing level in the LAGO ANNA framework.
-  - **L2: Quality for Astrophysics**. Ensures data quality to be used by experts from Astrophysics Community: fixed level scalers by atmospheric parameters and the detector efficiency. This corresponds to the second level of processing in the LAGO ANNA framework.
-  - **L3. Quality for public**. Ensures high quality to be used by researchers from other subjects or general public. Charge histograms of the detectors are also processed corrected. This is the third level of processing in the LAGO ANNA framework.
+  - **L2: Quality for Astrophysics**. Ensures quality data to be used by experts from the Astrophysics Community: fixed level scalers by atmospheric parameters and the detector efficiency. This corresponds to the second level of processing in the LAGO ANNA framework.
+  - **L3. Quality for the general public**. Ensures high quality data to be used by researchers from other subjects or the general public. Charge histograms of the detectors are also processed/corrected. This is the third level of processing in the LAGO ANNA framework.
 
 On the other hand, users can perform their own simulations of extensive atmospheric showers (EAS), the cascades of secondary particles produced when a high energy particle coming from the space interacts with the atmosphere. By using the LAGO ARTI framework, it is possible to simulate the expected flux on signals at the detector level including different geomagnetic, atmospheric and detector conditions. By using ARTI, users are able to generate different types of hierarchical data-sets:
   - **S0. Plain simulations**: CORSIKA outputs, which are described in the official documentation [D. Heck and T. Pierog, "Extensive Air Shower Simulation with CORSIKA: A User’s Guide". Version 7.7100 from December 17, 2019](https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf), section 10, page 121. (Available at https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf)
