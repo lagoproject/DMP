@@ -157,7 +157,7 @@ It should be based on the metadata. An approach for clear versioning is currentl
 (_If there are no standards in your discipline describe what metadata will be created and how_)
 
 | Data Type | related standards | previous metadata | new metadata specification |
-|-----------|--------|--------|
+|-----------|-------------------|-------------------|--------|
 | Raw (L0) | ROOT | key:value [(ACQUA docs)](https://github.com/lagoproject/acqua) and XML/DublinCore [(Asorey H. et al, DOI: 10.1109/CCGrid.2016.110)](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/)|  
 | Preliminary (L1) | None | None | (_TBD not supported by EOSC-Synergy_) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
 | Quality for Astrophysics (L2) | None | None |  (_TBD not supported by EOSC-Synergy_) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |  
