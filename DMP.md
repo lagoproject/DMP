@@ -154,16 +154,17 @@ Searching should be based on any metadata value, but there are technical limitat
 It should be based on the metadata. An approach for clear versioning is currently under discussion.
 
 #### **Standards for metadata creation (in your discipline)**.
+(_If there are no standards in your discipline describe what metadata will be created and how_)
 
-| Data Type | previous metadata | new metadata specification |
+| Data Type | related standards | previous metadata | new metadata specification |
 |-----------|--------|--------|
-| Raw (L0) | _TBD_ | _TBD_ |  
-| Preliminary (L1) | _TBD_ | _TBD_ |
-| Quality for Astrophysics (L2) | _TBD_ | _TBD_ |  
-| Quality for public (L3) | _TBD_ | _TBD_ |
-| Simulated (S0) | _TBD_ | _TBD_ |
-| Analyzed (S1) | _TBD_ | _TBD_ |
-| Analyzed (S2) | _TBD_ | _TBD_ |
+| Raw (L0) | ROOT | key:value [(ACQUA docs)](https://github.com/lagoproject/acqua) and XML/DublinCore [(Asorey H. et al, DOI: 10.1109/CCGrid.2016.110)](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/)|  
+| Preliminary (L1) | None | None | (_TBD not supported by EOSC-Synergy_) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
+| Quality for Astrophysics (L2) | None | None |  (_TBD not supported by EOSC-Synergy_) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |  
+| Quality for public (L3) | None | None |  (_TBD not supported by EOSC-Synergy_) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
+| Simulated (S0) | None | XML/DublinCore [(Asorey H. et al, DOI: 10.1109/CCGrid.2016.110)](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
+| Analyzed (S1) | ROOT | None | (_TBD not supported by EOSC-Synergy_) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
+| Analyzed (S2) | None | None |  (_TBD not supported by EOSC-Synergy_) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
 
 ### B.2. Making data openly accessible:
 
