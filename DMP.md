@@ -25,7 +25,7 @@ This section presents the main issues on how the project deals with data as esta
 
 #### **Purpose of the data collection/generation**.
 
-The Latin American Giant Observatory (LAGO) is an extended cosmic ray observatory composed of a network of water-Cherenkov detectors (WCD) spanning over different sites located at significantly different altitudes and latitudes.
+The [Latin American Giant Observatory (LAGO)](https://lagoproject.net) is an extended cosmic ray observatory composed of a network of water-Cherenkov detectors (WCD) spanning over different sites located at significantly different altitudes and latitudes.
 
 The measurements collected from these detectors are processed and analysed in subsequent steps. Additionally, scientists continuously generate simulated data. The final purpose is to enable the long-term curation and re-use of data within and outside the LAGO Collaboration through a Virtual Observatory.
 
@@ -42,13 +42,13 @@ Every generated **file** is considered **the minimum data-set** to be linked and
 There are two main kinds of data managed by the LAGO Collaboration. The first one is the data measured (L) by the water-Cherenkov detectors (WCD), and the second is the data obtained from simulations (S).
 
 The measured (raw) data is pipelined for correction and analysis, obtaining the following data sub-types according to their quality and processing level:
-  - **L0. Raw data**: data as acquired from detectors. Including onboard telemetry. Data directly acquired and transferred from the LAGO ACQUA system.
-  - **L1. Preliminary data**: low temporal resolution data processed in almost real-time. Only includes atmospheric pressure corrections. First processing level in the LAGO ANNA framework.
-  - **L2: Quality for Astrophysics**. Ensures quality data to be used by experts from the Astrophysics Community: fixed level scalers by atmospheric parameters and the detector efficiency. This corresponds to the second level of processing in the LAGO ANNA framework.
-  - **L3. Quality for the general public**. Ensures high quality data to be used by researchers from other subjects or the general public. Charge histograms of the detectors are also processed/corrected. This is the third level of processing in the LAGO ANNA framework.
+  - **L0. Raw data**: data as acquired from detectors. Including onboard telemetry. Data directly acquired and transferred from the LAGO [ACQUA system](https://github.com/lagoproject/acqua).
+  - **L1. Preliminary data**: low temporal resolution data processed in almost real-time. Only includes atmospheric pressure corrections. First processing level in the LAGO [ANNA framework](https://github.com/lagoproject/anna).
+  - **L2: Quality for Astrophysics**. Ensures quality data to be used by experts from the Astrophysics Community: fixed level scalers by atmospheric parameters and the detector efficiency. This corresponds to the second level of processing in the [ANNA framework](https://github.com/lagoproject/anna).
+  - **L3. Quality for the general public**. Ensures high quality data to be used by researchers from other subjects or the general public. Charge histograms of the detectors are also processed/corrected. This is the third level of processing in the [ANNA framework](https://github.com/lagoproject/anna).
 
-On the other hand, users can perform their own simulations of extensive atmospheric showers (EAS), the cascades of secondary particles are produced when a high-energy particle coming from the space interacts with the atmosphere. By using the LAGO ARTI framework, it is possible to simulate the expected flux on signals at the detector level including different geomagnetic, atmospheric and detector conditions. By using ARTI, users are able to generate different types of hierarchical data-sets:
-  - **S0. Plain simulations**: CORSIKA outputs, which are described in the official documentation [D. Heck and T. Pierog, "Extensive Air Shower Simulation with CORSIKA: A User’s Guide". Version 7.7100 from December 17, 2019](https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf), section 10, page 121. (Available at https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf)
+On the other hand, users can perform their own simulations of extensive atmospheric showers (EAS), the cascades of secondary particles are produced when a high-energy particle coming from the space interacts with the atmosphere. By using the LAGO [ARTI framework](https://github.com/lagoproject/arti), it is possible to simulate the expected flux on signals at the detector level including different geomagnetic, atmospheric and detector conditions. By using ARTI, users are able to generate different types of hierarchical data-sets:
+  - **S0. Plain simulations**: CORSIKA outputs, which are described in the official documentation [D. Heck and T. Pierog, "Extensive Air Shower Simulation with CORSIKA: A User’s Guide". Version 7.7100 from December 17, 2019](https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf), section 10, page 121.
   - **S1. Analyzed simulations**: ARTI analysis and outputs of the S0 data-set, containing the expected flux of secondary particles at the ground.
   - **S2. Detector response simulations**: ARTI detector simulation module, containing a complete, detailed and adjustable [Geant4](https://geant4.web.cern.ch/) model of the LAGO detectors. The main output is the expected signals in the detector, allowing site characterization and comparison with L2 and L3 data sets at each site.
 
@@ -102,14 +102,18 @@ Data are of interest for the Astrophysics community but also for other scientifi
 
 #### **Discoverability of data (metadata provision)**.
 
-The LAGO data repository will be based on OneData. OneData supports storing catalogs and datasets with enriched metadata, as well as publishing catalogs with persistent identifiers (PIDs) to allow gathering by services such as B2FIND. Thus **the discoverability** will be technically guaranteed, through:
+The LAGO data repository will be based on [OneData](https://onedata.org). OneData supports storing catalogs and datasets with enriched metadata, as well as publishing catalogs with persistent identifiers (PIDs) to allow gathering by services such as [B2FIND](https://eudat.eu/services/b2find). Thus **the discoverability** will be technically guaranteed, through:
 - OneData:
   - for LAGO members: web browser (without search engine), CDMI API, proprietary API and FUSE mount;
   - for the general public: web browser (link to a public PID).
 - B2FIND: web interface (with search engine), for LAGO members and the general public.
 - Other discovery services: customized CKAN based (for Comprehensive Knowledge Archive Network) could better benefit from metadata provided than B2FIND, and they will be explored in the future. Anyway, when the data become public, any discovery service can gather metadata, even not specific engines such as Google.
 
-Specific LAGO wrappers execute the processing or simulation and, at a subsequent stage, check every data-set and store them in the LAGO repository, always together with their metadata. These wrappers are packed into Docker images and release at the LAGO code repository in GitHub.
+Some of these services will be supported by the EOSC infrastructure as they are included in its [marketplace](https://marketplace.eosc-portal.eu/):
+- OneData is [provided](https://marketplace.eosc-portal.eu/services/egi-datahub) through the [EGI DataHub service](https://datahub.egi.eu).
+- B2FIND is also [offered](https://marketplace.eosc-portal.eu/services/b2find) through an unified [web page](http://b2find.eudat.eu/).
+
+Specific LAGO wrappers execute the processing or simulation and, at a subsequent stage, check every data-set and store them in the LAGO repository, always together with their metadata. These wrappers are packed into Docker images and released at the [official LAGO code repository](https://github.com/lagoproject) in GitHub.
 
 To assure the **metadata provision**, the only way to directly store and publish data-sets in the LAGO repository (by LAGO members) is by making use of these wrappers from the official Docker releases. Any other data to be included in the repository must be supervised and checked by the LAGO organization.
 
@@ -201,8 +205,7 @@ As commented above, data and metadata will be stored in providers associated to 
 | Data Type | Docs and code URLs |
 |-----------|--------|
 | Raw (L0) | [ACQUA](https://github.com/lagoproject/acqua) |
-| Preliminary (L1) | (_It is not supported by EOSC-Synergy_)  [ACQUA](https://github.com/lagoproject/acqua) |
-| Quality for Astrophysics (L2) and for public (L3) | (_It is not supported by EOSC-Synergy_) [ANNA](https://github.com/lagoproject/anna) |
+| Preliminary (L1), Quality for Astrophysics (L2) and for public (L3) | (_It is not supported by EOSC-Synergy_) [ANNA](https://github.com/lagoproject/anna) |
 | Simulated (S0) | [onedataSim](https://github/lagoproject/onedataSim), [ARTI] (https://github/lagoproject/arti), [CORSIKA](https://web.ikp.kit.edu/corsika/) |
 | Simulated (S1, S2) | [onedataSim](https://github/lagoproject/onedataSim), [ARTI] (https://github/lagoproject/arti), [CORSIKA](https://web.ikp.kit.edu/corsika), [GEANT4](https://geant4.web.cern.ch), [ROOT](https://root.cern.ch) and [geant-val](https://geant-val.cern.ch) |
 
