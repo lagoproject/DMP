@@ -169,13 +169,13 @@ Therefore, versioning directly the files (i.e. datasets) is not allowed, and the
 
 | Data Type | related standards | previous metadata | new metadata specification |
 |-----------|-------------------|-------------------|--------|
-| Raw (L0) | JSON for GEANT4/ROOT validator [(Freyermuth et. al, DOI: 10.1051/epjconf/201921405002)](https://doi.org/10.1051/epjconf/201921405002) | key:value [(ACQUA docs)](https://github.com/lagoproject/acqua) and XML/DublinCore [(Asorey H. et al, DOI: 10.1109/CCGrid.2016.110)](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/)|  
-| Preliminary (L1) | None | None | (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
-| Quality for Astrophysics (L2) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |  
-| Quality for public (L3) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
-| Simulated (S0) | None | XML/DublinCore [(Asorey H. et al, DOI: 10.1109/CCGrid.2016.110)](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
-| Analyzed (S1) | JSON for GEANT4/ROOT validator [(Freyermuth et. al, DOI: 10.1051/epjconf/201921405002)](https://doi.org/10.1051/epjconf/201921405002) | None | ((_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
-| Analyzed (S2) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
+| Raw (L0) | JSON for GEANT4/ROOT validator [(Freyermuth et. al, DOI: 10.1051/epjconf/201921405002)](https://doi.org/10.1051/epjconf/201921405002) | key:value [(ACQUA docs)](https://github.com/lagoproject/acqua) and XML/DublinCore [(Asorey H. et al, DOI: 10.1109/CCGrid.2016.110)](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](./schema/) and [definitions](defs/)|  
+| Preliminary (L1) | None | None | (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitions](defs/) |
+| Quality for Astrophysics (L2) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitions](./defs/) |  
+| Quality for public (L3) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitions](./defs/) |
+| Simulated (S0) | None | XML/DublinCore [(Asorey H. et al, DOI: 10.1109/CCGrid.2016.110)](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](./schema/) and [definitions](./defs/) |
+| Analyzed (S1) | JSON for GEANT4/ROOT validator [(Freyermuth et. al, DOI: 10.1051/epjconf/201921405002)](https://doi.org/10.1051/epjconf/201921405002) | None | ((_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitions](./defs/) |
+| Analyzed (S2) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitions](./defs/) |
 
 <sup>*</sup>(_Not supported by EOSC-Synergy. It is added for completeness and future projects._)
 
