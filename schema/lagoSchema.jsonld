@@ -54,6 +54,7 @@
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:duration" },
+    "dcat:label": "fluxTime", 
     "comment" : [ { "@language" : "en", "@value" : "Flux time (in seconds) for simulations. Use XML Schema 1.1, the format is P<secods>S (while in 1.0 was PT<seconds>S)" },  
                   { "@language" : "es", "@value" : "" } ]
    },
@@ -62,6 +63,7 @@
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:string" },
+    "dcat:label": "highEnergyIntModel",  
     "comment" : [ { "@language" : "en", "@value" : "Define the high interaction model to be used (EPOS or QGSII)" },  
                   { "@language" : "es", "@value" : "" } ]
    },
@@ -70,8 +72,54 @@
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "lago:DetectorSite" },
-    "comment" : [ { "@language" : "en", "@value" : "Location (several options) of predefined detector sites" },  
-                  { "@language" : "es", "@value" : "" } ]
+    "dcat:label": "detectorSite", 
+    "comment" : [ { "@language" : "en", "@value" : "Description (default values) of predefined detector sites at https://lagoproject.github.io/DMP/defs/sitesLago.jsonld" }, 
+                  { "@language" : "es", "@value" : "Descripción (opciones por defecto) de detectores predefinidos en https://lagoproject.github.io/DMP/defs/sitesLago.jsonld" } ]
+   },
+   {
+    "@id": "lago:rigidity",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:float" },
+    "dcat:label": "rigidity", 
+    "comment" : [ { "@language" : "en", "@value" : "Rigidity cutoff; 0 = disabled; value in GV = enabled" },  
+                  { "@language" : "es", "@value" : "Corte de la rigidez; 0 = deshabilitado; valor en GV = habilitado" } ]
+   },
+   {
+    "@id": "lago:tMin",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:float" },
+    "dcat:label": "tMin", 
+    "comment" : [ { "@language" : "en", "@value" : "Low edge of zenith angle" },  
+                  { "@language" : "es", "@value" : "Límite inferior del ángulo cenital" } ]
+   },
+   {
+    "@id": "lago:tMax",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:float" },
+    "dcat:label": "tMax", 
+    "comment" : [ { "@language" : "en", "@value" : "High edge of zenith angle" },  
+                  { "@language" : "es", "@value" : "Límite superior del ángulo cenital" } ]
+   },
+   {
+    "@id": "lago:lLimit",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:float" },
+    "dcat:label": "lLimit", 
+    "comment" : [ { "@language" : "en", "@value" : "Lower limit of the primary particle energy" },  
+                  { "@language" : "es", "@value" : "Límite inferior de la energía de las partículas primarias" } ]
+   },
+   {
+    "@id": "lago:uLimit",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:float" },
+    "dcat:label": "uLimit",      
+    "comment" : [ { "@language" : "en", "@value" : "Upper limit of the primary particle energy" },  
+                  { "@language" : "es", "@value" : "Límite superior de la energía de las partículas primarias" } ]
    },
    {
     "@id": "lago:flatArray",
@@ -79,6 +127,7 @@
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:boolean" },
     "@default" : true,
+    "dcat:label": "flatArray",
     "comment" : [ { "@language" : "en", "@value" : "Select volumetric detector mode (default=flat array)" },
                   { "@language" : "es", "@value" : "" } ]
    },
@@ -88,6 +137,7 @@
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:boolean" },
     "@default" : false,
+    "dcat:label": "cherenkov",    
     "comment" : [ { "@language" : "en", "@value" : "Enable CHERENKOV mode" },  
                   { "@language" : "es", "@value" : "" } ]
    },
@@ -97,6 +147,7 @@
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:boolean" },
     "@default" : false,
+    "dcat:label": "debug",
     "comment" : [ { "@language" : "en", "@value" : "Enable DEBUG mode" },  
                   { "@language" : "es", "@value" : "" } ]
    },
@@ -105,6 +156,7 @@
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:boolean" },
+    "dcat:label": "defaults",
     "@default" : false,
     "comment" : [ { "@language" : "en", "@value" : "If true, other parameters not explicitly stored in metadata are the default values set by the specific release of ARTI. Otherwise these values are unknow (set manually by the user via prompt)." },  
                   { "@language" : "es", "@value" : "Si es verdadero, los par,ametros que no aparecen en los metadatos corresponden a los valores por defecto de la versión concreta de ARTI que se estuviera usando. Si está marcado como falso, los valores que no aparecen en los metadatos son desconocidos, porque el usuario los ha puesto manualmente cuando la aplicación se lo ha preguntado por consola." } ]
@@ -114,6 +166,7 @@
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:boolean" },
+    "dcat:label": "highEnergyCutsSecondaries",
     "@default" : false,
     "comment" : [ { "@language" : "en", "@value" : "Enable high energy cuts for secondaries" },  
                   { "@language" : "es", "@value" : "" } ]
@@ -153,7 +206,7 @@
                       { "@id" : "lago:CorsikaInput" },
                       { "@id" : "lago:ArtiParams" } ],
      "dcat:range": { "@id": "xsd:float"},
-     "dcat:label": "obslev",
+     "dcat:label": "obsLev",
      "lago:corsikaParam" : "OBSLEV",
      "comment" : [ { "@language" : "en", "@value" : "Observation Level (altitude) above sea level [cm]. xsd:double type allows decimal (i.e. 2.10), non decimal (28467) and scientific notation (1633e2) values within 64-bits (double word)." },  
                    { "@language" : "es", "@value" : "[cm] por encima del nivel del mar. El tipo xsd:double permite valores decimales (2.10), no decimales (28467) y en notación cientifica (1633e2) con tamaño máximo de 64-bits (doble palabra)." } ]
@@ -181,8 +234,8 @@
       "dcat:domain": { "@id" : "lago:MagnetComponents" },
       "dcat:range": { "@id": "xsd:decimal"},
       "dcat:label": "bx",
-      "comment" : [ { "@language" : "en", "@value" : "Horizontal comp. of the Earth's mag. field (MAGNET) [North,muT], see values at http://www.ngdc.noaa.gov/geomagmodels/struts/calcIGRFWMM or currently at https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" },  
-                    { "@language" : "es", "@value" : "" } ]
+      "comment" : [ { "@language" : "en", "@value" : "Horizontal comp. of the Earth's mag. field (MAGNET) [North,muT], see values at https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" },  
+                    { "@language" : "es", "@value" : "Componente horizontal del campo magnético de la Tierra (MAGNET) [North,muT], ver valores en https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" } ]
     },
     {
       "@id": "lago:bz",
@@ -190,8 +243,8 @@
       "dcat:domain": { "@id" : "lago:MagnetComponents" },
       "dcat:range": { "@id": "xsd:decimal"},
       "dcat:label": "bz",
-      "comment" : [ { "@language" : "en", "@value" : "Vertical comp. of the Earth's mag. field (MAGNET) [downwards,muT], see values at http://www.ngdc.noaa.gov/geomagmodels/struts/calcIGRFWMM or currently at https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" },  
-                    { "@language" : "es", "@value" : "" } ]
+      "comment" : [ { "@language" : "en", "@value" : "Vertical comp. of the Earth's mag. field (MAGNET) [downwards,muT], see values at https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" },  
+                    { "@language" : "es", "@value" : "Componente vertical del campo magnético de la Tierra (MAGNET) [downwards,muT], ver valores en https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" } ]
     },
     {
       "@id": "lago:atmcrd",
@@ -218,11 +271,11 @@
                     { "@language" : "es", "@value" : "" } ]
     },
     {
-      "@id": "lago:modatm",
+      "@id": "lago:modAtm",
       "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
       "dcat:domain": [ { "@id" : "lago:Atmosphere" }, { "@id" : "lago:Atmod" } ],
       "dcat:range": { "@id" : "xsd:string" },
-      "dcat:label": "modatm",
+      "dcat:label": "modAtm",
       "comment" : [ { "@language" : "en", "@value" : "Atmospheric model (can be ATMOSPHERE or ATMOD), some posible values: 19, E1, E2, E10, E29, E30(=wi), E31(=sp), E32(=su), E33(=au)" },  
                     { "@language" : "es", "@value" : "" } ]
     },
