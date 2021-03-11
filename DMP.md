@@ -248,7 +248,8 @@ Data:
 
 (_Specify whether you will be using standard vocabulary for all data types present in your data set, to allow inter-disciplinary interoperability? If not, will you provide mapping to more commonly used ontologies?_)
 
-In principle, only supports CORSIKA outputs as described in the official documentation, but translating files to standardised formats in the future can be considered. 
+In principle, only supports [CORSIKA](https://web.ikp.kit.edu/corsika), inputs/outputs as described in the official documentation, which widely used in several disciplines.
+However, rest of data currently follows a proprietary format. Translating files to standardised formats in the future can be considered. For now, the only alternative identified could be translate these files to the [ROOT](https://root.cern.ch) format and make use the vocabulary for [GEANT4/ROOT](https://geant-val.cern.ch) validator (Freyermuth et. al, DOI: [10.1051/epjconf/201921405002](https://doi.org/10.1051/epjconf/201921405002)), but it does not accomplishes all the requirements of LAGO. 
 
 ### B.4. Increase data re-use (through clarifying licenses):
 
@@ -260,6 +261,8 @@ In principle, only supports CORSIKA outputs as described in the official documen
 - Data: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 - Metadata: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 - Databases derived from metadata or data: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+
+A compilation of common rights and acceptable use policies are available for reference at [https://lagoproject.github.io/DMP/rights/](https://lagoproject.github.io/DMP/rights/).
 
 ####  **When the data will be made available for reuse**.
 
