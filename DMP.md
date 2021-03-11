@@ -324,7 +324,11 @@ Considering an average generation of 60TB/year, the costs of a 4-years long-term
 
 ## D. Data security
 
-Address data recovery as well as secure storage and transfer of sensitive data. There is no sensitive data, thus anonymity and encryption are not required. Data recovery should be guaranteed by using replication, at least, in two locations of a distributed repository or filesystem (in this case OneData).
+(_Address data recovery as well as secure storage and transfer of sensitive data_). 
+
+There is no sensitive data, thus anonymity and encryption are not required. 
+
+Data recovery should be guaranteed by using replication, at least, in two locations of a distributed repository or filesystem, in this case OneData. Thus, following the classification in tiers, every space supported by an OneProvider must be replicated in any other OneProvider that holds Tier level 1. The backup architecture is described at [https://lagoproject.github.io/DMP/Architecture/](https://lagoproject.github.io/DMP/Architecture/).
 
 ## E. Ethical aspects
 
