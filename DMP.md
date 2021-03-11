@@ -237,17 +237,18 @@ while a manual to login into EGI DataHub, visualise datasets and obtain tokens i
 Metadata:
 - Language syntax: [JSON-LD 1.1, W3C](https://json-ld.org/spec/latest/json-ld/)
 - Main vocabulary: [DCAT-AP2, European Commission](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe), which is a specific profile of [DCAT2, W3C](https://www.w3.org/TR/vocab-dcat-2/) recommended for repositories, content aggregators or data consumers related to the public sector (goverments, rearch centers, funded projects).
-- LAGO vocabulary: It is re-profile of [DCAT-AP2, European Commission](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe), extending the existing classes and adding properties needed for the LAGO computation.
+- LAGO vocabulary: It is re-profile of [DCAT-AP2, European Commission](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe), extending the existing classes and adding properties needed for the LAGO computation. The [re-profile](/DMP/schema/) and specific [definitions](/DMP/defs) are available at [https://lagoproject.github.io/DMP/](https://lagoproject.github.io/DMP/).
 
 Data:
-- TBD.
+- Unfortunately, the generated data follow propietary formats. 
+- Interesting parameter or summarised results will be extracted from data-sets and then represented in their metadata using terms belonging LAGO vocabulary.
 
 
 ####  **Inter-disciplinary interoperability**
 
 (_Specify whether you will be using standard vocabulary for all data types present in your data set, to allow inter-disciplinary interoperability? If not, will you provide mapping to more commonly used ontologies?_)
 
-In principle, only supports CORSIKA outputs as described in the official documentation, but translating files to standardised formats in the future can be considered.
+In principle, only supports CORSIKA outputs as described in the official documentation, but translating files to standardised formats in the future can be considered. 
 
 ### B.4. Increase data re-use (through clarifying licenses):
 
@@ -269,7 +270,7 @@ LAGO Collaboration requires a waiting period similar to the established ones for
 | Data Type | embargo period |
 |-----------|--------|
 | L0 | private while quality data (L2,L3) are not publicly available. |
-| L1 | should be released almost in real-time as it is important for operative space weather forecasting. Should include a disclaimer about quality and usage |
+| L1 | should be released almost in real-time as it is important for operative space weather forecasting. Should include a disclaimer about quality and usage. |
 | L2, L3 | one year.|
 | S0, S1, S2 | one year maximum, the owner can decide to open the data before the end of this period.|
 
@@ -289,7 +290,14 @@ Indefinitely, after the waiting period.
 
 ## C. Allocation of resources
 
-(_Explain the allocation of resources, addressing the following issues:_)
+Cloud storage is based on OneData techonology, and the architecture will count on:
+- The OneZone service at [EGI DataHub](https://datahub.egi.eu), supported by the EOSC infrastructure. 
+- A network of OneProviders, supported by LAGO participating institutions: 
+  - Tier 1 OneProviders: the high capacity ones will store all data generated, backing up other tiers and among them.
+  - Tier 2 OneProviders: mid-capacity servers assuring long-term availability, used to improve the performance in a region.   
+  - Tier 3 OneProviders: temporal deployments for local caching before consolidate data in upper tiers.
+
+The architecture is deeply described at [https://lagoproject.github.io/DMP/Architecture/](https://lagoproject.github.io/DMP/Architecture/).
 
 ####  **Costs for making your data FAIR**.
 
@@ -301,12 +309,12 @@ Computing as data management will be structured as a Virtual Organization with s
 
 | Roles |  Responsability |
 |-------|-----------------|
-| Head of data management | Administrative account, only for enabling new resources or modifiying permissions of main roles |
-| System admnistrators of OneProviders | To maintain the availability and preserve the data and metadata stored |
-| Members of standardisation group | To establish data organisation and metadata definition |
-| Country representative/delegate | To authorise or ban local members in the VO |
-| Task coordination delegates | To assure the (for example raw data (L0) ) |
-| LAGO members | They must follow the rules of data generation/storing and they must not abuse of the services |
+| Head of data management | Administrative account, only for enabling new resources or modifiying permissions of main roles. |
+| System admnistrators of OneProviders | To maintain the availability and preserve the data and metadata stored. |
+| Members of standardisation group | To establish data organisation and metadata definition. |
+| Country representative/delegate | To authorise or ban local members in the VO. |
+| Task coordination delegates | To assure the accurancy of a spcific kind of data and metadata automatially (robots) or manually generated (for example the raw data (L0)). |
+| LAGO members | They must follow the rules of data generation/storing and they must not abuse of the services. |
 
 ####  **Costs and potential value of long-term preservation**.
 
