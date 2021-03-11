@@ -169,13 +169,13 @@ Therefore, versioning directly the files (i.e. datasets) is not allowed, and the
 
 | Data Type | related standards | previous metadata | new metadata specification |
 |-----------|-------------------|-------------------|--------|
-| Raw (L0) | JSON for GEANT4/ROOT validator: Freyermuth et. al, DOI: [10.1051/epjconf/201921405002](https://doi.org/10.1051/epjconf/201921405002) | key:value [(ACQUA docs)](https://github.com/lagoproject/acqua) and XML/DublinCore: Asorey H. et al, DOI: [10.1109/CCGrid.2016.110](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs)|  
-| Preliminary (L1) | None | None | (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitions](defs/) |
-| Quality for Astrophysics (L2) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitions](./defs/) |  
-| Quality for public (L3) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitions](./defs/) |
-| Simulated (S0) | None | XML/DublinCore: Asorey H. et al, DOI: [10.1109/CCGrid.2016.110](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](./schema/) and [definitions](./defs/) |
-| Analyzed (S1) | JSON for GEANT4/ROOT validator: Freyermuth et. al, DOI: [10.1051/epjconf/201921405002](https://doi.org/10.1051/epjconf/201921405002) | None | ((_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitions](./defs/) |
-| Analyzed (S2) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitions](./defs/) |
+| Raw (L0) | JSON for GEANT4/ROOT validator. Freyermuth et. al, DOI: [10.1051/epjconf/201921405002](https://doi.org/10.1051/epjconf/201921405002) | key:value [(ACQUA docs)](https://github.com/lagoproject/acqua) and XML/DublinCore. Asorey H. et al, DOI: [10.1109/CCGrid.2016.110](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs) |
+| Preliminary (L1) | None | None | (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs) |
+| Quality for Astrophysics (L2) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs) |
+| Quality for public (L3) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs) |
+| Simulated (S0) | None | XML/DublinCore: Asorey H. et al, DOI: [10.1109/CCGrid.2016.110](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs) |
+| Analyzed (S1) | JSON for GEANT4/ROOT validator: Freyermuth et. al, DOI: [10.1051/epjconf/201921405002](https://doi.org/10.1051/epjconf/201921405002) | None | ((_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs) |
+| Analyzed (S2) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs) |
 
 <sup>*</sup>(_Not supported by EOSC-Synergy. It is added for completeness and future projects._)
 
@@ -289,7 +289,7 @@ Indefinitely, after the waiting period.
 
 ## C. Allocation of resources
 
-Explain the allocation of resources, addressing the following issues:
+(_Explain the allocation of resources, addressing the following issues:_)
 
 ####  **Costs for making your data FAIR**.
 
@@ -299,7 +299,14 @@ The process of making the data FAIR will be supported by the EOSC-Synergy projec
 
 Computing as data management will be structured as a Virtual Organization with specific roles for data acquisition and processing.
 
-Roles - TBD.
+| Roles |  Responsability |
+|-------|-----------------|
+| Head of data management | Administrative account, only for enabling new resources or modifiying permissions of main roles |
+| System admnistrators of OneProviders | To maintain the availability and preserve the data and metadata stored |
+| Members of standardisation group | To establish data organisation and metadata definition |
+| Country representative/delegate | To authorise or ban local members in the VO |
+| Task coordination delegates | To assure the (for example raw data (L0) ) |
+| LAGO members | They must follow the rules of data generation/storing and they must not abuse of the services |
 
 ####  **Costs and potential value of long-term preservation**.
 
