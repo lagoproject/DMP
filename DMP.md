@@ -37,7 +37,7 @@ On the other hand, the European Commission requires open access to the results o
 
 #### **Types and formats of generated/collected data**.
 
-Every generated **file** is considered **the minimum data-set** to be linked and processed, while **a collection** of related files is grouped in a **catalog**, which should be referenced with a persistent and unique identifier (PID).As the different LAGO activities generate only one data sub-type, **catalogs will only contain files belonging to one sub-type activity**, with exception of checking or correction procedures.
+Every generated **file** is considered **the minimum data-set** to be linked and processed, while **a collection** of related files is grouped in a **catalog**, which should be referenced with a persistent and unique identifier (PID). As the different LAGO activities generate only one data sub-type, **catalogs will only contain files belonging to one sub-type activity**, with exception of checking or correction procedures.
 
 There are two main kinds of data managed by the LAGO Collaboration. The first one is the data measured (L) by the water-Cherenkov detectors (WCD), and the second is the data obtained from simulations (S).
 
@@ -52,7 +52,7 @@ On the other hand, users can perform their own simulations of extensive atmosphe
   - **S1. Analyzed simulations<sup>*</sup>**: ARTI analysis and outputs of the S0 data-set, containing the expected flux of secondary particles at the ground.
   - **S2. Detector response simulations<sup>*</sup>**: ARTI detector simulation module, containing a complete, detailed and adjustable [Geant4](https://geant4.web.cern.ch/) model of the LAGO detectors. The main output is the expected signals in the detector, allowing site characterization and comparison with L2 and L3 data sets at each site.
 
-<sup>*</sup>(_It is not supported by EOSC-Synergy. It is added for completeness and future projects._)
+<sup>*</sup>(_Not supported by EOSC-Synergy. They are added for completeness and future projects._)
 
 #### **Re-used previous data**.
 
@@ -125,9 +125,9 @@ There are two kinds of standard identifiers:
 1. Resolvable IRIs [(IETF RFC 3987)](https://tools.ietf.org/html/rfc3987) that univocally identifies every JSON-LD [(W3C Recomm.)](https://www.w3.org/TR/json-ld11/) object (datasets, catalogs and others) over the Internet. They build the network of standards-based, machine-readable linked-data across websites, actually allowing the provenance and reuse of the data.
 2. [Handle.net](http://handle.net) PIDs that only points to catalogs or to repository providers. The first ones are used as shortcuts for publication (as cheaper [DOIs](https://doi.org)), but the second are for assuring the accessibility to the whole data through provider migrations (changes of name/domain), being part of the aforementioned IRIs.
 
-For clarification, the Internationalized Resource Identifier (IRI) is an internet protocol standard [IETF RFC 3987](https://tools.ietf.org/html/rfc3987) that unambiguously identifies an object, but a resolvable IRI corresponds to the one that can be publicly accessed on Internet, preferably through conventional protocols such as HTTP. The basis of JSON-LD syntax [(W3C Recomm.)](https://www.w3.org/TR/json-ld11/) is always to refer to related objects and descriptions with IRIs to discover new data by simply following those links. This creates a metadata grid linking objects. These objects describe datasets, catalogs as well as provenance elements (activities, actors, owners) following certain vocabulary.
+For clarification, the Internationalized Resource Identifier (IRI) is an internet protocol standard [IETF RFC 3987](https://tools.ietf.org/html/rfc3987) that unambiguously identifies an object, but a resolvable IRI corresponds to the one that can be publicly accessed on Internet, preferably through conventional protocols such as HTTP. The basis of JSON-LD syntax [(W3C Recomm.)](https://www.w3.org/TR/json-ld11/) is always to refer to related objects and descriptions with IRIs to discover new data by simply following those links. This creates a metadata grid linking objects. These objects describe datasets, catalogs as well as provenance elements (activities, actors, owners) following a certain vocabulary.
 
-On the other hand, repository providers are physical servers, with certain DNS name/IP. However, these addresses could change through time due to migrations of data,  maintenance or changes of their domain. To preserve the linked grid and the univocal identification, absolute IRIs should use persistent and unique identifiers (PIDs) from [Handle.net](http://handle.net) to resolve these addresses, and even a catalog service. The preferred way to state this in JSON-LD is using the `@base` property in the `@context`, becoming the needed IRIs relative to the `@base` PID.
+On the other hand, repository providers are physical servers, with certain DNS name/IP. However, these addresses could change through time due to migrations of data,  maintenance or changes of their domains. To preserve the linked grid and the univocal identification, absolute IRIs should use persistent and unique identifiers (PIDs) from [Handle.net](http://handle.net) to resolve these addresses, and even a catalog service. The preferred way to state this in JSON-LD is using the `@base` property in the `@context`, becoming the needed IRIs relative to the `@base` PID.
 
 As commented above, every generated file is considered a dataset, but only collections of related datasets compose the catalogs. Catalogs should be directly referenced with PIDs from Handle.net, but datasets should not. The reason is that there is no necessity for a dataset reference in a publication. For example, an input file without the output. Moreover, every file (i.e. dataset) can also be identified with a relative path to its catalog's PID. When a Catalog is complete and verified, the corresponding PID for being published will be automatically requested by the checker tool to the EOSC B2Handle service.
 
@@ -147,7 +147,7 @@ In general, files (i.e datasets) generated by WCDs or base software will maintai
 | Analyzed (S1) | Analisyed data from S0 | (_TBD<sup>*</sup>._) `S1__<site>_<flux time>__<altitude>_ <CORSIKA version>_...` |
 | Analyzed (S2) | Simulation model from S1 | (_TBD<sup>*</sup>._) `S2__<site>_<flux time>__<altitude>_ <CORSIKA version>_...` |
 
-<sup>*</sup>(_It is not supported by EOSC-Synergy. It is added for completeness and future projects._)
+<sup>*</sup>(_Not supported by EOSC-Synergy. It is added for completeness and future projects._)
 
 Moreover, versioning is only allowed for catalogs by adding a `_v<number>` at the end of the catalog´s name.
 
@@ -159,7 +159,7 @@ Searching should be based on any metadata value, but there are technical limitat
 
 #### **Approach for clear versioning**.
 
-To save on computational costs, versioning (i.e the same generation of files without modifiying the input parameters) only is allowed if corrections have been done by the software used for generating them. It implies that every file sould be calculated again. Thus, it is more clear to build a new catalog for storing them together with their new metadata. It will be declared by adding a `_v<number>` at the end of the catalog´s name, where `<number>` is a consecutive number indicating the version and starting with 2.  
+To save on computational costs, versioning (i.e the same generation of files without modifiying the input parameters) only is allowed if corrections have been done by the software used for generating them. It implies that every file should be calculated again. Thus, it is more clear to build a new catalog for storing them together with their new metadata. It will be declared by adding a `_v<number>` at the end of the catalog's name, where `<number>` is a consecutive number indicating the version and starting with 2.  
 
 Therefore, versioning directly the files (i.e. datasets) is not allowed, and the decision about versioning any catalog will be based on the metadata previously stored (related to parameters and software version). 
 
@@ -177,7 +177,7 @@ Therefore, versioning directly the files (i.e. datasets) is not allowed, and the
 | Analyzed (S1) | JSON for GEANT4/ROOT validator [(Freyermuth et. al, DOI: 10.1051/epjconf/201921405002)](https://doi.org/10.1051/epjconf/201921405002) | None | ((_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
 | Analyzed (S2) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
 
-<sup>*</sup>(_It is not supported by EOSC-Synergy. It is added for completeness and future projects._)
+<sup>*</sup>(_Not supported by EOSC-Synergy. It is added for completeness and future projects._)
 
 ### B.2. Making data openly accessible:
 
@@ -215,7 +215,7 @@ As commented above, data and metadata will be stored in providers associated to 
 | Simulated (S0) | [onedataSim](https://github/lagoproject/onedataSim), [ARTI](https://github/lagoproject/arti), [CORSIKA](https://web.ikp.kit.edu/corsika/) |
 | <sup>*</sup>Simulated (S1, S2) | [onedataSim](https://github/lagoproject/onedataSim), [ARTI](https://github/lagoproject/arti), [CORSIKA](https://web.ikp.kit.edu/corsika), [GEANT4](https://geant4.web.cern.ch), [ROOT](https://root.cern.ch) and [geant-val](https://geant-val.cern.ch) |
 
-<sup>*</sup>(_It is not supported by EOSC-Synergy. It is added for completeness and future projects._)
+<sup>*</sup>(_Not supported by EOSC-Synergy. They are added for completeness and future projects._)
 
 #### **Specify how access will be provided in case there are any restrictions**.
 
