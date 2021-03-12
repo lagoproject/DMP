@@ -22,7 +22,7 @@ nav_order: 2
 
 [lagoCollaboration.jsonld](./lagoCollaboration.jsonld) unifies the definition of the LAGO Collaboration following the official LAGO schema vocabulary. 
 
-The purpose of the definition is to univocally identify the LAGO Collaboration employing a public URL for being linked by any metadata. 
+The purpose of the definition is to univocally identify the LAGO Collaboration employing a public URI for being linked by any metadata. 
 
 ## How should an item be referenced?
 

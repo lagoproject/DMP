@@ -23,7 +23,7 @@ nav_order: 1
 [sitesLago.jsonld](./sitesLago.jsonld) unifies the definition of the LAGO sites following the official LAGO schema vocabulary. 
 
 The purpose of the site's definition is:
-- to univocally identify a predefined LAGO site (real or virtual) to be linked by metadata using a public URL;
+- to univocally identify a predefined LAGO site (real or virtual) to be linked by metadata using a public URI;
 - to link several related definitions of the site: short codename, name, description, responsible organisation;  
 - to fix their location, i.e. magnetic field, observation level, GPS coordinates;
 - to provide other default configuration parameters, meaningful for applications such as the `arrang` [(ARTI)](https://github.com/lagoproject/arti), `status` [(locationMaps)](https://github.com/lagoproject/locationsMaps), etc.  
