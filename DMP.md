@@ -54,7 +54,7 @@ On the other hand, users can perform their own simulations of extensive atmosphe
 
 #### **Re-used previous data**.
 
-Measurements from WCDs gathered in previous years and relevant simulations stored at the old centralized repository at UIS (Universidad Industrial de Santander, Colombia). This is, ~ 6.6TB, mainly measurements. Additionally, previous simulations performed by users in private clusters will be considered if implies high CPU consumption.
+Measurements from WCDs gathered in previous years and relevant simulations stored at the old centralized repository at UIS (Universidad Industrial de Santander, Colombia). This is, ~ 6.6TB, mainly measurements. Additionally, previous simulations performed by users in private clusters will be considered if it implies high CPU consumption.
 
 #### **Origin of the data**.
 
@@ -79,7 +79,7 @@ Minimal data-set is one hour of measurement or simulation:
 
 Typically, every WCD generates one measurement per hour producing files of ~ 200MB each, this is ~ 150GB of raw data per month for a total of 720 files. These files can originate 70-120GB of cleaned data (L1) and 10-40GB of quality data (L2 and L3). The one-hour interval is kept as the reference unit, resulting in 2160 files (between 2-160MB each). The necessary amount of CPU resources to generate these files is small; around 35 minutes on a Gold 6138 Intel core (2 GHz). However, all data-sets should be preserved for reprocessing if software errors appear in the future.
 
-On the other hand, users can perform their own simulations, which should be re-usable and reproducible by other collaborators. A standard simulation using only CORSIKA (i.e. s background simulation), results in a data-set of 4-10 GB (usually ~ 6 GB), but the simulation of one event could take up to 100 GB. Geant4 files output do not change this estimated figures.
+On the other hand, users can perform their own simulations, which should be re-usable and reproducible by other collaborators. A standard simulation using only CORSIKA (i.e. s background simulation), results in a data-set of 4-10 GB (usually ~ 6 GB), but the simulation of one event could take up to 100 GB. Geant4 files output does not change these estimated figures.
 
 To keep the one-hour convention, both types of simulations are usually split into 60 runs, with an interval lasting from 15 minutes to 10 hours. One task per minute. Thus, the complete workload of a background simulation is over 640 CPU/hours (Gold Intel core, 2 GHz). Additionally, to assure reproducibility, every input and output file of each run should be in the data-set comprising 180 files.
 
@@ -109,7 +109,7 @@ The LAGO data repository will be based on OneData. OneData supports storing cata
 - B2FIND: web interface (with search engine), for LAGO members and the general public.
 - Other discovery services: customized CKAN based (for Comprehensive Knowledge Archive Network) could better benefit from metadata provided than B2FIND, and they will be explored in the future. Anyway, when the data become public, any discovery service can gather metadata, even not specific engines such as Google.
 
-Specific LAGO wrappers execute the processing or simulation and, at a subsequent stage, check every data-set and store them in the LAGO repository, always together with their metadata. These wrappers are packed into Docker images and release at the LAGO code repository in GitHub.
+Specific LAGO wrappers execute the processing or simulation and, at a subsequent stage, check every data-set and store them in the LAGO repository, always together with their metadata. These wrappers are packed into Docker images and released at the LAGO code repository in GitHub.
 
 To assure the **metadata provision**, the only way to directly store and publish data-sets in the LAGO repository (by LAGO members) is by making use of these wrappers from the official Docker releases. Any other data to be included in the repository must be supervised and checked by the LAGO organization.
 
@@ -121,7 +121,7 @@ There are two kinds of standard identifiers:
 
 For clarification, the Internationalized Resource Identifier (IRI) is an internet protocol standard [IETF RFC 3987](https://tools.ietf.org/html/rfc3987) that unambiguously identifies an object, but a resolvable IRI corresponds to the one that can be publicly accessed on Internet, preferably through conventional protocols such as HTTP. The basis of JSON-LD syntax [(W3C Recomm.)](https://www.w3.org/TR/json-ld11/) is always to refer to related objects and descriptions with IRIs to discover new data by simply following those links. This creates a metadata grid linking objects. These objects describe datasets, catalogs as well as provenance elements (activities, actors, owners) following certain vocabulary.
 
-On the other hand, repository providers are physical servers, with certain DNS name/IP. However, these addresses could change through time due to migrations of data,  maintenance or changes of their domain. To preserve the linked grid and the univocal identification, absolute IRIs should use persistent and unique identifiers (PIDs) from [Handle.net](http://handle.net) to resolve these addresses, and even a catalog service. The preferred way to state this in JSON-LD is using the `@base` property in the `@context`, becoming the needed IRIs relative to the `@base` PID.
+On the other hand, repository providers are physical servers, with certain DNS name/IP. However, these addresses could change through time due to migrations of data, maintenance or changes of their domain. To preserve the linked grid and the univocal identification, absolute IRIs should use persistent and unique identifiers (PIDs) from [Handle.net](http://handle.net) to resolve these addresses, and even a catalog service. The preferred way to state this in JSON-LD is using the `@base` property in the `@context`, becoming the needed IRIs relative to the `@base` PID.
 
 As commented above, every generated file is considered a dataset, but only collections of related datasets compose the catalogs. Catalogs should be directly referenced with PIDs from Handle.net, but datasets should not. The reason is that there is no necessity for a dataset reference in a publication. For example, an input file without the output. Moreover, every file (i.e. dataset) can also be identified with a relative path to its catalog's PID. When a Catalog is complete and verified, the corresponding PID for being published will be automatically requested by the checker tool to the EOSC B2Handle service.
 
@@ -129,7 +129,7 @@ As commented above, every generated file is considered a dataset, but only colle
 
 Any dataset or catalog will be referenced by its absolute IRI, composed by its provider PID, its internal path and its name. Note that a catalog corresponds to a directory and a dataset to a file in the repositories.
 
-In general, files (i.e datasets) generated by WCDs or base software will maintain their names when are stored in repositories, but naming catalogs will follow a different approach. In order to be distinguishable, the catalog name will be based on adding meaningful parameters used by the software, splitted by the `_` character.
+In general, files (i.e datasets) generated by WCDs or base software will maintain their names when they are stored in repositories, but naming catalogs will follow a different approach. In order to be distinguishable, the catalog name will be based on adding meaningful parameters used by the software, splitted by the `_` character.
 
 | Data Type | Source | Catalog Name |
 |-----------|--------|------|
@@ -192,7 +192,7 @@ https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf
 
 #### **Where the data and associated metadata, documentation and code are deposited**.
 
-As commented above, data and metadata will be stored in providers associated to [EGI DataHub, https://datahub.egi.eu](https://datahub.egi.eu) service (reliying in [OneData](https://onedata.org/) technology), while the documentation and codes:
+As commented above, data and metadata will be stored in providers associated to [EGI DataHub, https://datahub.egi.eu](https://datahub.egi.eu) service (relying in [OneData](https://onedata.org/) technology), while the documentation and codes:
 
 | Data Type | Docs and code URLs |
 |-----------|--------|
@@ -221,7 +221,7 @@ while a manual to login into EGI datahub, visualise datasets and obtain tokens i
 
 Metadata:
 - Language syntax: [JSON-LD 1.1, W3C](https://json-ld.org/spec/latest/json-ld/)
-- Main vocabulary: [DCAT-AP2, European Commission](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe), which is a specific profile of [DCAT2, W3C](https://www.w3.org/TR/vocab-dcat-2/) recommended for repositories, content aggregators or data consumers related to the public sector (goverments, rearch centers, funded projects).
+- Main vocabulary: [DCAT-AP2, European Commission](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe), which is a specific profile of [DCAT2, W3C](https://www.w3.org/TR/vocab-dcat-2/) recommended for repositories, content aggregators or data consumers related to the public sector (governments, research centers, funded projects).
 - LAGO vocabulary: It is re-profile of [DCAT-AP2, European Commission](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe), extending the existing classes and adding properties needed for the LAGO computation.
 
 Data:
@@ -232,7 +232,7 @@ Data:
 
 (_Specify whether you will be using standard vocabulary for all data types present in your data set, to allow inter-disciplinary interoperability? If not, will you provide mapping to more commonly used ontologies?_)
 
-In principle, only supports CORSIKA outputs as described in the official documentation, but translating files to standardised formats in the future can be considered.
+In principle, it only supports CORSIKA outputs as described in the official documentation, but translating files to standardised formats in the future can be considered.
 
 ### B.4. Increase data re-use (through clarifying licenses):
 
@@ -249,7 +249,7 @@ In principle, only supports CORSIKA outputs as described in the official documen
 
 (_Specify why and for what period a data embargo is needed_).
 
-LAGO Collaboration requires a waiting period similar to the established ones for other large experiments. Such a period should be set not only to properly exploit results by the Consortium before to their availability, but because measured raw data must be pre-processed by the Consortium to make them 'understandable’. Simulations will be available too, but it would be valuable that the waiting period could be set by the user, as the data owner. The recommended embargo period is set as one year in general, but depends on the data type, specifically:
+LAGO Collaboration requires a waiting period similar to the established ones for other large experiments. Such a period should be set not only to properly exploit results by the Consortium before their availability, but because measured raw data must be pre-processed by the Consortium to make them 'understandable’. Simulations will be available too, but it would be valuable that the waiting period could be set by the user, as the data owner. The recommended embargo period is set as one year in general, but depends on the data type, specifically:
 
 | Data Type | embargo period |
 |-----------|--------|
