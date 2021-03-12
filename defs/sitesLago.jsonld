@@ -1,0 +1,173 @@
+{
+"@context" : {
+    "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.jsonld",
+    "@base" : "https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#",
+    "@vocab" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
+    "_dcatap" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
+    "_dcatap_landing_page" : "http://data.europa.eu/r5r/"
+  },
+"@graph" : [
+  {  
+    "@id" : "hess", 
+    "@type" : "lago:DetectorSite",
+    "name" : "hess",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmosphere" }, "lago:modatm" : { "@default" : "E10" } },
+    "lago:obsLev" : "1800e2",
+    "lago:magnet" : { "lago:bx" : "12.5", "lago:bz" : "-25.9" }, 
+    "lago:arrang" : "-14" 
+  },
+  {  
+    "@id" : "sac", 
+    "@type" : "lago:DetectorSite",
+    "name" : "sac",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmosphere" }, "lago:modatm" : { "@default" : "E32" , "comment" : "Other possible values (E30=wi,E31=sp,E32=su,E33=au)" } },
+    "lago:obsLev" : "3700e2",
+    "lago:magnet" : { "lago:bx" : "20.94", "lago:bz" : "-8.91" },
+    "lago:arrang" : "0" 
+  },
+  {  
+    "@id" : "etn", 
+    "@type" : "lago:DetectorSite",
+    "name" : "etn",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmosphere" }, "lago:modatm" : { "@default" : "E2" } },
+    "lago:obsLev" : "3000e2",
+    "lago:magnet" : { "lago:bx" : "27.7623", "lago:bz" : "36.0667" },
+    "lago:arrang" : "0"
+  },
+  {  
+    "@id" : "ber", 
+    "@type" : "lago:DetectorSite",
+    "name" : "ber",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmosphere" }, "lago:modatm" : { "@default" : "E1" } },
+    "lago:obsLev" : "3450e2",
+    "lago:magnet" : { "lago:bx" : "26.9814", "lago:bz" : "17.1054" },
+    "lago:arrang" : "0"
+  },
+  {  
+    "@id" : "lim", 
+    "@type" : "lago:DetectorSite",
+    "name" : "lim",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmosphere" }, "lago:modatm" : { "@default" : "E1" } },
+    "lago:obsLev" : "168e2",
+    "lago:magnet" : { "lago:bx" : "25.28", "lago:bz" : "-0.046" },
+    "lago:arrang" : "0"
+  },
+  {  
+    "@id" : "glr", 
+    "@type" : "lago:DetectorSite",
+    "name" : "glr",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmosphere" }, "lago:modatm" : { "@default" : "E1" } },
+    "lago:obsLev" : "4276e2",
+    "lago:magnet" : { "lago:bx" : "27.0750", "lago:bz" : "11.7728" },
+    "lago:arrang" : "0"
+  },
+  {
+    "@id" : "mch", 
+    "@type" : "lago:DetectorSite",
+    "name" : "mch",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmosphere" }, "lago:modatm" : { "@default" : "E1" } },
+    "lago:obsLev" : "2650e2",
+    "lago:magnet" : { "lago:bx" : "27.1762", "lago:bz" : "14.6184" },
+    "lago:arrang" : "0"
+  },
+  {  
+    "@id" : "bga", 
+    "@type" : "lago:DetectorSite",
+    "name" : "bga",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E1" } },
+    "lago:obsLev" : "950e2",
+    "lago:magnet" : { "lago:bx" : "27.0263", "lago:bz" : "17.1760" },
+    "lago:arrang" : "0"
+  },
+  {  
+    "@id" : "mge", 
+    "@type" : "lago:DetectorSite",
+    "name" : "mge",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "19" } },
+    "lago:obsLev" : "1400e2",
+    "lago:magnet" : { "lago:bx" : "20.4367", "lago:bz" : "-11.8217" },
+    "lago:arrang" : "0"
+  },
+  {  
+    "@id" : "brc", 
+    "@type" : "lago:DetectorSite",
+    "name" : "brc",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E3" } },
+    "lago:obsLev" : "800e2",
+    "lago:magnet" : { "lago:bx" : "19.234", "lago:bz" : "-17.068" },
+    "lago:arrang" : "0"
+  },
+  {  
+    "@id" : "and", 
+    "@type" : "lago:DetectorSite",
+    "name" : "and",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "19" } },
+    "lago:obsLev" : "4200e2",
+    "lago:magnet" : { "lago:bx" : "19.6922", "lago:bz" : "-14.2420" },
+    "lago:arrang" : "0"
+  },
+  {  
+    "@id" : "mpc", 
+    "@type" : "lago:DetectorSite",
+    "name" : "mpc",
+    "_comment" : "Marcapomacocha",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E1" } },
+    "lago:obsLev" : "4500e2",
+    "lago:magnet" : { "lago:bx" : "24.9599", "lago:bz" : "0.4124" }
+  },
+  {  
+    "@id" : "cha", 
+    "@type" : "lago:DetectorSite",
+    "name" : "cha",
+    "_comment" : "Chacaltaya",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E2" } },
+    "lago:obsLev" : "5230e2",
+    "lago:magnet" : { "lago:bx" : "23.0386", "lago:bz" : "-3.9734" }
+  },
+  {  
+    "@id" : "cid", 
+    "@type" : "lago:DetectorSite",
+    "name" : "cid",
+    "_comment" : "CIDA",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E1" } },
+    "lago:obsLev" : "3600e2",
+    "lago:magnet" : { "lago:bx" : "26.8464", "lago:bz" : "18.1604" }
+  },
+  {  
+    "@id" : "mor", 
+    "@type" : "lago:DetectorSite",
+    "name" : "mor",
+    "_comment" : "Mordor",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E1" } },
+    "lago:obsLev" : "4400e2",
+    "lago:magnet" : { "lago:bx" : "26.8340", "lago:bz" : "18.2004" }
+  },
+  {  
+    "@id" : "lsc", 
+    "@type" : "lago:DetectorSite",
+    "name" : "lsc",
+    "_comment" : "La Serena",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E2" } },
+    "lago:obsLev" : "28e2",
+    "lago:magnet" : { "lago:bx" : "20.29", "lago:bz" : "-11.74" }
+  },
+  {  
+    "@id" : "mbo", 
+    "@type" : "lago:DetectorSite",
+    "name" : "mbo",
+    "_comment" : "Base Marambio",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E5" } },
+    "lago:obsLev" : "196e2",
+    "lago:magnet" : { "lago:bx" : "19.6571", "lago:bz" : "-30.5809" }
+  },
+  {  
+    "@id" : "ccs", 
+    "@type" : "lago:DetectorSite",
+    "name" : "ccs",
+    "_comment" : "Caracas, data provided by Jose Antonio López, UCV, 10.486004N -66.894461W",
+    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E1" } },
+    "lago:obsLev" : "900e2",
+    "lago:magnet" : { "lago:bx" : "26.7364", "lago:bz" : "18.6777" }
+  }
+ ]
+}
