@@ -1,173 +1,1167 @@
 {
-"@context" : {
-    "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.jsonld",
-    "@base" : "https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#",
-    "@vocab" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
-    "_dcatap" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
-    "_dcatap_landing_page" : "http://data.europa.eu/r5r/"
+  "@context": {
+    "lago": "https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.jsonld",
+    "@base": "https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#",
+    "@vocab": "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
+    "_dcatap": "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
+    "_dcatap_landing_page": "http://data.europa.eu/r5r/"
   },
-"@graph" : [
-  {  
-    "@id" : "hess", 
-    "@type" : "lago:DetectorSite",
-    "name" : "hess",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmosphere" }, "lago:modatm" : { "@default" : "E10" } },
-    "lago:obsLev" : "1800e2",
-    "lago:magnet" : { "lago:bx" : "12.5", "lago:bz" : "-25.9" }, 
-    "lago:arrang" : "-14" 
-  },
-  {  
-    "@id" : "sac", 
-    "@type" : "lago:DetectorSite",
-    "name" : "sac",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmosphere" }, "lago:modatm" : { "@default" : "E32" , "comment" : "Other possible values (E30=wi,E31=sp,E32=su,E33=au)" } },
-    "lago:obsLev" : "3700e2",
-    "lago:magnet" : { "lago:bx" : "20.94", "lago:bz" : "-8.91" },
-    "lago:arrang" : "0" 
-  },
-  {  
-    "@id" : "etn", 
-    "@type" : "lago:DetectorSite",
-    "name" : "etn",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmosphere" }, "lago:modatm" : { "@default" : "E2" } },
-    "lago:obsLev" : "3000e2",
-    "lago:magnet" : { "lago:bx" : "27.7623", "lago:bz" : "36.0667" },
-    "lago:arrang" : "0"
-  },
-  {  
-    "@id" : "ber", 
-    "@type" : "lago:DetectorSite",
-    "name" : "ber",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmosphere" }, "lago:modatm" : { "@default" : "E1" } },
-    "lago:obsLev" : "3450e2",
-    "lago:magnet" : { "lago:bx" : "26.9814", "lago:bz" : "17.1054" },
-    "lago:arrang" : "0"
-  },
-  {  
-    "@id" : "lim", 
-    "@type" : "lago:DetectorSite",
-    "name" : "lim",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmosphere" }, "lago:modatm" : { "@default" : "E1" } },
-    "lago:obsLev" : "168e2",
-    "lago:magnet" : { "lago:bx" : "25.28", "lago:bz" : "-0.046" },
-    "lago:arrang" : "0"
-  },
-  {  
-    "@id" : "glr", 
-    "@type" : "lago:DetectorSite",
-    "name" : "glr",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmosphere" }, "lago:modatm" : { "@default" : "E1" } },
-    "lago:obsLev" : "4276e2",
-    "lago:magnet" : { "lago:bx" : "27.0750", "lago:bz" : "11.7728" },
-    "lago:arrang" : "0"
-  },
-  {
-    "@id" : "mch", 
-    "@type" : "lago:DetectorSite",
-    "name" : "mch",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmosphere" }, "lago:modatm" : { "@default" : "E1" } },
-    "lago:obsLev" : "2650e2",
-    "lago:magnet" : { "lago:bx" : "27.1762", "lago:bz" : "14.6184" },
-    "lago:arrang" : "0"
-  },
-  {  
-    "@id" : "bga", 
-    "@type" : "lago:DetectorSite",
-    "name" : "bga",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E1" } },
-    "lago:obsLev" : "950e2",
-    "lago:magnet" : { "lago:bx" : "27.0263", "lago:bz" : "17.1760" },
-    "lago:arrang" : "0"
-  },
-  {  
-    "@id" : "mge", 
-    "@type" : "lago:DetectorSite",
-    "name" : "mge",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "19" } },
-    "lago:obsLev" : "1400e2",
-    "lago:magnet" : { "lago:bx" : "20.4367", "lago:bz" : "-11.8217" },
-    "lago:arrang" : "0"
-  },
-  {  
-    "@id" : "brc", 
-    "@type" : "lago:DetectorSite",
-    "name" : "brc",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E3" } },
-    "lago:obsLev" : "800e2",
-    "lago:magnet" : { "lago:bx" : "19.234", "lago:bz" : "-17.068" },
-    "lago:arrang" : "0"
-  },
-  {  
-    "@id" : "and", 
-    "@type" : "lago:DetectorSite",
-    "name" : "and",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "19" } },
-    "lago:obsLev" : "4200e2",
-    "lago:magnet" : { "lago:bx" : "19.6922", "lago:bz" : "-14.2420" },
-    "lago:arrang" : "0"
-  },
-  {  
-    "@id" : "mpc", 
-    "@type" : "lago:DetectorSite",
-    "name" : "mpc",
-    "_comment" : "Marcapomacocha",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E1" } },
-    "lago:obsLev" : "4500e2",
-    "lago:magnet" : { "lago:bx" : "24.9599", "lago:bz" : "0.4124" }
-  },
-  {  
-    "@id" : "cha", 
-    "@type" : "lago:DetectorSite",
-    "name" : "cha",
-    "_comment" : "Chacaltaya",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E2" } },
-    "lago:obsLev" : "5230e2",
-    "lago:magnet" : { "lago:bx" : "23.0386", "lago:bz" : "-3.9734" }
-  },
-  {  
-    "@id" : "cid", 
-    "@type" : "lago:DetectorSite",
-    "name" : "cid",
-    "_comment" : "CIDA",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E1" } },
-    "lago:obsLev" : "3600e2",
-    "lago:magnet" : { "lago:bx" : "26.8464", "lago:bz" : "18.1604" }
-  },
-  {  
-    "@id" : "mor", 
-    "@type" : "lago:DetectorSite",
-    "name" : "mor",
-    "_comment" : "Mordor",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E1" } },
-    "lago:obsLev" : "4400e2",
-    "lago:magnet" : { "lago:bx" : "26.8340", "lago:bz" : "18.2004" }
-  },
-  {  
-    "@id" : "lsc", 
-    "@type" : "lago:DetectorSite",
-    "name" : "lsc",
-    "_comment" : "La Serena",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E2" } },
-    "lago:obsLev" : "28e2",
-    "lago:magnet" : { "lago:bx" : "20.29", "lago:bz" : "-11.74" }
-  },
-  {  
-    "@id" : "mbo", 
-    "@type" : "lago:DetectorSite",
-    "name" : "mbo",
-    "_comment" : "Base Marambio",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E5" } },
-    "lago:obsLev" : "196e2",
-    "lago:magnet" : { "lago:bx" : "19.6571", "lago:bz" : "-30.5809" }
-  },
-  {  
-    "@id" : "ccs", 
-    "@type" : "lago:DetectorSite",
-    "name" : "ccs",
-    "_comment" : "Caracas, data provided by Jose Antonio López, UCV, 10.486004N -66.894461W",
-    "lago:atmcrd" : { "@type": { "@default" : "lago:Atmod" }, "lago:modatm" : { "@default" : "E1" } },
-    "lago:obsLev" : "900e2",
-    "lago:magnet" : { "lago:bx" : "26.7364", "lago:bz" : "18.6777" }
-  }
- ]
+  "graph": [
+    {
+      "@id": "SAWB",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Marambio",
+        "country": "Antarctica",
+        "institution": "UBA",
+        "latitude": "-64.24",
+        "longitude": "-56.62",
+        "altitude": "200",
+        "lago:siteStatus": "active"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E5"
+        }
+      },
+      "lago:obsLev": [
+        "20000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "19.368",
+        "lago:bz": "-30.225",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "2.19",
+        "lago:rigidityCut": "2.19",
+        "lago:rigidityLow": "2.19"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "MAPI",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Machu Picchu",
+        "country": "Antarctica",
+        "institution": "CONIDA",
+        "latitude": "-62.09",
+        "longitude": "-58.47",
+        "altitude": "10",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E5"
+        }
+      },
+      "lago:obsLev": [
+        "1000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "19.312",
+        "lago:bz": "-28.696",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "2.19",
+        "lago:rigidityCut": "2.19",
+        "lago:rigidityLow": "2.19"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "BRC",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Bariloche",
+        "country": "Argentina",
+        "institution": "CNEA",
+        "latitude": "-41.15",
+        "longitude": "-71.3",
+        "altitude": "850",
+        "lago:siteStatus": "active"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E3"
+        }
+      },
+      "lago:obsLev": [
+        "86500"
+      ],
+      "lago:magnet": {
+        "lago:bx": "18.956",
+        "lago:bz": "-17.051",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "7.84",
+        "lago:rigidityCut": "7.84",
+        "lago:rigidityLow": "7.84"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "BUE",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Buenos Aires",
+        "country": "Argentina",
+        "institution": "UBA",
+        "latitude": "-34.54",
+        "longitude": "-58.44",
+        "altitude": "10",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E2"
+        }
+      },
+      "lago:obsLev": [
+        "1000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "17.095",
+        "lago:bz": "-14.671",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "8.19",
+        "lago:rigidityCut": "8.19",
+        "lago:rigidityLow": "8.19"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "KNA",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "VinaDelMar",
+        "country": "Chile",
+        "institution": "UVM",
+        "latitude": "-33.07",
+        "longitude": "-71.55",
+        "altitude": "347",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E2"
+        }
+      },
+      "lago:obsLev": [
+        "34700"
+      ],
+      "lago:magnet": {
+        "lago:bx": "19.564",
+        "lago:bz": "-13.332",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "9.15",
+        "lago:rigidityCut": "9.15",
+        "lago:rigidityLow": "9.15"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "LSC",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "La Serena",
+        "country": "Chile",
+        "institution": "USERENA",
+        "latitude": "-29.9",
+        "longitude": "-71.25",
+        "altitude": "28",
+        "lago:siteStatus": "active"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E2"
+        }
+      },
+      "lago:obsLev": [
+        "2800"
+      ],
+      "lago:magnet": {
+        "lago:bx": "19.979",
+        "lago:bz": "-11.825",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "9.25",
+        "lago:rigidityCut": "9.25",
+        "lago:rigidityLow": "9.25"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "TUC",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Tucuman",
+        "country": "Argentina",
+        "institution": "UNT",
+        "latitude": "-26.5",
+        "longitude": "-65.11",
+        "altitude": "430",
+        "lago:siteStatus": "virtual"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E2"
+        }
+      },
+      "lago:obsLev": [
+        "43000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "19.492",
+        "lago:bz": "-10.644",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "9.4",
+        "lago:rigidityCut": "9.4",
+        "lago:rigidityLow": "9.4"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "ASU",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Asuncion-Paraguay",
+        "country": "Paraguay",
+        "institution": "UNA",
+        "latitude": "-25.19",
+        "longitude": "-57.3",
+        "altitude": "136",
+        "lago:siteStatus": "virtual"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "13600"
+      ],
+      "lago:magnet": {
+        "lago:bx": "18.239",
+        "lago:bz": "-11.725",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "9.4",
+        "lago:rigidityCut": "9.4",
+        "lago:rigidityLow": "9.4"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "SAO",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Sao Paulo-UFABC",
+        "country": "Brazil",
+        "institution": "UFABC",
+        "latitude": "-23.38",
+        "longitude": "-46.31",
+        "altitude": "760",
+        "lago:siteStatus": "active"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "76000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "16.49",
+        "lago:bz": "-14.474",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "9.73",
+        "lago:rigidityCut": "9.73",
+        "lago:rigidityLow": "9.73"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "VCP",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Campinas",
+        "country": "Brazil",
+        "institution": "UNICAMP",
+        "latitude": "-22.9",
+        "longitude": "-47.06",
+        "altitude": "640",
+        "lago:siteStatus": "active"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "64000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "16.756",
+        "lago:bz": "-14.097",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "9.73",
+        "lago:rigidityCut": "9.73",
+        "lago:rigidityLow": "9.73"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "LPB",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "La Paz",
+        "country": "Bolivia",
+        "institution": "UMSA",
+        "latitude": "-16.49",
+        "longitude": "-68.15",
+        "altitude": "3630",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E2"
+        }
+      },
+      "lago:obsLev": [
+        "363000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "22.367",
+        "lago:bz": "-4.703",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "11.55",
+        "lago:rigidityCut": "11.55",
+        "lago:rigidityLow": "11.55"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "COT",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Cota cota(bo)",
+        "country": "Bolivia",
+        "institution": "UMSA",
+        "latitude": "-16.41",
+        "longitude": "-68.5",
+        "altitude": "3917",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E2"
+        }
+      },
+      "lago:obsLev": [
+        "391700"
+      ],
+      "lago:magnet": {
+        "lago:bx": "22.441",
+        "lago:bz": "-4.584",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "11.55",
+        "lago:rigidityCut": "11.55",
+        "lago:rigidityLow": "11.55"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "CHA",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Chacaltaya",
+        "country": "Bolivia",
+        "institution": "UMSA",
+        "latitude": "-16.35",
+        "longitude": "-68.13",
+        "altitude": "5230",
+        "lago:siteStatus": "active"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E2"
+        }
+      },
+      "lago:obsLev": [
+        "523000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "22.384",
+        "lago:bz": "-4.614",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "11.55",
+        "lago:rigidityCut": "11.55",
+        "lago:rigidityLow": "11.55"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "CUZ",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Cusco",
+        "country": "Peru",
+        "institution": "CONIDA",
+        "latitude": "-13.52",
+        "longitude": "-71.96",
+        "altitude": "3400",
+        "lago:siteStatus": "active"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "340000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "23.68",
+        "lago:bz": "-2.016",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "11.86",
+        "lago:rigidityCut": "11.86",
+        "lago:rigidityLow": "11.86"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "LIM",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Lima",
+        "country": "Peru",
+        "institution": "CONIDA",
+        "latitude": "-12.1",
+        "longitude": "-77.02",
+        "altitude": "150",
+        "lago:siteStatus": "active"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "16800"
+      ],
+      "lago:magnet": {
+        "lago:bx": "24.727",
+        "lago:bz": "-0.472",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "12.03",
+        "lago:rigidityCut": "12.03",
+        "lago:rigidityLow": "12.03"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "SPHU",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Huancayo",
+        "country": "Peru",
+        "institution": "CONIDA",
+        "latitude": "-12.04",
+        "longitude": "-75.3",
+        "altitude": "3370",
+        "lago:siteStatus": "active"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E2"
+        }
+      },
+      "lago:obsLev": [
+        "337000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "24.475",
+        "lago:bz": "-0.528",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "12.03",
+        "lago:rigidityCut": "12.03",
+        "lago:rigidityLow": "12.03"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "CPV",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Campina Grande",
+        "country": "Brazil",
+        "institution": "UFCG",
+        "latitude": "-7.23",
+        "longitude": "-35.88",
+        "altitude": "550",
+        "lago:siteStatus": "active"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "55000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "21.177",
+        "lago:bz": "-12.602",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "11.86",
+        "lago:rigidityCut": "11.86",
+        "lago:rigidityLow": "11.86"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "SERB",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Riobamba-EPOSCH",
+        "country": "Ecuador",
+        "institution": "EPOSCH",
+        "latitude": "-1.81",
+        "longitude": "-78.74",
+        "altitude": "2750",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "275000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "26.58",
+        "lago:bz": "8.505",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "12.18",
+        "lago:rigidityCut": "12.18",
+        "lago:rigidityLow": "12.18"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "QUIE",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Quito-EPN",
+        "country": "Ecuador",
+        "institution": "EPN",
+        "latitude": "-0.2",
+        "longitude": "-78.5",
+        "altitude": "2850",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "285000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "26.72",
+        "lago:bz": "9.976",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "12.18",
+        "lago:rigidityCut": "12.18",
+        "lago:rigidityLow": "12.18"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "QUIU",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Quito-USFQ",
+        "country": "Ecuador",
+        "institution": "USFQ",
+        "latitude": "-0.2",
+        "longitude": "-78.5",
+        "altitude": "2200",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "220000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "26.728",
+        "lago:bz": "9.98",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "12.18",
+        "lago:rigidityCut": "12.18",
+        "lago:rigidityLow": "12.18"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "PSO",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Pasto",
+        "country": "Colombia",
+        "institution": "UDENAR",
+        "latitude": "1.21",
+        "longitude": "-77.27",
+        "altitude": "2530",
+        "lago:siteStatus": "virtual"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "253000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "26.739",
+        "lago:bz": "11.171",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "12.18",
+        "lago:rigidityCut": "12.18",
+        "lago:rigidityLow": "12.18"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "BGA",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Bucaramanga",
+        "country": "Colombia",
+        "institution": "UIS",
+        "latitude": "7.14",
+        "longitude": "-73.12",
+        "altitude": "956",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "95000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "26.795",
+        "lago:bz": "16.063",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "11.63",
+        "lago:rigidityCut": "11.63",
+        "lago:rigidityLow": "11.63"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "PAM",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Pamplona",
+        "country": "Colombia",
+        "institution": "UNIPAM",
+        "latitude": "7.22",
+        "longitude": "-72.39",
+        "altitude": "2342",
+        "lago:siteStatus": "virtual"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "234200"
+      ],
+      "lago:magnet": {
+        "lago:bx": "26.745",
+        "lago:bz": "15.963",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "11.63",
+        "lago:rigidityCut": "11.63",
+        "lago:rigidityLow": "11.63"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "MRDP",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Pico Espejo-ULA",
+        "country": "Venezuela",
+        "institution": "ULA",
+        "latitude": "8.32",
+        "longitude": "-71.03",
+        "altitude": "4700",
+        "lago:siteStatus": "virtual"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "470000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "26.686",
+        "lago:bz": "16.648",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "11.6",
+        "lago:rigidityCut": "11.6",
+        "lago:rigidityLow": "11.6"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "MRDU",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Merida-ULA",
+        "country": "Venezuela",
+        "institution": "ULA",
+        "latitude": "8.63",
+        "longitude": "-71.15",
+        "altitude": "1893",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "189300"
+      ],
+      "lago:magnet": {
+        "lago:bx": "26.731",
+        "lago:bz": "16.995",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "11.6",
+        "lago:rigidityCut": "11.6",
+        "lago:rigidityLow": "11.6"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "CCSC",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Caracas-UCV",
+        "country": "Venezuela",
+        "institution": "UCV",
+        "latitude": "10.49",
+        "longitude": "-66.89",
+        "altitude": "900",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "90000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "26.685",
+        "lago:bz": "17.506",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "11.69",
+        "lago:rigidityCut": "11.69",
+        "lago:rigidityLow": "11.69"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "CCSS",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Caracas-USB",
+        "country": "Venezuela",
+        "institution": "USB",
+        "latitude": "10.49",
+        "longitude": "-66.89",
+        "altitude": "900",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "90000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "26.685",
+        "lago:bz": "17.506",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "11.69",
+        "lago:rigidityCut": "11.69",
+        "lago:rigidityLow": "11.69"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "GUA",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Guatemala",
+        "country": "Guatemala",
+        "institution": "UVG",
+        "latitude": "14.63",
+        "longitude": "-90.59",
+        "altitude": "1490",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "149000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "27.535",
+        "lago:bz": "24.938",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "9.11",
+        "lago:rigidityCut": "9.11",
+        "lago:rigidityLow": "9.11"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "TAC",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Tacana",
+        "country": "Guatemala",
+        "institution": "UVG",
+        "latitude": "15.13",
+        "longitude": "-92.11",
+        "altitude": "4060",
+        "lago:siteStatus": "virtual"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "406000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "27.533",
+        "lago:bz": "25.359",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "9.11",
+        "lago:rigidityCut": "9.11",
+        "lago:rigidityLow": "9.11"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "CHIA",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Chiapas",
+        "country": "Mexico",
+        "institution": "UNACH",
+        "latitude": "16.75",
+        "longitude": "-93.12",
+        "altitude": "522",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E2"
+        }
+      },
+      "lago:obsLev": [
+        "52200"
+      ],
+      "lago:magnet": {
+        "lago:bx": "27.407",
+        "lago:bz": "27.029",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "9.11",
+        "lago:rigidityCut": "9.11",
+        "lago:rigidityLow": "9.11"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "SNG",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Sierra Negra",
+        "country": "Mexico",
+        "institution": "BUAP",
+        "latitude": "18.16",
+        "longitude": "-97.95",
+        "altitude": "4550",
+        "lago:siteStatus": "inactive"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E2"
+        }
+      },
+      "lago:obsLev": [
+        "455000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "27.361",
+        "lago:bz": "28.043",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "7.36",
+        "lago:rigidityCut": "7.36",
+        "lago:rigidityLow": "7.36"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "CID",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "CIDA",
+        "country": "Venezuela",
+        "institution": "UCV",
+        "latitude": "8.78",
+        "longitude": "-70.87",
+        "altitude": "3600",
+        "lago:siteStatus": "virtual"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "360000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "26.702",
+        "lago:bz": "17.049",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "11.6",
+        "lago:rigidityCut": "11.6",
+        "lago:rigidityLow": "11.6"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "MOR",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Mordor",
+        "country": "Venezuela",
+        "institution": "UCV",
+        "latitude": "9.02",
+        "longitude": "-70.8",
+        "altitude": "4400",
+        "lago:siteStatus": "virtual"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "440000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "26.693",
+        "lago:bz": "17.25",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "11.6",
+        "lago:rigidityCut": "11.6",
+        "lago:rigidityLow": "11.6"
+      },
+      "lago:detectors": "1"
+    },
+    {
+      "@id": "MPC",
+      "@type": "lago:DetectorSite",
+      "lago:site": {
+        "name": "Marcapomacocha",
+        "country": "Peru",
+        "institution": "CONIDA",
+        "latitude": "-11.41",
+        "longitude": "-76.34",
+        "altitude": "4500",
+        "lago:siteStatus": "virtual"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:obsLev": [
+        "450000"
+      ],
+      "lago:magnet": {
+        "lago:bx": "24.733",
+        "lago:bz": "0.041",
+        "lago:Bdate": "2021-03-18",
+        "lago:Bmodel": "IGRF13",
+        "lago:rigidityUp": "12",
+        "lago:rigidityCut": "12",
+        "lago:rigidityLow": "12"
+      },
+      "lago:detectors": "1"
+    }
+  ]
 }
