@@ -13,15 +13,15 @@ nav_order: 4
 {:toc}
 
 
-# Crear el cluster Slurm básico.
+## Crear el cluster Slurm básico.
 
-## Características mínimas del master: 
+### Características mínimas del master: 
 
 Tiene que tener suficiente memoria y CPUs, en especial esta última, para el despliegue de los nodos por Ansible. Luego para que ejecute slurm no necesita casi nada, pero es lo que hay (es un desperdicio que se podría solucionar poniendo al master que funcione también como un nodo, pero eso estro tema).
 
 En general 4GB es más que suficiente. Pero 4 VCPUs puede valer para 8 nodos de trabajo, pero esto último lo decidimos despúes, según cuántos nodos creamos.
 
-## Número y tipo de nodos. 
+### Número y tipo de nodos. 
 
 Lo ideal es intentar copar el máximo de cores disponibles (VCPUS) en el proveedor Cloud con el mínimo número de MVs y memoria por MV. De esta forma aseguras que las simulaciones terminan antes (tienes más cores disponibles por simulación) y te aseguras que el máximo de memoria usable en el proveedor te impida obtener todas las VCPUs restantes. Lo suyo es que todas los nodos de trabajo sean iguales.
 
@@ -36,12 +36,14 @@ Es decir, tenemos para 12 máquinas de 16 VCPUs y 1 de 8VCPUs.  Entonces podemos
 - el máster tendría 8 VCPUs y 4GB de RAM
 - 12 nodos de trabajo con 16 VCPUs y (500+16*250MB=) 4.5 GB de RAM.
 
-## - Comprobar si está todo bien, para ello se entra en el master y al pasar a "root" comprueba que aparece el hostname "slurmserver", no quedan procesos "ansible" consumiendo mucha CPU y que los nodos están "idle".
+### Comprobar si está todo bien. 
+
+Para ello se entra en el master y al pasar a "root" comprueba que aparece el hostname "slurmserver", no quedan procesos "ansible" consumiendo mucha CPU y que los nodos están "idle".
 
 Lanzar la creación y esperar a que esté todo OK en verde (10-15 minutos para 8 nodos)
 
 ```bash
-# ssh -i key.pem cloudadm@<IP master>
+PC-local# ssh -i key.pem cloudadm@<IP master>
 $ sudo su -
 root@slurmserver:~# ps aux | grep -i ansible
 root     17961  0.0  0.0  14436  1116 pts/0    S+   15:18   0:00 grep --color=auto -i ansible
@@ -51,9 +53,9 @@ debug*       up   infinite      12  idle vnode-[1-12]
 ```
 
 
-# Preparación y pruebas del cluster para el Challenge.
+## Preparación y pruebas del cluster para el Challenge.
 
-## - HOME compartido con los nodos. 
+### HOME compartido con los nodos. 
 
 El oneclient requiere que se ejecute con privilegios casi de root y el docker también, por tanto tenemos que lanzar los trabajos con root.
 
@@ -65,7 +67,7 @@ root@slurmserver:~# cd /home/root
 root@slurmserver:/home/root#
 ```
 
-## - Comprobación del cluster
+### Comprobación del cluster
 
 
 Creamos un directorio prep, para lanzar pruebas simples y preparativos
@@ -73,7 +75,7 @@ Creamos un directorio prep, para lanzar pruebas simples y preparativos
 ```bash
 root@slurmserver:/home/root# mkdir prep
 root@slurmserver:/home/root# cd prep
-root@slurmserver:/home/root/prep# cat > test.sbatch
+root@slurmserver:/home/root/prep# cat test.sbatch
 #!/bin/bash
 #SBATCH --export=ALL
 #SBATCH --exclusive
@@ -93,7 +95,7 @@ root@slurmserver:/home/root/prep# for i in {1..12}; do sbatch test.sbatch ; done
 
 
 
-## Creación de una imagen docker lista para ser usada en cada nodo.
+### Creación de una imagen docker lista para ser usada en cada nodo.
 
 En el mundo ideal el "docker build" puede ir justo antes del "docker run" así actualizaría lo que fuera necesario si cambiamos de rama y etc.
 
@@ -122,12 +124,12 @@ root@slurmserver:/home/root/prep# for i in {1..12}; do sbatch build_docker.sbatc
 
 Se puede repetir la operación todas las veces que queramos hasta que se consigan crear todas las imágenes docker en cada nodo.
 
-## Comprobar que los docker funcionan 
+### Comprobar que los docker funcionan 
 
 ```bash
 root@slurmserver:/home/root/prep# export TOKEN="XXXXXmi tokenXXXXX"
 #ahora sí necesitamos exportar el OneProvider 
-root@slurmserver:/home/root/prep# cat > test_docker.sbatch
+root@slurmserver:/home/root/prep# cat test_docker.sbatch
 #!/bin/bash
 #SBATCH --export=ALL
 #SBATCH --exclusive
@@ -144,15 +146,15 @@ root@slurmserver:/home/root/prep# for i in {1..12}; do sbatch build_docker.sbatc
 
 
 
-# Lanzamiento de listados de simulaciones.
+## Lanzamiento de listados de simulaciones.
 
 
-## Crear los scripts genéricos de lanzamiento
+### Crear los scripts genéricos de lanzamiento
 
 Es un script basado que lanza al vuelo sbatch's creados desde un patron que también está en un fichero.
 
 ```bash
-root@slurmserver:/home/root# cat > read_csv_and_submit.sh
+root@slurmserver:/home/root# cat read_csv_and_submit.sh
 #!/bin/bash
 # USE: read_csv_and_submit.sh <.CSV> <NUM jobs> 
 
@@ -200,7 +202,7 @@ var_end=' -x"'
 ```
 
 ```bash
-root@slurmserver:/home/root# cat > pattern.sbatch
+root@slurmserver:/home/root# cat pattern.sbatch
 #!/bin/bash
 #SBATCH --export=ALL
 #SBATCH --exclusive
@@ -212,7 +214,7 @@ docker run --privileged -e ONECLIENT_ACCESS_TOKEN=$TOKEN -e ONECLIENT_PROVIDER_H
 ```
 
 
-## Preparar un directorio exclusivamente para un conjunto de simulaciones y su .csv
+### Preparar un directorio exclusivamente para un conjunto de simulaciones y su .csv
 
 ```bash
 root@slurmserver:/home/root# mkdir sims01
@@ -223,7 +225,7 @@ root@slurmserver:/home/root/sims01#
 Esta sería una simulación de 10 segundos con la altura pre-determinada (k) por eso está vacia:
 
 ```bash
-root@slurmserver:/home/root/sims01# cat  sims01.csv 
+root@slurmserver:/home/root/sims01# cat sims01.csv 
 t,u,s,k,h
 10,0000-0001-6497-753X,and,,QGSII
 10,0000-0001-6497-753X,asu,,QGSII
@@ -237,7 +239,7 @@ t,u,s,k,h
 Pero se podría hacer variedad, unas k si y otras no:
 
 ```bash
-root@slurmserver:/home/root/sims01# cat > sims01bis.csv 
+root@slurmserver:/home/root/sims01# cat sims01bis.csv 
 t,u,s,k,h
 10,0000-0001-6497-753X,and,,QGSII
 10,0000-0001-6497-753X,asu,220e2,QGSII
@@ -249,7 +251,7 @@ t,u,s,k,h
 ```
 
 
-## Lanzar la simulacion
+### Lanzar la simulacion
 
 Se copian los scripts de lanzamiento y se hacen los export correspondintes
 Aqui hay que exportar también el oneprovider donde se depositarán los resultados. /LAGOsim está en ceta-ciemat01.datahub.egi.eu
@@ -270,9 +272,9 @@ root@slurmserver:/home/root/sims01# ./read_csv_and_submit.sh sims01bis.csv 16
 
 
 
-# Troubleshooting y limpieza
+## Troubleshooting y limpieza
 
-## Entrar en los nodos y ver que pasa.
+### Entrar en los nodos y ver que pasa.
 
 Dos opciones: 
 - Hay que descargarse las key de cada nodo desde el IM. Es tedioso.
@@ -282,7 +284,7 @@ Lo último es lo mejor a la larga.
 
 
 
-## Matar todos los trabajos
+### Matar todos los trabajos
 
 ´´´bash
 #scancel  `echo $(squeue | awk -F' ' '{print $1}' | tail -n +2)`
@@ -297,7 +299,7 @@ El procedimiento bestia para reinciar los 12 nodos es mandar un trabajo de limpi
 ```bash
 root@slurmserver:/home/root# mkdir prep
 root@slurmserver:/home/root# cd prep
-root@slurmserver:/home/root/prep# cat > clean_docker.sbatch
+root@slurmserver:/home/root/prep# cat clean_docker.sbatch
 #!/bin/bash
 #SBATCH --export=ALL
 #SBATCH --exclusive
