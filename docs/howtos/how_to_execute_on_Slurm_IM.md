@@ -48,7 +48,7 @@ root     17961  0.0  0.0  14436  1116 pts/0    S+   15:18   0:00 grep --color=au
 root@slurmserver:~# sinfo
 PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 debug*       up   infinite      12  idle vnode-[1-12]
-´´´
+```
 
 
 # Preparación y pruebas del cluster para el Challenge.
@@ -59,18 +59,18 @@ El oneclient requiere que se ejecute con privilegios casi de root y el docker ta
 
 El directorio /root no está compartido con los nodos, tenemos que crear uno en /home (que si está compartido) y lanzar desde allí para poder ver los logs de los trabajos.
 
-´´´bash
+```bash
 root@slurmserver:~# mkdir /home/root
 root@slurmserver:~# cd /home/root
 root@slurmserver:/home/root#
-´´´
+```
 
 ## - Comprobación del cluster
 
 
 Creamos un directorio prep, para lanzar pruebas simples y preparativos
 
-´´´bash
+```bash
 root@slurmserver:/home/root# mkdir prep
 root@slurmserver:/home/root# cd prep
 root@slurmserver:/home/root/prep# cat > test.sbatch
@@ -83,13 +83,13 @@ hostname
 sleep 10
 docker ps
 date
-´´´
+```
 
 Como tenemos 12 nodos
 
-´´´bash
+```bash
 root@slurmserver:/home/root/prep# for i in {1..12}; do sbatch test.sbatch ; done
-´´´
+```
 
 
 
@@ -101,7 +101,7 @@ Pero para el Challenge es mejor dejar las imágenes creadas fijas en cada nodo y
 
 Entonces creamos, en este caso para la rama "dev-asoreyh"  
 
-´´´bash
+```bash
 root@slurmserver:/home/root/prep# export TOKEN="XXXXXmi tokenXXXXX"
 #no necesitamos exportar todavia el OneProvider 
 root@slurmserver:/home/root/prep# cat > build_docker.sbatch
@@ -112,19 +112,19 @@ root@slurmserver:/home/root/prep# cat > build_docker.sbatch
 
 ## oneprovider and branch hardcoded
 docker build --build-arg ONEDATASIM_BRANCH="dev-asoreyh" --build-arg ONECLIENT_ACCESS_TOKEN_TO_BUILD=$TOKEN --build-arg ONECLIENT_PROVIDER_HOST_TO_BUILD=https://mon01-tic.ciemat.es -t lagocontainer:0.0.1 https://github.com/lagoproject/onedataSim.git#dev-asoreyh 
-´´´
+```
 
 Para 12 nodos, se lanzaría así:
 
-´´´bash
+```bash
 root@slurmserver:/home/root/prep# for i in {1..12}; do sbatch build_docker.sbatch ; done
-´´´
+```
 
 Se puede repetir la operación todas las veces que queramos hasta que se consigan crear todas las imágenes docker en cada nodo.
 
 ## Comprobar que los docker funcionan 
 
-´´´bash
+```bash
 root@slurmserver:/home/root/prep# export TOKEN="XXXXXmi tokenXXXXX"
 #ahora sí necesitamos exportar el OneProvider 
 root@slurmserver:/home/root/prep# cat > test_docker.sbatch
@@ -135,12 +135,12 @@ root@slurmserver:/home/root/prep# cat > test_docker.sbatch
 docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
 docker run --privileged -e ONECLIENT_ACCESS_TOKEN=$TOKEN -e ONECLIENT_PROVIDER_HOST=$ONEPROVIDER -i lagocontainer:0.0.1 bash -lc "ls -alh /mnt/datahub.egi.eu/"
-´´´
+```
 
 Para 12 nodos, se lanzaría así:
-´´´bash
+```bash
 root@slurmserver:/home/root/prep# for i in {1..12}; do sbatch build_docker.sbatch ; done
-´´´
+```
 
 
 
@@ -151,7 +151,7 @@ root@slurmserver:/home/root/prep# for i in {1..12}; do sbatch build_docker.sbatc
 
 Es un script basado que lanza al vuelo sbatch's creados desde un patron que también está en un fichero.
 
-´´´bash
+```bash
 root@slurmserver:/home/root# cat > read_csv_and_submit.sh
 #!/bin/bash
 # USE: read_csv_and_submit.sh <.CSV> <NUM jobs> 
@@ -197,8 +197,9 @@ var_end=' -x"'
 
         done
 } < $INPUT
+```
 
-
+```bash
 root@slurmserver:/home/root# cat > pattern.sbatch
 #!/bin/bash
 #SBATCH --export=ALL
@@ -208,21 +209,20 @@ root@slurmserver:/home/root# cat > pattern.sbatch
 DO_nSIM=$*
 
 docker run --privileged -e ONECLIENT_ACCESS_TOKEN=$TOKEN -e ONECLIENT_PROVIDER_HOST=$ONEPROVIDER -i lagocontainer:0.0.1 bash -lc "$DO_nSIM"
-
-´´´
+```
 
 
 ## Preparar un directorio exclusivamente para un conjunto de simulaciones y su .csv
 
-´´´bash
+```bash
 root@slurmserver:/home/root# mkdir sims01
 root@slurmserver:/home/root# cd smis01
 root@slurmserver:/home/root/sims01# 
-´´´
+```
 
 Esta sería una simulación de 10 segundos con la altura pre-determinada (k) por eso está vacia:
 
-´´´bash
+```bash
 root@slurmserver:/home/root/sims01# cat  sims01.csv 
 t,u,s,k,h
 10,0000-0001-6497-753X,and,,QGSII
@@ -232,11 +232,11 @@ t,u,s,k,h
 10,0000-0001-6497-753X,brc,,QGSII
 ....
 ....
-´´´
+```
 
 Pero se podría hacer variedad, unas k si y otras no:
 
-´´´bash
+```bash
 root@slurmserver:/home/root/sims01# cat > sims01bis.csv 
 t,u,s,k,h
 10,0000-0001-6497-753X,and,,QGSII
@@ -246,7 +246,7 @@ t,u,s,k,h
 10,0000-0001-6497-753X,brc,,QGSII
 ....
 ....
-´´´
+```
 
 
 ## Lanzar la simulacion
@@ -254,19 +254,19 @@ t,u,s,k,h
 Se copian los scripts de lanzamiento y se hacen los export correspondintes
 Aqui hay que exportar también el oneprovider donde se depositarán los resultados. /LAGOsim está en ceta-ciemat01.datahub.egi.eu
 
-´´´bash
+```bash
 root@slurmserver:/home/root/sims01# cp ../read_csv_and_submit.sh .
 root@slurmserver:/home/root/sims01# chmod +x read_csv_and_submit.sh
 root@slurmserver:/home/root/sims01# cp ../pattern.sbatch .
 root@slurmserver:/home/root/sims01# export TOKEN="XXXXXmi tokenXXXXX"
 root@slurmserver:/home/root/sims01# export ONEPROVIDER="ceta-ciemat01.datahub.egi.eu"
-´´´
+```
 
 Se lanza el script indicando el .csv que quiere similar y si tenemos MVs con 16 cores, se pone como número de jobs 16
 
-´´´bash
+```bash
 root@slurmserver:/home/root/sims01# ./read_csv_and_submit.sh sims01bis.csv 16
-´´´
+```
 
 
 
@@ -294,7 +294,7 @@ A veces se quedan muy llenos de basura o colgados los dockers y los oneclients.
 
 El procedimiento bestia para reinciar los 12 nodos es mandar un trabajo de limpieza/reinicio como este:
 
-´´´bash
+```bash
 root@slurmserver:/home/root# mkdir prep
 root@slurmserver:/home/root# cd prep
 root@slurmserver:/home/root/prep# cat > clean_docker.sbatch
@@ -309,12 +309,12 @@ docker rmi $(docker images)
 
 sleep 5
 reboot
-´´´
+```
 
 
-´´´bash
+```bash
 root@slurmserver:/home/root/prep# for i in {1..12}; do sbatch clean_docker.sbatch ; done
-´´´
+```
 
 
 
