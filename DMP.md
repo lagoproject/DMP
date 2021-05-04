@@ -56,7 +56,7 @@ On the other hand, users can perform their own simulations of extensive atmosphe
 
 #### **Re-used previous data**.
 
-Measurements from WCDs gathered in previous years and relevant simulations stored at the old centralized repository at UIS (Universidad Industrial de Santander, Colombia). This is, ~ 6.6TB, mainly measurements. Additionally, previous simulations performed by users in private clusters will be considered if implies high CPU consumption.
+Measurements from WCDs gathered in previous years and relevant simulations stored at the old centralized repository at UIS (Universidad Industrial de Santander, Colombia). This is, ~ 6.6TB, mainly measurements. Additionally, previous simulations performed by users in private clusters will be considered if it implies high CPU consumption.
 
 #### **Origin of the data**.
 
@@ -81,7 +81,7 @@ Minimal data-set is one hour of measurement or simulation:
 
 Typically, every WCD generates one measurement per hour producing files of ~ 200MB each, this is ~ 150GB of raw data per month for a total of 720 files. These files can originate 70-120GB of cleaned data (L1) and 10-40GB of quality data (L2 and L3). The one-hour interval is kept as the reference unit, resulting in 2160 files (between 2-160MB each). The necessary amount of CPU resources to generate these files is small; around 35 minutes on a Gold 6138 Intel core (2 GHz). However, all data-sets should be preserved for reprocessing if software errors appear in the future.
 
-On the other hand, users can perform their own simulations, which should be re-usable and reproducible by other collaborators. A standard simulation using only CORSIKA (i.e. s background simulation), results in a data-set of 4-10 GB (usually ~ 6 GB), but the simulation of one event could take up to 100 GB. Geant4 files output do not change this estimated figures.
+On the other hand, users can perform their own simulations, which should be re-usable and reproducible by other collaborators. A standard simulation using only CORSIKA (i.e. s background simulation), results in a data-set of 4-10 GB (usually ~ 6 GB), but the simulation of one event could take up to 100 GB. Geant4 files output does not change these estimated figures.
 
 To keep the one-hour convention, both types of simulations are usually split into 60 runs, with an interval lasting from 15 minutes to 10 hours. One task per minute. Thus, the complete workload of a background simulation is over 640 CPU/hours (Gold Intel core, 2 GHz). Additionally, to assure reproducibility, every input and output file of each run should be in the data-set comprising 180 files.
 
@@ -127,7 +127,7 @@ There are two kinds of standard identifiers:
 
 For clarification, the Internationalized Resource Identifier (IRI) is an internet protocol standard [IETF RFC 3987](https://tools.ietf.org/html/rfc3987) that unambiguously identifies an object, but a resolvable IRI corresponds to the one that can be publicly accessed on Internet, preferably through conventional protocols such as HTTP. The basis of JSON-LD syntax [(W3C Recomm.)](https://www.w3.org/TR/json-ld11/) is always to refer to related objects and descriptions with IRIs to discover new data by simply following those links. This creates a metadata grid linking objects. These objects describe datasets, catalogs as well as provenance elements (activities, actors, owners) following a certain vocabulary.
 
-On the other hand, repository providers are physical servers, with certain DNS name/IP. However, these addresses could change through time due to migrations of data,  maintenance or changes of their domains. To preserve the linked grid and the univocal identification, absolute IRIs should use persistent and unique identifiers (PIDs) from [Handle.net](http://handle.net) to resolve these addresses, and even a catalog service. The preferred way to state this in JSON-LD is using the `@base` property in the `@context`, becoming the needed IRIs relative to the `@base` PID.
+On the other hand, repository providers are physical servers, with certain DNS name/IP. However, these addresses could change through time due to migrations of data, maintenance or changes of their domains. To preserve the linked grid and the univocal identification, absolute IRIs should use persistent and unique identifiers (PIDs) from [Handle.net](http://handle.net) to resolve these addresses, and even a catalog service. The preferred way to state this in JSON-LD is using the `@base` property in the `@context`, becoming the needed IRIs relative to the `@base` PID.
 
 As commented above, every generated file is considered a dataset, but only collections of related datasets compose the catalogs. Catalogs should be directly referenced with PIDs from Handle.net, but datasets should not. The reason is that there is no necessity for a dataset reference in a publication. For example, an input file without the output. Moreover, every file (i.e. dataset) can also be identified with a relative path to its catalog's PID. When a Catalog is complete and verified, the corresponding PID for being published will be automatically requested by the checker tool to the EOSC B2Handle service.
 
@@ -135,7 +135,7 @@ As commented above, every generated file is considered a dataset, but only colle
 
 Any dataset or catalog will be referenced by its absolute IRI, composed by its provider PID, its internal path and its name. Note that a catalog corresponds to a directory and a dataset to a file in the repositories.
 
-In general, files (i.e datasets) generated by WCDs or base software will maintain their names when are stored in repositories, but naming catalogs will follow a different approach. In order to be distinguishable, the catalog name will be based on the data type (L0-L3, S0-S2) by adding meaningful parameters used by the software, splitted by the `_` character.
+In general, files (i.e datasets) generated by WCDs or base software will maintain their names when they are stored in repositories, but naming catalogs will follow a different approach. In order to be distinguishable, the catalog name will be based on the data type (L0-L3, S0-S2) by adding meaningful parameters used by the software, splitted by the `_` character.
 
 | Data Type | Source | Catalog Name |
 |-----------|--------|------|
@@ -169,13 +169,13 @@ Therefore, versioning directly the files (i.e. datasets) is not allowed, and the
 
 | Data Type | related standards | previous metadata | new metadata specification |
 |-----------|-------------------|-------------------|--------|
-| Raw (L0) | JSON for GEANT4/ROOT validator [(Freyermuth et. al, DOI: 10.1051/epjconf/201921405002)](https://doi.org/10.1051/epjconf/201921405002) | key:value [(ACQUA docs)](https://github.com/lagoproject/acqua) and XML/DublinCore [(Asorey H. et al, DOI: 10.1109/CCGrid.2016.110)](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/)|  
-| Preliminary (L1) | None | None | (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
-| Quality for Astrophysics (L2) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |  
-| Quality for public (L3) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
-| Simulated (S0) | None | XML/DublinCore [(Asorey H. et al, DOI: 10.1109/CCGrid.2016.110)](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
-| Analyzed (S1) | JSON for GEANT4/ROOT validator [(Freyermuth et. al, DOI: 10.1051/epjconf/201921405002)](https://doi.org/10.1051/epjconf/201921405002) | None | ((_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
-| Analyzed (S2) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](./schema/) and [definitios](./defs/) |
+| Raw (L0) | JSON for GEANT4/ROOT validator. Freyermuth et. al, DOI: [10.1051/epjconf/201921405002](https://doi.org/10.1051/epjconf/201921405002) | key:value [(ACQUA docs)](https://github.com/lagoproject/acqua) and XML/DublinCore. Asorey H. et al, DOI: [10.1109/CCGrid.2016.110](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs) |
+| Preliminary (L1) | None | None | (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs) |
+| Quality for Astrophysics (L2) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs) |
+| Quality for public (L3) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs) |
+| Simulated (S0) | None | XML/DublinCore: Asorey H. et al, DOI: [10.1109/CCGrid.2016.110](https://doi.org/10.1109/CCGrid.2016.110) | JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs) |
+| Analyzed (S1) | JSON for GEANT4/ROOT validator: Freyermuth et. al, DOI: [10.1051/epjconf/201921405002](https://doi.org/10.1051/epjconf/201921405002) | None | ((_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs) |
+| Analyzed (S2) | None | None |  (_TBD<sup>*</sup>._) JSON-LD/DCAT-AP based [profile](/DMP/schema/) and [definitions](/DMP/defs) |
 
 <sup>*</sup>(_Not supported by EOSC-Synergy. It is added for completeness and future projects._)
 
@@ -206,7 +206,7 @@ https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf
 
 #### **Where the data and associated metadata, documentation and code are deposited**.
 
-As commented above, data and metadata will be stored in providers associated to [EGI DataHub, https://datahub.egi.eu](https://datahub.egi.eu) service (reliying in [OneData](https://onedata.org/) technology), while the documentation and codes:
+As commented above, data and metadata will be stored in providers associated to [EGI DataHub, https://datahub.egi.eu](https://datahub.egi.eu) service (relying in [OneData](https://onedata.org/) technology), while the documentation and codes:
 
 | Data Type | Docs and code URLs |
 |-----------|--------|
@@ -237,17 +237,21 @@ while a manual to login into EGI DataHub, visualise datasets and obtain tokens i
 Metadata:
 - Language syntax: [JSON-LD 1.1, W3C](https://json-ld.org/spec/latest/json-ld/)
 - Main vocabulary: [DCAT-AP2, European Commission](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe), which is a specific profile of [DCAT2, W3C](https://www.w3.org/TR/vocab-dcat-2/) recommended for repositories, content aggregators or data consumers related to the public sector (goverments, rearch centers, funded projects).
-- LAGO vocabulary: It is re-profile of [DCAT-AP2, European Commission](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe), extending the existing classes and adding properties needed for the LAGO computation.
+- LAGO vocabulary: It is re-profile of [DCAT-AP2, European Commission](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe), extending the existing classes and adding properties needed for the LAGO computation. The [re-profile](/DMP/schema/) and specific [definitions](/DMP/defs) are available at [https://lagoproject.github.io/DMP/](https://lagoproject.github.io/DMP/).
+
 
 Data:
-- TBD.
+- Unfortunately, the generated data follow propietary formats. 
+- Interesting parameter or summarised results will be extracted from data-sets and then represented in their metadata using terms belonging LAGO vocabulary.
 
 
 ####  **Inter-disciplinary interoperability**
 
 (_Specify whether you will be using standard vocabulary for all data types present in your data set, to allow inter-disciplinary interoperability? If not, will you provide mapping to more commonly used ontologies?_)
 
-In principle, only supports CORSIKA outputs as described in the official documentation, but translating files to standardised formats in the future can be considered.
+In principle, only supports [CORSIKA](https://web.ikp.kit.edu/corsika), inputs/outputs as described in the official documentation, which widely used in several disciplines.
+However, rest of data currently follows a proprietary format. Translating files to standardised formats in the future can be considered. For now, the only alternative identified could be translate these files to the [ROOT](https://root.cern.ch) format and make use the vocabulary for [GEANT4/ROOT](https://geant-val.cern.ch) validator (Freyermuth et. al, DOI: [10.1051/epjconf/201921405002](https://doi.org/10.1051/epjconf/201921405002)), but it does not accomplishes all the requirements of LAGO. 
+
 
 ### B.4. Increase data re-use (through clarifying licenses):
 
@@ -260,16 +264,18 @@ In principle, only supports CORSIKA outputs as described in the official documen
 - Metadata: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 - Databases derived from metadata or data: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 
+A compilation of common rights and acceptable use policies are available for reference at [https://lagoproject.github.io/DMP/rights/](https://lagoproject.github.io/DMP/rights/).
+
 ####  **When the data will be made available for reuse**.
 
 (_Specify why and for what period a data embargo is needed_).
 
-LAGO Collaboration requires a waiting period similar to the established ones for other large experiments. Such a period should be set not only to properly exploit results by the Consortium before to their availability, but because measured raw data must be pre-processed by the Consortium to make them 'understandable’. Simulations will be available too, but it would be valuable that the waiting period could be set by the user, as the data owner. The recommended embargo period is set as one year in general, but depends on the data type, specifically:
+LAGO Collaboration requires a waiting period similar to the established ones for other large experiments. Such a period should be set not only to properly exploit results by the Consortium before their availability, but because measured raw data must be pre-processed by the Consortium to make them 'understandable’. Simulations will be available too, but it would be valuable that the waiting period could be set by the user, as the data owner. The recommended embargo period is set as one year in general, but depends on the data type, specifically:
 
 | Data Type | embargo period |
 |-----------|--------|
 | L0 | private while quality data (L2,L3) are not publicly available. |
-| L1 | should be released almost in real-time as it is important for operative space weather forecasting. Should include a disclaimer about quality and usage |
+| L1 | should be released almost in real-time as it is important for operative space weather forecasting. Should include a disclaimer about quality and usage. |
 | L2, L3 | one year.|
 | S0, S1, S2 | one year maximum, the owner can decide to open the data before the end of this period.|
 
@@ -289,7 +295,14 @@ Indefinitely, after the waiting period.
 
 ## C. Allocation of resources
 
-Explain the allocation of resources, addressing the following issues:
+Cloud storage is based on OneData techonology, and the architecture will count on:
+- The OneZone service at [EGI DataHub](https://datahub.egi.eu), supported by the EOSC infrastructure. 
+- A network of OneProviders, supported by LAGO participating institutions: 
+  - Tier 1 OneProviders: the high capacity ones will store all data generated, backing up other tiers and among them.
+  - Tier 2 OneProviders: mid-capacity servers assuring long-term availability, used to improve the performance in a region.   
+  - Tier 3 OneProviders: temporal deployments for local caching before consolidate data in upper tiers.
+
+The architecture is deeply described at [https://lagoproject.github.io/DMP/Architecture/](https://lagoproject.github.io/DMP/Architecture/).
 
 ####  **Costs for making your data FAIR**.
 
@@ -299,7 +312,14 @@ The process of making the data FAIR will be supported by the EOSC-Synergy projec
 
 Computing as data management will be structured as a Virtual Organization with specific roles for data acquisition and processing.
 
-Roles - TBD.
+| Roles |  Responsability |
+|-------|-----------------|
+| Head of data management | Administrative account, only for enabling new resources or modifiying permissions of main roles. |
+| System admnistrators of OneProviders | To maintain the availability and preserve the data and metadata stored. |
+| Members of standardisation group | To establish data organisation and metadata definition. |
+| Country representative/delegate | To authorise or ban local members in the VO. |
+| Task coordination delegates | To assure the accurancy of a spcific kind of data and metadata automatially (robots) or manually generated (for example the raw data (L0)). |
+| LAGO members | They must follow the rules of data generation/storing and they must not abuse of the services. |
 
 ####  **Costs and potential value of long-term preservation**.
 
@@ -309,7 +329,11 @@ Considering an average generation of 60TB/year, the costs of a 4-years long-term
 
 ## D. Data security
 
-Address data recovery as well as secure storage and transfer of sensitive data. There is no sensitive data, thus anonymity and encryption are not required. Data recovery should be guaranteed by using replication, at least, in two locations of a distributed repository or filesystem (in this case OneData).
+(_Address data recovery as well as secure storage and transfer of sensitive data_). 
+
+There is no sensitive data, thus anonymity and encryption are not required. 
+
+Data recovery should be guaranteed by using replication, at least, in two locations of a distributed repository or filesystem, in this case OneData. Thus, following the classification in tiers, every space supported by an OneProvider must be replicated in any other OneProvider that holds Tier level 1. The backup architecture is described at [https://lagoproject.github.io/DMP/Architecture/](https://lagoproject.github.io/DMP/Architecture/).
 
 ## E. Ethical aspects
 
