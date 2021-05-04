@@ -1,3 +1,16 @@
+---
+layout: default
+parent: HowTo's
+nav_order: 4
+---
+
+# How to Create a Slurm cluster in EOSC cloud and run simulations
+
+## Table of contents
+{: .no_toc}
+
+- TOC
+{:toc}
 
 
 # Crear el cluster Slurm básico.
@@ -27,7 +40,7 @@ Es decir, tenemos para 12 máquinas de 16 VCPUs y 1 de 8VCPUs.  Entonces podemos
 
 Lanzar la creación y esperar a que esté todo OK en verde (10-15 minutos para 8 nodos)
 
-´´´bash
+```bash
 # ssh -i key.pem cloudadm@<IP master>
 $ sudo su -
 root@slurmserver:~# ps aux | grep -i ansible
