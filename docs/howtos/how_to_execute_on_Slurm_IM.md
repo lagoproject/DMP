@@ -141,7 +141,7 @@ docker run --privileged -e ONECLIENT_ACCESS_TOKEN=$TOKEN -e ONECLIENT_PROVIDER_H
 
 Para 12 nodos, se lanzaría así:
 ```bash
-root@slurmserver:/home/root/prep# for i in {1..12}; do sbatch build_docker.sbatch ; done
+root@slurmserver:/home/root/prep# for i in {1..12}; do sbatch test_docker.sbatch ; done
 ```
 
 
