@@ -210,6 +210,7 @@ root@slurmserver:/home/root# cat pattern.sbatch
 
 DO_nSIM=$*
 
+docker rm $(docker ps -aq)
 docker run --privileged -e ONECLIENT_ACCESS_TOKEN=$TOKEN -e ONECLIENT_PROVIDER_HOST=$ONEPROVIDER -i lagocontainer:0.0.1 bash -lc "$DO_nSIM"
 ```
 
@@ -218,7 +219,7 @@ docker run --privileged -e ONECLIENT_ACCESS_TOKEN=$TOKEN -e ONECLIENT_PROVIDER_H
 
 ```bash
 root@slurmserver:/home/root# mkdir sims01
-root@slurmserver:/home/root# cd smis01
+root@slurmserver:/home/root# cd sims01
 root@slurmserver:/home/root/sims01# 
 ```
 
