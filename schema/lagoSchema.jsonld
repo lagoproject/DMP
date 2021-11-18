@@ -165,10 +165,10 @@
     "@id": "lago:highEnergyCutsSecondaries",
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
-    "dcat:range": { "@id" : "xsd:boolean" },
+    "dcat:range": { "@id" : "xsd:float" },
     "dcat:label": "highEnergyCutsSecondaries",
     "@default" : false,
-    "comment" : [ { "@language" : "en", "@value" : "Enable high energy cuts for secondaries" },  
+    "comment" : [ { "@language" : "en", "@value" : "Enable high energy cuts for secondaries; 0 = disabled, value in GeV = enabled" },  
                   { "@language" : "es", "@value" : "" } ]
    },  
 {"_comment" : "------ Defining installed detectors and simulated detectors, this implies estaiblishing equivalencies among measures and software parameters --------"},
