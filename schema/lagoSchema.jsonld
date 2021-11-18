@@ -81,6 +81,7 @@
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:float" },
+    "@default" : 0,
     "dcat:label": "rigidity", 
     "comment" : [ { "@language" : "en", "@value" : "Rigidity cutoff; 0 = disabled; value in GV = enabled" },  
                   { "@language" : "es", "@value" : "Corte de la rigidez; 0 = deshabilitado; valor en GV = habilitado" } ]
@@ -167,7 +168,7 @@
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:float" },
     "dcat:label": "highEnergyCutsSecondaries",
-    "@default" : false,
+    "@default" : 0,
     "comment" : [ { "@language" : "en", "@value" : "Enable high energy cuts for secondaries; 0 = disabled, value in GeV = enabled" },  
                   { "@language" : "es", "@value" : "" } ]
    },  
