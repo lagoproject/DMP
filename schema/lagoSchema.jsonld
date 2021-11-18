@@ -81,10 +81,10 @@
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:float" },
-    "@default" : 0,
+    "@default" : "0.0",
     "dcat:label": "rigidity", 
-    "comment" : [ { "@language" : "en", "@value" : "Rigidity cutoff; 0 = disabled; value in GV = enabled" },  
-                  { "@language" : "es", "@value" : "Corte de la rigidez; 0 = deshabilitado; valor en GV = habilitado" } ]
+    "comment" : [ { "@language" : "en", "@value" : "Rigidity cutoff; 0.0 = disabled; value in GV = enabled" },  
+                  { "@language" : "es", "@value" : "Corte de la rigidez; 0.0 = deshabilitado; valor en GV = habilitado" } ]
    },
    {
     "@id": "lago:tMin",
@@ -168,8 +168,8 @@
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:float" },
     "dcat:label": "highEnergyCutsSecondaries",
-    "@default" : 0,
-    "comment" : [ { "@language" : "en", "@value" : "Enable high energy cuts for secondaries; 0 = disabled, value in GeV = enabled" },  
+    "@default" : "0.0",
+    "comment" : [ { "@language" : "en", "@value" : "Enable high energy cuts for secondaries; 0.0 = disabled, value in GeV = enabled" },  
                   { "@language" : "es", "@value" : "" } ]
    },  
 {"_comment" : "------ Defining installed detectors and simulated detectors, this implies estaiblishing equivalencies among measures and software parameters --------"},
