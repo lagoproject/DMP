@@ -199,7 +199,17 @@
      "comment" : [ { "@language" : "en", "@value" : "" },  
                    { "@language" : "es", "@value" : "" } ]
   },
-{"_comment" : "------ common properties to describe characteristics of a DetectorSite (Agent) which are included also in a lago:CorsikaInput --------"},
+{"_comment" : "------ common properties to describe characteristics of a DetectorSite (Agent), some of which are included also in a lago:CorsikaInput --------"},
+   {
+    "@id": "lago:belongsLago",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:DetectorSite" },
+    "dcat:range": { "@id" : "xsd:boolean" },
+    "@default" : false,
+    "dcat:label": "belongsLago",
+    "comment" : [ { "@language" : "en", "@value" : "" },
+                  { "@language" : "es", "@value" : "" } ]
+   },
    {
      "@id": "lago:obsLev",
      "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
@@ -229,6 +239,15 @@
     "comment" : [ { "@language" : "en", "@value" : " Components of the Earth's mag. field (MAGNET), Horizontal (bx) and Vertical (bx)" },  
                   { "@language" : "es", "@value" : "" } ]
    },
+    { 
+     "@id": "lago:bDate",
+     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+     "dcat:domain": { "@id" : "lago:MagnetComponents" },
+     "dcat:range": { "@id" : "xsd:date" },
+     "dcat:label": "bDate", 
+     "comment" : [ { "@language" : "en", "@value" : "The date for which the magnetic field values are calculated, in the form yyyy-mm-dd. (xsd:date)" },  
+                   { "@language" : "es", "@value" : "" } ]
+    },
     {
       "@id": "lago:bx",
       "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
@@ -246,6 +265,15 @@
       "dcat:label": "bz",
       "comment" : [ { "@language" : "en", "@value" : "Vertical comp. of the Earth's mag. field (MAGNET) [downwards,muT], see values at https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" },  
                     { "@language" : "es", "@value" : "Componente vertical del campo magnético de la Tierra (MAGNET) [downwards,muT], ver valores en https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" } ]
+    },
+    { 
+      "@id": "lago:bi",
+      "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+      "dcat:domain": { "@id" : "lago:MagnetComponents" },
+      "dcat:range": { "@id": "xsd:decimal"},
+      "dcat:label": "bx",
+      "comment" : [ { "@language" : "en", "@value" : "" },  
+                    { "@language" : "es", "@value" : "" } ]
     },
     {
       "@id": "lago:atmcrd",
@@ -291,6 +319,39 @@
       "comment" : [ { "@language" : "en", "@value" : "" },  
                     { "@language" : "es", "@value" : "" } ]
     }
+   {
+    "@id" : "geometry",
+    "@type" : "geometry",
+    "dcat:domain" : [ { "@id" : "Location" },
+                      { "@id" : "lago:DetectorSite" } ],
+    "dcat:range" : { "@id": "geo:Point" },    
+    "dcat:label" : "point",
+    "seeAlso" : [ "https://www.w3.org/ns/locn#locn:geometry", 
+                  "https://www.w3.org/TR/vocab-dcat-2/#Property:location_geometry" ],
+    "comment" : [ { "@language" : "en", "@value" : ""},  
+                  { "@language" : "es", "@value" : "" } ]
+   },
+   {"_comment" : "Reiterative including geo:Point and its propierties. It is as is in W3C WGS84 vocab: http://www.w3.org/2003/01/geo/wgs84_pos#). Added for guiding/clarifying."}
+   {
+    "@id": "geo:latitude",
+    "@type":"http://www.w3.org/2001/XMLSchema#float",
+    "dcat:domain": { "@id": "geo:Point" },
+    "dcat:label" : "lat",
+    "owl:equivalentProperty" : { "@id": "sdo:GeoCoordinates#latitude" }
+   },
+   {
+    "@id": "geo:longitude",
+     "@type":"http://www.w3.org/2001/XMLSchema#float",
+     "dcat:label" : "long",
+     "dcat:domain": { "@id": "geo:Point" },
+     "owl:equivalentProperty" : { "@id": "sdo:GeoCoordinates#longitude" }
+    },
+    "@id": "geo:altitude"
+     "@type":"http://www.w3.org/2001/XMLSchema#float",
+     "dcat:label" : "alt",
+     "dcat:domain": { "@id": "geo:Point" },
+     "owl:equivalentProperty" : { "@id": "sdo:GeoCoordinates#altitude" }
+    },
   ],
 "@context" : {
     "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.jsonld",
@@ -304,6 +365,7 @@
     "dcat" : "http://www.w3.org/ns/dcat#",
     "prov" : "http://www.w3.org/ns/prov#",
     "foaf" : "http://xmlns.com/foaf/0.1/",
-    "sdo" : "http://schema.org/"
+    "sdo" : "http://schema.org/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
   }
 }
