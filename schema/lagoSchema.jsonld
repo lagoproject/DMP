@@ -318,7 +318,7 @@
       "lago:corsikaParam" : "ARRANG",
       "comment" : [ { "@language" : "en", "@value" : "" },  
                     { "@language" : "es", "@value" : "" } ]
-    }
+    },
    {
     "@id" : "geometry",
     "@type" : "geometry",
@@ -331,7 +331,7 @@
     "comment" : [ { "@language" : "en", "@value" : ""},  
                   { "@language" : "es", "@value" : "" } ]
    },
-   {"_comment" : "Reiterative including geo:Point and its propierties. It is as is in W3C WGS84 vocab: http://www.w3.org/2003/01/geo/wgs84_pos#). Added for guiding/clarifying."}
+   {"_comment" : "Reiterative including geo:Point and its propierties. It is as is in W3C WGS84 vocab: http://www.w3.org/2003/01/geo/wgs84_pos#). Added for guiding/clarifying."},
    {
     "@id": "geo:latitude",
     "@type":"http://www.w3.org/2001/XMLSchema#float",
@@ -346,12 +346,13 @@
      "dcat:domain": { "@id": "geo:Point" },
      "owl:equivalentProperty" : { "@id": "sdo:GeoCoordinates#longitude" }
     },
-    "@id": "geo:altitude"
+   {
+    "@id": "geo:altitude",
      "@type":"http://www.w3.org/2001/XMLSchema#float",
      "dcat:label" : "alt",
      "dcat:domain": { "@id": "geo:Point" },
      "owl:equivalentProperty" : { "@id": "sdo:GeoCoordinates#altitude" }
-    },
+    }
   ],
 "@context" : {
     "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.jsonld",
