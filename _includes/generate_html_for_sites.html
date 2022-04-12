@@ -87,16 +87,16 @@ $().ready(function(){
                 for (var k=0; k<keys.length; k++) {
                     table = table + ' <th>'+ keys[k] + '</th>';
                 };
-                for (var k=0; k<keys.length; k++) {
-                table = table +'	</tr>
+                table = table +' </tr>
                     </thead>
                     <tbody>
                         <tr>';
+                for (var k=0; k<keys.length; k++) {
                     table = table +' <td>'+ itemnize_json(element[keysUP[up]][keys[k]] , data["@context"], true ) +'</td>';
-                    table = table +'	</tr>
-                    </tbody>
-                    </table>';
                 };
+                table = table +' </tr>
+                    </tbody>
+                </table>';
                 if (element["lago:belongsLago"]) {
                     $('#properties').append(table);				  
                 } else {
