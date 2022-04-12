@@ -1,0 +1,126 @@
+<!-- 
+################################################################################
+# Original Author: A.J. Rubio-Montero (http://orcid.org/0000-0001-6497-753X),  #
+#          CIEMAT - Sci-Track Group (http://rdgroups.ciemat.es/web/sci-track), #
+#          for the EOSC-Synergy project (EU H2020 RI Grant No 857647).         #
+# License (SPDX): BSD-3-Clause (https://opensource.org/licenses/BSD-3-Clause)  #
+# Copyright (c): 2020-today, The LAGO Collaboration (http://lagoproject.net)   #
+################################################################################
+-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+function itemnize_json( json, context, link ) { 
+  var html ='';
+  if ( (link == false) || (typeof(json) === 'boolean') )  return json;
+  if ( typeof(json) === 'string' ) {
+    var element = json.split(':');
+    var innid = element[0];
+    var vocab = "@vocab";
+    if (element.length == 2) {
+      if ( (element[0] !== "http") && (element[0] !== "https") ) {
+        innid = element[1];
+        vocab = element[0];
+      } else return json;
+    };
+    var contexturl = context[vocab];
+    if ( vocab == "lago" ) contexturl = '';  
+    if ( contexturl[contexturl.length-1] !== '#' )  contexturl = contexturl + '#';
+    if ( vocab == "sdo" ) contexturl = context[vocab];
+    else innid = json;
+    html = '<a href="'+ contexturl + innid +'">'+ json +'</a>';
+  } else {
+    if ( !(Array.isArray(json)) ) {
+      var json_aux = [];
+      json_aux.push(json);
+      json = json_aux;
+    };
+    for (var j=0; j<json.length; j++) {
+      var inner_json = json[j];
+      if ( !(typeof(json[j]) === 'string') ) {
+      	if ("@id" in json[j]) {
+          inner_json = json[j]["@id"];
+        } else {
+          inner_json = JSON.stringify(json[j]);
+	  link = false;
+        };
+      };
+      html = html + '<br />' + itemnize_json(inner_json, context, link);
+    };
+  };
+  return html;
+};
+$().ready(function(){
+  $.getJSON( "{{ include.folder }}", function( data ) { 
+    var graphelements = data["@graph"];
+    for (var i=0; i<graphelements.length; i++) {
+        if ("@id" in graphelements[i]) { 
+          var id = graphelements[i]["@id"];
+          var indexhtml = '<li><a href="#'+id+'">'+id+'</a></li>';
+          var headerhtml = '<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h5>';
+          if ("comment" in graphelements[i]) {
+            headerhtml = headerhtml + '<p><small>'+ graphelements[i]["comment"][0]["@value"]+'</small></p>';
+          };
+          var keys = Object.keys(graphelements[i]);
+          keys.splice(keys.indexOf("@id"),1);
+          keys.splice(keys.indexOf("@type"),1);
+          keys.splice(keys.indexOf("comment"),1);
+          var table = '<table class="grid" style="width: 100%"> 
+		      <thead>
+			    <tr class="header">
+				<th>@type</th>';	  
+	  for (var k=0; k<keys.length; k++) {
+	    table = table + ' <th>'+ keys[k] + '</th>';
+	  };
+	  table = table +'	</tr>
+			</thead>
+			<tbody>
+			    <tr>
+			      <td>'+ itemnize_json(graphelements[i]["@type"] , data["@context"], true ) +'</td>';
+          for (var k=0; k<keys.length; k++) {
+            table = table + ' <td>'+ itemnize_json(graphelements[i][keys[k]] , data["@context"], true ) +'</td>';
+          };
+          table = table +'	</tr>
+			</tbody>
+		    </table>';
+          if ("dcat:domain" in graphelements[i]) {
+                $('#iproperties').append(indexhtml);
+                $('#properties').append(headerhtml);
+                <!-- $('#properties').append(table); -->				  
+          } else {
+            $('#iclasses').append(indexhtml);
+            $('#classes').append(headerhtml);
+            <!-- $('#classes').append(table); -->
+	  };
+	};
+      };		
+    });
+});
+</script>
+
+{% if include.vocabulary == "true" %}
+
+- [**Classes**](#classes)
+  <ul id="iclasses"></ul>
+		
+- [**Properties**](#properties)
+  <ul id="iproperties"></ul>
+
+### Classes
+
+<div id="classes"></div>
+
+### Properties
+
+<div  id="properties"></div>
+
+{% else %}
+
+- [**Items**](#items)
+  <ul id="iclasses"></ul>
+
+### Items
+
+<div id="classes"></div>
+
+{% endif %}
+
