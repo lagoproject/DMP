@@ -66,8 +66,8 @@ $().ready(function(){
                     headerhtml = headerhtml+'<p><small>'+ graphelements[i]["comment"][0]["@value"]+'</small></p>';
                 };
                 if (graphelements[i]["lago:belongsLago"]) {
-                      $('#iproperties').append(indexhtml);
-                      $('#properties').append(headerhtml);              
+                    $('#iproperties').append(indexhtml);
+                    $('#properties').append(headerhtml);              
                 } else {
                   $('#iclasses').append(indexhtml);
                   $('#classes').append(headerhtml);
@@ -80,7 +80,7 @@ $().ready(function(){
                 keysUP.splice(keysUP.indexOf("lago:belongsLago"),1);
                 keysUP.splice(keysUP.indexOf("qualifiedAttribution"),1);
                 for (var up=0; up<keysUP.length; up++) {
-                    var keys = Object.keys(graphelements[i][up]);
+                    var keys = Object.keys(graphelements[i][keysUP[up]]);
                     var table = '<table class="grid" style="width: 100%"> 
                         <thead>
                             <tr class="header">
@@ -99,9 +99,9 @@ $().ready(function(){
                         </table>';
                     };
                     if (graphelements[i]["lago:belongsLago"]) {
-                          $('#properties').append(table);				  
+                        $('#properties').append(table);				  
                     } else {
-                      $('#classes').append(table);
+                        $('#classes').append(table);
                     };
                 };
             };
