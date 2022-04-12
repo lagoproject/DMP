@@ -58,7 +58,7 @@ $().ready(function(){
             var indexhtml = '<li><a href="#'+id+'">'+id+': '+element["name"]+'.'+'</a></li>';
             var headerhtml = '<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h5>';
             headerhtml = headerhtml+'<p><small>'+'Site located in '+element["name"];
-            if ("qualifiedAttribution" in element) {
+            if (["qualifiedAttribution"]["name"] !== "") {
                 headerhtml = headerhtml+' and managed by '+element["qualifiedAttribution"]["name"];
             };
             headerhtml = headerhtml+'.'+'</small></p>';
@@ -83,8 +83,7 @@ $().ready(function(){
                 var keys = Object.keys(element[keysUP[up]]);
                 var table = '<table class="grid" style="width: 100%"> 
                     <thead>
-                        <tr class="header">
-                        <th>@type</th>';	  
+                        <tr class="header">';  
                 for (var k=0; k<keys.length; k++) {
                     table = table + ' <th>'+ keys[k] + '</th>';
                 };
