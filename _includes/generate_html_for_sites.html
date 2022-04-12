@@ -63,6 +63,13 @@ $().ready(function(){
                 if ("qualifiedAttribution" in graphelements[i]) {
                     headerhtml = headerhtml + '<p><small>'+ graphelements[i]["qualifiedAttribution"]["name"]+'</small></p>';
                 };
+                if (graphelements[i]["lago:belongsLago"]) {
+                      $('#iproperties').append(indexhtml);
+                      $('#properties').append(headerhtml);              
+                } else {
+                  $('#iclasses').append(indexhtml);
+                  $('#classes').append(headerhtml);
+                };        
                 var keysUP = Object.keys(graphelements[i]);
                 keysUP.splice(keysUP.indexOf("@id"),1);
                 keysUP.splice(keysUP.indexOf("@type"),1);
@@ -70,7 +77,8 @@ $().ready(function(){
                 keysUP.splice(keysUP.indexOf("name"),1);
                 keysUP.splice(keysUP.indexOf("lago:belongsLago"),1);
                 keysUP.splice(keysUP.indexOf("qualifiedAttribution"),1);
-                for (var up=0; up<keysUP.length; k++) {
+                for (var up=0; up<keysUP.length; up++) {
+                    var keys = Object.keys(graphelements[i][up]);
                     var table = '<table class="grid" style="width: 100%"> 
                         <thead>
                             <tr class="header">
@@ -88,15 +96,11 @@ $().ready(function(){
                         </tbody>
                         </table>';
                     };
-                };
-                if (graphelements[i]["lago:belongsLago"]) {
-                      $('#iproperties').append(indexhtml);
-                      $('#properties').append(headerhtml);
-                      $('#properties').append(table);				  
-                } else {
-                  $('#iclasses').append(indexhtml);
-                  $('#classes').append(headerhtml);
-                  $('#classes').append(table);
+                    if (graphelements[i]["lago:belongsLago"]) {
+                          $('#properties').append(table);				  
+                    } else {
+                      $('#classes').append(table);
+                    };
                 };
             };
         };		
