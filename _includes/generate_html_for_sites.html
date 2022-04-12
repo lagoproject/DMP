@@ -71,18 +71,18 @@ $().ready(function(){
                 for (var k=0; k<keys.length; k++) {
                     table = table + ' <th>'+ keys[k] + '</th>';
                 };
+                for (var k=0; k<keys.length; k++) {
                 table = table +'	</tr>
                     </thead>
                     <tbody>
-                        <tr>
-                        <td>'+ itemnize_json(graphelements[i]["@type"] , data["@context"], true ) +'</td>';
-                for (var k=0; k<keys.length; k++) {
+                        <tr>';
+
                     table = table + ' <td>'+ itemnize_json(graphelements[i][keys[k]] , data["@context"], true ) +'</td>';
-                };
-                table = table +'	</tr>
+                    table = table +'	</tr>
                     </tbody>
                     </table>';
-                if ("dcat:domain" in graphelements[i]) {
+                };
+                if (graphelements[i]["lago:belongsLago"]) {
                       $('#iproperties').append(indexhtml);
                       $('#properties').append(headerhtml);
                       $('#properties').append(table);				  
@@ -111,16 +111,25 @@ $().ready(function(){
 
 ### Properties
 
-<div  id="properties"></div>
+<div id="properties"></div>
 
 {% else %}
 
-- [**Items**](#items)
+- [**Official LAGO sites**](#lago)
+  <ul id="iproperties"></ul>
+- [**non-LAGO sites**](#non-lago)
   <ul id="iclasses"></ul>
 
-### Items
+
+### Official LAGO sites
+
+<div id="properties"></div>
+
+
+### non-LAGO sites
 
 <div id="classes"></div>
+
 
 {% endif %}
 
