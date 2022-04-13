@@ -52,7 +52,6 @@ function itemnize_json( json, context, link ) {
 function gmap(lat, long, type) {
     return '<div style="width: 100%"><iframe class="iframe" src="https://maps.google.com/?ll='+lat+','+long+'&z=14&t='+type+'&output=embed" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>';
 };
-
 $().ready(function(){
     $.getJSON( "{{ include.folder }}", function( data ) { 
         var graphelements = data["@graph"];
@@ -69,7 +68,7 @@ $().ready(function(){
             if ("comment" in element) {
                 headerhtml = headerhtml+'<p><small>'+ element["comment"][0]["@value"]+'</small></p>';
             };
-            headerhtml = headerhtml+'<button type="button" class="btn tw" onclick="javascript:(function(){gmap('element["geometry"]["geo:latitude"]+','+element["geometry"]["geo:longitude"]+',p'+')})()">Show map</button>';
+            headerhtml = headerhtml+'<button type="button" class="btn tw" onclick="javascript:(function(){gmap('+element["geometry"]["geo:latitude"]+','+element["geometry"]["geo:longitude"]+',p'+')})()">Show map</button>';
             if (element["lago:belongsLago"]) {
                 $('#iproperties').append(indexhtml);
                 $('#properties').append(headerhtml);              
