@@ -65,7 +65,7 @@ $().ready(function(){
             if ("comment" in element) {
                 headerhtml = headerhtml+'<p><small>'+ element["comment"][0]["@value"]+'</small></p>';
             };
-            headerhtml = headerhtml+'<img src="https://maps.google.com/maps/api/staticmap?center='+element["geometry"]["geo:latitude"]+','+element["geometry"]["geo:longitude"]+'&zoom=8&size=400x300&sensor=false" style="width: 400px; height: 400px;" />';
+            headerhtml = headerhtml+'<div style="width: 100%"><iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q='+element["geometry"]["geo:latitude"]+','+element["geometry"]["geo:longitude"]+'("'+element["name"]+'")&amp;t=k&amp;z=6&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="400" frameborder="0"><a href="https://www.gps.ie/car-satnav-gps/">Car GPS</a></iframe></div>';
             if (element["lago:belongsLago"]) {
                 $('#iproperties').append(indexhtml);
                 $('#properties').append(headerhtml);              
