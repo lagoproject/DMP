@@ -21,7 +21,7 @@ function itemnize_json( json, context, link ) {
         innid = element[1];
         vocab = element[0];
       } else return json;
-    };
+    } else return json;
     var contexturl = context[vocab];
     if ( vocab == "lago" ) contexturl = '';  
     if ( contexturl[contexturl.length-1] !== '#' )  contexturl = contexturl + '#';
@@ -50,7 +50,7 @@ function itemnize_json( json, context, link ) {
   return html;
 };
 function gmap_static(lat, long, type) {
-    return '<div style="width: 100%"><iframe class="iframe" src="https://maps.google.com/?ll='+lat+','+long+'&amp;z=13&amp;t='+type+'amp;iwloc=B&amp;output=embed" height="400" allowfullscreen></iframe></div>';
+    return '<div style="width: 100%"><iframe class="iframe" src="https://maps.google.com/?ll='+lat+','+long+'&amp;z=13&amp;t='+type+'amp;iwloc=B&amp;output=embed" height="200" allowfullscreen></iframe></div>';
 };
 $().ready(function(){
     $.getJSON( "{{ include.folder }}", function( data ) { 
