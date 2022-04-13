@@ -14,16 +14,13 @@ function itemnize_json( json, context, link ) {
   if ( (link == false) || (typeof(json) === 'boolean') )  return json;
   if ( typeof(json) === 'string' ) {
     var element = json.split(':');
-    if ( (element.length == 1) && ((element[0] == "http") || (element[0] == "https")) ) {
-      return '<a href="'+ element[0] +'">'+ element[0] +'</a>';
-    };
     var innid = element[0];
     var vocab = "@vocab";
     if (element.length == 2) {
       if ( (element[0] !== "http") && (element[0] !== "https") ) {
         innid = element[1];
         vocab = element[0];
-      } else return json;
+      } else return '<a href="'+ element[0] +'">'+ json +'</a>';
     } else return json;
     var contexturl = context[vocab];
     if ( vocab == "lago" ) contexturl = '';  
@@ -86,7 +83,7 @@ $().ready(function(){
             keysUP.splice(keysUP.indexOf("name"),1);
             keysUP.splice(keysUP.indexOf("lago:belongsLago"),1);
             keysUP.splice(keysUP.indexOf("qualifiedAttribution"),1);
-            table = '<ul>';
+            table = '<ul> Default propierties defined for <strong>'+ id + '</strong> site are:' ;
             for (var up=0; up<keysUP.length; up++) {
                 var keys = Object.keys(element[keysUP[up]]);
                 table = table + '<li>'+ itemnize_json(keysUP[up], data["@context"], true )+' :';
