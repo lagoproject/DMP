@@ -68,7 +68,7 @@ $().ready(function(){
             if ("comment" in element) {
                 headerhtml = headerhtml+'<p><small>'+ element["comment"][0]["@value"]+'</small></p>';
             };
-            headerhtml = headerhtml+gmap_button(element["geometry"]["geo:latitude"],element["geometry"]["geo:longitude"],"p");
+            headerhtml = headerhtml+gmap_static(element["geometry"]["geo:latitude"],element["geometry"]["geo:longitude"],"p");
             if (element["lago:belongsLago"]) {
                 $('#iproperties').append(indexhtml);
                 $('#properties').append(headerhtml);              
