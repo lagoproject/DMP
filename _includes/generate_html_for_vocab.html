@@ -20,13 +20,12 @@ function itemnize_json( json, context, link ) {
       if ( (element[0] !== "http") && (element[0] !== "https") ) {
         innid = element[1];
         vocab = element[0];
-      } else return '<a href="'+ element[0] +'">'+ json +'</a>';
+      } else return '<a href="'+ json +'">'+ json +'</a>';
     } else return json;
     var contexturl = context[vocab];
     if ( vocab == "lago" ) contexturl = '';  
     if ( contexturl[contexturl.length-1] !== '#' )  contexturl = contexturl + '#';
     if ( vocab == "sdo" ) contexturl = context[vocab];
-    else innid = json;
     html = '<a href="'+ contexturl + innid +'">'+ json +'</a>';
   } else {
     if ( !(Array.isArray(json)) ) {
