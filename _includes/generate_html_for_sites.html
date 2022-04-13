@@ -24,7 +24,7 @@ function itemnize_json( json, context, link ) {
     } else return json;
     var contexturl = context[vocab];
     if ( vocab == "lago" ) { 
-        contexturl = '';
+        contexturl = 'https://lagoproject.github.io/DMP/schema/lagoSchema/';
         innid = json;
     };  
     if ( contexturl[contexturl.length-1] !== '#' )  contexturl = contexturl + '#';
