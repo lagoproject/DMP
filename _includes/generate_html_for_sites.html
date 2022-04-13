@@ -14,6 +14,9 @@ function itemnize_json( json, context, link ) {
   if ( (link == false) || (typeof(json) === 'boolean') )  return json;
   if ( typeof(json) === 'string' ) {
     var element = json.split(':');
+    if ( (element.length == 1) && ((element[0] == "http") || (element[0] == "https")) ) {
+      return '<a href="'+ element[0] +'">'+ element[0] +'</a>';
+    };
     var innid = element[0];
     var vocab = "@vocab";
     if (element.length == 2) {
