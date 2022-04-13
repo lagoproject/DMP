@@ -49,8 +49,12 @@ function itemnize_json( json, context, link ) {
   };
   return html;
 };
-function gmap(lat, long, type) {
-    return '<div style="width: 100%"><iframe class="iframe" src="https://maps.google.com/?ll='+lat+','+long+'&z=14&t='+type+'&output=embed" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>';
+function gmap_button(lat, long, type, i) {
+    button = '<button type="button" class="btn tw" onclick="javascript:(function(){gmap'+i+'()})()">Show map</button>';
+    button = button + '<div id="map'+i+'"></div>';
+    inner = '<div class="map'+i+'"><iframe class="iframe" src="https://maps.google.com/?ll='+lat+','+long+'&amp;z=18&amp;t='+type+'&amp;output=embed" height="500" allowfullscreen></iframe></div>';
+    button = button + '<script> function gmap'+i+'(){ document.getElementById(map'+i+').innerHTML='+inner+';}</script>';
+    return button;
 };
 $().ready(function(){
     $.getJSON( "{{ include.folder }}", function( data ) { 
@@ -68,7 +72,7 @@ $().ready(function(){
             if ("comment" in element) {
                 headerhtml = headerhtml+'<p><small>'+ element["comment"][0]["@value"]+'</small></p>';
             };
-            headerhtml = headerhtml+'<button type="button" class="btn tw" onclick="javascript:(function(){gmap('+element["geometry"]["geo:latitude"]+','+element["geometry"]["geo:longitude"]+',p'+')})()">Show map</button>';
+            headerhtml = headerhtml+gmap_button(element["geometry"]["geo:latitude"],element["geometry"]["geo:longitude"],p,id);
             if (element["lago:belongsLago"]) {
                 $('#iproperties').append(indexhtml);
                 $('#properties').append(headerhtml);              
