@@ -53,7 +53,7 @@ function gmap_button(lat, long, type, i) {
     button = '<button type="button" class="btn tw" onclick="javascript:(function(){gmap'+i+'()})()">Show map</button>';
     button = button + '<div id="map'+i+'"></div>';
     inner = '<div class="map'+i+'"><iframe class="iframe" src="https://maps.google.com/?ll='+lat+','+long+'&amp;z=18&amp;t='+type+'&amp;output=embed" height="500" allowfullscreen></iframe></div>';
-    button = button + '<script> function gmap'+i+'(){document.getElementById(map'+i+').innerHTML='+"'"+inner+"'"+';}</script>';
+    button = button + '<script> function gmap'+i+'(){document.getElementById(map'+i+').innerHTML='+';}</script>';
     return button;
 };
 $().ready(function(){
