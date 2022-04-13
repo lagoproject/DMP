@@ -58,15 +58,15 @@ $().ready(function(){
         for (var i=0; i<graphelements.length; i++) {
             var element = graphelements[i];
             var id = element["@id"];
-            var indexhtml = '<li><a href="#'+id+'">'+id+': '+element["name"]+'.'+'</a></li>';
+            var indexhtml = '<li><a href="#'+id+'"><strong>'+id+'</strong> ['+element["name"]+'].'+'</a></li>';
             var headerhtml = '<h5 id="'+id+'"><a href="#'+id+'" class="anchor-heading" aria-labelledby="'+id+'"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a><strong>'+id+'</strong></h5>';
-            headerhtml = headerhtml+'<p><small>'+'Site located in '+element["name"];
+            headerhtml = headerhtml+'<p>'+'Site located in '+element["name"];
             if (["qualifiedAttribution"]["name"] !== "") {
                 headerhtml = headerhtml+' and managed by '+element["qualifiedAttribution"]["name"];
             };
-            headerhtml = headerhtml+'.'+'</small></p>';
+            headerhtml = headerhtml+'.'+'</p>';
             if ("comment" in element) {
-                headerhtml = headerhtml+'<p><small>'+ element["comment"][0]["@value"]+'</small></p>';
+                headerhtml = headerhtml+'<p>'+ element["comment"][0]["@value"]+'</p>';
             };
             headerhtml = headerhtml+gmap_static(element["geometry"]["geo:latitude"],element["geometry"]["geo:longitude"],"k");
             if (element["lago:belongsLago"]) {
@@ -83,9 +83,11 @@ $().ready(function(){
             keysUP.splice(keysUP.indexOf("name"),1);
             keysUP.splice(keysUP.indexOf("lago:belongsLago"),1);
             keysUP.splice(keysUP.indexOf("qualifiedAttribution"),1);
+            table = '<ul>';
             for (var up=0; up<keysUP.length; up++) {
                 var keys = Object.keys(element[keysUP[up]]);
-                var table = '<table class="grid" style="width: 100%"> 
+                table = table + '<li>'+ itemnize_json(element[keysUP[up], data["@context"], true )+' :';
+                table = table + '<table class="grid" style="width: 100%"> 
                     <thead>
                         <tr class="header">';  
                 for (var k=0; k<keys.length; k++) {
@@ -101,11 +103,13 @@ $().ready(function(){
                 table = table +' </tr>
                     </tbody>
                 </table>';
-                if (element["lago:belongsLago"]) {
-                    $('#properties').append(table);				  
-                } else {
-                    $('#classes').append(table);
-                };
+                table = table + '</li>';
+            };
+            table = table + '</ul>';
+            if (element["lago:belongsLago"]) {
+                $('#properties').append(table);				  
+            } else {
+                $('#classes').append(table);
             };
         };		
     });
