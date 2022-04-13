@@ -49,7 +49,7 @@ function itemnize_json( json, context, link ) {
   };
   return html;
 };
-function gmap_static(lat, long, type, i) {
+function gmap_static(lat, long, type) {
     return '<div style="width: 100%"><iframe class="iframe" src="https://maps.google.com/?ll='+lat+','+long+'&amp;z=18&amp;t='+type+'&amp;output=embed" height="100" allowfullscreen></iframe></div>';
 };
 $().ready(function(){
@@ -68,7 +68,7 @@ $().ready(function(){
             if ("comment" in element) {
                 headerhtml = headerhtml+'<p><small>'+ element["comment"][0]["@value"]+'</small></p>';
             };
-            headerhtml = headerhtml+gmap_button(element["geometry"]["geo:latitude"],element["geometry"]["geo:longitude"],p,id);
+            headerhtml = headerhtml+gmap_button(element["geometry"]["geo:latitude"],element["geometry"]["geo:longitude"],"p");
             if (element["lago:belongsLago"]) {
                 $('#iproperties').append(indexhtml);
                 $('#properties').append(headerhtml);              
