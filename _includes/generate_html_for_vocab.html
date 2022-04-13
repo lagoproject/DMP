@@ -14,6 +14,9 @@ function itemnize_json( json, context, link ) {
   if ( (link == false) || (typeof(json) === 'boolean') )  return json;
   if ( typeof(json) === 'string' ) {
     var element = json.split(':');
+    if ( (element.length == 1) (element[0] == "http") && (element[0] == "https") ) {
+      return '<a href="'+ element[0] +'">'+ element[0] +'</a>';
+    };
     var innid = element[0];
     var vocab = "@vocab";
     if (element.length == 2) {
@@ -69,7 +72,7 @@ $().ready(function(){
 			    <tr class="header">
 				<th>@type</th>';	  
 	  for (var k=0; k<keys.length; k++) {
-	    table = table + ' <th>'+ keys[k] + '</th>';
+	    table = table + ' <th>'+  itemnize_json(keys[k] , data["@context"], true ) + '</th>';
 	  };
 	  table = table +'	</tr>
 			</thead>

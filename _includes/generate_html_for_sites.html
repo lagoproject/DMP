@@ -86,7 +86,7 @@ $().ready(function(){
             table = '<ul>';
             for (var up=0; up<keysUP.length; up++) {
                 var keys = Object.keys(element[keysUP[up]]);
-                table = table + '<li>'+ itemnize_json(element[keysUP[up], data["@context"], true )+' :';
+                table = table + '<li>'+ itemnize_json(keysUP[up], data["@context"], true )+' :';
                 table = table + '<table class="grid" style="width: 100%"> 
                     <thead>
                         <tr class="header">';  
