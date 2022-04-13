@@ -49,12 +49,8 @@ function itemnize_json( json, context, link ) {
   };
   return html;
 };
-function gmap_button(lat, long, type, i) {
-    button = '<button type="button" class="btn tw" onclick="javascript:(function(){gmap'+i+'()})()">Show map</button>';
-    button = button + '<div id="map'+i+'"></div>';
-    inner = '<div class="map'+i+'"><iframe class="iframe" src="https://maps.google.com/?ll='+lat+','+long+'&amp;z=18&amp;t='+type+'&amp;output=embed" height="500" allowfullscreen></iframe></div>';
-    button = button + '<script> function gmap'+i+'(){document.getElementById(map'+i+').innerHTML='+';}</script>';
-    return button;
+function gmap_static(lat, long, type, i) {
+    return '<div style="width: 100%"><iframe class="iframe" src="https://maps.google.com/?ll='+lat+','+long+'&amp;z=18&amp;t='+type+'&amp;output=embed" height="100" allowfullscreen></iframe></div>';
 };
 $().ready(function(){
     $.getJSON( "{{ include.folder }}", function( data ) { 
