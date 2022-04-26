@@ -95,11 +95,11 @@ Currently, there are 10 detectors installed (plus 11 planned), that can potentia
 
 
 | Data Type | triggered | Size |  number of files | 
-|-----------|--------|
+|-----------|-----------|------|------------------|
 | Raw 0 (R0) | measurements of detectors of [type](https://dummy0.ciemat.es)|  XXX GB/month per detector, total XXX GB/month | num files |
 | Raw 1 (R1) | measurements of detectors of [type](https://dummy1.ciemat.es)|  XXX GB/month per detector, total XXX GB/month | num files |
 | ... | ... | ... | ... |  
-| Unified datasets 0 (P0) | measurements of detectors of [type](https://dummy0.ciemat.es)|  | XXX GB/month per detector, estimated XXX GB/month |  num files |
+| Unified datasets 0 (P0) | measurements of detectors of [type](https://dummy0.ciemat.es)| XXX GB/month per detector, estimated XXX GB/month |  num files |
 | Analyzed (P1) | measurements of detectors of [type](https://dummy1.ciemat.es)| XXX GB/month per detector, estimated XXX GB/month |  num files |
 | ... | ... | ... | ... |
 
