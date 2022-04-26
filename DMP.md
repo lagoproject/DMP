@@ -21,65 +21,69 @@ nav_order: 2
 
 ## A. Data summary
 
-This section presents the main issues on how the project deals with data as established in the LAGO Data Management Plan (DMP).
+This section presents the main issues on how the project deals with data as established in the PSA Data Management Plan (DMP).
 
 #### **Purpose of the data collection/generation**.
 
-The [Latin American Giant Observatory (LAGO)](https://lagoproject.net) is an extended cosmic ray observatory composed of a network of water-Cherenkov detectors (WCD) spanning over different sites located at significantly different altitudes and latitudes.
+The [Plataforma Solar de Almería (PSA)](https://www.psa.es/), a dependency of the [Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas (CIEMAT)](https://www.ciemat.es/). The PSA is the largest concentrating solar technology research, development and test center in Europe, which activities are integrated in the CIEMAT organization as an R&D division of the Department of Energy. 
 
-The measurements collected from these detectors are processed and analysed in subsequent steps. Additionally, scientists continuously generate simulated data. The final purpose is to enable the long-term curation and re-use of data within and outside the LAGO Collaboration through a Virtual Observatory.
+The [PSA](https://www.psa.es/) manages a network of SOLAR detectors at different GEOPOSITIONAL LOCATIONS RELIYING ON DIFFERENT HARDWARE AND SOFTWARE.
+
+The measurements collected from these detectors are processed and analysed in subsequent steps.. 
+
+The final purpose is to enable the long-term curation and re-use of data within and outside the PSA through a Virtual Observatory of SOLAR....
 
 #### **Relation to the objectives of the project**.
 
-The objective is to enable the long-term curation and re-use of generated data within and outside LAGO Collaboration through a Virtual Observatory, being of interest in areas as HEP, space weather, life sciences, aerospatial security, computer science,...
+The objective is to enable the long-term curation and re-use of generated data within and outside the PSA through a Virtual Observatory, being of interest in areas as HEP, space weather, life sciences, aerospatial security, computer science,...
 
-On the other hand, the European Commission requires open access to the results obtained from their funded projects meanwhile, EOSC-Synergy being a H2020 project (RIA 857647) encourages the implementation of FAIR policies as an additional standard in research. Since LAGO computations are included in the EOSC-Synergy project as one of their Thematic Services, the generated or stored data within the project resources must observe these guidelines, being also beneficial for the success of both initiatives.
+On the other hand, the European Commission (EC) requires open access to the results obtained from their funded projects and encourages the implementation of FAIR policies as an additional standard in research. Since PSA is (and will be) involved in several EC projects, the generated or stored data should observe these guidelines for the success of future collaborations and applying to funding.
 
 #### **Types and formats of generated/collected data**.
 
-Every generated **file** is considered **the minimum data-set** to be linked and processed, while **a collection** of related files is grouped in a **catalog**, which should be referenced with a persistent and unique identifier (PID). As the different LAGO activities generate only one data sub-type, **catalogs will only contain files belonging to one sub-type activity**, with exception of checking or correction procedures.
+Every generated **file** is considered **the minimum data-set** to be linked and processed, while **a collection** of related files is grouped in a **catalog**, which should be referenced with a persistent and unique identifier (PID). As the different PSA activities generate only one data sub-type, **catalogs will only contain files belonging to one sub-type activity**, with exception of checking or correction procedures.
 
-There are two main kinds of data managed by the LAGO Collaboration. The first one is the data measured (L) by the water-Cherenkov detectors (WCD), and the second is the data obtained from simulations (S).
+There are two main kinds of data managed by the LAGO Collaboration. The first one is the data measured or raw (R) by the detectors, and the second is the data processed (P) from these raw data.
 
-The measured (raw) data is pipelined for correction and analysis, obtaining the following data sub-types according to their quality and processing level:
-  - **L0. Raw data**: data as acquired from detectors. Including onboard telemetry. Data directly acquired and transferred from the LAGO [ACQUA system](https://github.com/lagoproject/acqua).
-  - **L1. Preliminary data<sup>*</sup>**: low temporal resolution data processed in almost real-time. Only includes atmospheric pressure corrections. First processing level in the LAGO [ANNA framework](https://github.com/lagoproject/anna).
-  - **L2: Quality for Astrophysics<sup>*</sup>**. Ensures quality data to be used by experts from the Astrophysics Community: fixed level scalers by atmospheric parameters and the detector efficiency. This corresponds to the second level of processing in the [ANNA framework](https://github.com/lagoproject/anna).
-  - **L3. Quality for the general public<sup>*</sup>**. Ensures high quality data to be used by researchers from other subjects or the general public. Charge histograms of the detectors are also processed/corrected. This is the third level of processing in the [ANNA framework](https://github.com/lagoproject/anna).
+The measured (raw) data depends on the hardware/software of the detectector:
+  - **R0.** ... : data as acquired from detectors of [type](https://github.com/?).
+  - **R1.** ... : data as acquired from detectors of [type](https://github.com/?).
 
-On the other hand, users can perform their own simulations of extensive atmospheric showers (EAS), the cascades of secondary particles are produced when a high-energy particle coming from the space interacts with the atmosphere. By using the LAGO [ARTI framework](https://github.com/lagoproject/arti), it is possible to simulate the expected flux on signals at the detector level including different geomagnetic, atmospheric and detector conditions. By using ARTI, users are able to generate different types of hierarchical data-sets:
-  - **S0. Plain simulations**: CORSIKA outputs, which are described in the official documentation [D. Heck and T. Pierog, "Extensive Air Shower Simulation with CORSIKA: A User’s Guide". Version 7.7100 from December 17, 2019](https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf), section 10, page 121.
-  - **S1. Analyzed simulations<sup>*</sup>**: ARTI analysis and outputs of the S0 data-set, containing the expected flux of secondary particles at the ground.
-  - **S2. Detector response simulations<sup>*</sup>**: ARTI detector simulation module, containing a complete, detailed and adjustable [Geant4](https://geant4.web.cern.ch/) model of the LAGO detectors. The main output is the expected signals in the detector, allowing site characterization and comparison with L2 and L3 data sets at each site.
+The aforementioned (raw) data is pipelined for correction and analysis, obtaining the following data sub-types according to their quality and processing level. 
 
-<sup>*</sup>(_Not supported by EOSC-Synergy. They are added for completeness and future projects._)
+Users can perform their own processing. 
+Users are able to generate different types of hierarchical data-sets:
+
+  - **P0. Unifiying datasets**:  R0-R* are translated to a common format, which are described in the official [standard](https://dummy.ciemat.es/....).
+  - **P1. Analyzed**: analysis and outputs of the P0 data-set, containing the expected XXXXX. These data are the 
 
 #### **Re-used previous data**.
 
-Measurements from WCDs gathered in previous years and relevant simulations stored at the old centralized repository at UIS (Universidad Industrial de Santander, Colombia). This is, ~ 6.6TB, mainly measurements. Additionally, previous simulations performed by users in private clusters will be considered if it implies high CPU consumption.
+Measurements from PSA detectors gathered in previous years and stored at the PSA and CIEMAT, this is, ~ XXX TB. Additionally, previous processing performed by users will be considered if it implies high CPU consumption to be recalculated.
 
 #### **Origin of the data**.
 
 | Data Type | Source |
 |-----------|--------|
-| Raw (L0) | measurements of Water-Cherenkov detectors (WCDs) |  
-| Preliminary (L1) | cleaning raw data (L0) |
-| Quality for Astrophysics (L2)| fixed scalers from preliminary data (L1) |  
-| Quality for public (L3)| fixed scalers from histograms in quality data (L2) |
-| Simulated (S0) | from standalone CORSIKA runs |
-| Analyzed (S1) | ARTI analysis of plain simulated data (S0) |
-| Analyzed (S2) | ARTI analysis including simulated detector response |
+| Raw 0 (R0) | measurements of detectors of [type](https://dummy0.ciemat.es)|  
+| Raw 1 (R1) | measurements of detectors of [type](https://dummy1.ciemat.es)| 
+| ... | ... |  
+| Unified datasets 0 (P0) | measurements of detectors of [type](https://dummy0.ciemat.es)|  
+| Analyzed (P1) | measurements of detectors of [type](https://dummy1.ciemat.es)| 
+| ... | ... |
 
 #### **Expected size of the data**.
 
-Minimal data-set is one hour of measurement or simulation:
-  - Raw data (L0): ~200MB
-  - Preliminary data (L1): ~100MB
-  - Quality data (L2, L3): ~ 30 MB
-  - Simulated background (S0+S1+S2): ~ 10GB
-  - Simulated event (S0+S1+S2): ~ 110GB
+Fixed data-set for raw (R) data is one hour of measurement:
+  - Raw 0 (R0): ~ XXX MB
+  - Raw 1 (R1): ~ XXX MB
+  - ...
+The minimal data-set for processed data is XXXX:
+  - Unified datasets 0 (P0): ~ XXX MB 
+  - Analyzed (P1): ~ XXX MB
+  - ...
 
-Typically, every WCD generates one measurement per hour producing files of ~ 200MB each, this is ~ 150GB of raw data per month for a total of 720 files. These files can originate 70-120GB of cleaned data (L1) and 10-40GB of quality data (L2 and L3). The one-hour interval is kept as the reference unit, resulting in 2160 files (between 2-160MB each). The necessary amount of CPU resources to generate these files is small; around 35 minutes on a Gold 6138 Intel core (2 GHz). However, all data-sets should be preserved for reprocessing if software errors appear in the future.
+Typically, every detector generates one measurement per hour producing files of ~ XXXMB-XXXMB each, this is ~ XXXGB-XXXGB of raw data per month for a total of 720 files. These files can originate 70-120GB of cleaned data (L1) and 10-40GB of quality data (L2 and L3). The one-hour interval is kept as the reference unit, resulting in 2160 files (between 2-160MB each). The necessary amount of CPU resources to generate these files is small; around 35 minutes on a Gold 6138 Intel core (2 GHz). However, all data-sets should be preserved for reprocessing if software errors appear in the future.
 
 On the other hand, users can perform their own simulations, which should be re-usable and reproducible by other collaborators. A standard simulation using only CORSIKA (i.e. s background simulation), results in a data-set of 4-10 GB (usually ~ 6 GB), but the simulation of one event could take up to 100 GB. Geant4 files output does not change these estimated figures.
 
