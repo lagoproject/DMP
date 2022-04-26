@@ -5,12 +5,12 @@ has_children: false
 nav_order: 2
 ---
 
-# The PSA Data Management Plan (DMP) document
+# The LAGO Data Management Plan (DMP) document
 {: .no_toc }
 
 |Version| Updated | Date |Contributors|
 |-------|---------|------|------------|
-| 1.1 develop | {{ site.time }} | 2020-06-01 - today | PSA-CIEMAT |
+| 1.1 develop | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
 
 
 ## Table of contents
@@ -21,71 +21,65 @@ nav_order: 2
 
 ## A. Data summary
 
-This section presents the main issues on how the project deals with data as established in the PSA Data Management Plan (DMP).
+This section presents the main issues on how the project deals with data as established in the LAGO Data Management Plan (DMP).
 
 #### **Purpose of the data collection/generation**.
 
-The [Plataforma Solar de Almería (PSA)](https://www.psa.es/), a dependency of the [Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas (CIEMAT)](https://www.ciemat.es/). The PSA is the largest concentrating solar technology research, development and test center in Europe, which activities are integrated in the CIEMAT organization as an R&D division of the Department of Energy. 
+The [Latin American Giant Observatory (LAGO)](https://lagoproject.net) is an extended cosmic ray observatory composed of a network of water-Cherenkov detectors (WCD) spanning over different sites located at significantly different altitudes and latitudes.
 
-The [PSA](https://www.psa.es/) manages a network of SOLAR detectors at different GEOPOSITIONAL LOCATIONS RELIYING ON DIFFERENT HARDWARE AND SOFTWARE.
-
-The measurements collected from these detectors are processed and analysed in subsequent steps.. 
-
-The final purpose is to enable the long-term curation and re-use of data within and outside the PSA through a Virtual Observatory of SOLAR....
+The measurements collected from these detectors are processed and analysed in subsequent steps. Additionally, scientists continuously generate simulated data. The final purpose is to enable the long-term curation and re-use of data within and outside the LAGO Collaboration through a Virtual Observatory.
 
 #### **Relation to the objectives of the project**.
 
-The objective is to enable the long-term curation and re-use of generated data within and outside the PSA through a Virtual Observatory, being of interest in areas as HEP, space weather, life sciences, aerospatial security, computer science,...
+The objective is to enable the long-term curation and re-use of generated data within and outside LAGO Collaboration through a Virtual Observatory, being of interest in areas as HEP, space weather, life sciences, aerospatial security, computer science,...
 
-On the other hand, the European Commission (EC) requires open access to the results obtained from their funded projects and encourages the implementation of FAIR policies as an additional standard in research. Since PSA is (and will be) involved in several EC projects, the generated or stored data should observe these guidelines for the success of future collaborations and applying to funding.
+On the other hand, the European Commission requires open access to the results obtained from their funded projects meanwhile, EOSC-Synergy being a H2020 project (RIA 857647) encourages the implementation of FAIR policies as an additional standard in research. Since LAGO computations are included in the EOSC-Synergy project as one of their Thematic Services, the generated or stored data within the project resources must observe these guidelines, being also beneficial for the success of both initiatives.
 
 #### **Types and formats of generated/collected data**.
 
-Every generated **file** is considered **the minimum data-set** to be linked and processed, while **a collection** of related files is grouped in a **catalog**, which should be referenced with a persistent and unique identifier (PID). As the different PSA activities generate only one data sub-type, **catalogs will only contain files belonging to one sub-type activity**, with exception of checking or correction procedures.
+Every generated **file** is considered **the minimum data-set** to be linked and processed, while **a collection** of related files is grouped in a **catalog**, which should be referenced with a persistent and unique identifier (PID). As the different LAGO activities generate only one data sub-type, **catalogs will only contain files belonging to one sub-type activity**, with exception of checking or correction procedures.
 
-There are two main kinds of data managed by the PSA. The first one is the data measured or raw (R) by the detectors, and the second is the data processed (P) from these raw data.
+There are two main kinds of data managed by the LAGO Collaboration. The first one is the data measured (L) by the water-Cherenkov detectors (WCD), and the second is the data obtained from simulations (S).
 
-The measured (raw) data depends on the hardware/software of the detectector:
-  - **R0.** ... : data as acquired from detectors of [type](https://github.com/?).
-  - **R1.** ... : data as acquired from detectors of [type](https://github.com/?).
+The measured (raw) data is pipelined for correction and analysis, obtaining the following data sub-types according to their quality and processing level:
+  - **L0. Raw data**: data as acquired from detectors. Including onboard telemetry. Data directly acquired and transferred from the LAGO [ACQUA system](https://github.com/lagoproject/acqua).
+  - **L1. Preliminary data<sup>*</sup>**: low temporal resolution data processed in almost real-time. Only includes atmospheric pressure corrections. First processing level in the LAGO [ANNA framework](https://github.com/lagoproject/anna).
+  - **L2: Quality for Astrophysics<sup>*</sup>**. Ensures quality data to be used by experts from the Astrophysics Community: fixed level scalers by atmospheric parameters and the detector efficiency. This corresponds to the second level of processing in the [ANNA framework](https://github.com/lagoproject/anna).
+  - **L3. Quality for the general public<sup>*</sup>**. Ensures high quality data to be used by researchers from other subjects or the general public. Charge histograms of the detectors are also processed/corrected. This is the third level of processing in the [ANNA framework](https://github.com/lagoproject/anna).
 
-The aforementioned (raw) data is pipelined for correction and analysis, obtaining the following data sub-types according to their quality and processing level. 
+On the other hand, users can perform their own simulations of extensive atmospheric showers (EAS), the cascades of secondary particles are produced when a high-energy particle coming from the space interacts with the atmosphere. By using the LAGO [ARTI framework](https://github.com/lagoproject/arti), it is possible to simulate the expected flux on signals at the detector level including different geomagnetic, atmospheric and detector conditions. By using ARTI, users are able to generate different types of hierarchical data-sets:
+  - **S0. Plain simulations**: CORSIKA outputs, which are described in the official documentation [D. Heck and T. Pierog, "Extensive Air Shower Simulation with CORSIKA: A User’s Guide". Version 7.7100 from December 17, 2019](https://web.ikp.kit.edu/corsika/usersguide/usersguide.pdf), section 10, page 121.
+  - **S1. Analyzed simulations<sup>*</sup>**: ARTI analysis and outputs of the S0 data-set, containing the expected flux of secondary particles at the ground.
+  - **S2. Detector response simulations<sup>*</sup>**: ARTI detector simulation module, containing a complete, detailed and adjustable [Geant4](https://geant4.web.cern.ch/) model of the LAGO detectors. The main output is the expected signals in the detector, allowing site characterization and comparison with L2 and L3 data sets at each site.
 
-Users can perform their own processing. 
-Users are able to generate different types of hierarchical data-sets:
-
-  - **P0. Unifiying datasets**:  R0-R* are translated to a common format, which are described in the official [standard](https://dummy.ciemat.es/....).
-  - **P1. Analyzed**: analysis and outputs of the P0 data-set, containing the expected XXXXX. These data are the 
+<sup>*</sup>(_Not supported by EOSC-Synergy. They are added for completeness and future projects._)
 
 #### **Re-used previous data**.
 
-Measurements from PSA detectors gathered in previous years and stored at the PSA and CIEMAT, this is, ~ XXX TB. Additionally, previous processing performed by users will be considered if it implies high CPU consumption to be recalculated.
+Measurements from WCDs gathered in previous years and relevant simulations stored at the old centralized repository at UIS (Universidad Industrial de Santander, Colombia). This is, ~ 6.6TB, mainly measurements. Additionally, previous simulations performed by users in private clusters will be considered if it implies high CPU consumption.
 
 #### **Origin of the data**.
 
 | Data Type | Source |
 |-----------|--------|
-| Raw 0 (R0) | measurements of detectors of [type](https://dummy0.ciemat.es)|  
-| Raw 1 (R1) | measurements of detectors of [type](https://dummy1.ciemat.es)| 
-| ... | ... |  
-| Unified datasets 0 (P0) | measurements of detectors of [type](https://dummy0.ciemat.es)|  
-| Analyzed (P1) | measurements of detectors of [type](https://dummy1.ciemat.es)| 
-| ... | ... |
+| Raw (L0) | measurements of Water-Cherenkov detectors (WCDs) |  
+| Preliminary (L1) | cleaning raw data (L0) |
+| Quality for Astrophysics (L2)| fixed scalers from preliminary data (L1) |  
+| Quality for public (L3)| fixed scalers from histograms in quality data (L2) |
+| Simulated (S0) | from standalone CORSIKA runs |
+| Analyzed (S1) | ARTI analysis of plain simulated data (S0) |
+| Analyzed (S2) | ARTI analysis including simulated detector response |
 
 #### **Expected size of the data**.
 
-Fixed data-set for raw (R) data is one hour of measurement:
-  - Raw 0 (R0): ~ XXX MB
-  - Raw 1 (R1): ~ XXX MB
-  - ...
-The minimal data-set for processed data is XXXX:
-  - Unified datasets 0 (P0): ~ XXX MB 
-  - Analyzed (P1): ~ XXX MB
-  - ...
+Minimal data-set is one hour of measurement or simulation:
+  - Raw data (L0): ~200MB
+  - Preliminary data (L1): ~100MB
+  - Quality data (L2, L3): ~ 30 MB
+  - Simulated background (S0+S1+S2): ~ 10GB
+  - Simulated event (S0+S1+S2): ~ 110GB
 
-Typically, every detector generates one measurement per hour producing files of ~ XXXMB-XXXMB each, this is ~ XXXGB-XXXGB of raw data per month for a total of 720 files. 
-
-These files can originate 70-120GB of cleaned data (L1) and 10-40GB of quality data (L2 and L3). The one-hour interval is kept as the reference unit, resulting in 2160 files (between 2-160MB each). The necessary amount of CPU resources to generate these files is small; around XXX minutes on a Gold XXX Intel core (XXX GHz). However, all data-sets should be preserved for reprocessing if software errors appear in the future.
+Typically, every WCD generates one measurement per hour producing files of ~ 200MB each, this is ~ 150GB of raw data per month for a total of 720 files. These files can originate 70-120GB of cleaned data (L1) and 10-40GB of quality data (L2 and L3). The one-hour interval is kept as the reference unit, resulting in 2160 files (between 2-160MB each). The necessary amount of CPU resources to generate these files is small; around 35 minutes on a Gold 6138 Intel core (2 GHz). However, all data-sets should be preserved for reprocessing if software errors appear in the future.
 
 On the other hand, users can perform their own simulations, which should be re-usable and reproducible by other collaborators. A standard simulation using only CORSIKA (i.e. s background simulation), results in a data-set of 4-10 GB (usually ~ 6 GB), but the simulation of one event could take up to 100 GB. Geant4 files output does not change these estimated figures.
 
@@ -93,19 +87,16 @@ To keep the one-hour convention, both types of simulations are usually split int
 
 Currently, there are 10 detectors installed (plus 11 planned), that can potentially transfer 18 TB/year of raw data. Members of the Collaboration (~ 85 researchers) are also allowed to run simulations. Thus, the entire collaboration could generate up to 27 TB of raw, cleaned, and analyzed data, plus 12-120 TB of simulated data in one year. Nevertheless, the availability of detectors can be an issue, an active user could submit 10 or 20 simulations per month, but actually researchers do not regularly submit simulations, and even some may only run simulations sporadically. Therefore, a realistic estimation of the storage consumption could be around 3.6 TB/year of L(0-3) data corresponding to 4 WCDs and 2-8 TB/year corresponding to 25 active users.
 
-
-| Data Type | triggered | Size |  number of files | 
-|-----------|-----------|------|------------------|
-| Raw 0 (R0) | measurements of detectors of [type](https://dummy0.ciemat.es)|  XXX GB/month per detector, total XXX GB/month | num files |
-| Raw 1 (R1) | measurements of detectors of [type](https://dummy1.ciemat.es)|  XXX GB/month per detector, total XXX GB/month | num files |
-| ... | ... | ... | ... |  
-| Unified datasets 0 (P0) | measurements of detectors of [type](https://dummy0.ciemat.es)| XXX GB/month per detector, estimated XXX GB/month |  num files |
-| Analyzed (P1) | measurements of detectors of [type](https://dummy1.ciemat.es)| XXX GB/month per detector, estimated XXX GB/month |  num files |
-| ... | ... | ... | ... |
+| Data Type | triggered | Size |
+|-----------|--------|------|
+| Raw (L0) | Water-Cherenkov detector (WCD) | 150GB/month (per WCD) |
+| Preliminary (L1) | robot (mainly) or researcher | 70-120GB/month (per WCD) |
+| Quality (L2 and L3)| robot (mainly) or researcher | 10-40GB/month (per WCD) |
+| Simulated (S0, S1, and S2)| robot or researcher (mainly) | Estimated per 1 user: 1-4 sim. per month (72-300 GB/year) Max: 120GB/month |
 
 #### **The utility of the data: to whom will they be useful**.
 
-FSA data are of interest for Weather and Climate forecasting applied to the solar generation of energy. Moreover, they are also of interest for other scientific or industrial areas such as Astrophysics, High Energy Physics, Life Sciences, Geophysics, Aero-spatial security or Computer Science, among others, because of the effects of solar radiation on natural life, materials, or climate change, among others.
+Data are of interest for the Astrophysics community but also for other scientific or industrial areas such as High Energy Physics, Life Sciences, Weather Forecasting, Geophysics, Aero-spatial security or Computer Science, among others, because of the effects of cosmic radiation on natural life, materials, or climate change, or its novel application in Geophysics.
 
 ## B. FAIR data
 
@@ -113,20 +104,20 @@ FSA data are of interest for Weather and Climate forecasting applied to the sola
 
 #### **Discoverability of data (metadata provision)**.
 
-The PSA data repository will be based on [OneData](https://onedata.org). OneData supports storing catalogs and datasets with enriched metadata, as well as publishing catalogs with persistent identifiers (PIDs) to allow gathering by services such as [B2FIND](https://eudat.eu/services/b2find). Thus **the discoverability** will be technically guaranteed, through:
+The LAGO data repository will be based on [OneData](https://onedata.org). OneData supports storing catalogs and datasets with enriched metadata, as well as publishing catalogs with persistent identifiers (PIDs) to allow gathering by services such as [B2FIND](https://eudat.eu/services/b2find). Thus **the discoverability** will be technically guaranteed, through:
 - OneData:
-  - for PSA members: web browser (without search engine), CDMI API, proprietary API and FUSE mount;
+  - for LAGO members: web browser (without search engine), CDMI API, proprietary API and FUSE mount;
   - for the general public: web browser (link to a public PID).
-- B2FIND: web interface (with search engine), for PSA members and the general public.
+- B2FIND: web interface (with search engine), for LAGO members and the general public.
 - Other discovery services: customized CKAN based (for Comprehensive Knowledge Archive Network) could better benefit from metadata provided than B2FIND, and they will be explored in the future. Anyway, when the data become public, any discovery service can gather metadata, even not specific engines such as Google.
 
 Some of these services will be supported by the EOSC infrastructure as they are included in its [marketplace](https://marketplace.eosc-portal.eu/):
 - OneData is [provided](https://marketplace.eosc-portal.eu/services/egi-datahub) through the [EGI DataHub service](https://datahub.egi.eu).
 - B2FIND is also [offered](https://marketplace.eosc-portal.eu/services/b2find) through an unified [web page](http://b2find.eudat.eu/).
 
-Specific PSA wrappers execute the processing or simulation and, at a subsequent stage, check every data-set and store them in the PSA repository, always together with their metadata. These wrappers are packed into Docker images and released at the [official PSA code repository](https://github.com/???) in GitHub.
+Specific LAGO wrappers execute the processing or simulation and, at a subsequent stage, check every data-set and store them in the LAGO repository, always together with their metadata. These wrappers are packed into Docker images and released at the [official LAGO code repository](https://github.com/lagoproject) in GitHub.
 
-To assure the **metadata provision**, the only way to directly store and publish data-sets in the PSA repository (by PSA members) is by making use of these wrappers from the official Docker releases. Any other data to be included in the repository must be supervised and checked by the PSA organization.
+To assure the **metadata provision**, the only way to directly store and publish data-sets in the LAGO repository (by LAGO members) is by making use of these wrappers from the official Docker releases. Any other data to be included in the repository must be supervised and checked by the LAGO organization.
 
 #### **Identifiability of data and standard identification mechanisms (PIDs)**
 
@@ -201,7 +192,7 @@ Data will be made publicly available after a variable waiting (embargo) period s
 Consolidated datasets (grouped by catalogs) will be exposed together with their metadata through the [EGI DataHub, https://datahub.egi.eu](https://datahub.egi.eu) service to be gathered by discovery services such as B2FIND, thus:  
 
 - General public: B2FIND web interface at [http://b2find.eudat.eu](http://b2find.eudat.eu) (search engine of metadata published), a web browser to the page of some published catalog (link to a public PID). Additionally, as metadata follow a linked-data syntaxis and standards, other discovery services, even Google could find them.
-- PSA members: the aforementioned ones for general public plus, browser whole data repository at [https://datahub.egi.eu](https://datahub.egi.eu) (without search engine),
+- LAGO members: the aforementioned ones for general public plus, browser whole data repository at [https://datahub.egi.eu](https://datahub.egi.eu) (without search engine),
 CDMI API, proprietary API and FUSE mount on a local system of the repository tree.
 
 
@@ -228,9 +219,9 @@ As commented above, data and metadata will be stored in providers associated to 
 
 #### **Specify how access will be provided in case there are any restrictions**.
 
-The data will be only accessible by the author and/or the Collaboration during the embargo period with the corresponding OpenID credentials. These will be obtained after login into the PSA Virtual Organisation, supported by eduTEAMs (https://eduteams.org/), a service provided by GEANT in Europe and associated with RedClara.
+The data will be only accessible by the author and/or the Collaboration during the embargo period with the corresponding OpenID credentials. These will be obtained after login into the LAGO Virtual Organisation, supported by eduTEAMs (https://eduteams.org/), a service provided by GEANT in Europe and associated with RedClara.
 
-A manual for joining to the PSA VO is published at:
+A manual for joining to the LAGO VO is published at:
 - [https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO/](https://lagoproject.github.io/DMP/docs/howtos/how_to_join_LAGO_VO/),
 
 while a manual to login into EGI DataHub, visualise datasets and obtain tokens is at:
@@ -246,12 +237,12 @@ while a manual to login into EGI DataHub, visualise datasets and obtain tokens i
 Metadata:
 - Language syntax: [JSON-LD 1.1, W3C](https://json-ld.org/spec/latest/json-ld/)
 - Main vocabulary: [DCAT-AP2, European Commission](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe), which is a specific profile of [DCAT2, W3C](https://www.w3.org/TR/vocab-dcat-2/) recommended for repositories, content aggregators or data consumers related to the public sector (goverments, rearch centers, funded projects).
-- PSA vocabulary: It is re-profile of [DCAT-AP2, European Commission](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe), extending the existing classes and adding properties needed for the PSA computation. The [re-profile](/DMP/schema/) and specific [definitions](/DMP/defs) are available at [https://lagoproject.github.io/DMP/](https://lagoproject.github.io/DMP/).
+- LAGO vocabulary: It is re-profile of [DCAT-AP2, European Commission](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe), extending the existing classes and adding properties needed for the LAGO computation. The [re-profile](/DMP/schema/) and specific [definitions](/DMP/defs) are available at [https://lagoproject.github.io/DMP/](https://lagoproject.github.io/DMP/).
 
 
 Data:
 - Unfortunately, the generated data follow propietary formats. 
-- Interesting parameter or summarised results will be extracted from data-sets and then represented in their metadata using terms belonging PSA vocabulary.
+- Interesting parameter or summarised results will be extracted from data-sets and then represented in their metadata using terms belonging LAGO vocabulary.
 
 
 ####  **Inter-disciplinary interoperability**
@@ -311,11 +302,11 @@ Cloud storage is based on OneData techonology, and the architecture will count o
   - Tier 2 OneProviders: mid-capacity servers assuring long-term availability, used to improve the performance in a region.   
   - Tier 3 OneProviders: temporal deployments for local caching before consolidate data in upper tiers.
 
-The architecture is deeply described at [https://ciemat-tic.github.io/PSA-DMP/Architecture/](https://ciemat-tic.github.io/PSA-DMP/Architecture/).
+The architecture is deeply described at [https://lagoproject.github.io/DMP/Architecture/](https://lagoproject.github.io/DMP/Architecture/).
 
 ####  **Costs for making your data FAIR**.
 
-The process of making the data FAIR will be supported by CIEMAT. The cost of the management (human resources) will be supported by CIEMAT and counting on external collaborators.
+The process of making the data FAIR will be supported by the EOSC-Synergy project. The cost of the management (human resources) will be supported by the LAGO Collaboration and its participating institutions.
 
 ####  **Responsibilities for data management in your project**.
 
@@ -327,14 +318,14 @@ Computing as data management will be structured as a Virtual Organization with s
 | System admnistrators of OneProviders | To maintain the availability and preserve the data and metadata stored. |
 | Members of standardisation group | To establish data organisation and metadata definition. |
 | Country representative/delegate | To authorise or ban local members in the VO. |
-| Task coordination delegates | To assure the accurancy of a specific kind of data and metadata automatially (robots) or manually generated (for example the raw data (R*)). |
-| PSA members | They must follow the rules of data generation/storing and they must not abuse of the services. |
+| Task coordination delegates | To assure the accurancy of a spcific kind of data and metadata automatially (robots) or manually generated (for example the raw data (L0)). |
+| LAGO members | They must follow the rules of data generation/storing and they must not abuse of the services. |
 
 ####  **Costs and potential value of long-term preservation**.
 
-Preservation of data-sets is essential for the sustainability of PSA research. Every active detector should generate XXXXGB/month of raw (R*) data. Currently, due to the number of active detectetors, the PSA network will generate up to XXX TB of raw (R*) data, plus XXX TB of processed (P*) data throughout the year. Data should be replicated, at least, in two locations of a distributed repository (in this case OneData).
+Preservation of data-sets is essential for the sustainability of LAGO. Every active WCD should generate 300GB/month of L0-L3 data. Currently, due to the number of active WCDs, the Collaboration will generate up to 27 TB of L0-L3 data, plus 12-120 TB of simulated data throughout the year. Data should be replicated, at least, in two locations of a distributed repository (in this case OneData).
 
-Considering an average generation of XXXTB/year, the costs of a 4-years long-term data preservation are related to hardware (two generic RAID servers ~240TB = ~30k€, prices in 2019), consumption (3.68KW max. power for 2 servers, ~ 0.1 €/kWh industrial price average in 2019 = max. 13k€) and human resources (technician: XXXX person/month, scientific: XXXX p/m, ~XXXk€).
+Considering an average generation of 60TB/year, the costs of a 4-years long-term data preservation are related to hardware (two generic RAID servers ~240TB = ~30k€, prices in 2019), consumption (3.68KW max. power for 2 servers, ~ 0.1 €/kWh industrial price average in 2019 = max. 13k€) and human resources (technician: 1 person/month, scientific: 2 p/m, ~10k€).
 
 ## D. Data security
 
@@ -342,14 +333,8 @@ Considering an average generation of XXXTB/year, the costs of a 4-years long-ter
 
 There is no sensitive data, thus anonymity and encryption are not required. 
 
-Data recovery should be guaranteed by using replication, at least, in two locations of a distributed repository or filesystem, in this case OneData. Thus, following the classification in tiers, every space supported by an OneProvider must be replicated in any other OneProvider that holds Tier level 1. The backup architecture is described at [https://ciemat-tic.github.io/PSA-DMP/Architecture/](https://ciemat-tic.github.io/PSA-DMP/Architecture/).
+Data recovery should be guaranteed by using replication, at least, in two locations of a distributed repository or filesystem, in this case OneData. Thus, following the classification in tiers, every space supported by an OneProvider must be replicated in any other OneProvider that holds Tier level 1. The backup architecture is described at [https://lagoproject.github.io/DMP/Architecture/](https://lagoproject.github.io/DMP/Architecture/).
 
 ## E. Ethical aspects
 
-Data do not contain protected records that could present ethical or security issues. The only personal data included are the required by FAIR policies in metadata, i.e., the name and the identifier of the author of the data-set. On the other hand, there are no issues with reusing previous raw data generated in PSA, as well as the data belonging to the CIEMAT.
-
-## F. Acknowledgment
-
-This PSA Data Management Plan is based on the [LAGO Data Management Plan](https://lagoproject.github.io/DMP/) published under the terms of the Creative Common [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) license. Main authors of the source document are also authors of this DMP, which reserve them the rights for modifying both licenses in the future. 
-
-
+Data do not contain protected records that could present ethical or security issues. The only personal data included are the required by FAIR policies in metadata, i.e., the name and the identifier of the author of the data-set. On the other hand, there are no issues with reusing previous raw data generated in LAGO, as well as the data belonging to the Collaboration.
