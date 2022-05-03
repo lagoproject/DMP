@@ -91,36 +91,40 @@
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:float" },
+    "@default" : "0",
     "dcat:label": "tMin", 
-    "comment" : [ { "@language" : "en", "@value" : "Low edge of zenith angle" },  
-                  { "@language" : "es", "@value" : "Límite inferior del ángulo cenital" } ]
+    "comment" : [ { "@language" : "en", "@value" : "Low edge of zenith angle, in degrees" },  
+                  { "@language" : "es", "@value" : "Límite inferior del ángulo cenital, en grados" } ]
    },
    {
     "@id": "lago:tMax",
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:float" },
+    "@default" : "90",
     "dcat:label": "tMax", 
-    "comment" : [ { "@language" : "en", "@value" : "High edge of zenith angle" },  
-                  { "@language" : "es", "@value" : "Límite superior del ángulo cenital" } ]
+    "comment" : [ { "@language" : "en", "@value" : "High edge of zenith angle, in degrees" },  
+                  { "@language" : "es", "@value" : "Límite superior del ángulo cenital, en grados" } ]
    },
    {
     "@id": "lago:lLimit",
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:float" },
+    "@default" : "5",
     "dcat:label": "lLimit", 
-    "comment" : [ { "@language" : "en", "@value" : "Lower limit of the primary particle energy" },  
-                  { "@language" : "es", "@value" : "Límite inferior de la energía de las partículas primarias" } ]
+    "comment" : [ { "@language" : "en", "@value" : "Lower limit of the primary particle energy in GeV" },  
+                  { "@language" : "es", "@value" : "Límite inferior de la energía de las partículas primarias en GeV" } ]
    },
    {
     "@id": "lago:uLimit",
     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
     "dcat:domain": { "@id" : "lago:ArtiParams" },
     "dcat:range": { "@id" : "xsd:float" },
+    "@default" : "1e6",
     "dcat:label": "uLimit",      
-    "comment" : [ { "@language" : "en", "@value" : "Upper limit of the primary particle energy" },  
-                  { "@language" : "es", "@value" : "Límite superior de la energía de las partículas primarias" } ]
+    "comment" : [ { "@language" : "en", "@value" : "Upper limit of the primary particle energy in GeV" },  
+                  { "@language" : "es", "@value" : "Límite superior de la energía de las partículas primarias en GeV" } ]
    },
    {
     "@id": "lago:flatArray",
