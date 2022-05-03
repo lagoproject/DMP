@@ -145,7 +145,7 @@
           "@default": "lago:Atmod"
         },
         "lago:modatm": {
-          "@default": "E2"
+          "@default": "E1"
         }
       },
       "lago:magnet": {
@@ -906,6 +906,62 @@
       }
     },
     {
+      "@id": "jsc",
+      "@type": "lago:DetectorSite",
+      "name": "J\u00fclich, Germany",
+      "lago:belongsLago": false,
+      "qualifiedAttribution": {
+        "@type": "lago:Organisation",
+        "name": ""
+      },
+      "geometry": {
+        "@id": "jsc#geometry",
+        "@type": "geo:Point",
+        "geo:latitude": "50.92",
+        "geo:longitude": "6.54",
+        "geo:altitude": "100"
+      },
+      "lago:obsLev": {
+        "@default": "10000"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E2"
+        }
+      },
+      "lago:magnet": {
+        "@default": {
+          "lago:bDate": "2021-05-18",
+          "conformsTo": {
+            "@id": "https://doi.org/10.1186/s40623-020-01288-x",
+            "@type": [
+              "dct:Standard",
+              "DataSet"
+            ],
+            "title": "IGRF",
+            "description": "International Geomagnetic Reference Field",
+            "landingpage": "https://www.ngdc.noaa.gov/IAGA/vmod/igrf.html",
+            "version": "13",
+            "dataservice": {
+              "title": "Geomagnetic Model Web Service",
+              "endpointURL": "http://geomag.bgs.ac.uk/web_service/GMModels/"
+            },
+            "temporalCoverage": {
+              "startDate": "2020-01-01",
+              "endDate": "2024-12-31"
+            },
+            "temporalResolution": "P1D"
+          },
+          "lago:bx": "19.676",
+          "lago:bz": "44.928",
+          "lago:bi": "49.055"
+        }
+      }
+    },
+    {
       "@id": "kna",
       "@type": "lago:DetectorSite",
       "name": "Vina Del Mar, Chile",
@@ -1410,6 +1466,62 @@
       }
     },
     {
+      "@id": "psnc",
+      "@type": "lago:DetectorSite",
+      "name": "Poznam, Poland",
+      "lago:belongsLago": false,
+      "qualifiedAttribution": {
+        "@type": "lago:Organisation",
+        "name": ""
+      },
+      "geometry": {
+        "@id": "psnc#geometry",
+        "@type": "geo:Point",
+        "geo:latitude": "52.41",
+        "geo:longitude": "16.92",
+        "geo:altitude": "100"
+      },
+      "lago:obsLev": {
+        "@default": "10000"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E2"
+        }
+      },
+      "lago:magnet": {
+        "@default": {
+          "lago:bDate": "2021-05-18",
+          "conformsTo": {
+            "@id": "https://doi.org/10.1186/s40623-020-01288-x",
+            "@type": [
+              "dct:Standard",
+              "DataSet"
+            ],
+            "title": "IGRF",
+            "description": "International Geomagnetic Reference Field",
+            "landingpage": "https://www.ngdc.noaa.gov/IAGA/vmod/igrf.html",
+            "version": "13",
+            "dataservice": {
+              "title": "Geomagnetic Model Web Service",
+              "endpointURL": "http://geomag.bgs.ac.uk/web_service/GMModels/"
+            },
+            "temporalCoverage": {
+              "startDate": "2020-01-01",
+              "endDate": "2024-12-31"
+            },
+            "temporalResolution": "P1D"
+          },
+          "lago:bx": "18.598",
+          "lago:bz": "46.45",
+          "lago:bi": "50.066"
+        }
+      }
+    },
+    {
       "@id": "quie",
       "@type": "lago:DetectorSite",
       "name": "Quito-EPN, Ecuador",
@@ -1718,7 +1830,7 @@
       },
       "lago:magnet": {
         "@default": {
-          "lago:bDate": "2021-05-18",
+          "lago:bDate": "2021-06-02",
           "conformsTo": {
             "@id": "https://doi.org/10.1186/s40623-020-01288-x",
             "@type": [
@@ -1739,9 +1851,9 @@
             },
             "temporalResolution": "P1D"
           },
-          "lago:bx": "18.111",
+          "lago:bx": "18.108",
           "lago:bz": "-16.917",
-          "lago:bi": "24.787"
+          "lago:bi": "24.785"
         }
       }
     },
