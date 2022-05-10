@@ -12,11 +12,10 @@
 $().ready(function(){
   $.getJSON( "{{ include.folder }}", function( data ) { 
     var description = data["description"];
-    $('#contents').append(description);
-    $('#contents').append("keooo");
+    $('#des').append(description);
+    $('#des').append("keooo");
     });  
 });
 </script>
-
 
 <div id="contents"></div>

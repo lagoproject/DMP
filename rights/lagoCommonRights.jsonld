@@ -17,6 +17,6 @@
 "publisher":  { "@id": "/defs/lagoCollaboration.jsonld" , "@type": "lago:Organization", "name" : "LAGO Collaboration" },
 "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
 "accessRigths": "@id",
-"type": "Markdown"
-"description": '### hola2'
+"type": "Markdown",
+"description": '#### hola2'
 }
