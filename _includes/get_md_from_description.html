@@ -1,0 +1,23 @@
+<!-- 
+################################################################################
+# Original Author: A.J. Rubio-Montero (http://orcid.org/0000-0001-6497-753X),  #
+#          CIEMAT - Sci-Track Group (http://rdgroups.ciemat.es/web/sci-track), #
+#          for the EOSC-Synergy project (EU H2020 RI Grant No 857647).         #
+# License (SPDX): BSD-3-Clause (https://opensource.org/licenses/BSD-3-Clause)  #
+# Copyright (c): 2020-today, The LAGO Collaboration (http://lagoproject.net)   #
+################################################################################
+-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$().ready(function(){
+  $.getJSON( "{{ include.folder }}", function( data ) { 
+    var description = data["description"];
+    $('#contents').append(description);
+    });  
+});
+</script>
+
+
+<div id="contents"></div>
+
+{% endif %}

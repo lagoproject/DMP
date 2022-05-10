@@ -20,7 +20,7 @@ nav_order: 1
 
 ## What is defined?
 
-[lagoCommonRights.jsonld](./sitesLago.jsonld) unifies the usual rights of LAGO data and metadata, following the official LAGO schema vocabulary. 
+[lagoCommonRights.jsonld](./lagoCommonRights.jsonld) unifies the usual rights of LAGO data and metadata, following the official LAGO schema vocabulary. 
 
 ## How should an item be referenced?
 
@@ -56,6 +56,10 @@ As a real example, the metadata´s catalog of a simulation should include the re
 ...
 ...
 ```
+
+## ver que pasa
+
+{% include get_md_from_description.html folder="/DMP/rights/lagoCommonRights.jsonld" %}
 
 ## Plain JSON-LD file
 
