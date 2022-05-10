@@ -13,6 +13,7 @@ $().ready(function(){
   $.getJSON( "{{ include.folder }}", function( data ) { 
     var description = data["description"];
     $('#contents').append(description);
+    $('#contents').append("keooo");
     });  
 });
 </script>
