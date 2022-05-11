@@ -5,13 +5,13 @@ nav_order: 1
 jsonldinhead: lagoCommonRights.jsonld 
 ---
 
-|Tag Release | Issued | Updated | Date |Contributors|
+|Tag Release | Issued | Updated | Dates |Contributors|
 |------------|-----   |-------- |------|------------|
-| 1.1 | {{ site.time }} | 2020-06-01 - today | [Hernán Asorey](https://orcid.org/0000-0002-4559-8785) |
+| 1.1 | 2022-05-11 | {{ site.time }} | 2020-06-01 - today | [Hernán Asorey](https://orcid.org/0000-0002-4559-8785) |
 |  |  |  |  | [Iván Sidelnik](https://orcid.org/0000-0003-4115-3129) |
 |  |  |  |  | for the [LAGO Collaboration](/DMP/defs/lagoCollaboration/) |
 
-# Data and Metadata Release, Rights and Disclaimer 
+# Data and Metadata Releases, Rights and Disclaimer 
 {: .no_toc }
 
 By using the data provided by the Latin American Giant Observatory (LAGO), you are accepting the following conditions of release and acknowledging the following disclaimers issued by LAGO.
@@ -74,11 +74,11 @@ Neither LAGO nor contributors of data to LAGO shall be held liable for any impro
 ## D. Disclaimer of Accuracy of Data
 No warranty, expressed or implied, is made regarding the accuracy, adequacy, completeness, reliability, or usefulness of any data provided. These data are provided &quot;as is.&quot; All warranties of any kind, expressed or implied, including but not limited to fitness for a particular use, freedom from computer viruses, and non-infringement of proprietary rights, are disclaimed.
 
-## ANNEX. Linking this document
+## APPENDIX. Linking this document
 
 This document unifies the rights, disclaimers and acknolegmentes for this LAGO data and metadata release.  
 
-To accomplish the linked-data requirements, this document has associated a metadata file [lagoCommonRights.jsonld](./lagoCommonRights.jsonld) 
+To accomplish the linked-data requirements, this document has associated a metadata file [{{ page.jsonldinhead }}](./{{ page.jsonldinhead }}) 
 
 ### How should this be embarransingly referenced?
 
@@ -122,7 +122,7 @@ As a real example, the metadata´s catalog of a simulation should include the re
 ...
 ```
 
-## Plain JSON-LD file
+#### The plain JSON-LD file
 
 ```json
 {% include_relative lagoCommonRights.jsonld %}
