@@ -74,11 +74,13 @@ Neither LAGO nor contributors of data to LAGO shall be held liable for any impro
 ## D. Disclaimer of Accuracy of Data
 No warranty, expressed or implied, is made regarding the accuracy, adequacy, completeness, reliability, or usefulness of any data provided. These data are provided &quot;as is.&quot; All warranties of any kind, expressed or implied, including but not limited to fitness for a particular use, freedom from computer viruses, and non-infringement of proprietary rights, are disclaimed.
 
-## APPENDIX. Linking this document
+## TECHNICAL APPENDIX: how to linking this document
 
-This document unifies the rights, disclaimers and acknolegmentes for this LAGO data and metadata release.  
+As stated above, this document unifies the rights, disclaimers and acknolegmentes for this LAGO data and metadata release. 
 
-To accomplish the linked-data requirements, this document has associated a metadata file [{{ page.jsonldinhead }}](./{{ page.jsonldinhead }}) 
+To accomplish the linked-data requirements, this document has associated metatada in:
+- a JSON-LD file [lagoCommonRights.jsonld](./lagoCommonRights.jsonld) 
+- a block ```<script type="application/ld+json">```, which shows the later JSON-LD in the ```<head>``` section of this HTML page.   
 
 ### How should this be embarransingly referenced?
 
