@@ -5,15 +5,16 @@ nav_order: 1
 jsonldinhead: lagoCommonRights.jsonld 
 ---
 
-
-{% include get_md_from_description.html folder="/DMP/rights/lagoCommonRights.jsonld" %}
-
-# LAGO Common Rights 
-{: .no_toc }
-
 |Version| Updated | Date |Contributors|
 |-------|---------|------|------------|
-| 1.1 develop | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
+| 1.1   | {{ site.time }} | 2020-06-01 - today | [Hernán Asorey](https://orcid.org/0000-0002-4559-8785) |
+|  |  |  | [Iván Sidelnik](https://orcid.org/0000-0003-4115-3129) |
+|  |  |  | for the [LAGO Collaboration](/DMP/defs/lagoCollaboration/) |
+
+# Data and Metadata Release, Rights and Disclaimer 
+{: .no_toc }
+
+By using the data provided by the Latin American Giant Observatory (LAGO), you are accepting the following conditions of release and acknowledging the following disclaimers issued by LAGO.
 
 
 ## Table of contents
@@ -26,7 +27,7 @@ jsonldinhead: lagoCommonRights.jsonld
 
 [lagoCommonRights.jsonld](./lagoCommonRights.jsonld) unifies the usual rights of LAGO data and metadata, following the official LAGO schema vocabulary. 
 
-## How should an item be referenced?
+## How should this be referenced?
 
 To preserve the provenance of the linked metadata through time, the GitHub raw link of a certain release of this document must be used:
 
@@ -71,9 +72,6 @@ As a real example, the metadata´s catalog of a simulation should include the re
 ```
 
 
-# Data and Metadata Release, Rights and Disclaimer
-
-By using the data provided by the Latin American Giant Observatory (LAGO), you are accepting the following conditions of release and acknowledging the following disclaimers issued by LAGO.
 
 # A. Definitions
 

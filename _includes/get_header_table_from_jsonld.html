@@ -13,9 +13,14 @@ $().ready(function(){
   $.getJSON( "{{ include.folder }}", function( data ) { 
     var description = data["description"];
     $('#des').append(description);
-    $('#des').append("keooo");
     });  
 });
 </script>
 
 <div id="des"></div>
+
+
+|Version| Issued  | Updated | Date | Download URL |  
+|-------|---------|------|------------|
+| <div id="version"></div> | <div id="issued"></div> | {{ site.time }} | 2020-06-01 - today |
+
