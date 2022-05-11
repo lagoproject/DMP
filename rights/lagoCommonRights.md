@@ -2,7 +2,10 @@
 layout: default
 parent: Rights
 nav_order: 1
+jsonldinhead: lagoCommonRights.jsonld 
 ---
+
+
 
 # LAGO Common Rights 
 {: .no_toc }
@@ -44,7 +47,7 @@ As a real example, the metadata´s catalog of a simulation should include the re
 ...
           },
 "@id":"/sac_60_100.0_75600_QGSII_flat",
-"@type":"Catalog",
+"@type":"Catalogue",
 ...
 "license":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
 "rights":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/rights/lagoCommonRights.jsonld",
