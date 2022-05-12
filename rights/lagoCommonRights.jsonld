@@ -20,11 +20,12 @@
 "descprition" : "By using the data provided by the Latin American Giant Observatory (LAGO), you are accepting the following conditions of release and acknowledging the following disclaimers issued by LAGO.",
 "@type": "Document",
 "landingPage": "https://lagoproject.github.io/DMP/rights/lagoCommonRights/",
-"version":"1.1"
+"version":"1.1",
 "distribution": { "@id": "/rights/lagoCommonRights.md", 
                   "@type": "Distribution"
                   "accessURL": "/rights/lagoCommonRights/",
                   "downloadURL": "/rights/lagoCommonRights.md", 
                   "format": "http://publications.europa.eu/resource/authority/file-type/TXT",  
-                  "mediaType": "https://www.iana.org/assignments/media-types/text/markdown"}
+                  "mediaType": "https://www.iana.org/assignments/media-types/text/markdown"
+                }
 }
