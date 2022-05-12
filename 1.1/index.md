@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Home
+title: 1.1
+permalink: /1.1/
 nav_order: 1
 ---
 
