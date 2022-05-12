@@ -5,6 +5,8 @@ nav_order: 1
 jsonldinhead: lagoCommonRights.jsonld 
 ---
 
+# Data and Metadata Releases, Rights and Disclaimer 
+
 |Tag Release | Issued | Updated | Dates |Contributors|
 |------------|-----   |-------- |------|------------|
 | 1.1 | 2022-05-11 | {{ site.time }} | 2020-06-01 - today | [Hernán Asorey](https://orcid.org/0000-0002-4559-8785) |
@@ -15,7 +17,6 @@ jsonldinhead: lagoCommonRights.jsonld
 {: .no_toc }
 
 By using the data provided by the Latin American Giant Observatory (LAGO), you are accepting the following conditions of release and acknowledging the following disclaimers issued by LAGO.
-
 
 ## Table of contents
 {: .no_toc .text-delta }
