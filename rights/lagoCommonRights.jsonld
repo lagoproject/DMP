@@ -22,7 +22,7 @@
 "landingPage": "https://lagoproject.github.io/DMP/rights/lagoCommonRights/",
 "version":"1.1",
 "distribution": { "@id": "/rights/lagoCommonRights.md", 
-                  "@type": "Distribution"
+                  "@type": "Distribution",
                   "accessURL": "/rights/lagoCommonRights/",
                   "downloadURL": "/rights/lagoCommonRights.md", 
                   "format": "http://publications.europa.eu/resource/authority/file-type/TXT",  
