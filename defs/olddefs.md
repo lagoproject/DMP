@@ -2,7 +2,6 @@
 layout: default
 title: Old Defs
 has_children: true
-parent: Definitions
 ---
 
 # Older definitions
