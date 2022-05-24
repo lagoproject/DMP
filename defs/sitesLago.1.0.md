@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Old Defs.
+parent: Old Defs
 nav_order: 1
 ---
 
