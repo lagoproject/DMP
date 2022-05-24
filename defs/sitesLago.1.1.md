@@ -4,7 +4,7 @@ parent: Definitions
 nav_order: 1
 ---
 
-# LAGO sites 
+# LAGO sites 1.1 
 {: .no_toc }
 
 |Version| Updated | Date |Contributors|
