@@ -1,6 +1,6 @@
 ---
 layout: default
-title: The LAGO Data Management Plan (DMP) document
+title: DMP document
 has_children: true
 permalink: /DMP/
 nav_order: 2
