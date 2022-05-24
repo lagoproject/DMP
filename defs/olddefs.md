@@ -3,6 +3,7 @@ layout: default
 title: Old Defs.
 has_children: true
 nav_order: 10
+parent: Definitions
 ---
 
 # Established definitions

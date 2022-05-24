@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Old Defs.
+parent: Definitions
 nav_order: 1
 ---
 
