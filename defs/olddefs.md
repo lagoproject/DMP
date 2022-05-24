@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Old Defs
+parent: Definitions
 has_children: true
 ---
 
