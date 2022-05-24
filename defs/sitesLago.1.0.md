@@ -1,6 +1,7 @@
 ---
 layout: default
 parent: Old Defs
+grand_parent: Definitions
 ---
 
 # LAGO sites 1.0 
