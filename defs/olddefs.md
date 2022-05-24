@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Old Defs
-has_children: true
+has_children: false
 nav_order: 10
 parent: Definitions
 ---

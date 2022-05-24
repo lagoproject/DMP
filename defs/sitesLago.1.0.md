@@ -1,7 +1,6 @@
 ---
 layout: default
 parent: Old Defs
-nav_order: 1
 ---
 
 # LAGO sites 1.0 
