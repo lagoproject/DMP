@@ -1,8 +1,8 @@
 ---
 layout: default
-#title: Definitions
+# title: Definitions
 has_children: false
-nav_order: 2
+nav_order: 1
 ---
 
 # The LAGO Data Management Plan (DMP) document
