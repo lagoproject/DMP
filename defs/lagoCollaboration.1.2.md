@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: Definitions
-nav_order: 2
+parent: Dev Defs
+grand_parent: Definitions
+---
 ---
 
 # LAGO Collaboration 

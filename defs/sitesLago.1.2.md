@@ -1,15 +1,15 @@
 ---
 layout: default
-parent: Current Defs
+parent: Dev Defs
 grand_parent: Definitions
 ---
 
-# LAGO sites 1.1 
+# LAGO sites 1.2 
 {: .no_toc }
 
 |Version| Updated | Date |Contributors|
 |-------|---------|------|------------|
-| 1.1 develop | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
+| 1.2 develop | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
 
 
 ## Table of contents
