@@ -5,7 +5,7 @@ nav_order: 1
 jsonldinhead: lagoCommonRights.1.1.jsonld 
 ---
 
-# Data and Metadata Releases, Rights and Disclaimer 
+# Data and Metadata Releases, Rights and Disclaimer 1.1
 
 |Tag Release | Issued | Updated | Dates |Contributors|
 |------------|-----   |-------- |------|------------|

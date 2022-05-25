@@ -6,5 +6,5 @@ has_children: true
 nav_order: 8
 ---
 
-# Definitions in developing phase
+# LAGO schemas in developing phase
 
