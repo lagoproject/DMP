@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: Metadata Schema
-permalink: lagoSchema/
+permalink: lagoSchema2/
 nav_exclude: true
 ---
 
