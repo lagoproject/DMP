@@ -3,7 +3,6 @@ layout: default
 parent: Current Defs
 grand_parent: Definitions
 ---
----
 
 # LAGO Collaboration 1.1
 {: .no_toc }

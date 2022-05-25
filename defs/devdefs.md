@@ -2,7 +2,6 @@
 layout: default
 title: Dev Defs
 parent: Definitions
-has_children: true
 nav_fold: false
 ---
 
