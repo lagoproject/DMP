@@ -1,6 +1,7 @@
 ---
 layout: default
 parent: Definitions
+nav_order: 2
 ---
 
 # LAGO Collaboration 1.1

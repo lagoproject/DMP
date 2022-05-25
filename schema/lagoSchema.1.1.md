@@ -1,6 +1,7 @@
 ---
 layout: default
 parent: Metadata Schema
+nav_order: 1
 ---
 
 # Metadata Schema for LAGO 1.1
