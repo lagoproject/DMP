@@ -20,7 +20,7 @@ grand_parent: Definitions
 
 ## What is defined?
 
-[sitesLago.1.1.jsonld](./sitesLago.1.1.jsonld) unifies the definition of the LAGO sites following the official LAGO schema vocabulary. 
+[sitesLago.1.2.jsonld](./sitesLago.1.2.jsonld) unifies the definition of the LAGO sites following the official LAGO schema vocabulary. 
 
 The purpose of the site's definition is:
 - to univocally identify a predefined LAGO site (real or virtual) to be linked by metadata using a public URI;
@@ -47,7 +47,7 @@ As a real example, the metadata´s catalog of a simulation should include the si
 {
 "@context":{
 ...
-            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.jsonld",
+            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.2/schema/lagoSchema.1.2.jsonld",
 ...
           },
 ...
@@ -58,7 +58,7 @@ As a real example, the metadata´s catalog of a simulation should include the si
            "lago:cherenkov":False,
            "lago:debug":False,
            "lago:highEnergyIntModel":"QGSII",
-           "lago:detectorSite":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.1.1.jsonld#sac",
+           "lago:detectorSite":"https://raw.githubusercontent.com/lagoproject/DMP/1.2/defs/sitesLago.1.2.jsonld#sac",
            "lago:obsLev":100,
            "lago:highEnergyCutsSecondaries": False,
            "lago:fluxTime":"Psac_60_100.0_75600_QGSII_flatS",
@@ -70,12 +70,12 @@ As a real example, the metadata´s catalog of a simulation should include the si
 
 ## Defined LAGO sites
 
-{% include generate_html_for_sites.html folder="/DMP/defs/sitesLago.1.1.jsonld" %}
+{% include generate_html_for_sites.html folder="/DMP/defs/sitesLago.1.2.jsonld" %}
 
 
 ## Plain JSON-LD file
 
 ```json
-{% include_relative sitesLago.1.1.jsonld %}
+{% include_relative sitesLago.1.2.jsonld %}
 ```
 

@@ -5,12 +5,12 @@ grand_parent: Definitions
 ---
 ---
 
-# LAGO Collaboration 
+# LAGO Collaboration 1.2
 {: .no_toc }
 
 |Version| Updated | Date |Contributors|
 |-------|---------|------|------------|
-| 1.1 develop | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
+| 1.2 develop | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
 
 
 ## Table of contents
@@ -21,7 +21,7 @@ grand_parent: Definitions
 
 ## What is defined?
 
-[lagoCollaboration.jsonld](./lagoCollaboration.jsonld) unifies the definition of the LAGO Collaboration following the official LAGO schema vocabulary. 
+[lagoCollaboration.1.2.jsonld](./lagoCollaboration.1.2.jsonld) unifies the definition of the LAGO Collaboration following the official LAGO schema vocabulary. 
 
 The purpose of the definition is to univocally identify the LAGO Collaboration employing a public URI for being linked by any metadata. 
 
@@ -29,11 +29,11 @@ The purpose of the definition is to univocally identify the LAGO Collaboration e
 
 To preserve the provenance of the linked metadata through time, the GitHub raw link of a certain release of this document must be used:
 
-`https://raw.githubusercontent.com/lagoproject/DMP/`*\<tag release\>*`/defs/lagoCollaboration.jsonld`
+`https://raw.githubusercontent.com/lagoproject/DMP/`*\<tag release\>*`/defs/lagoCollaboration.1.2.jsonld`
 
 For example:
 
-[https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/lagoCollaboration.jsonld](https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/lagoCollaboration.jsonld)
+[https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/lagoCollaboration.1.2.jsonld](https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/lagoCollaboration.1.2.jsonld)
 
 
 As a real example, the metadata´s catalog of a simulation should include the reference to the [DCAT-AP2](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe) property [publisher](https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld#publisher):
@@ -42,7 +42,7 @@ As a real example, the metadata´s catalog of a simulation should include the re
 {
 "@context":{
 ...
-            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.jsonld",
+            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.1.2.jsonld",
             "@vocab":"https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
 ...
           },
@@ -51,7 +51,7 @@ As a real example, the metadata´s catalog of a simulation should include the re
 "title":"sac_60_100.0_75600_QGSII_flat",
 "description":"A Complete Corsika Simulation",
 "publisher":{
-             "@id":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/lagoCollaboration.jsonld",
+             "@id":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/lagoCollaboration.1.2.jsonld",
              "@type":"lago:Organization"
             },
 ...
@@ -61,6 +61,6 @@ As a real example, the metadata´s catalog of a simulation should include the re
 ## Plain JSON-LD file
 
 ```json
-{% include_relative lagoCollaboration.jsonld %}
+{% include_relative lagoCollaboration.1.2.jsonld %}
 ```
 
