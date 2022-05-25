@@ -1,7 +1,6 @@
 ---
 layout: default
-parent: Current Defs
-grand_parent: Definitions
+parent: Definitions
 ---
 
 # LAGO Collaboration 1.1
