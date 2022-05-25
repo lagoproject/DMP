@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Dev Schemas
+parent: Old Schemas
 grand_parent: Metadata Schema
 nav_order: 1
 ---
