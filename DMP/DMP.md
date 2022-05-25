@@ -6,4 +6,4 @@ permalink: /DMP/
 nav_order: 2
 ---
 
-# Rights
+# Released DMP in LAGO Collaboration

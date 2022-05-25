@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Old Defs
-parent: Definitions
+parent: DMP document
 has_children: true
 nav_order: 9
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Old Defs
-parent: Definitions
+title: Old Schemas
+parent: Metadata Schema
 has_children: true
 nav_order: 9
 ---

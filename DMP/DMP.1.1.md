@@ -6,12 +6,12 @@ nav_order: 1
 parent: DMP document
 ---
 
-# The LAGO Data Management Plan (DMP) document
+# The LAGO Data Management Plan (DMP) document 1.1
 {: .no_toc }
 
 |Version| Updated | Date |Contributors|
 |-------|---------|------|------------|
-| 1.1 develop | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
+| 1.1   | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
 
 
 ## Table of contents
