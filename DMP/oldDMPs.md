@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Old Defs
+title: Old DMPs
 parent: DMP document
 has_children: true
 nav_order: 9
 ---
 
-# Older definitions
+# Older DMPs
 
-This section compiles outdated definitions of certain LAGO actors following older versions of the [metadata schema](/schema/lagoSchema). The objective is to maintain the linking among  metadata with public URIs through the time.
+This section compiles outdated documents depicting the LAGO DMP. The objective is to maintain the linking among metadata with public URIs through the time.
