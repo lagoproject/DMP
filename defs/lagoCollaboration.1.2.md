@@ -33,7 +33,7 @@ To preserve the provenance of the linked metadata through time, the GitHub raw l
 
 For example:
 
-[https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/lagoCollaboration.1.2.jsonld](https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/lagoCollaboration.1.2.jsonld)
+[https://raw.githubusercontent.com/lagoproject/DMP/1.2/defs/lagoCollaboration.1.2.jsonld](https://raw.githubusercontent.com/lagoproject/DMP/1.2/defs/lagoCollaboration.1.2.jsonld)
 
 
 As a real example, the metadata´s catalog of a simulation should include the reference to the [DCAT-AP2](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe) property [publisher](https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld#publisher):
@@ -42,7 +42,7 @@ As a real example, the metadata´s catalog of a simulation should include the re
 {
 "@context":{
 ...
-            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.1.2.jsonld",
+            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.2/schema/lagoSchema.1.2.jsonld",
             "@vocab":"https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
 ...
           },
@@ -51,7 +51,7 @@ As a real example, the metadata´s catalog of a simulation should include the re
 "title":"sac_60_100.0_75600_QGSII_flat",
 "description":"A Complete Corsika Simulation",
 "publisher":{
-             "@id":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/lagoCollaboration.1.2.jsonld",
+             "@id":"https://raw.githubusercontent.com/lagoproject/DMP/1.2/defs/lagoCollaboration.1.2.jsonld",
              "@type":"lago:Organization"
             },
 ...

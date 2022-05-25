@@ -61,6 +61,6 @@ As a real example, the metadata´s catalog of a simulation should include the re
 ## Plain JSON-LD file
 
 ```json
-{% include_relative lagoCollaboaration.1.1.jsonld %}
+{% include_relative lagoCollaboration.1.1.jsonld %}
 ```
 

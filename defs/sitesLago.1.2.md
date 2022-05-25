@@ -34,11 +34,11 @@ Note that the sites give support or have given support (physically or virtually)
 
 To preserve the provenance of the linked metadata through time, you must use the GitHub raw link to a certain release of this document, plus `#` and the short site codename:
 
-`https://raw.githubusercontent.com/lagoproject/DMP/`*\<tag release\>*`/defs/sitesLago.1.1.jsonld`*#\<site codename\>*
+`https://raw.githubusercontent.com/lagoproject/DMP/`*\<tag release\>*`/defs/sitesLago.1.2.jsonld`*#\<site codename\>*
 
 For example:
 
-[https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.1.1.jsonld#sac](https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.1.1.jsonld#sac)
+[https://raw.githubusercontent.com/lagoproject/DMP/1.2/defs/sitesLago.1.2.jsonld#sac](https://raw.githubusercontent.com/lagoproject/DMP/1.2/defs/sitesLago.1.2.jsonld#sac)
 
 
 As a real example, the metadata´s catalog of a simulation should include the site´s reference:
