@@ -9,7 +9,7 @@ jsonldinhead: lagoCommonRights.1.1.jsonld
 # Data and Metadata Releases, Rights and Disclaimer 1.1
 {: .no_toc }
 
-(NOTE: please consult the associated [technical annex](lagoCommonRightsTechAnnex.1.1/) to correctly link this document) 
+(NOTE: please consult the associated [technical annex](/rights/lagoCommonRightsTechAnnex.1.1/) to correctly link this document) 
 
 |Tag Release | Issued | Updated | Dates |Contributors|
 |------------|-----   |-------- |------|------------|
