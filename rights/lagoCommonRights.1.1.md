@@ -1,6 +1,7 @@
 ---
 layout: default
 parent: Rights
+has_children: true
 nav_order: 1
 jsonldinhead: lagoCommonRights.1.1.jsonld 
 ---
