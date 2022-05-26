@@ -1,7 +1,7 @@
 {
   "@context" : {
     "@base" : "https://raw.githubusercontent.com/lagoproject/DMP/1.1", 
-    "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.1.1ma.jsonld#",
+    "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.1.1.jsonld#",
     "dct" : "http://purl.org/dc/terms/",
     "@vocab" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld#",
     "_dcatap" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
@@ -23,8 +23,8 @@
 "version":"1.1",
 "distribution": { "@id": "/rights/lagoCommonRights.1.1.md", 
                   "@type": "Distribution",
-                  "accessURL": "/rights/lagoCommonRights.1.1/",
-                  "downloadURL": "/rights/lagoCommonRights.1.1..md", 
+                  "accessURL": "https://lagoproject.github.io/DMP/rights/lagoCommonRights.1.1/",
+                  "downloadURL": "/rights/lagoCommonRights.1.1.md", 
                   "format": "http://publications.europa.eu/resource/authority/file-type/TXT",  
                   "mediaType": "https://www.iana.org/assignments/media-types/text/markdown"
                 }
