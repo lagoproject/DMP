@@ -6,10 +6,10 @@ nav_order: 1
 jsonldinhead: lagoCommonRights.1.1.jsonld 
 ---
 
-(NOTE: please consult the associated [technical annex](lagoCommonRightsTechAnnex.1.1/) to correctly link this document) 
-
 # Data and Metadata Releases, Rights and Disclaimer 1.1
 {: .no_toc }
+
+(NOTE: please consult the associated [technical annex](lagoCommonRightsTechAnnex.1.1/) to correctly link this document) 
 
 |Tag Release | Issued | Updated | Dates |Contributors|
 |------------|-----   |-------- |------|------------|
