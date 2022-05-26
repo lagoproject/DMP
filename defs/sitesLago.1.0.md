@@ -47,7 +47,7 @@ As a real example, the metadata´s catalog of a simulation should include the si
 {
 "@context":{
 ...
-            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.0/schema/lagoSchema.jsonld",
+            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.0/schema/lagoSchema.1.0.jsonld",
 ...
           },
 ...
@@ -70,7 +70,7 @@ As a real example, the metadata´s catalog of a simulation should include the si
 
 ## Defined LAGO sites
 
-{% include generate_html_for_sites.html folder="/DMP/defs/sitesLago.1.0.jsonld" %}
+{% include generate_html_for_vocab.1.0.html folder="/DMP/defs/sitesLago.1.0.jsonld" %}
 
 
 ## Plain JSON-LD file
