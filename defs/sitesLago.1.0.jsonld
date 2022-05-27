@@ -1,7 +1,7 @@
 {
 "@context" : {
-    "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.jsonld",
-    "@base" : "https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#",
+    "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.0/schema/lagoSchema.1.0.jsonld",
+    "@base" : "https://raw.githubusercontent.com/lagoproject/DMP/1.0/defs/sitesLago.1.0.jsonld#",
     "@vocab" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
     "_dcatap" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
     "_dcatap_landing_page" : "http://data.europa.eu/r5r/"
