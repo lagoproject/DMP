@@ -14,6 +14,7 @@
 "releaseDate" : "2022-05-10",
 "conformsTo" : { "@id" : "https://github.github.com/gfm/" , "@type" : "Document", "title": "GitHub Flavored Markdown Spec", "preferredLabel" :"GFM"},
 "relatedResource" : "https://lagoproject.net/lagoCommonRights/1.1.html",
+"isVersionOf": [ "https://doi.org/10.5281/zenodo.6599863", "https://zenodo.org/record/6599863", "https://lagoproject.net/lagoCommonRights/1.1" ],
 "publisher" :  { "@id" : "/defs/lagoCollaboration.1.1.jsonld" , "@type" : "lago:Organization", "name" : "LAGO Collaboration" },
 "license" : "https://creativecommons.org/licenses/by-nc-sa/4.0/",
 "accessRigths" : "@id",
