@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Data and Metadata Releases, Rights and Disclaimer 1.1
+parent: LAGO Data and Metadata Releases, Rights and Disclaimer 1.1
 grand_parent: Rights
 ---
 
@@ -14,10 +14,11 @@ To accomplish the linked-data requirements, this document has associated metatad
 
 ### How should this be embarransingly referenced?
 
-- ZENODO DOI
-- lagoproject page
-- github dynamic page...
-- CURL... agains the page.
+- Zenodo DOI: https://doi.org/10.5281/zenodo.6599863
+- Zenodo Record: https://zenodo.org/record/6599863 
+- Copy on lagoproject page: https://lagoproject.net/lagoCommonRights/1.1
+- GitHub dynamic page: https://lagoproject.github.io/DMP/rights/lagoCommonRights.1.1/
+- CURL... agaisnt the GitHub dynamic page: (TBD.)
 
 ### How should this be referenced for linked-data?
 
