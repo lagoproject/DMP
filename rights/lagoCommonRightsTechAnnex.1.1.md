@@ -5,13 +5,16 @@ grand_parent: Rights
 ---
 
 ## TECHNICAL APPENDIX: how to linking this document
+{: .no_toc .text-delta }
 
-As stated above, this document unifies the rights, disclaimers and acknolegmentes for this LAGO data and metadata release. 
+As stated above, the ["LAGO Data and Metadata Releases, Rights and Disclaimer 1.1" document](/rights/lagoCommonRights.1.1/) unifies the rights, disclaimers and acknolegmentes for the LAGO data and metadata 1.1 main release. 
 
-To accomplish the linked-data requirements, this document has associated metatada in:
+To accomplish the linked-data requirements, the aforementioned document has associated metatada in:
 - a JSON-LD file [lagoCommonRights.1.1.jsonld](./lagoCommonRights.1.1.jsonld) 
 - a block ```<script type="application/ld+json">```, which shows the later JSON-LD in the ```<head>``` section of this HTML page.   
 
+- Therefore:
+{:toc}
 
 ### How should this be referenced for linked-data?
 

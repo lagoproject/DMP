@@ -72,7 +72,7 @@ As a real example, the metadata´s catalog of a simulation should include the si
 
 Although it is **discouraged** because these methods do not preserve the metadata provenance, it could be sometimes needed linking this document using only the **main release** (the ``Major.Minor``) as reference and forgoting the GitHub tag release.
 
-As this document has ``Major.Minor = 1.1`` version, you can use links to [this](./sitesLago.1.1/) dynamic web page, adding also the plus `#` and the short site codename. For example:
+As this document has ``Major.Minor = 1.1`` version, you can use links to [this](./) dynamic web page, adding also the plus `#` and the short site codename. For example:
 
 [https://lagoproject.github.io/DMP/defs/sitesLago.1.1/#ima](https://lagoproject.github.io/DMP/defs/sitesLago.1.1/#ima)
 
