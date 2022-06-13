@@ -5,7 +5,6 @@ grand_parent: Rights
 ---
 
 ## TECHNICAL APPENDIX: how to linking this document
-{: .no_toc .text-delta }
 
 As stated above, the ["LAGO Data and Metadata Releases, Rights and Disclaimer 1.1" document](/rights/lagoCommonRights.1.1/) unifies the rights, disclaimers and acknolegmentes for the LAGO data and metadata 1.1 main release. 
 
@@ -68,7 +67,7 @@ As this document has ``Major.Minor = 1.1`` version, there are alternative ways:
   
   
 
-#### The plain JSON-LD file
+### The plain JSON-LD file
 
 ```json
 {% include_relative lagoCommonRights.1.1.jsonld %}
