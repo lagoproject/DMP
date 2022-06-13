@@ -32,13 +32,13 @@ Note that the sites give support or have given support (physically or virtually)
 
 ## How should an item be referenced?
 
-To preserve the provenance of the linked metadata through time, you must use the GitHub raw link to a certain release of this document, plus `#` and the short site codename:
+To preserve the provenance of the linked metadata through time, you must use the GitHub raw link to a certain tag release of this document, plus `#` and the short site codename:
 
-`https://raw.githubusercontent.com/lagoproject/DMP/`*\<tag release\>*`/defs/sitesLago.1.1.jsonld`*#\<site codename\>*
+`https://raw.githubusercontent.com/lagoproject/DMP/`*\<Major.Minor.Patch\>*`/defs/sitesLago.1.1.jsonld`*#\<site codename\>*
 
 For example:
 
-[https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.1.1.jsonld#sac](https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.1.1.jsonld#sac)
+[https://raw.githubusercontent.com/lagoproject/DMP/1.1.0/defs/sitesLago.1.1.jsonld#sac](https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.1.1.jsonld#sac)
 
 
 As a real example, the metadata´s catalog of a simulation should include the site´s reference:
@@ -47,7 +47,7 @@ As a real example, the metadata´s catalog of a simulation should include the si
 {
 "@context":{
 ...
-            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.1.1.jsonld",
+            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.1.0/schema/lagoSchema.1.1.jsonld",
 ...
           },
 ...
@@ -67,6 +67,19 @@ As a real example, the metadata´s catalog of a simulation should include the si
 ...
 ...
 ```
+
+### How could an item be embarransingly referenced?
+
+Although it is **discouraged** because these methods do not preserve the metadata provenance, it could be sometimes needed linking this document using only the **main release** (the ``Major.Minor``) as reference and forgoting the GitHub tag release.
+
+As this document has ``Major.Minor = 1.1`` version, you can use links to [this](./sitesLago.1.1/) dynamic web page, adding also the plus `#` and the short site codename. For example:
+
+[https://lagoproject.github.io/DMP/defs/sitesLago.1.1/#ima](https://lagoproject.github.io/DMP/defs/sitesLago.1.1/#ima)
+
+
+The mechanism is similar to other vocabularies published in Internet. Nevertheless, it could include changes which were not taken into account when the metadata was generated.
+
+
 
 ## Defined LAGO sites
 
