@@ -13,7 +13,7 @@ To accomplish the linked-data requirements, the aforementioned document has asso
 - a JSON-LD file [lagoCommonRights.1.1.jsonld](./lagoCommonRights.1.1.jsonld) 
 - a block ```<script type="application/ld+json">```, which shows the later JSON-LD in the ```<head>``` section of this HTML page.   
 
-- Therefore:
+- TOC
 {:toc}
 
 ### How should this be referenced for linked-data?

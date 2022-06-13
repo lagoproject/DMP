@@ -38,7 +38,7 @@ To preserve the provenance of the linked metadata through time, you must use the
 
 For example:
 
-[https://raw.githubusercontent.com/lagoproject/DMP/1.1.0/defs/sitesLago.1.1.jsonld#sac](https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.1.1.jsonld#sac)
+[https://raw.githubusercontent.com/lagoproject/DMP/1.1.0/defs/sitesLago.1.1.jsonld#sac](https://raw.githubusercontent.com/lagoproject/DMP/1.1.0/defs/sitesLago.1.1.jsonld#sac)
 
 
 As a real example, the metadata´s catalog of a simulation should include the site´s reference:
