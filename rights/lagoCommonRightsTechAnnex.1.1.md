@@ -5,12 +5,15 @@ grand_parent: Rights
 ---
 
 ## TECHNICAL APPENDIX: how to linking this document
+{: .no_toc }
 
 As stated above, the ["LAGO Data and Metadata Releases, Rights and Disclaimer 1.1" document](/rights/lagoCommonRights.1.1/) unifies the rights, disclaimers and acknolegmentes for the LAGO data and metadata 1.1 main release. 
 
 To accomplish the linked-data requirements, the aforementioned document has associated metatada in:
 - a JSON-LD file [lagoCommonRights.1.1.jsonld](./lagoCommonRights.1.1.jsonld) 
 - a block ```<script type="application/ld+json">```, which shows the later JSON-LD in the ```<head>``` section of this HTML page.   
+
+There are several ways to perform linking, described in this technical appendix.
 
 - TOC
 {:toc}
