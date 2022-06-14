@@ -9,7 +9,7 @@ grand_parent: Definitions
 
 |Version| Updated | Date |Contributors|
 |-------|---------|------|------------|
-| 1.2 develop | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
+| 1.2   | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
 
 
 ## Table of contents
@@ -32,13 +32,13 @@ Note that the sites give support or have given support (physically or virtually)
 
 ## How should an item be referenced?
 
-To preserve the provenance of the linked metadata through time, you must use the GitHub raw link to a certain release of this document, plus `#` and the short site codename:
+To preserve the provenance of the linked metadata through time, you must use the GitHub raw link to a certain tag release of this document, plus `#` and the short site codename:
 
-`https://raw.githubusercontent.com/lagoproject/DMP/`*\<tag release\>*`/defs/sitesLago.1.2.jsonld`*#\<site codename\>*
+`https://raw.githubusercontent.com/lagoproject/DMP/`*\<Major.Minor.Patch\>*`/defs/sitesLago.1.2.jsonld`*#\<site codename\>*
 
 For example:
 
-[https://raw.githubusercontent.com/lagoproject/DMP/1.2/defs/sitesLago.1.2.jsonld#sac](https://raw.githubusercontent.com/lagoproject/DMP/1.2/defs/sitesLago.1.2.jsonld#sac)
+[https://raw.githubusercontent.com/lagoproject/DMP/1.2.0/defs/sitesLago.1.2.jsonld#sac](https://raw.githubusercontent.com/lagoproject/DMP/1.2.0/defs/sitesLago.1.2.jsonld#sac)
 
 
 As a real example, the metadata´s catalog of a simulation should include the site´s reference:
@@ -47,7 +47,7 @@ As a real example, the metadata´s catalog of a simulation should include the si
 {
 "@context":{
 ...
-            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.2/schema/lagoSchema.1.2.jsonld",
+            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.2.0/schema/lagoSchema.1.2.jsonld",
 ...
           },
 ...
@@ -58,7 +58,7 @@ As a real example, the metadata´s catalog of a simulation should include the si
            "lago:cherenkov":False,
            "lago:debug":False,
            "lago:highEnergyIntModel":"QGSII",
-           "lago:detectorSite":"https://raw.githubusercontent.com/lagoproject/DMP/1.2/defs/sitesLago.1.2.jsonld#sac",
+           "lago:detectorSite":"https://raw.githubusercontent.com/lagoproject/DMP/1.2.0/defs/sitesLago.1.2.jsonld#sac",
            "lago:obsLev":100,
            "lago:highEnergyCutsSecondaries": False,
            "lago:fluxTime":"Psac_60_100.0_75600_QGSII_flatS",
@@ -67,6 +67,19 @@ As a real example, the metadata´s catalog of a simulation should include the si
 ...
 ...
 ```
+
+### How could an item be embarranssingly referenced?
+
+Although it is **discouraged** because these methods do not preserve the metadata provenance, it could be sometimes needed linking this document using only the **main release** (the ``Major.Minor``) as reference and forgoting the GitHub tag release.
+
+As this document has ``Major.Minor = 1.2`` version, you can use links to [this](./) dynamic web page, adding also the plus `#` and the short site codename. For example:
+
+[https://lagoproject.github.io/DMP/defs/sitesLago.1.2/#ima](https://lagoproject.github.io/DMP/defs/sitesLago.1.2/#ima)
+
+
+The mechanism is similar to other vocabularies published in Internet. Nevertheless, it could include changes which were not taken into account when the metadata was generated.
+
+
 
 ## Defined LAGO sites
 

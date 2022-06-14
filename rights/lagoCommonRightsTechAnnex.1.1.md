@@ -53,7 +53,7 @@ As a real example, the metadata´s catalog of a simulation should include the re
 ...
 ```
 
-### How could this be embarransingly referenced?
+### How could this document be embarranssingly referenced?
 
 Although it is **discouraged** because these methods do not preserve the metadata provenance, it could be sometimes needed linking this document using only the **main release** (the ``Major.Minor``) as reference and forgetting the GitHub tag release.
 

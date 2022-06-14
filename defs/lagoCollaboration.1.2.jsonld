@@ -1,7 +1,7 @@
 {
   "@context" : { 
     "@vocab" : "http://schema.org/",
-    "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.2/schema/lagoSchema.1.2.jsonld#",
+    "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.2.0/schema/lagoSchema.1.2.jsonld#",
     "foaf" : "http://xmlns.com/foaf/0.1/",
     "org" : "https://www.w3.org/TR/vocab-org/#", 
     "owl" : "http://www.w3.org/2002/07/owl#",   

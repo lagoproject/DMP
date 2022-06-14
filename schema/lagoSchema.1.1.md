@@ -88,7 +88,7 @@ Consequently, you will can use *"lago:"* as a shortcut of any vocabulary type:
 ...
 ```
 
-### How could an item be embarransingly referenced?
+### How could an item be embarranssingly referenced?
 
 Although it is **discouraged** because these methods do not preserve the metadata provenance, it could be sometimes needed linking this document using only the **main release** (the ``Major.Minor``) as reference and forgoting the GitHub tag release.
 

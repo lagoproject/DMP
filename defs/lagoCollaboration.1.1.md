@@ -25,7 +25,7 @@ nav_order: 2
 The purpose of the definition is to univocally identify the LAGO Collaboration employing a public URI for being linked by any metadata. 
 
 
-## How should this document be referenced for linked-data?
+## How should this definition be referenced for linked-data?
 
 To preserve the provenance of the linked metadata through time, the GitHub raw link of a certain tag release (``Major.Minor.Patch``) of this document must be used:
 
@@ -58,18 +58,18 @@ As a real example, the metadata´s catalog of a simulation should include the re
 ...
 ```
 
-### How could this be embarransingly referenced?
+### How could this definition be embarranssingly referenced?
 
 Although it is **discouraged** because these methods do not preserve the metadata provenance,  it could be sometimes needed referencing using alternative ways.
 
-- Links to other official LAGO pages:
-  - Directly the main page for LAGO Collaboration [http://lagoproject.net][http://lagoproject.net] page.
+- Links to other official LAGO pages: gererally are updated but not corresponding with the the release of software used for generating the metadata.
+  - Directly, the main page for LAGO Collaboration [http://lagoproject.net](http://lagoproject.net) page.
   - The current list of collaborators: [https://lagoproject.net/collab.html](https://lagoproject.net/collab.html)
-  - CURL command against lagoproject.net page: (TBD.)
+  - CURL command against *lagoproject.net* page: (TBD.)
   - The GitHub repository for LAGO Collaboration: [https://github.com/lagoproject/](https://github.com/lagoproject/),
   - The DockerHub repositroy for LAGO Collaboration: [https://hub.docker.com/u/lagocollaboration](https://hub.docker.com/u/lagocollaboration)
   
-- Alternative static documents: they could be outdated with respect to te release of software used for generating the metadata.
+- Alternative static documents: they could be outdated with respect to the release of software used for generating the metadata.
   - arXiv DOI: [https://doi.org/10.48550/arXiv.1909.10039](https://doi.org/10.48550/arXiv.1909.10039)  
   
 - Linking this document using only the **main release** (the ``Major.Minor``) as reference and forgetting the GitHub tag release, altough it could include changes which were not taken into account when the metadata was generated. As this document has ``Major.Minor = 1.1`` version

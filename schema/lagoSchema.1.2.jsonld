@@ -12,7 +12,8 @@
    },
    {
     "@id": "lago:Organization",
-    "@type": "foaf:Organization",
+    "@type": "sdo:Organization",
+    "owl:equivalentClass" : [ "foaf:Organization", "org:OrganizationalCollaboration"],
     "dcat:subClassOf" : "Agent",
     "name": {
       "@id" : "http://xmlns.com/foaf/0.1/name",
@@ -359,7 +360,7 @@
     }
   ],
 "@context" : {
-    "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.2/schema/lagoSchema.1.2.jsonld",
+    "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.2.0/schema/lagoSchema.1.2.jsonld",
     "@vocab" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
     "_dcatap" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
     "_dcatap_landing_page" : "http://data.europa.eu/r5r/",
@@ -371,6 +372,7 @@
     "prov" : "http://www.w3.org/ns/prov#",
     "foaf" : "http://xmlns.com/foaf/0.1/",
     "sdo" : "http://schema.org/",
+    "org" : "https://www.w3.org/TR/vocab-org/#",
     "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
   }
 }

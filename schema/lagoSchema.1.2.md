@@ -10,7 +10,7 @@ nav_order: 1
 
 |Version| Updated | Date |Contributors|
 |-------|---------|------|------------|
-| 1.2 devel   | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
+| 1.2   | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
 
 ## Table of contents
 {: .no_toc}
@@ -51,8 +51,69 @@ Secondly, the developer can use [this document](./lagoSchema.1.2.md) and the [la
     - new or existing LAGO sites,
     - users, institutions, etc.
 
+## How should an item be referenced?
 
-## Vocabulary item by item
+To preserve the provenance of the linked metadata through time, you must use the GitHub raw link to a certain tag release of this document, 
+
+`https://raw.githubusercontent.com/lagoproject/DMP/`*\<Major.Minor.Patch\>*`/schema/lagoSchema.1.2.jsonld`
+
+Consequently, you must include this link in the `context` section of the JSONL-LD file, tagging the vocoabulary as *"lago"*: 
+
+```json
+{
+"@context":{
+...
+            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.2.0/schema/lagoSchema.1.2.jsonld",
+...
+          },
+}
+```
+
+Consequently, you will can use *"lago:"* as a shortcut of any vocabulary type:
+
+```json
+...      
+          {
+           "@id":"/sac_60_100.0_75600_QGSII_flat#artiParams",
+           "@type":"lago:ArtiParams",
+           "lago:cherenkov":False,
+           "lago:debug":False,
+           "lago:highEnergyIntModel":"QGSII",
+           "lago:detectorSite":"https://raw.githubusercontent.com/lagoproject/DMP/1.2.0/defs/sitesLago.1.2.jsonld#sac",
+           "lago:obsLev":100,
+           "lago:highEnergyCutsSecondaries": False,
+           "lago:fluxTime":"Psac_60_100.0_75600_QGSII_flatS",
+           "lago:flatArray":True
+           },
+...
+...
+```
+
+### How could an item be embarranssingly referenced?
+
+Although it is **discouraged** because these methods do not preserve the metadata provenance, it could be sometimes needed linking this document using only the **main release** (the ``Major.Minor``) as reference and forgoting the GitHub tag release.
+
+As this document has ``Major.Minor = 1.2`` version, you can use links to [this](./) dynamic web page, adding also the plus `#` and the vocabulary type. For example:
+
+[https://lagoproject.github.io/DMP/schema/lagoSchema.1.2/#obsLev](https://lagoproject.github.io/DMP/schema/lagoSchema.1.2/#obsLev)
+
+
+Additionally, you could include [this](./) dynamic web page adding the plus `#` into the `context`:
+
+```json
+{
+"@context":{
+...
+            "lago":"https://lagoproject.github.io/DMP/schema/lagoSchema.1.2/#",
+...
+          },
+}
+``` 
+
+The mechanism is similar to other vocabularies published through Internet. Nevertheless, it could include changes which were not taken into account when the metadata was generated.
+
+
+## The LAGO Vocabulary item by item
 
 {% include generate_html_for_vocab.html folder="/DMP/schema/lagoSchema.1.2.jsonld" vocabulary="true" %}
 
