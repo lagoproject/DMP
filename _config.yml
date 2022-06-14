@@ -5,7 +5,7 @@ title: "LAGO Data Management Plan"
 remote_theme: lagoproject/just-the-docs-static
 # Color scheme supports "light" (default) and "dark"
 color_scheme: "light"
-logo: "_includes/images/lago-logo-90-dmp.png"
+logo: "/_includes/images/lago-logo-90-dmp.png"
 # logo: "https://lagoproject.net/images/lago-logo-90.png"
 # baseurl: "/DMP" # the subpath of your site, e.g. /blog
 # url: "https://lagoproject.github.io/DMP" # the base hostname & protocol for your site, e.g. http://example.com
