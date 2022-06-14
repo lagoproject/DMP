@@ -1,6 +1,8 @@
 # Minimun config
 title: "LAGO Data Management Plan"
-remote_theme: pmarsceill/just-the-docs
+# remote_theme: pmarsceill/just-the-docs
+# ajrm: make the theme static for LAGO
+remote_theme: lagoproject/just-the-docs-static
 # Color scheme supports "light" (default) and "dark"
 color_scheme: "light"
 # logo: "/images/lago.png"
