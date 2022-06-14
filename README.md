@@ -24,16 +24,16 @@ However, in order to simplify and reduce the number of files in the repository:
 - The filename of the linkable documents & definitions will contain only the `Major.Minor` number, just before their extension.
 - GitHub Tagging will also contain the patching, being the `Major.Minor.Patch`. 
 
-Thus, the `Major.Minor` is considered the **main release** on wich the development orbit around and the reference identifier of every version. 
+Thus, the `Major.Minor` is considered the **main release** or **version** on wich the development orbit around and the reference identifier of every version. Meanwhile, the `Major.Minor.Patch` is the **tag release** used in GitHub for consolidating patches. 
 
 ### Repository organization 
 
 This [repository](https://github.com/lagoproject/DMP/) follows a fixed directory structure to preserve linking to definitions through the time:
-- *DMP/*: contains all the formal DMP documents improved and extended; 
-- *schema/*: all releases of the schema for LAGO data and metadata;
-- *defs/*: the different referenciable definitions of LAGO items (sites, institutions, harware,...) for a certain LAGO schema;
-- *rights/*: disclaimers and specific rights on the date when certain LAGO datasets are published;
-- *notes/*: release notes of every main release.
+- `*DMP/*`: contains all the formal DMP documents improved and extended; 
+- `*schema/*`: all releases of the schema for LAGO data and metadata;
+- `*defs/*`: the different referenciable definitions of LAGO items (sites, institutions, harware,...) for a certain LAGO schema;
+- `*rights/*`: disclaimers and specific rights on the date when certain LAGO datasets are published;
+- `*notes/*`: release notes of every main release.
 
 The linkable documents in these folders are distinguised with their `Major.Minor` release number (i.e. their main release number). Therefore:
 - The web page will always show the last updated definitions for a `Major.Minor` release, for example: [https://lagoproject.github.io/DMP/schema/lagoSchema.1.1/](https://lagoproject.github.io/DMP/schema/lagoSchema.1.1/)
