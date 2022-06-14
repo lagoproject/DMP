@@ -18,7 +18,7 @@ There are several ways to perform linking, described in this technical appendix.
 - TOC
 {:toc}
 
-### How should this be referenced for linked-data?
+### How should this document be referenced for linked-data?
 
 To preserve the provenance of the linked metadata through time, the GitHub raw link of a certain tag release (``Major.Minor.Patch``) of this document must be used:
 
@@ -67,8 +67,7 @@ As this document has ``Major.Minor = 1.1`` version, there are alternative ways:
 - Dynamic documents: links to the DMP web page, they could include changes which were not taken into account when the metadata was generated.
   - GitHub dynamic page: [https://lagoproject.github.io/DMP/rights/lagoCommonRights.1.1/](https://lagoproject.github.io/DMP/rights/lagoCommonRights.1.1/)
   - CURL command agaisnt the GitHub dynamic page: (TBD.)
-  
-  
+
 
 ### The plain JSON-LD file
 

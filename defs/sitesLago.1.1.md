@@ -58,7 +58,7 @@ As a real example, the metadata´s catalog of a simulation should include the si
            "lago:cherenkov":False,
            "lago:debug":False,
            "lago:highEnergyIntModel":"QGSII",
-           "lago:detectorSite":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.1.1.jsonld#sac",
+           "lago:detectorSite":"https://raw.githubusercontent.com/lagoproject/DMP/1.1.0/defs/sitesLago.1.1.jsonld#sac",
            "lago:obsLev":100,
            "lago:highEnergyCutsSecondaries": False,
            "lago:fluxTime":"Psac_60_100.0_75600_QGSII_flatS",
