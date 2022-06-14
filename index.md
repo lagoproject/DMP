@@ -17,6 +17,7 @@ However, a DMP is actually a guide that references specifications, mechanisms or
 Due these reasons, we use this public code repository for enabling the traceability of the changes performed in the DMP and their related definitions. Likewise, this Web page shows the current, developing and old versions of these documents.  
 
 ### Current version and updating date
+{: .no_toc }
 
 Every document that requires versioning include a header similar to:
 
@@ -26,10 +27,5 @@ Every document that requires versioning include a header similar to:
 
 The `Major.Minor` release currently in use is the "**1.1**", while the "1.2" is in development.
 
-More information about versioning is in the [Contributing] (./README/) section.
+More information about versioning is in the [Contributing](./README/) section.
 
-### The LAGO DMP and its related documents
-{: .no_toc }
-
-- TOC 
-{:toc}
