@@ -4,6 +4,8 @@ title: Home
 nav_order: 1
 ---
 
+This Web page unifies the Data Management Plan for the [Latin American Giant Observatory (LAGO)](http://lagoproject.net/). 
+
 ### Introduction to the Data Management Plan
 {: .no_toc }
 A Data Management Plan (DMP) is a formal document that outlines how data are to be handled both during a research project and after the project is completed. 
