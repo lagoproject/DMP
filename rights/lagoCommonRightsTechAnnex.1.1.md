@@ -55,7 +55,7 @@ As a real example, the metadata´s catalog of a simulation should include the re
 
 ### How could this be embarransingly referenced?
 
-Although it is **discouraged** because these methods do not preserve the metadata provenance, it could be sometimes needed linking this document using only the **main release** (the ``Major.Minor``) as reference and forgoting the GitHub tag release.
+Although it is **discouraged** because these methods do not preserve the metadata provenance, it could be sometimes needed linking this document using only the **main release** (the ``Major.Minor``) as reference and forgetting the GitHub tag release.
 
 As this document has ``Major.Minor = 1.1`` version, there are alternative ways:  
 
