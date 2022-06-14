@@ -1,15 +1,15 @@
 ---
 layout: default
-parent: Definitions
-nav_order: 1
+parent: Old Defs
+grand_parent: Definitions
 ---
 
-# LAGO sites 
+# LAGO sites 1.0 
 {: .no_toc }
 
 |Version| Updated | Date |Contributors|
 |-------|---------|------|------------|
-| 1.1 develop | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
+| 1.0 develop | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
 
 
 ## Table of contents
@@ -20,7 +20,7 @@ nav_order: 1
 
 ## What is defined?
 
-[sitesLago.jsonld](./sitesLago.jsonld) unifies the definition of the LAGO sites following the official LAGO schema vocabulary. 
+[sitesLago.1.0.jsonld](./sitesLago.1.0.jsonld) unifies the definition of the LAGO sites following the official LAGO schema vocabulary. 
 
 The purpose of the site's definition is:
 - to univocally identify a predefined LAGO site (real or virtual) to be linked by metadata using a public URI;
@@ -34,11 +34,11 @@ Note that the sites give support or have given support (physically or virtually)
 
 To preserve the provenance of the linked metadata through time, you must use the GitHub raw link to a certain release of this document, plus `#` and the short site codename:
 
-`https://raw.githubusercontent.com/lagoproject/DMP/`*\<tag release\>*`/defs/sitesLago.jsonld`*#\<site codename\>*
+`https://raw.githubusercontent.com/lagoproject/DMP/`*\<tag release\>*`/defs/sitesLago.1.0.jsonld`*#\<site codename\>*
 
 For example:
 
-[https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#sac](https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#sac)
+[https://raw.githubusercontent.com/lagoproject/DMP/1.0/defs/sitesLago.1.0.jsonld#sac](https://raw.githubusercontent.com/lagoproject/DMP/1.0/defs/sitesLago.1.0.jsonld#sac)
 
 
 As a real example, the metadata´s catalog of a simulation should include the site´s reference:
@@ -47,7 +47,7 @@ As a real example, the metadata´s catalog of a simulation should include the si
 {
 "@context":{
 ...
-            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.jsonld",
+            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.0/schema/lagoSchema.1.0.jsonld",
 ...
           },
 ...
@@ -58,7 +58,7 @@ As a real example, the metadata´s catalog of a simulation should include the si
            "lago:cherenkov":False,
            "lago:debug":False,
            "lago:highEnergyIntModel":"QGSII",
-           "lago:detectorSite":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/defs/sitesLago.jsonld#sac",
+           "lago:detectorSite":"https://raw.githubusercontent.com/lagoproject/DMP/1.0/defs/sitesLago.1.0.jsonld#sac",
            "lago:obsLev":100,
            "lago:highEnergyCutsSecondaries": False,
            "lago:fluxTime":"Psac_60_100.0_75600_QGSII_flatS",
@@ -70,12 +70,12 @@ As a real example, the metadata´s catalog of a simulation should include the si
 
 ## Defined LAGO sites
 
-{% include generate_html_for_sites.html folder="/DMP/defs/sitesLago.jsonld" %}
+{% include generate_html_for_vocab.1.0.html folder="/DMP/defs/sitesLago.1.0.jsonld" %}
 
 
 ## Plain JSON-LD file
 
 ```json
-{% include_relative sitesLago.jsonld %}
+{% include_relative sitesLago.1.0.jsonld %}
 ```
 

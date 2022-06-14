@@ -1,0 +1,378 @@
+{
+"@graph": [
+{"_comment" : "------ Some prov:Agent that acts in LAGO proccesses : Person, Organization and Software. Defining these claess is not our business far away that were univocally identified and conforms to DCAP-AP --------"},
+   {
+    "@id": "lago:Person",
+    "@type": "sdo:Person",
+    "owl:equivalentClass" : "foaf:Person",
+    "dcat:subClassOf" : "Agent",
+    "seeAlso" : ["foaf:Person", "sdo:Person", "Agent"],
+    "comment" : [ { "@language" : "en", "@value" : "You must use the ORCID link as @id of this Class. ORCID is currently only using the Schema.org vocabulary for JSON-LD. sdo:Person is explicitely defined as a equivalent class in Schema.org and can be considered as a extension of foaf:Person. Therefore, it could be used in DCAT-AP as subclass of Agent (formerly as foaf:Agent), providing the @id as the ORCID URI (https://orcid.org/yyyy-zzzz-wwww-xxxx), and the required Agent:name property." },  
+                  { "@language" : "es", "@value" : "Se debe usar en enlace ORCID como  @id de esta Clase. Actualmente ORCID utiliza únicamente el vocabulario Schema.org para JSON-LD. La definición de sdo:Person en Schema.org indica explicitamente la equivalencia con foaf:Person y puede considerarse una extensión. Por lo tanto podrí­a usarse en DCAT-AP como subclase de Agent, (formalmente definida como foaf:Agent), ya que proporciona el id@ como la URI ORCID (https://orcid.org/yyyy-zzzz-wwww-xxxx), y la propiedad obligatoria Agent:name ." } ]
+   },
+   {
+    "@id": "lago:Organization",
+    "@type": "sdo:Organization",
+    "owl:equivalentClass" : [ "foaf:Organization", "org:OrganizationalCollaboration"],
+    "dcat:subClassOf" : "Agent",
+    "name": {
+      "@id" : "http://xmlns.com/foaf/0.1/name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "owl:equivalentProperty" : { "@id": "http://www.w3.org/2000/01/rdf-schema#label" }
+    },  
+    "seeAlso" : [ "foaf:Organization", "Agent"],
+    "comment" : [ { "@language" : "en", "@value" : "" },
+                  { "@language" : "es", "@value" : "Se debe usar el enlace simple al LCNAF-Corporate Name de la Libería del Congreso de EEUU http://id.loc.gov/rwo/agents/<LCCN> como @id de esta clase.  A diferencia de de sdo:Person con ORCID, no existe un registro de organizaciones con una API que devuelva JSON+LD con un vocabulario/esquema simplificado. De las dos opciones más adecuadas, ISNI.org, no tiene API JSON (está en desarrollo) y no contiene todas las organizaciones. La otra opción es la Librería del Congreso de EEUU, que asigna un identificador único LCCN para cada LC Name Authority File (LCNAF) - Corporate Name y permite consultar sus datos en formato SKOS/JSON, usando la API JSON+LD a traves de los servicios web http://id.loc.gov/authorities/names/<LCCN> (modo extendido)  o http://id.loc.gov/rwo/agents/<LCCN> (modo simplificado). El problema es que aún usando el modo simplificado la información puede ser excesiva, ya que enlaza a trabajos publicados. Sin embargo en el JSON se puede identificar claramente que junto con el @id del modo simplificado aparece el tipo de clase http://xmlns.com/foaf/0.1/Organization y la propiedad rdf-schema#label con su @value el nombre de la organización. Se equipara Agent:name con rdfs:label" } ]
+   },
+   {
+    "@id": "lago:Software",
+    "@type": "sdo:SoftwareSourceCode",
+    "owl:equivalentClass" : "prov:SoftwareAgent",
+    "dcat:subClassOf" : "Agent",
+    "sdo:codeRepository" : { "@type" : "sdo:URL" },
+    "sdo:runtimePlatform" : {"@type" : "lago:runtimePlatform" },
+    "seeAlso" : [ "prov:SoftwareAgent", "sdo:SoftwareSourceCode", "Agent"],
+    "comment" : [ { "@language" : "en", "@value" : "It identifies any concrete release of software used for simulation, measure, cleaning or analysis procedures. It always refers to a COMMIT in the source code, identified with a HASH at the CVS (but, it will be needed, a compressed file, using other type of hasisng, such as MD5SUM, to guarantee its immutability). Therefore, in GitHub, the @id is the link for the COMMIT (https://api.github.com/org/repo/git/commits/COMMIT_HASH and the sdo:codeRepository will be these COMMIT but browsable for humans ( https://github.com/org/repo/tree/COMMIT_HASH). It is mandatory assign an Agent:name. However, it is optional to use sdo:runtimePlatform (redefined as lago:runtimePlatform) to point to other lago:Software on which it was executed, for example to some deployment with Docker in GitHub." },  
+                  { "@language" : "es", "@value" : "Identifica una versión concreta de un software usado para simular, medir, limpiar o analizar los datos de LAGO. Se refiere siempre a un COMMIT concreto en el código fuente, identificado con un código HASH en un CVS (o bien, si no fuera posible, a un fichero comprimido, univocamente identificado con algún tipo de HASH, como MD5SUM). Por tanto, en GitHub, el @id es el link del COMMIT https://api.github.com/org/repo/git/commits/COMMIT_HASH y la propiedad sdo:codeRepository sería ese COMMIT navegable para humanos  https://github.com/org/repo/tree/COMMIT_HASH. Es obligatorio asignar un Agent:name. Pero es opcional el uso de sdo:runtimePlatform (redefinida como lago:runtimePlatform) para señalar otro lago:Software sobre el que se ejecuta, por ejemplo una integración Docker en GitHub)." } ]
+    },
+   {
+    "@id": "lago:runtimePlatform", 
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:Software" },
+    "dcat:range": { "@id" : "lago:Software" },
+    "comment" : [ { "@language" : "en", "@value" : "" },  
+                  { "@language" : "es", "@value" : "" } ]
+   },
+{"_comment" : "------ ARTI do_sims main Class and parameters to create a Catalog of a complete Simulation --------"},
+   {
+    "@id": "lago:ArtiParams",
+    "@type" : [ "rdfs:Class", "owl:Class" ],
+    "comment" : [ { "@language" : "en", "@value" : "" },  
+                  { "@language" : "es",  "@value" : "" } ]
+   },
+   {
+    "@id": "lago:fluxTime", 
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:duration" },
+    "dcat:label": "fluxTime", 
+    "comment" : [ { "@language" : "en", "@value" : "Flux time (in seconds) for simulations. Use XML Schema 1.1, the format is P<secods>S (while in 1.0 was PT<seconds>S)" },  
+                  { "@language" : "es", "@value" : "" } ]
+   },
+   {
+    "@id": "lago:highEnergyIntModel", 
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:string" },
+    "dcat:label": "highEnergyIntModel",  
+    "comment" : [ { "@language" : "en", "@value" : "Define the high interaction model to be used (EPOS or QGSII)" },  
+                  { "@language" : "es", "@value" : "" } ]
+   },
+   {
+    "@id": "lago:detectorSite",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "lago:DetectorSite" },
+    "dcat:label": "detectorSite", 
+    "comment" : [ { "@language" : "en", "@value" : "Description (default values) of predefined detector sites at https://lagoproject.github.io/DMP/defs/sitesLago.jsonld" }, 
+                  { "@language" : "es", "@value" : "Descripción (opciones por defecto) de detectores predefinidos en https://lagoproject.github.io/DMP/defs/sitesLago.jsonld" } ]
+   },
+   {
+    "@id": "lago:rigidity",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:float" },
+    "@default" : "0.0",
+    "dcat:label": "rigidity", 
+    "comment" : [ { "@language" : "en", "@value" : "Rigidity cutoff; 0.0 = disabled; value in GV = enabled" },  
+                  { "@language" : "es", "@value" : "Corte de la rigidez; 0.0 = deshabilitado; valor en GV = habilitado" } ]
+   },
+   {
+    "@id": "lago:tMin",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:float" },
+    "@default" : "0",
+    "dcat:label": "tMin", 
+    "comment" : [ { "@language" : "en", "@value" : "Low edge of zenith angle, in degrees" },  
+                  { "@language" : "es", "@value" : "Límite inferior del ángulo cenital, en grados" } ]
+   },
+   {
+    "@id": "lago:tMax",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:float" },
+    "@default" : "90",
+    "dcat:label": "tMax", 
+    "comment" : [ { "@language" : "en", "@value" : "High edge of zenith angle, in degrees" },  
+                  { "@language" : "es", "@value" : "Límite superior del ángulo cenital, en grados" } ]
+   },
+   {
+    "@id": "lago:lLimit",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:float" },
+    "@default" : "5",
+    "dcat:label": "lLimit", 
+    "comment" : [ { "@language" : "en", "@value" : "Lower limit of the primary particle energy in GeV" },  
+                  { "@language" : "es", "@value" : "Límite inferior de la energía de las partículas primarias en GeV" } ]
+   },
+   {
+    "@id": "lago:uLimit",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:float" },
+    "@default" : "1e6",
+    "dcat:label": "uLimit",      
+    "comment" : [ { "@language" : "en", "@value" : "Upper limit of the primary particle energy in GeV" },  
+                  { "@language" : "es", "@value" : "Límite superior de la energía de las partículas primarias en GeV" } ]
+   },
+   {
+    "@id": "lago:flatArray",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:boolean" },
+    "@default" : true,
+    "dcat:label": "flatArray",
+    "comment" : [ { "@language" : "en", "@value" : "Select volumetric detector mode (default=flat array)" },
+                  { "@language" : "es", "@value" : "" } ]
+   },
+   {
+    "@id": "lago:cherenkov",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:boolean" },
+    "@default" : false,
+    "dcat:label": "cherenkov",    
+    "comment" : [ { "@language" : "en", "@value" : "Enable CHERENKOV mode" },  
+                  { "@language" : "es", "@value" : "" } ]
+   },
+   {
+    "@id": "lago:debug",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:boolean" },
+    "@default" : false,
+    "dcat:label": "debug",
+    "comment" : [ { "@language" : "en", "@value" : "Enable DEBUG mode" },  
+                  { "@language" : "es", "@value" : "" } ]
+   },
+   {
+    "@id": "lago:defaults",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:boolean" },
+    "dcat:label": "defaults",
+    "@default" : false,
+    "comment" : [ { "@language" : "en", "@value" : "If true, other parameters not explicitly stored in metadata are the default values set by the specific release of ARTI. Otherwise these values are unknow (set manually by the user via prompt)." },  
+                  { "@language" : "es", "@value" : "Si es verdadero, los par,ametros que no aparecen en los metadatos corresponden a los valores por defecto de la versión concreta de ARTI que se estuviera usando. Si está marcado como falso, los valores que no aparecen en los metadatos son desconocidos, porque el usuario los ha puesto manualmente cuando la aplicación se lo ha preguntado por consola." } ]
+   },
+   {
+    "@id": "lago:highEnergyCutsSecondaries",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:ArtiParams" },
+    "dcat:range": { "@id" : "xsd:float" },
+    "dcat:label": "highEnergyCutsSecondaries",
+    "@default" : "0.0",
+    "comment" : [ { "@language" : "en", "@value" : "Enable high energy cuts for secondaries; 0.0 = disabled, value in GeV = enabled" },  
+                  { "@language" : "es", "@value" : "" } ]
+   },  
+{"_comment" : "------ Defining installed detectors and simulated detectors, this implies estaiblishing equivalencies among measures and software parameters --------"},
+   {
+    "@id": "lago:DetectorSite",
+    "@type" : [ "rdfs:Class", "owl:Class" ],
+    "dcat:subClassOf" : "Agent",
+    "comment" : [ { "@language" : "en", "@value" : "Main characteristics of a detector, such as location, mangetic field, recommended parameters for simuation, hardware/software intalled ..." },  
+                  { "@language" : "es", "@value" : "Caractersísticas principales de un Detector como su ubicación, coordenadas magnéticas, parámetros recomendados en simulación, hardware/software instalado..." } ]
+   },
+   {
+    "@id": "lago:CorsikaInput",
+    "@type" : [ "rdfs:Class", "owl:Class" ],
+    "comment" : [ { "@language" : "en", "@value" : "Set of effectively used parameters in (i.e extracted from) a CORSIKA input. The significant ones for reusing, datamining and BigData are only included." },  
+                  { "@language" : "es", "@value" : "Conjunto de parámetros efectivamente usados para crear (o extraidos de) un fichero INPUT de CORSIKA, solo los que son para reutilización, minería de datos y BigData." } ]
+   },
+   {
+     "@id": "lago:corsikaParam",
+     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+     "dcat:domain": [ { "@id" : "lago:obsLev" },
+                      { "@id" : "lago:magnet" },
+                      { "@id" : "lago:Atmosphere" },
+                      { "@id" : "lago:Atmod" },
+                      { "@id" : "lago:arrang" } ],
+     "dcat:range": { "@id" : "xsd:string" },
+     "dcat:label": "corsikaParam",
+     "comment" : [ { "@language" : "en", "@value" : "" },  
+                   { "@language" : "es", "@value" : "" } ]
+  },
+{"_comment" : "------ common properties to describe characteristics of a DetectorSite (Agent), some of which are included also in a lago:CorsikaInput --------"},
+   {
+    "@id": "lago:belongsLago",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": { "@id" : "lago:DetectorSite" },
+    "dcat:range": { "@id" : "xsd:boolean" },
+    "@default" : false,
+    "dcat:label": "belongsLago",
+    "comment" : [ { "@language" : "en", "@value" : "" },
+                  { "@language" : "es", "@value" : "" } ]
+   },
+   {
+     "@id": "lago:obsLev",
+     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+     "dcat:domain": [ { "@id" : "lago:DetectorSite" },
+                      { "@id" : "lago:CorsikaInput" },
+                      { "@id" : "lago:ArtiParams" } ],
+     "dcat:range": { "@id": "xsd:float"},
+     "dcat:label": "obsLev",
+     "lago:corsikaParam" : "OBSLEV",
+     "comment" : [ { "@language" : "en", "@value" : "Observation Level (altitude) above sea level [cm]. xsd:double type allows decimal (i.e. 2.10), non decimal (28467) and scientific notation (1633e2) values within 64-bits (double word)." },  
+                   { "@language" : "es", "@value" : "[cm] por encima del nivel del mar. El tipo xsd:double permite valores decimales (2.10), no decimales (28467) y en notación cientifica (1633e2) con tamaño máximo de 64-bits (doble palabra)." } ]
+    },
+   {
+    "@id": "lago:magnet",
+    "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+    "dcat:domain": [ { "@id" : "lago:DetectorSite" },
+                     { "@id" : "lago:CorsikaInput" } ],
+    "dcat:range": { "@id": "lago:MagnetComponents" },    
+    "dcat:label": "magnet",
+    "lago:corsikaParam" : "MAGNET", 
+    "comment" : [ { "@language" : "en", "@value" : " Earth's mag. field (MAGNET), see values at http://www.ngdc.noaa.gov/geomagmodels/struts/calcIGRFWMM or currently at https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm"},  
+                  { "@language" : "es", "@value" : "" } ]
+   },
+   {
+    "@id": "lago:MagnetComponents",
+    "@type" : [ "rdfs:Class", "owl:Class" ],
+    "comment" : [ { "@language" : "en", "@value" : " Components of the Earth's mag. field (MAGNET), Horizontal (bx) and Vertical (bx)" },  
+                  { "@language" : "es", "@value" : "" } ]
+   },
+    { 
+     "@id": "lago:bDate",
+     "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+     "dcat:domain": { "@id" : "lago:MagnetComponents" },
+     "dcat:range": { "@id" : "xsd:date" },
+     "dcat:label": "bDate", 
+     "comment" : [ { "@language" : "en", "@value" : "The date for which the magnetic field values are calculated, in the form yyyy-mm-dd. (xsd:date)" },  
+                   { "@language" : "es", "@value" : "" } ]
+    },
+    {
+      "@id": "lago:bx",
+      "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+      "dcat:domain": { "@id" : "lago:MagnetComponents" },
+      "dcat:range": { "@id": "xsd:decimal"},
+      "dcat:label": "bx",
+      "comment" : [ { "@language" : "en", "@value" : "Horizontal comp. of the Earth's mag. field (MAGNET) [North,muT], see values at https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" },  
+                    { "@language" : "es", "@value" : "Componente horizontal del campo magnético de la Tierra (MAGNET) [North,muT], ver valores en https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" } ]
+    },
+    {
+      "@id": "lago:bz",
+      "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+      "dcat:domain": { "@id" : "lago:MagnetComponents" },
+      "dcat:range": { "@id": "xsd:decimal"},
+      "dcat:label": "bz",
+      "comment" : [ { "@language" : "en", "@value" : "Vertical comp. of the Earth's mag. field (MAGNET) [downwards,muT], see values at https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" },  
+                    { "@language" : "es", "@value" : "Componente vertical del campo magnético de la Tierra (MAGNET) [downwards,muT], ver valores en https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm" } ]
+    },
+    { 
+      "@id": "lago:bi",
+      "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+      "dcat:domain": { "@id" : "lago:MagnetComponents" },
+      "dcat:range": { "@id": "xsd:decimal"},
+      "dcat:label": "bx",
+      "comment" : [ { "@language" : "en", "@value" : "" },  
+                    { "@language" : "es", "@value" : "" } ]
+    },
+    {
+      "@id": "lago:atmcrd",
+      "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+      "dcat:domain": [ { "@id" : "lago:DetectorSite" },
+                       { "@id" : "lago:CorsikaInput"} ],
+      "dcat:range":  [ { "@id": "lago:Atmosphere" }, { "@id": "lago:Atmod" } ],
+      "dcat:label": "atmcrd",
+      "comment" : [ { "@language" : "en", "@value" : "Atmospheric type, posible values: ATMOSPHERE, ATMOD" },  
+                    { "@language" : "es", "@value" : "" } ]
+    },
+    { 
+      "@id": "lago:Atmosphere",
+      "@type" : [ "rdfs:Class", "owl:Class" ],
+      "lago:corsikaParam" : "ATMOSPHERE",
+      "comment" : [ { "@language" : "en", "@value" : "Atmospheric type, fixed value: ATMOSPHERE" },  
+                    { "@language" : "es", "@value" : "" } ]
+    },
+    { 
+      "@id": "lago:Atmod",
+      "@type" : [ "rdfs:Class", "owl:Class" ],
+      "lago:corsikaParam" : "ATMOD",
+      "comment" : [ { "@language" : "en", "@value" : "Atmospheric type, fixed vaule: ATMOD" },  
+                    { "@language" : "es", "@value" : "" } ]
+    },
+    {
+      "@id": "lago:modAtm",
+      "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+      "dcat:domain": [ { "@id" : "lago:Atmosphere" }, { "@id" : "lago:Atmod" } ],
+      "dcat:range": { "@id" : "xsd:string" },
+      "dcat:label": "modAtm",
+      "comment" : [ { "@language" : "en", "@value" : "Atmospheric model (can be ATMOSPHERE or ATMOD), some posible values: 19, E1, E2, E10, E29, E30(=wi), E31(=sp), E32(=su), E33(=au)" },  
+                    { "@language" : "es", "@value" : "" } ]
+    },
+    {
+      "@id": "lago:arrang",
+      "@type" : [ "rdf:Property", "owl:ObjectProperty" ],
+      "dcat:domain": [ { "@id" : "lago:DetectorSite" },
+                       { "@id" : "lago:CorsikaInput"} ],
+      "dcat:range": { "@id": "xsd:decimal"},
+      "dcat:label": "arrang",
+      "lago:corsikaParam" : "ARRANG",
+      "comment" : [ { "@language" : "en", "@value" : "" },  
+                    { "@language" : "es", "@value" : "" } ]
+    },
+   {
+    "@id" : "geometry",
+    "@type" : "geometry",
+    "dcat:domain" : [ { "@id" : "Location" },
+                      { "@id" : "lago:DetectorSite" } ],
+    "dcat:range" : { "@id": "geo:Point" },    
+    "dcat:label" : "point",
+    "seeAlso" : [ "https://www.w3.org/ns/locn#locn:geometry", 
+                  "https://www.w3.org/TR/vocab-dcat-2/#Property:location_geometry" ],
+    "comment" : [ { "@language" : "en", "@value" : ""},  
+                  { "@language" : "es", "@value" : "" } ]
+   },
+   {"_comment" : "Reiterative including geo:Point and its propierties. It is as is in W3C WGS84 vocab: http://www.w3.org/2003/01/geo/wgs84_pos#). Added for guiding/clarifying."},
+   {
+    "@id": "geo:latitude",
+    "@type":"http://www.w3.org/2001/XMLSchema#float",
+    "dcat:domain": { "@id": "geo:Point" },
+    "dcat:label" : "lat",
+    "owl:equivalentProperty" : { "@id": "sdo:GeoCoordinates#latitude" }
+   },
+   {
+    "@id": "geo:longitude",
+     "@type":"http://www.w3.org/2001/XMLSchema#float",
+     "dcat:label" : "long",
+     "dcat:domain": { "@id": "geo:Point" },
+     "owl:equivalentProperty" : { "@id": "sdo:GeoCoordinates#longitude" }
+    },
+   {
+    "@id": "geo:altitude",
+     "@type":"http://www.w3.org/2001/XMLSchema#float",
+     "dcat:label" : "alt",
+     "dcat:domain": { "@id": "geo:Point" },
+     "owl:equivalentProperty" : { "@id": "sdo:GeoCoordinates#altitude" }
+    }
+  ],
+"@context" : {
+    "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.2.0/schema/lagoSchema.1.2.jsonld",
+    "@vocab" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
+    "_dcatap" : "https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
+    "_dcatap_landing_page" : "http://data.europa.eu/r5r/",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "dcat" : "http://www.w3.org/ns/dcat#",
+    "prov" : "http://www.w3.org/ns/prov#",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "sdo" : "http://schema.org/",
+    "org" : "https://www.w3.org/TR/vocab-org/#",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+  }
+}

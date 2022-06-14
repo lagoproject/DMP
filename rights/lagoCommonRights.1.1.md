@@ -1,20 +1,22 @@
 ---
 layout: default
 parent: Rights
+has_children: true
 nav_order: 1
-jsonldinhead: lagoCommonRights.jsonld 
+jsonldinhead: lagoCommonRights.1.1.jsonld 
 ---
 
-# Data and Metadata Releases, Rights and Disclaimer 
+# LAGO Data and Metadata Releases, Rights and Disclaimer 1.1
+{: .no_toc }
 
-|Tag Release | Issued | Updated | Dates |Contributors|
+(NOTE: please consult the associated [technical annex](/rights/lagoCommonRightsTechAnnex.1.1/) to correctly link this document) 
+
+|Version | Issued | Updated | Dates |Contributors|
 |------------|-----   |-------- |------|------------|
 | 1.1 | 2022-05-11 | {{ site.time }} | 2020-06-01 - today | [Hernán Asorey](https://orcid.org/0000-0002-4559-8785) |
 |  |  |  |  | [Iván Sidelnik](https://orcid.org/0000-0003-4115-3129) |
 |  |  |  |  | for the [LAGO Collaboration](/DMP/defs/lagoCollaboration/) |
 
-# Data and Metadata Releases, Rights and Disclaimer 
-{: .no_toc }
 
 By using the data provided by the Latin American Giant Observatory (LAGO), you are accepting the following conditions of release and acknowledging the following disclaimers issued by LAGO.
 
@@ -74,62 +76,4 @@ Neither LAGO nor contributors of data to LAGO shall be held liable for any impro
 
 ## D. Disclaimer of Accuracy of Data
 No warranty, expressed or implied, is made regarding the accuracy, adequacy, completeness, reliability, or usefulness of any data provided. These data are provided &quot;as is.&quot; All warranties of any kind, expressed or implied, including but not limited to fitness for a particular use, freedom from computer viruses, and non-infringement of proprietary rights, are disclaimed.
-
-## TECHNICAL APPENDIX: how to linking this document
-
-As stated above, this document unifies the rights, disclaimers and acknolegmentes for this LAGO data and metadata release. 
-
-To accomplish the linked-data requirements, this document has associated metatada in:
-- a JSON-LD file [lagoCommonRights.jsonld](./lagoCommonRights.jsonld) 
-- a block ```<script type="application/ld+json">```, which shows the later JSON-LD in the ```<head>``` section of this HTML page.   
-
-### How should this be embarransingly referenced?
-
-- ZENODO DOI
-- lagoproject page
-- github dynamic page...
-- CURL... agains the page.
-
-### How should this be referenced for linked-data?
-
-To preserve the provenance of the linked metadata through time, the GitHub raw link of a certain release of this document must be used:
-
-`https://raw.githubusercontent.com/lagoproject/DMP/`*\<tag release\>*`/rights/lagoCommonRights.jsonld`
-
-For example:
-
-[https://raw.githubusercontent.com/lagoproject/DMP/1.1/rights/lagoCommonRights.jsonld](https://raw.githubusercontent.com/lagoproject/DMP/1.1/rights/lagoCommonRights.jsonld)
-
-
-As a real example, the metadata´s catalog of a simulation should include the reference as the [DCAT-AP2](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe) property [*rights*](https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld#rigths):
-
-```json
-{
-"@context":{
-...
-            "lago":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/schema/lagoSchema.jsonld",
-            "@vocab":"https://raw.githubusercontent.com/SEMICeu/DCAT-AP/2.0.0/releases/2.0.0/dcat-ap_2.0.0.jsonld",
-...
-          },
-"@id":"/sac_60_100.0_75600_QGSII_flat",
-"@type":"Catalogue",
-...
-"license":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
-"rights":"https://raw.githubusercontent.com/lagoproject/DMP/1.1/rights/lagoCommonRights.jsonld",
-"accessRigths":"http://publications.europa.eu/resource/authority/access-right/RESTRICTED",
-"creator":{
-           "@id":"https://orcid.org/0000-0001-6497-753X",
-           "@type":"lago:Person"
-          },
-...
-...
-```
-
-#### The plain JSON-LD file
-
-```json
-{% include_relative lagoCommonRights.jsonld %}
-```
-
-
 
