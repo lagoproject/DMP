@@ -1,11 +1,11 @@
 ---
 layout: default
 parent: Rights
-nav_order: 4
+nav_order: 2
 ---
 
 
-Acceptable Use Policy (AUP) for LAGO VO
+Acceptable Use Policy (AUP) for LAGO VO 1.1
 ------------------------------------------
 
 This Acceptable Use Policy applies to all members of LAGO Virtual Organisation (named as "LAGO-AAI" in GEANT/eduTEAMs and "lagoproject.net" in EGI/check-in), hereafter referred to as LAGO VO, concerning the use of the GEANT/eduTEAMs and the EOSC/EGI Infrastructure. The LAGO Collaboration (http://lagoproject.net) owns and gives authority to this policy. 

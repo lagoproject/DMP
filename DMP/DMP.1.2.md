@@ -1,16 +1,16 @@
 ---
 layout: default
-#title: Definitions
-has_children: false
-nav_order: 2
+parent: Dev DMPs
+grand_parent: DMP document
+nav_order: 1
 ---
 
-# The LAGO Data Management Plan (DMP) document
+# The LAGO Data Management Plan (DMP) document 1.2
 {: .no_toc }
 
 |Version| Updated | Date |Contributors|
 |-------|---------|------|------------|
-| 1.1 develop | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
+| 1.2 devel  | {{ site.time }} | 2020-06-01 - today | LAGO Collaboration |
 
 
 ## Table of contents

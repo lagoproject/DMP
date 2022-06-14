@@ -1,0 +1,21 @@
+{
+  "@context" : { 
+    "@vocab" : "http://schema.org/",
+    "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.2.0/schema/lagoSchema.1.2.jsonld#",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "org" : "https://www.w3.org/TR/vocab-org/#", 
+    "owl" : "http://www.w3.org/2002/07/owl#",   
+  },
+    "@id" : "https://lagoproject.net/", 
+    "@type" : "Organization",
+    "owl:equivalentClass" : [ "lago:Organization", "foaf:Organization", "org:OrganizationalCollaboration"],
+    "name" : "LAGO Collaboration",
+    "description" : "The LAGO Collaboration is a non-centralized, distributed and highly collaborative grid of scientific institutions. The main goal of the LAGO Collaboration is the design, installation, commissioning, operation, coordination, maintenance, and, eventually, the decommissioning of the Latin American Giant Observatory (LAGO). LAGO is an astroparticle observatory on a global scale, working as an integrated detection network, hereinafter referred to as 'the LAGO detection network' or simply 'the LAGO network', of single or small arrays of detectors, hereinafter referred to as 'the LAGO detectors', that are deployed at different geographical locations, hereinafter referred as “the LAGO sites”.",
+    "url" : "https://lagoproject.net/",
+    "sameAs" : [ "https://lagoproject.github.io/DMP/defs/lagoCollaboration.1.2/",
+                 "https://lagoproject.net/collab.html",
+                 "https://doi.org/10.48550/arXiv.1909.10039",
+                 "https://github.com/lagoproject/",
+                 "https://hub.docker.com/u/lagocollaboration" ],
+    "logo" : "https://lagoproject.net/images/lago-logo-90.png"
+}

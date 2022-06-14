@@ -20,15 +20,13 @@ function itemnize_json( json, context, link ) {
       if ( (element[0] !== "http") && (element[0] !== "https") ) {
         innid = element[1];
         vocab = element[0];
-      } else return '<a href="'+ json +'">'+ json +'</a>';
-    } else return json;
+      } else return json;
+    };
     var contexturl = context[vocab];
-    if ( vocab == "lago" ) { 
-        contexturl = 'https://lagoproject.github.io/DMP/schema/lagoSchema/';
-        innid = json;
-    };    
+    if ( vocab == "lago" ) contexturl = '';  
     if ( contexturl[contexturl.length-1] !== '#' )  contexturl = contexturl + '#';
     if ( vocab == "sdo" ) contexturl = context[vocab];
+    else innid = json;
     html = '<a href="'+ contexturl + innid +'">'+ json +'</a>';
   } else {
     if ( !(Array.isArray(json)) ) {
@@ -71,7 +69,7 @@ $().ready(function(){
 			    <tr class="header">
 				<th>@type</th>';	  
 	  for (var k=0; k<keys.length; k++) {
-	    table = table + ' <th>'+  itemnize_json(keys[k] , data["@context"], true ) + '</th>';
+	    table = table + ' <th>'+ keys[k] + '</th>';
 	  };
 	  table = table +'	</tr>
 			</thead>
@@ -85,9 +83,9 @@ $().ready(function(){
 			</tbody>
 		    </table>';
           if ("dcat:domain" in graphelements[i]) {
-            $('#iproperties').append(indexhtml);
+                  $('#iproperties').append(indexhtml);
             $('#properties').append(headerhtml);
-            $('#properties').append(table);				  
+                  $('#properties').append(table);				  
           } else {
             $('#iclasses').append(indexhtml);
             $('#classes').append(headerhtml);
@@ -113,7 +111,7 @@ $().ready(function(){
 
 ### Properties
 
-<div id="properties"></div>
+<div  id="properties"></div>
 
 {% else %}
 
