@@ -11,7 +11,7 @@ jsonldinhead: lagoCommonRights.1.1.jsonld
 
 (NOTE: please consult the associated [technical annex](/rights/lagoCommonRightsTechAnnex.1.1/) to correctly link this document) 
 
-|Tag Release | Issued | Updated | Dates |Contributors|
+|Version | Issued | Updated | Dates |Contributors|
 |------------|-----   |-------- |------|------------|
 | 1.1 | 2022-05-11 | {{ site.time }} | 2020-06-01 - today | [Hernán Asorey](https://orcid.org/0000-0002-4559-8785) |
 |  |  |  |  | [Iván Sidelnik](https://orcid.org/0000-0003-4115-3129) |
