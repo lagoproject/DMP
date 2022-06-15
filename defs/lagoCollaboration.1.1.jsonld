@@ -4,7 +4,7 @@
     "lago" : "https://raw.githubusercontent.com/lagoproject/DMP/1.1.0/schema/lagoSchema.1.1.jsonld#",
     "foaf" : "http://xmlns.com/foaf/0.1/",
     "org" : "https://www.w3.org/TR/vocab-org/#", 
-    "owl" : "http://www.w3.org/2002/07/owl#",   
+    "owl" : "http://www.w3.org/2002/07/owl#"   
   },
     "@id" : "https://lagoproject.net/", 
     "@type" : "Organization",
