@@ -46,7 +46,7 @@ Every collaborator should belong to some LAGO scientific group. To apply for one
 ``https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group=<GROUP>``
 
 The collaborations are mainly distributed by countries, where every person corresponds to one group:
-{% assign countries = "argentina, bolivia, brazil, chile, colombia, ecuador, guatamala, mexico, peru, spain" | split: ", " %}
+{% assign countries = "argentina, bolivia, brazil, chile, colombia, ecuador, guatemala, mexico, peru, spain" | split: ", " %}
 {% for c in countries %}
   - "{{c}}" : [https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group={{c}}](https://mms.eduteams.org/fed/registrar/?vo=LAGO-AAI&group={{c}})
 {% endfor %}
