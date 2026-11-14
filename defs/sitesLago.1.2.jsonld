@@ -626,6 +626,62 @@
       }
     },
     {
+      "@id": "cid",
+      "@type": "lago:DetectorSite",
+      "name": "CIDA, Merida, Venezuela",
+      "lago:belongsLago": true,
+      "qualifiedAttribution": {
+        "@type": "lago:Organisation",
+        "name": "CIDA"
+      },
+      "geometry": {
+        "@id": "cid#geometry",
+        "@type": "geo:Point",
+        "geo:latitude": "8.7864",
+        "geo:longitude": "-70.8719",
+        "geo:altitude": "3600"
+      },
+      "lago:obsLev": {
+        "@default": "360000"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:magnet": {
+        "@default": {
+          "lago:bDate": "2026-11-14",
+          "conformsTo": {
+            "@id": "https://doi.org/10.5281/zenodo.14012302",
+            "@type": [
+              "dct:Standard",
+              "DataSet"
+            ],
+            "title": "IGRF",
+            "description": "International Geomagnetic Reference Field",
+            "landingpage": "https://www.ngdc.noaa.gov/IAGA/vmod/igrf.html",
+            "version": "14",
+            "dataservice": {
+              "title": "Geomagnetic Model Web Service",
+              "endpointURL": "http://geomag.bgs.ac.uk/web_service/GMModels/"
+            },
+            "temporalCoverage": {
+              "startDate": "2025-01-01",
+              "endDate": "2029-12-31"
+            },
+            "temporalResolution": "P1D"
+          },
+          "lago:bx": "26.507",
+          "lago:bz": "16.276",
+          "lago:bi": "31.541"
+        }
+      }
+    },
+    {
       "@id": "cop",
       "@type": "lago:DetectorSite",
       "name": "Copahue, Argentina",
@@ -1406,6 +1462,62 @@
           "lago:bx": "26.743",
           "lago:bz": "15.955",
           "lago:bi": "31.443"
+        }
+      }
+    },
+    {
+      "@id": "pes",
+      "@type": "lago:DetectorSite",
+      "name": "Pico Espejo, Merida, Venezuela",
+      "lago:belongsLago": true,
+      "qualifiedAttribution": {
+        "@type": "lago:Organisation",
+        "name": ""
+      },
+      "geometry": {
+        "@id": "pes#geometry",
+        "@type": "geo:Point",
+        "geo:latitude": "8.5317",
+        "geo:longitude": "-71.0533",
+        "geo:altitude": "4765"
+      },
+      "lago:obsLev": {
+        "@default": "476500"
+      },
+      "lago:atmcrd": {
+        "@type": {
+          "@default": "lago:Atmod"
+        },
+        "lago:modatm": {
+          "@default": "E1"
+        }
+      },
+      "lago:magnet": {
+        "@default": {
+          "lago:bDate": "2026-11-14",
+          "conformsTo": {
+            "@id": "https://doi.org/10.5281/zenodo.14012302",
+            "@type": [
+              "dct:Standard",
+              "DataSet"
+            ],
+            "title": "IGRF",
+            "description": "International Geomagnetic Reference Field",
+            "landingpage": "https://www.ngdc.noaa.gov/IAGA/vmod/igrf.html",
+            "version": "14",
+            "dataservice": {
+              "title": "Geomagnetic Model Web Service",
+              "endpointURL": "http://geomag.bgs.ac.uk/web_service/GMModels/"
+            },
+            "temporalCoverage": {
+              "startDate": "2025-01-01",
+              "endDate": "2029-12-31"
+            },
+            "temporalResolution": "P1D"
+          },
+          "lago:bx": "26.489",
+          "lago:bz": "16.081",
+          "lago:bi": "31.416"
         }
       }
     },
